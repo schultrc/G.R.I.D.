@@ -1,9 +1,24 @@
-package MAP;
+package edu.ucdenver.cse.GRID.MAP;
 
 public class Road {
 	private Intersection from;
 	private Intersection to;
 	
+	private Long Id = -1L;
+	
+	public Road(Long theId)
+	{
+		Id = theId;
+	}
+	
+	public Long getId() {
+		return Id;
+	}
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
 	// Defined in meters
 	private double Length;
 	

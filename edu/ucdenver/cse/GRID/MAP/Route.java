@@ -1,4 +1,4 @@
-package MAP;
+package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.ArrayList;
 
