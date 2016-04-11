@@ -55,7 +55,7 @@ public class PopulationGenerator {
 			plan.addLeg(populationFactory.createLeg("car"));
 			
 			Activity activity3 =
-					  populationFactory.createActivityFromCoord("h6",homeCoordinates);
+					  populationFactory.createActivityFromCoord("home",homeCoordinates);
 					
 			plan.addActivity(activity3);
 			plan.addLeg(populationFactory.createLeg("car"));
@@ -63,7 +63,8 @@ public class PopulationGenerator {
 		
 		MatsimWriter popWriter = new PopulationWriter(population, network);
 		popWriter.write("c:/grid/HandMade.xml");
-		
+		//popWriter.write("c:\\Users\\Matt\\Desktop\\GRID_SIM\\out\\HandMade.xml");
+
 	}
 
 }
