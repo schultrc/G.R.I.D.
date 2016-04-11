@@ -18,8 +18,9 @@ public class GRID_SIM {
 		System.out.println("It's not hard--you just gotta use finesse!");
 		
 		try {
-			Config config = ConfigUtils.createConfig() ;
+			Config config = new Config();
 			
+			ConfigUtils.loadConfig(config, args[0]);
 			
 			config.controler().setLastIteration(1);
 			config.controler().setOverwriteFileSetting(OverwriteFileSetting.deleteDirectoryIfExists);
@@ -38,7 +39,8 @@ public class GRID_SIM {
 			Assert.fail();
 		}
 		
-		
+		System.out.println("\n\n\n\nWell, we got to the end. \n\n\n\n");
+
 
 		// Here is where we would run our test algorithms
 		
