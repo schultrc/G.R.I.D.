@@ -2,7 +2,7 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.matsim.api.core.*;
+//import org.matsim.api.core.*;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.core.config.*;
 import org.matsim.core.controler.Controler;
@@ -15,7 +15,7 @@ public class GRID_SIM {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println("Why is this so HARD???!");
+		System.out.println("It's not hard--you just gotta use finesse!");
 		
 		try {
 			Config config = ConfigUtils.createConfig() ;
