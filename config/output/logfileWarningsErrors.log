@@ -1,0 +1,58 @@
+2016-04-10 21:21:56,495  WARN OutputDirectoryHierarchy:184 ###########################################################
+2016-04-10 21:21:56,495  WARN OutputDirectoryHierarchy:185 ### THE CONTROLER WILL DELETE THE EXISTING OUTPUT DIRECTORY:
+2016-04-10 21:21:56,495  WARN OutputDirectoryHierarchy:186 ### ./output
+2016-04-10 21:21:56,495  WARN OutputDirectoryHierarchy:187 ###########################################################
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,038  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,039  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-10 21:21:57,039  WARN QVehicle:79  Future occurences of this logging statement are suppressed.
+2016-04-10 21:21:57,404 ERROR SimStepParallelEventsManagerImpl$ExceptionHandler:409 Thread class org.matsim.core.events.SimStepParallelEventsManagerImpl$ProcessEventsRunnable0 died with exception while handling events.
+java.lang.IllegalArgumentException: acttype "work" is not known in utility parameters (module name="planCalcScore" in the config file).
+	at org.matsim.core.scoring.functions.CharyparNagelActivityScoring.calcActScore(CharyparNagelActivityScoring.java:121)
+	at org.matsim.core.scoring.functions.CharyparNagelActivityScoring.handleActivity(CharyparNagelActivityScoring.java:338)
+	at org.matsim.core.scoring.SumScoringFunction.handleActivity(SumScoringFunction.java:68)
+	at org.matsim.core.scoring.ScoringFunctionsForPopulation.handleActivity(ScoringFunctionsForPopulation.java:102)
+	at org.matsim.core.scoring.EventsToActivities.handleEvent(EventsToActivities.java:66)
+	at org.matsim.core.scoring.EventsToScore.handleEvent(EventsToScore.java:129)
+	at org.matsim.core.events.EventsManagerImpl.callHandlerFast(EventsManagerImpl.java:335)
+	at org.matsim.core.events.EventsManagerImpl.computeEvent(EventsManagerImpl.java:222)
+	at org.matsim.core.events.EventsManagerImpl.processEvent(EventsManagerImpl.java:136)
+	at org.matsim.core.events.SimStepParallelEventsManagerImpl$ProcessEventsRunnable.run(SimStepParallelEventsManagerImpl.java:319)
+	at java.lang.Thread.run(Unknown Source)
+2016-04-10 21:21:57,416 ERROR AbstractController:175 Getting uncaught Exception in Thread main
+java.lang.RuntimeException: Exception while processing events. Cannot guarantee that all events have been fully processed.
+	at org.matsim.core.events.SimStepParallelEventsManagerImpl.finishProcessing(SimStepParallelEventsManagerImpl.java:202)
+	at org.matsim.core.controler.corelisteners.EventsHandlingImpl.notifyAfterMobsim(EventsHandlingImpl.java:130)
+	at org.matsim.core.controler.ControlerListenerManager.fireControlerAfterMobsimEvent(ControlerListenerManager.java:245)
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:330)
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:338)
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:326)
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:261)
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:198)
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:139)
+	at org.matsim.core.controler.Controler.run(Controler.java:215)
+	at edu.ucdenver.cse.GRID.GRID_SIM.GRID_SIM.main(GRID_SIM.java:32)
+2016-04-10 21:21:57,417 ERROR AbstractController:205 ERROR --- This is an unexpected shutdown!
+2016-04-10 21:21:57,417 ERROR AbstractController:208 Shutdown possibly caused by the following Exception:
+java.lang.RuntimeException: Exception while processing events. Cannot guarantee that all events have been fully processed.
+	at org.matsim.core.events.SimStepParallelEventsManagerImpl.finishProcessing(SimStepParallelEventsManagerImpl.java:202)
+	at org.matsim.core.controler.corelisteners.EventsHandlingImpl.notifyAfterMobsim(EventsHandlingImpl.java:130)
+	at org.matsim.core.controler.ControlerListenerManager.fireControlerAfterMobsimEvent(ControlerListenerManager.java:245)
+	at org.matsim.core.controler.AbstractController$8.run(AbstractController.java:330)
+	at org.matsim.core.controler.AbstractController.iterationStep(AbstractController.java:338)
+	at org.matsim.core.controler.AbstractController.mobsim(AbstractController.java:326)
+	at org.matsim.core.controler.AbstractController.iteration(AbstractController.java:261)
+	at org.matsim.core.controler.AbstractController.doIterations(AbstractController.java:198)
+	at org.matsim.core.controler.AbstractController.run(AbstractController.java:139)
+	at org.matsim.core.controler.Controler.run(Controler.java:215)
+	at edu.ucdenver.cse.GRID.GRID_SIM.GRID_SIM.main(GRID_SIM.java:32)
+2016-04-10 21:21:57,549 ERROR AbstractController:223 ERROR --- MATSim unexpectedly terminated. Please check the output or the logfile with warnings and errors for hints.
+2016-04-10 21:21:57,549 ERROR AbstractController:224 ERROR --- results should not be used for further analysis.
+2016-04-10 21:21:57,549 ERROR AbstractController:228 ERROR --- This was an unexpected shutdown! See the log file for a possible reason.

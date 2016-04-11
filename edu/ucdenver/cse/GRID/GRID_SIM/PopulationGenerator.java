@@ -25,7 +25,7 @@ public class PopulationGenerator {
 		
 		for(idSeed = 1; idSeed < 100; ++idSeed){		
 			
-			Person person = populationFactory.createPerson(Id.createPersonId(idSeed));//   .createPerson("1");//    (sc. createId("1"));
+			Person person = populationFactory.createPerson(Id.createPersonId(idSeed));
 			
 			Plan plan = populationFactory.createPlan();
 			person.addPlan(plan);
