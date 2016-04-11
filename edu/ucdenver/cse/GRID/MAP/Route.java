@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 
 public class Route {	
-	long agent_ID;
+	long agentID;
+	String agentName;
 	
-	ArrayList<Road> nodes = new ArrayList<Road>();
+	ArrayList<Road> roads = new ArrayList<Road>();
 	
 	
 	

@@ -3,20 +3,20 @@ package edu.ucdenver.cse.GRID.MAP;
 import java.util.concurrent.*;
 import java.util.*;
 
-public class Map {
+public class GRIDMap {
 	
-	private ConcurrentMap<Intersection, Long > Intersections = new ConcurrentHashMap<Intersection, Long >();
-	private ConcurrentMap<Road, Long> Roads = new ConcurrentHashMap<Road, Long >();
-	public ConcurrentMap<Intersection, Long > getIntersections() {
+	private ConcurrentMap<Long, Intersection> Intersections = new ConcurrentHashMap<Long, Intersection >();
+	private ConcurrentMap<Long, Road> Roads = new ConcurrentHashMap<Long, Road >();
+	public ConcurrentMap<Long, Intersection > getIntersections() {
 		return Intersections;
 	}
-	public void setIntersections(ConcurrentMap<Intersection, Long > intersections) {
+	public void setIntersections(ConcurrentMap<Long, Intersection > intersections) {
 		Intersections = intersections;
 	}
-	public ConcurrentMap<Road, Long > getRoads() {
+	public ConcurrentMap<Long, Road > getRoads() {
 		return Roads;
 	}
-	public void setRoads(ConcurrentMap<Road, Long > roads) {
+	public void setRoads(ConcurrentMap<Long, Road > roads) {
 		Roads = roads;
 	}
 
@@ -30,7 +30,7 @@ public class Map {
 		}
 		else
 		{
-			this.Roads.put(addMe, addMe.getId());
+			this.Roads.put(addMe.getId(), addMe);
 			System.out.printf("Successfully added road: %d \n", addMe.getId());
 		}
 		
