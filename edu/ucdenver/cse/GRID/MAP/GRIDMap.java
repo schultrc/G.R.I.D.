@@ -1,7 +1,6 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.concurrent.*;
-import java.util.*;
 
 public class GRIDMap {
 	

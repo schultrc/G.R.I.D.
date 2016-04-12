@@ -1,8 +1,13 @@
 package edu.ucdenver.cse.GRID.MAP;
 
+
+import java.util.concurrent.ConcurrentHashMap;
+
 public class Road {
+	private static final Double ourDefaultValue = (double) 1;
 	private Intersection from;
 	private Intersection to;
+	private ConcurrentHashMap<Long, Double> roadCapacity = new ConcurrentHashMap<Long, Double>();
 	
 	private Long Id = -1L;
 	
@@ -66,5 +71,20 @@ public class Road {
 
 	public void setCurrentSpeed(double currentSpeed) {
 		this.currentSpeed = currentSpeed;
+	}
+	
+	public void addToCapacity(Long time) {
+		// replace checks to ensure it already exists
+			if (this.roadCapacity.replace(time, (this.roadCapacity.get(time) + 1)) == null) {
+				this.roadCapacity.put(time, ourDefaultValue);
+			}		
+	}
+	
+	public double getCapacityAtTime(Long time) {
+		if (this.roadCapacity.containsKey(time) ) {
+			return this.roadCapacity.get(time);
+		}
+		
+		return -1;
 	}
 }
