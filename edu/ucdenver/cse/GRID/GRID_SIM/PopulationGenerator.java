@@ -25,7 +25,7 @@ public class PopulationGenerator {
 		
 		for(idSeed = 1; idSeed < 100; ++idSeed){		
 			
-			Person person = populationFactory.createPerson(Id.createPersonId(idSeed));//   .createPerson("1");//    (sc. createId("1"));
+			Person person = populationFactory.createPerson(Id.createPersonId(idSeed));
 			
 			Plan plan = populationFactory.createPlan();
 			person.addPlan(plan);
@@ -33,20 +33,22 @@ public class PopulationGenerator {
 			population.addPerson(person);
 
 			// How do we make these reasonable???
-			Coord homeCoordinates = sc.createCoord(-1.1644353007143369E7, 4616838.252581435);
+//			Coord homeCoordinates = sc.createCoord(-1.1644353007143369E7, 4616838.252581435);
+			Coord homeCoordinates = sc.createCoord(0, 0);
 			Activity activity1 = 
-			  populationFactory.createActivityFromCoord ("home", homeCoordinates);
+			  populationFactory.createActivityFromCoord ("h", homeCoordinates);
 			  
 			// Leave at 6 am - how do we change this???
 			activity1.setEndTime(21600);
 			plan.addActivity(activity1);
 			
 			plan.addLeg(populationFactory.createLeg("car"));
-			
-			Coord workCoordinates = sc.createCoord(-1.1646500805398736E7, 4623084.819612819);
+
+//			Coord workCoordinates = sc.createCoord(-1.1646500805398736E7, 4623084.819612819);
+			Coord workCoordinates = sc.createCoord(100000, 100000);
 
 			Activity activity2 =
-					  populationFactory.createActivityFromCoord("work",workCoordinates);
+					  populationFactory.createActivityFromCoord("w",workCoordinates);
 			
 			// Finish work at 4 PM - CHANGE???
 			activity2.setEndTime(57600);
@@ -55,15 +57,18 @@ public class PopulationGenerator {
 			plan.addLeg(populationFactory.createLeg("car"));
 			
 			Activity activity3 =
-					  populationFactory.createActivityFromCoord("h6",homeCoordinates);
+					  populationFactory.createActivityFromCoord("h",homeCoordinates);
 					
 			plan.addActivity(activity3);
 			plan.addLeg(populationFactory.createLeg("car"));
+			
+			
 		}
 		
 		MatsimWriter popWriter = new PopulationWriter(population, network);
-		popWriter.write("c:/grid/HandMade.xml");
-		
+		popWriter.write("c:/grid/SmallPopulation.xml");
+		//popWriter.write("c:\\Users\\Matt\\Desktop\\GRID_SIM\\out\\HandMade.xml");
+
 	}
 
 }
