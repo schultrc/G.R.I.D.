@@ -18,7 +18,7 @@ public class selfishAlg {
     private ConcurrentMap<Intersection, Intersection> previousNodes;
     private ConcurrentMap<Intersection, Double> currentPathTotal;
 
-    public selfishAlg(Gridmap selfishMap){
+    public selfishAlg(GRIDMap selfishMap){
 
         this.nodes = selfishMap.getIntersections();
         this.edges = selfishMap.getRoads();
