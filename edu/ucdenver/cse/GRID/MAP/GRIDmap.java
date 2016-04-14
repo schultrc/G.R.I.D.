@@ -2,7 +2,7 @@ package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.concurrent.*;
 
-public class GRIDMap {
+public class GRIDmap {
 	
 	private ConcurrentMap<Long, GRIDintersection> Intersections = new ConcurrentHashMap<Long, GRIDintersection >();
 	private ConcurrentMap<Long, GRIDroad> Roads = new ConcurrentHashMap<Long, GRIDroad >();

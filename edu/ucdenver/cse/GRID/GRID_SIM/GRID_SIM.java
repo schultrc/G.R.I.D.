@@ -52,4 +52,6 @@ public class GRID_SIM {
 		System.out.println("\n\n\n\nWell, we got to the end. \n\n\n\n");	
 	}
 	
+	
+	
 }
