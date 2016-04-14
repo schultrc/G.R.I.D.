@@ -1,216 +1,220 @@
-2016-04-13 09:30:58,759  INFO Gbl:57 JVM: 1.8.0_73; Oracle Corporation; mixed mode; 64-bit
-2016-04-13 09:30:58,759  INFO Gbl:61 OS: Windows 7; 6.1; amd64
-2016-04-13 09:30:58,759  INFO Gbl:64 CPU cores: 4
-2016-04-13 09:30:58,760  INFO Gbl:65 max. Memory: 2731.0MB (2863661056B)
-2016-04-13 09:30:58,760  INFO Gbl:103 MATSim-Build: r92988ce59136ee2aff1ef13a5c44ef6b9ed94573 (2015-10-29 09:45:01)
-2016-04-13 09:30:58,760  INFO AbstractController:102 Used Controler-Class: org.matsim.core.controler.Controler
-2016-04-13 09:30:59,115  INFO Injector:80 org.matsim.core.controler.corelisteners.PlansScoring
-2016-04-13 09:30:59,116  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.PlansScoring, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@6babf3bf[Scopes.SINGLETON]}
-2016-04-13 09:30:59,116  INFO Injector:80 org.matsim.core.controler.corelisteners.PlansReplanning
-2016-04-13 09:30:59,116  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.PlansReplanning, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@24fcf36f[Scopes.SINGLETON]}
-2016-04-13 09:30:59,116  INFO Injector:80 org.matsim.core.controler.corelisteners.PlansDumping
-2016-04-13 09:30:59,117  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.PlansDumping, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@ea6147e[Scopes.SINGLETON]}
-2016-04-13 09:30:59,117  INFO Injector:80 org.matsim.core.controler.corelisteners.EventsHandling
-2016-04-13 09:30:59,117  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.EventsHandling, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@1e683a3e[Scopes.SINGLETON]}
-2016-04-13 09:30:59,117  INFO Injector:80 org.matsim.core.controler.corelisteners.DumpDataAtEnd
-2016-04-13 09:30:59,117  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.DumpDataAtEnd, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@14555e0a[Scopes.SINGLETON]}
-2016-04-13 09:30:59,117  INFO Injector:80 org.matsim.core.mobsim.framework.Mobsim
-2016-04-13 09:30:59,117  INFO Injector:82    -> Key[type=org.matsim.core.mobsim.qsim.QSimProvider, annotation=[none]]
-2016-04-13 09:30:59,117  INFO Injector:80 org.matsim.api.core.v01.network.Network
-2016-04-13 09:30:59,117  INFO Injector:82    -> Key[type=org.matsim.core.scenario.ScenarioElementsModule$NetworkProvider, annotation=[none]]
-2016-04-13 09:30:59,117  INFO Injector:80 org.matsim.api.core.v01.population.Population
-2016-04-13 09:30:59,118  INFO Injector:82    -> Key[type=org.matsim.core.scenario.ScenarioElementsModule$PopulationProvider, annotation=[none]]
-2016-04-13 09:30:59,118  INFO Injector:80 org.matsim.core.trafficmonitoring.TravelTimeCalculator
-2016-04-13 09:30:59,118  INFO Injector:82    -> Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$TravelTimeCalculatorProvider, annotation=[none]][Scopes.SINGLETON]
-2016-04-13 09:30:59,118  INFO Injector:80 org.matsim.core.events.handler.EventHandler
-2016-04-13 09:30:59,118  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.events.handler.EventHandler, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=2, type=MULTIBINDER, keyType=)], provider=Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$TravelTimeCalculatorProvider, annotation=[none]][Scopes.SINGLETON]}
-2016-04-13 09:30:59,118  INFO Injector:80 org.matsim.core.router.util.TravelTime
-2016-04-13 09:30:59,118  INFO Injector:82    -> Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$TravelTimeProvider, annotation=[none]]
-2016-04-13 09:30:59,118  INFO Injector:80 org.matsim.core.router.util.LinkToLinkTravelTime
-2016-04-13 09:30:59,118  INFO Injector:82    -> Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$LinkToLinkTravelTimeProvider, annotation=[none]]
-2016-04-13 09:30:59,118  INFO Injector:80 org.matsim.core.router.costcalculators.TravelDisutilityFactory
-2016-04-13 09:30:59,119  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.router.costcalculators.TravelDisutilityFactory, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@28f3b248}
-2016-04-13 09:30:59,119  INFO Injector:80 org.matsim.core.scoring.ScoringFunctionFactory
-2016-04-13 09:30:59,119  INFO Injector:82    -> org.matsim.core.scoring.functions.CharyparNagelScoringFunctionModule$1@581ac8a8
-2016-04-13 09:30:59,119  INFO Injector:80 org.matsim.core.router.util.LeastCostPathCalculatorFactory
-2016-04-13 09:30:59,119  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.router.util.LeastCostPathCalculatorFactory, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@76c3e77a[Scopes.SINGLETON]}
-2016-04-13 09:30:59,119  INFO Injector:80 org.matsim.pt.router.TransitRouter
-2016-04-13 09:30:59,119  INFO Injector:82    -> Key[type=org.matsim.pt.router.TransitRouterModule$DummyTransitRouterFactory, annotation=[none]]
-2016-04-13 09:30:59,119  INFO Injector:80 org.matsim.core.router.TripRouterFactory
-2016-04-13 09:30:59,119  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.router.TripRouterFactory, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@fa49800}[Scopes.SINGLETON]
-2016-04-13 09:30:59,119  INFO Injector:80 org.matsim.core.router.TripRouter
-2016-04-13 09:30:59,119  INFO Injector:82    -> Key[type=org.matsim.core.router.TripRouterModule$RealTripRouterProvider, annotation=[none]]
-2016-04-13 09:30:59,119  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
-2016-04-13 09:30:59,120  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=3, type=MAPBINDER, keyType=java.lang.String)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@505fc5a4}
-2016-04-13 09:30:59,120  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
-2016-04-13 09:30:59,120  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=5, type=MAPBINDER, keyType=java.lang.String)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@bd4dc25}
-2016-04-13 09:30:59,120  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
-2016-04-13 09:30:59,120  INFO Injector:82    -> Key[type=org.matsim.core.replanning.DefaultPlanStrategiesModule$ExpBetaPlanSelectorForRemoval, annotation=[none]]
-2016-04-13 09:30:59,120  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
-2016-04-13 09:30:59,120  INFO Injector:82    -> Key[type=org.matsim.core.replanning.DefaultPlanStrategiesModule$ExpBetaPlanChangerForRemoval, annotation=[none]]
-2016-04-13 09:30:59,120  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
-2016-04-13 09:30:59,120  INFO Injector:82    -> Key[type=org.matsim.core.replanning.DefaultPlanStrategiesModule$PathSizeLogitSelectorForRemoval, annotation=[none]]
-2016-04-13 09:30:59,120  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,120  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.KeepLastSelectedPlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,120  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectBestPlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectExpBetaPlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeExpBetaPlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectRandomStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectPathSizeLogitStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ReRoutePlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.TimeAllocationMutatorPlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,121  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,121  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.TimeAllocationMutatorReRoutePlanStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeSingleLegModeStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeLegModeStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SubtourModeChoiceStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeTripModeStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeSingleTripModeStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.TripSubtourModeChoiceStrategyFactory, annotation=[none]]
-2016-04-13 09:30:59,122  INFO Injector:80 org.matsim.core.replanning.StrategyManager
-2016-04-13 09:30:59,122  INFO Injector:82    -> Key[type=org.matsim.core.replanning.StrategyManagerModule$StrategyManagerProvider, annotation=[none]][Scopes.SINGLETON]
-2016-04-13 09:30:59,123  INFO Injector:80 org.matsim.core.replanning.ReplanningContext
-2016-04-13 09:30:59,123  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.replanning.ReplanningContext, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@6cd28fa7}
-2016-04-13 09:30:59,123  INFO Injector:80 org.matsim.analysis.CalcLinkStats
-2016-04-13 09:30:59,123  INFO Injector:82    -> Key[type=org.matsim.core.controler.corelisteners.LinkStatsModule$CalcLinkStatsProvider, annotation=[none]][Scopes.SINGLETON]
-2016-04-13 09:30:59,123  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
-2016-04-13 09:30:59,123  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=43, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@1af2d44a}
-2016-04-13 09:30:59,123  INFO Injector:80 org.matsim.analysis.VolumesAnalyzer
-2016-04-13 09:30:59,123  INFO Injector:82    -> Key[type=org.matsim.analysis.VolumesAnalyzerModule$VolumesAnalyzerProvider, annotation=[none]][Scopes.SINGLETON]
-2016-04-13 09:30:59,123  INFO Injector:80 org.matsim.core.events.handler.EventHandler
-2016-04-13 09:30:59,123  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.events.handler.EventHandler, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=44, type=MULTIBINDER, keyType=)], provider=Key[type=org.matsim.analysis.VolumesAnalyzerModule$VolumesAnalyzerProvider, annotation=[none]][Scopes.SINGLETON]}
-2016-04-13 09:30:59,123  INFO Injector:80 org.matsim.core.events.handler.EventHandler
-2016-04-13 09:30:59,123  INFO Injector:82    -> of(org.matsim.analysis.LegHistogram@3514a4c0)
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.analysis.LegHistogram
-2016-04-13 09:30:59,124  INFO Injector:82    -> of(org.matsim.analysis.LegHistogram@3514a4c0)
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
-2016-04-13 09:30:59,124  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=46, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@7bd4937b}
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.core.events.handler.EventHandler
-2016-04-13 09:30:59,124  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.events.handler.EventHandler, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=47, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@58d75e99[Scopes.SINGLETON]}
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
-2016-04-13 09:30:59,124  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=48, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@306e95ec}
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
-2016-04-13 09:30:59,124  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=49, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@4f2b503c[Scopes.SINGLETON]}
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.analysis.ScoreStats
-2016-04-13 09:30:59,124  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.analysis.ScoreStats, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@4f2b503c[Scopes.SINGLETON]}
-2016-04-13 09:30:59,124  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
-2016-04-13 09:30:59,125  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=50, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@6392827e}
-2016-04-13 09:30:59,125  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
-2016-04-13 09:30:59,125  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=51, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@43dac38f}
-2016-04-13 09:30:59,125  INFO Injector:80 org.matsim.core.controler.OutputDirectoryHierarchy
-2016-04-13 09:30:59,125  INFO Injector:82    -> of(org.matsim.core.controler.OutputDirectoryHierarchy@5d0a1059)
-2016-04-13 09:30:59,125  INFO Injector:80 org.matsim.analysis.IterationStopWatch
-2016-04-13 09:30:59,125  INFO Injector:82    -> of(org.matsim.analysis.IterationStopWatch@54bff557)
-2016-04-13 09:30:59,125  INFO Injector:80 org.matsim.api.core.v01.Scenario
-2016-04-13 09:30:59,125  INFO Injector:82    -> of(org.matsim.core.scenario.ScenarioImpl@7c711375)
-2016-04-13 09:30:59,125  INFO Injector:80 org.matsim.core.api.experimental.events.EventsManager
-2016-04-13 09:30:59,125  INFO Injector:82    -> of(org.matsim.core.events.SimStepParallelEventsManagerImpl@37d4349f)
-2016-04-13 09:30:59,125  INFO Injector:80 org.matsim.analysis.CalcLegTimes
-2016-04-13 09:30:59,125  INFO Injector:82    -> com.google.inject.internal.ConstructorBindingImpl$Factory@58d75e99[Scopes.SINGLETON]
-2016-04-13 09:30:59,126  INFO Injector:80 org.matsim.analysis.ScoreStatsControlerListener
-2016-04-13 09:30:59,126  INFO Injector:82    -> com.google.inject.internal.ConstructorBindingImpl$Factory@4f2b503c[Scopes.SINGLETON]
-2016-04-13 09:30:59,127  INFO ScenarioImpl:277 no transit schedule, and transit not activated from config. You must first call the create method of ScenarioImpl.
-2016-04-13 09:30:59,133  INFO StrategyManagerConfigLoader:61 global innovation switch off after iteration: 0
-2016-04-13 09:30:59,133  INFO GenericStrategyManager:345 setting PlanSelectorForRemoval to class org.matsim.core.replanning.selectors.WorstPlanForRemovalSelector
-2016-04-13 09:30:59,136  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.trafficmonitoring.TravelTimeCalculator
-2016-04-13 09:30:59,136  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkEnterEvent
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
-2016-04-13 09:30:59,137  INFO EventsManagerImpl:148   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:207     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.trafficmonitoring.TravelTimeCalculator
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkEnterEvent
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
-2016-04-13 09:30:59,138  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.VolumesAnalyzer
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,139  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.VolumesAnalyzer
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.LegHistogram
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.LegHistogram
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
-2016-04-13 09:30:59,140  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.CalcLegTimes
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
-2016-04-13 09:30:59,141  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityEndEventHandler
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityEndEvent
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityStartEventHandler
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityStartEvent
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.CalcLegTimes
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
-2016-04-13 09:30:59,142  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityEndEventHandler
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityEndEvent
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityStartEventHandler
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityStartEvent
-2016-04-13 09:30:59,143  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,144  INFO CalcLinkStats:148  resetting `count' to zero.  This info is here since we want to check when this is happening during normal simulation runs.  kai, jan'11
-2016-04-13 09:30:59,145  INFO ControlerListenerManager:108 calling notifyStartup on org.matsim.counts.CountsControlerListener
-2016-04-13 09:30:59,145  INFO ControlerListenerManager:108 calling notifyStartup on org.matsim.analysis.ScoreStatsControlerListener
-2016-04-13 09:30:59,145  INFO ControlerListenerManager:111 all ControlerStartupListeners called.
-2016-04-13 09:30:59,145  INFO ControlerUtils:57 config dump before iterations start
-2016-04-13 09:30:59,149  INFO ControlerUtils:61 
+2016-04-13 23:43:06,130  INFO Gbl:57 JVM: 1.8.0_73; Oracle Corporation; mixed mode; 64-bit
+2016-04-13 23:43:06,130  INFO Gbl:61 OS: Windows 7; 6.1; amd64
+2016-04-13 23:43:06,130  INFO Gbl:64 CPU cores: 4
+2016-04-13 23:43:06,131  INFO Gbl:65 max. Memory: 2731.0MB (2863661056B)
+2016-04-13 23:43:06,131  INFO Gbl:103 MATSim-Build: r92988ce59136ee2aff1ef13a5c44ef6b9ed94573 (2015-10-29 09:45:01)
+2016-04-13 23:43:06,131  INFO AbstractController:102 Used Controler-Class: org.matsim.core.controler.Controler
+2016-04-13 23:43:06,140  WARN OutputDirectoryHierarchy:184 ###########################################################
+2016-04-13 23:43:06,140  WARN OutputDirectoryHierarchy:185 ### THE CONTROLER WILL DELETE THE EXISTING OUTPUT DIRECTORY:
+2016-04-13 23:43:06,140  WARN OutputDirectoryHierarchy:186 ### ./output
+2016-04-13 23:43:06,140  WARN OutputDirectoryHierarchy:187 ###########################################################
+2016-04-13 23:43:06,425  INFO Injector:80 org.matsim.core.controler.corelisteners.PlansScoring
+2016-04-13 23:43:06,426  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.PlansScoring, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@ea6147e[Scopes.SINGLETON]}
+2016-04-13 23:43:06,426  INFO Injector:80 org.matsim.core.controler.corelisteners.PlansReplanning
+2016-04-13 23:43:06,426  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.PlansReplanning, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@1e683a3e[Scopes.SINGLETON]}
+2016-04-13 23:43:06,426  INFO Injector:80 org.matsim.core.controler.corelisteners.PlansDumping
+2016-04-13 23:43:06,426  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.PlansDumping, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@14555e0a[Scopes.SINGLETON]}
+2016-04-13 23:43:06,426  INFO Injector:80 org.matsim.core.controler.corelisteners.EventsHandling
+2016-04-13 23:43:06,426  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.EventsHandling, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@3c73951[Scopes.SINGLETON]}
+2016-04-13 23:43:06,427  INFO Injector:80 org.matsim.core.controler.corelisteners.DumpDataAtEnd
+2016-04-13 23:43:06,427  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.corelisteners.DumpDataAtEnd, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@73700b80[Scopes.SINGLETON]}
+2016-04-13 23:43:06,427  INFO Injector:80 org.matsim.core.mobsim.framework.Mobsim
+2016-04-13 23:43:06,427  INFO Injector:82    -> Key[type=org.matsim.core.mobsim.qsim.QSimProvider, annotation=[none]]
+2016-04-13 23:43:06,427  INFO Injector:80 org.matsim.api.core.v01.network.Network
+2016-04-13 23:43:06,427  INFO Injector:82    -> Key[type=org.matsim.core.scenario.ScenarioElementsModule$NetworkProvider, annotation=[none]]
+2016-04-13 23:43:06,427  INFO Injector:80 org.matsim.api.core.v01.population.Population
+2016-04-13 23:43:06,428  INFO Injector:82    -> Key[type=org.matsim.core.scenario.ScenarioElementsModule$PopulationProvider, annotation=[none]]
+2016-04-13 23:43:06,428  INFO Injector:80 org.matsim.core.trafficmonitoring.TravelTimeCalculator
+2016-04-13 23:43:06,428  INFO Injector:82    -> Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$TravelTimeCalculatorProvider, annotation=[none]][Scopes.SINGLETON]
+2016-04-13 23:43:06,428  INFO Injector:80 org.matsim.core.events.handler.EventHandler
+2016-04-13 23:43:06,428  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.events.handler.EventHandler, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=2, type=MULTIBINDER, keyType=)], provider=Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$TravelTimeCalculatorProvider, annotation=[none]][Scopes.SINGLETON]}
+2016-04-13 23:43:06,428  INFO Injector:80 org.matsim.core.router.util.TravelTime
+2016-04-13 23:43:06,428  INFO Injector:82    -> Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$TravelTimeProvider, annotation=[none]]
+2016-04-13 23:43:06,428  INFO Injector:80 org.matsim.core.router.util.LinkToLinkTravelTime
+2016-04-13 23:43:06,428  INFO Injector:82    -> Key[type=org.matsim.core.trafficmonitoring.TravelTimeCalculatorModule$LinkToLinkTravelTimeProvider, annotation=[none]]
+2016-04-13 23:43:06,428  INFO Injector:80 org.matsim.core.router.costcalculators.TravelDisutilityFactory
+2016-04-13 23:43:06,429  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.router.costcalculators.TravelDisutilityFactory, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@76c3e77a}
+2016-04-13 23:43:06,429  INFO Injector:80 org.matsim.core.scoring.ScoringFunctionFactory
+2016-04-13 23:43:06,429  INFO Injector:82    -> org.matsim.core.scoring.functions.CharyparNagelScoringFunctionModule$1@fba92d3
+2016-04-13 23:43:06,429  INFO Injector:80 org.matsim.core.router.util.LeastCostPathCalculatorFactory
+2016-04-13 23:43:06,429  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.router.util.LeastCostPathCalculatorFactory, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@71238fc2[Scopes.SINGLETON]}
+2016-04-13 23:43:06,429  INFO Injector:80 org.matsim.pt.router.TransitRouter
+2016-04-13 23:43:06,429  INFO Injector:82    -> Key[type=org.matsim.pt.router.TransitRouterModule$DummyTransitRouterFactory, annotation=[none]]
+2016-04-13 23:43:06,429  INFO Injector:80 org.matsim.core.router.TripRouterFactory
+2016-04-13 23:43:06,429  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.router.TripRouterFactory, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@5fbdfdcf}[Scopes.SINGLETON]
+2016-04-13 23:43:06,429  INFO Injector:80 org.matsim.core.router.TripRouter
+2016-04-13 23:43:06,429  INFO Injector:82    -> Key[type=org.matsim.core.router.TripRouterModule$RealTripRouterProvider, annotation=[none]]
+2016-04-13 23:43:06,430  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
+2016-04-13 23:43:06,430  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=3, type=MAPBINDER, keyType=java.lang.String)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@3bf9ce3e}
+2016-04-13 23:43:06,430  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
+2016-04-13 23:43:06,430  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=5, type=MAPBINDER, keyType=java.lang.String)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@383bfa16}
+2016-04-13 23:43:06,430  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
+2016-04-13 23:43:06,430  INFO Injector:82    -> Key[type=org.matsim.core.replanning.DefaultPlanStrategiesModule$ExpBetaPlanSelectorForRemoval, annotation=[none]]
+2016-04-13 23:43:06,430  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
+2016-04-13 23:43:06,430  INFO Injector:82    -> Key[type=org.matsim.core.replanning.DefaultPlanStrategiesModule$ExpBetaPlanChangerForRemoval, annotation=[none]]
+2016-04-13 23:43:06,430  INFO Injector:80 org.matsim.core.replanning.selectors.GenericPlanSelector<org.matsim.api.core.v01.population.Plan, org.matsim.api.core.v01.population.Person>
+2016-04-13 23:43:06,430  INFO Injector:82    -> Key[type=org.matsim.core.replanning.DefaultPlanStrategiesModule$PathSizeLogitSelectorForRemoval, annotation=[none]]
+2016-04-13 23:43:06,430  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,430  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.KeepLastSelectedPlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectBestPlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectExpBetaPlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeExpBetaPlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectRandomStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SelectPathSizeLogitStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ReRoutePlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,431  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,431  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.TimeAllocationMutatorPlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.TimeAllocationMutatorReRoutePlanStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeSingleLegModeStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeLegModeStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.SubtourModeChoiceStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeTripModeStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.ChangeSingleTripModeStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.PlanStrategy
+2016-04-13 23:43:06,432  INFO Injector:82    -> Key[type=org.matsim.core.replanning.modules.TripSubtourModeChoiceStrategyFactory, annotation=[none]]
+2016-04-13 23:43:06,432  INFO Injector:80 org.matsim.core.replanning.StrategyManager
+2016-04-13 23:43:06,433  INFO Injector:82    -> Key[type=org.matsim.core.replanning.StrategyManagerModule$StrategyManagerProvider, annotation=[none]][Scopes.SINGLETON]
+2016-04-13 23:43:06,433  INFO Injector:80 org.matsim.core.replanning.ReplanningContext
+2016-04-13 23:43:06,433  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.replanning.ReplanningContext, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@18d87d80}
+2016-04-13 23:43:06,433  INFO Injector:80 org.matsim.analysis.CalcLinkStats
+2016-04-13 23:43:06,434  INFO Injector:82    -> Key[type=org.matsim.core.controler.corelisteners.LinkStatsModule$CalcLinkStatsProvider, annotation=[none]][Scopes.SINGLETON]
+2016-04-13 23:43:06,434  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
+2016-04-13 23:43:06,434  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=43, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@4fb3ee4e}
+2016-04-13 23:43:06,434  INFO Injector:80 org.matsim.analysis.VolumesAnalyzer
+2016-04-13 23:43:06,434  INFO Injector:82    -> Key[type=org.matsim.analysis.VolumesAnalyzerModule$VolumesAnalyzerProvider, annotation=[none]][Scopes.SINGLETON]
+2016-04-13 23:43:06,435  INFO Injector:80 org.matsim.core.events.handler.EventHandler
+2016-04-13 23:43:06,436  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.events.handler.EventHandler, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=44, type=MULTIBINDER, keyType=)], provider=Key[type=org.matsim.analysis.VolumesAnalyzerModule$VolumesAnalyzerProvider, annotation=[none]][Scopes.SINGLETON]}
+2016-04-13 23:43:06,436  INFO Injector:80 org.matsim.core.events.handler.EventHandler
+2016-04-13 23:43:06,436  INFO Injector:82    -> of(org.matsim.analysis.LegHistogram@37654521)
+2016-04-13 23:43:06,436  INFO Injector:80 org.matsim.analysis.LegHistogram
+2016-04-13 23:43:06,436  INFO Injector:82    -> of(org.matsim.analysis.LegHistogram@37654521)
+2016-04-13 23:43:06,436  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
+2016-04-13 23:43:06,436  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=46, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@306e95ec}
+2016-04-13 23:43:06,436  INFO Injector:80 org.matsim.core.events.handler.EventHandler
+2016-04-13 23:43:06,436  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.events.handler.EventHandler, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=47, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@4f2b503c[Scopes.SINGLETON]}
+2016-04-13 23:43:06,437  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
+2016-04-13 23:43:06,437  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=48, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@e15b7e8}
+2016-04-13 23:43:06,437  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
+2016-04-13 23:43:06,437  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=49, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@2ed2d9cb[Scopes.SINGLETON]}
+2016-04-13 23:43:06,437  INFO Injector:80 org.matsim.analysis.ScoreStats
+2016-04-13 23:43:06,437  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.analysis.ScoreStats, annotation=[none]], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@2ed2d9cb[Scopes.SINGLETON]}
+2016-04-13 23:43:06,437  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
+2016-04-13 23:43:06,437  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=50, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@5d0a1059}
+2016-04-13 23:43:06,437  INFO Injector:80 org.matsim.core.controler.listener.ControlerListener
+2016-04-13 23:43:06,437  INFO Injector:82    -> FactoryProxy{key=Key[type=org.matsim.core.controler.listener.ControlerListener, annotation=@com.google.inject.multibindings.Element(setName=,uniqueId=51, type=MULTIBINDER, keyType=)], provider=com.google.inject.internal.ConstructorBindingImpl$Factory@54bff557}
+2016-04-13 23:43:06,437  INFO Injector:80 org.matsim.core.controler.OutputDirectoryHierarchy
+2016-04-13 23:43:06,437  INFO Injector:82    -> of(org.matsim.core.controler.OutputDirectoryHierarchy@7c711375)
+2016-04-13 23:43:06,438  INFO Injector:80 org.matsim.analysis.IterationStopWatch
+2016-04-13 23:43:06,438  INFO Injector:82    -> of(org.matsim.analysis.IterationStopWatch@37d4349f)
+2016-04-13 23:43:06,438  INFO Injector:80 org.matsim.api.core.v01.Scenario
+2016-04-13 23:43:06,438  INFO Injector:82    -> of(org.matsim.core.scenario.ScenarioImpl@2805d709)
+2016-04-13 23:43:06,438  INFO Injector:80 org.matsim.core.api.experimental.events.EventsManager
+2016-04-13 23:43:06,438  INFO Injector:82    -> of(org.matsim.core.events.SimStepParallelEventsManagerImpl@3a44431a)
+2016-04-13 23:43:06,438  INFO Injector:80 org.matsim.analysis.CalcLegTimes
+2016-04-13 23:43:06,438  INFO Injector:82    -> com.google.inject.internal.ConstructorBindingImpl$Factory@4f2b503c[Scopes.SINGLETON]
+2016-04-13 23:43:06,438  INFO Injector:80 org.matsim.analysis.ScoreStatsControlerListener
+2016-04-13 23:43:06,438  INFO Injector:82    -> com.google.inject.internal.ConstructorBindingImpl$Factory@2ed2d9cb[Scopes.SINGLETON]
+2016-04-13 23:43:06,439  INFO ScenarioImpl:277 no transit schedule, and transit not activated from config. You must first call the create method of ScenarioImpl.
+2016-04-13 23:43:06,445  INFO StrategyManagerConfigLoader:61 global innovation switch off after iteration: 0
+2016-04-13 23:43:06,445  INFO GenericStrategyManager:345 setting PlanSelectorForRemoval to class org.matsim.core.replanning.selectors.WorstPlanForRemovalSelector
+2016-04-13 23:43:06,448  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.trafficmonitoring.TravelTimeCalculator
+2016-04-13 23:43:06,448  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2016-04-13 23:43:06,448  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkEnterEvent
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:148   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:207     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
+2016-04-13 23:43:06,449  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.trafficmonitoring.TravelTimeCalculator
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkEnterEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkEnterEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.core.api.experimental.events.handler.VehicleArrivesAtFacilityEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.core.api.experimental.events.VehicleArrivesAtFacilityEvent
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.TransitDriverStartsEventHandler
+2016-04-13 23:43:06,450  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.TransitDriverStartsEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.VolumesAnalyzer
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.VolumesAnalyzer
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.LinkLeaveEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.LegHistogram
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,451  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.LegHistogram
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonStuckEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonStuckEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.CalcLegTimes
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityEndEventHandler
+2016-04-13 23:43:06,452  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityEndEvent
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityStartEventHandler
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityStartEvent
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.analysis.CalcLegTimes
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonDepartureEvent
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.PersonArrivalEvent
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityEndEventHandler
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityEndEvent
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:148   org.matsim.api.core.v01.events.handler.ActivityStartEventHandler
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.ActivityStartEvent
+2016-04-13 23:43:06,453  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,454  INFO CalcLinkStats:148  resetting `count' to zero.  This info is here since we want to check when this is happening during normal simulation runs.  kai, jan'11
+2016-04-13 23:43:06,456  INFO ControlerListenerManager:108 calling notifyStartup on org.matsim.counts.CountsControlerListener
+2016-04-13 23:43:06,456  INFO ControlerListenerManager:108 calling notifyStartup on org.matsim.analysis.ScoreStatsControlerListener
+2016-04-13 23:43:06,456  INFO ControlerListenerManager:111 all ControlerStartupListeners called.
+2016-04-13 23:43:06,456  INFO ControlerUtils:57 config dump before iterations start
+2016-04-13 23:43:06,460  INFO ControlerUtils:61 
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">
@@ -836,7 +840,7 @@
 
 		<param name="logitScaleParamForPlansRemoval" value="1.0" />
 
-		<!-- Options: [Lorg.matsim.core.config.groups.VspExperimentalConfigGroup$VspDefaultsCheckingLevel;@221a3fa4.  When violating VSP defaults, this results in nothing, logfile infos, logfile warnings, or aborts.  Members of VSP should use `abort' or talk to kai. -->
+		<!-- Options: [Lorg.matsim.core.config.groups.VspExperimentalConfigGroup$VspDefaultsCheckingLevel;@24569dba.  When violating VSP defaults, this results in nothing, logfile infos, logfile warnings, or aborts.  Members of VSP should use `abort' or talk to kai. -->
 		<param name="vspDefaultsCheckingLevel" value="ignore" />
 
 		<!-- if true then writes output_events in output directory.  default is `false'. Will only work when lastIteration is multiple of events writing interval -->
@@ -847,9 +851,9 @@
 
 </config>
 
-2016-04-13 09:30:59,150  INFO ControlerUtils:62 Complete config dump done.
-2016-04-13 09:30:59,150  INFO ControlerUtils:63 Checking consistency of config...
-2016-04-13 09:30:59,150  INFO PlanCalcScoreConfigGroup:397 NO OPENING OR CLOSING TIMES DEFINED!
+2016-04-13 23:43:06,461  INFO ControlerUtils:62 Complete config dump done.
+2016-04-13 23:43:06,461  INFO ControlerUtils:63 Checking consistency of config...
+2016-04-13 23:43:06,462  INFO PlanCalcScoreConfigGroup:397 NO OPENING OR CLOSING TIMES DEFINED!
 
 
 There is no activity type that has an opening *and* closing time (or opening time and late penalty) defined.
@@ -860,178 +864,178 @@ If you are using MATSim without time adaptation, you can ignore this warning.
 
 
 
-2016-04-13 09:30:59,151  INFO VspConfigConsistencyCheckerImpl:55 NOT running vsp config consistency check because vsp defaults checking level is set to IGNORE
-2016-04-13 09:30:59,151  INFO ControlerUtils:65 Checking consistency of config done.
-2016-04-13 09:30:59,157  INFO NetworkImpl:358 building QuadTree for nodes: xrange(-1.0,100001.0); yrange(-1.0,100001.0)
-2016-04-13 09:30:59,159  INFO NetworkImpl:367 Building QuadTree took 0.002 seconds.
-2016-04-13 09:30:59,161  INFO Counter:51 [PersonPrepareForSim] handled person # 1
-2016-04-13 09:30:59,161  INFO Counter:51 [PersonPrepareForSim] handled person # 2
-2016-04-13 09:30:59,161  INFO Counter:51 [PersonPrepareForSim] handled person # 4
-2016-04-13 09:30:59,161  INFO Counter:51 [PersonPrepareForSim] handled person # 8
-2016-04-13 09:30:59,161  INFO Counter:51 [PersonPrepareForSim] handled person # 16
-2016-04-13 09:30:59,162  INFO Counter:51 [PersonPrepareForSim] handled person # 32
-2016-04-13 09:30:59,163  INFO Counter:51 [PersonPrepareForSim] handled person # 64
-2016-04-13 09:30:59,164  INFO Counter:57 [PersonPrepareForSim] handled person # 99
-2016-04-13 09:30:59,164  INFO AbstractController:240 ###################################################
-2016-04-13 09:30:59,164  INFO AbstractController:241 ### ITERATION 0 BEGINS
-2016-04-13 09:30:59,165  INFO ControlerListenerManager:141 calling notifyIterationStarts on org.matsim.core.controler.corelisteners.PlansScoringImpl
-2016-04-13 09:30:59,171  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.scoring.EventsToScore
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.scoring.EventsToScore
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
-2016-04-13 09:30:59,172  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,172  INFO ControlerListenerManager:146 calling notifyIterationStarts on org.matsim.core.controler.corelisteners.LegHistogramListener
-2016-04-13 09:30:59,172  INFO ControlerListenerManager:146 calling notifyIterationStarts on org.matsim.core.controler.corelisteners.LinkStatsControlerListener
-2016-04-13 09:30:59,172  INFO ControlerListenerManager:149 [it.0] all ControlerIterationStartsListeners called.
-2016-04-13 09:30:59,173  INFO ControlerListenerManager:225 calling notifyBeforeMobsim on org.matsim.core.controler.corelisteners.EventsHandlingImpl
-2016-04-13 09:30:59,173  INFO EventsManagerImpl:170 resetting Event-Handlers
-2016-04-13 09:30:59,173  INFO EventsManagerImpl:177   org.matsim.core.trafficmonitoring.TravelTimeCalculator
-2016-04-13 09:30:59,173  INFO EventsManagerImpl:177   org.matsim.analysis.VolumesAnalyzer
-2016-04-13 09:30:59,173  INFO EventsManagerImpl:177   org.matsim.analysis.LegHistogram
-2016-04-13 09:30:59,173  INFO EventsManagerImpl:177   org.matsim.analysis.CalcLegTimes
-2016-04-13 09:30:59,173  INFO EventsManagerImpl:177   org.matsim.core.scoring.EventsToScore
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:148   org.matsim.core.events.algorithms.EventWriter
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:148   org.matsim.core.events.algorithms.EventWriter
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
-2016-04-13 09:30:59,176  INFO EventsManagerImpl:156 
-2016-04-13 09:30:59,177  INFO ControlerListenerManager:225 calling notifyBeforeMobsim on org.matsim.core.controler.corelisteners.PlansDumpingImpl
-2016-04-13 09:30:59,177  INFO PlansDumpingImpl:93 dumping plans...
-2016-04-13 09:30:59,179  INFO Counter:51 [PopulationWriter] dumped person # 1
-2016-04-13 09:30:59,180  INFO Counter:51 [PopulationWriter] dumped person # 2
-2016-04-13 09:30:59,180  INFO Counter:51 [PopulationWriter] dumped person # 4
-2016-04-13 09:30:59,180  INFO Counter:51 [PopulationWriter] dumped person # 8
-2016-04-13 09:30:59,181  INFO Counter:51 [PopulationWriter] dumped person # 16
-2016-04-13 09:30:59,182  INFO Counter:51 [PopulationWriter] dumped person # 32
-2016-04-13 09:30:59,184  INFO Counter:51 [PopulationWriter] dumped person # 64
-2016-04-13 09:30:59,185  INFO PopulationWriter:95 Population written to: ./output/ITERS/it.0/0.plans.xml.gz
-2016-04-13 09:30:59,186  INFO Counter:57 [PopulationWriter] dumped person # 99
-2016-04-13 09:30:59,186  INFO PlansDumpingImpl:95 finished plans dump.
-2016-04-13 09:30:59,186  INFO ControlerListenerManager:230 calling notifyBeforeMobsim on org.matsim.population.VspPlansCleaner
-2016-04-13 09:30:59,186  INFO ControlerListenerManager:233 [it.0] all ControlerBeforeMobsimListeners called.
-2016-04-13 09:30:59,205  INFO MobsimListenerManager:49 calling addQueueSimulationListener
-2016-04-13 09:30:59,206  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimInitializedListener
-2016-04-13 09:30:59,206  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimBeforeCleanupListener
-2016-04-13 09:30:59,206  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimListener
-2016-04-13 09:30:59,206  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.vis.snapshotwriters.SnapshotWriterManager
-2016-04-13 09:30:59,206  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimAfterSimStepListener
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,209  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,210  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,210  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,210  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
-2016-04-13 09:30:59,210  WARN QVehicle:79  Future occurences of this logging statement are suppressed.
-2016-04-13 09:30:59,212  INFO QNetsimEngine:534 Assigned 10 nodes and 10 links to QSimEngineRunner #0
-2016-04-13 09:30:59,213  INFO EventsManagerImpl:134  event # 1
-2016-04-13 09:30:59,218  INFO EventsManagerImpl:134  event # 2
-2016-04-13 09:30:59,218  INFO EventsManagerImpl:134  event # 4
-2016-04-13 09:30:59,219  INFO EventsManagerImpl:134  event # 8
-2016-04-13 09:30:59,219  INFO EventsManagerImpl:134  event # 16
-2016-04-13 09:30:59,220  INFO EventsManagerImpl:134  event # 32
-2016-04-13 09:30:59,220  INFO EventsManagerImpl:134  event # 64
-2016-04-13 09:30:59,221  INFO EventsManagerImpl:134  event # 128
-2016-04-13 09:30:59,225  INFO EventsManagerImpl:134  event # 256
-2016-04-13 09:30:59,230  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 06:00:00 : #links=1 #nodes=0
-2016-04-13 09:30:59,230  INFO QSim:426 SIMULATION (NEW QSim) AT 06:00:00 : #Veh=99 lost=0 simT=0.0s realT=0s; (s/r): 0.0
-2016-04-13 09:30:59,230  INFO Gbl:52 used RAM: 38673104B = 37766kB = 36MB  free: 114943280B = 109MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,232  INFO EventsManagerImpl:134  event # 512
-2016-04-13 09:30:59,263  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 07:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,263  INFO QSim:426 SIMULATION (NEW QSim) AT 07:00:00 : #Veh=99 lost=0 simT=3600.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,263  INFO Gbl:52 used RAM: 40258464B = 39314kB = 38MB  free: 113357920B = 108MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,297  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 08:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,297  INFO QSim:426 SIMULATION (NEW QSim) AT 08:00:00 : #Veh=99 lost=0 simT=7200.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,297  INFO Gbl:52 used RAM: 41843856B = 40863kB = 39MB  free: 111772528B = 106MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,327  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 09:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,328  INFO QSim:426 SIMULATION (NEW QSim) AT 09:00:00 : #Veh=99 lost=0 simT=10800.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,328  INFO Gbl:52 used RAM: 43697728B = 42673kB = 41MB  free: 109918656B = 104MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,354  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 10:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,354  INFO QSim:426 SIMULATION (NEW QSim) AT 10:00:00 : #Veh=99 lost=0 simT=14400.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,354  INFO Gbl:52 used RAM: 45283152B = 44221kB = 43MB  free: 108333232B = 103MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,365  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 11:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,366  INFO QSim:426 SIMULATION (NEW QSim) AT 11:00:00 : #Veh=99 lost=0 simT=18000.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,366  INFO Gbl:52 used RAM: 45820032B = 44746kB = 43MB  free: 107796352B = 102MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,395  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 12:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,395  INFO QSim:426 SIMULATION (NEW QSim) AT 12:00:00 : #Veh=99 lost=0 simT=21600.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,395  INFO Gbl:52 used RAM: 47136984B = 46032kB = 44MB  free: 106479400B = 101MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,425  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 13:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,426  INFO QSim:426 SIMULATION (NEW QSim) AT 13:00:00 : #Veh=99 lost=0 simT=25200.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,426  INFO Gbl:52 used RAM: 48990864B = 47842kB = 46MB  free: 104625520B = 99MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,457  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 14:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,457  INFO QSim:426 SIMULATION (NEW QSim) AT 14:00:00 : #Veh=99 lost=0 simT=28800.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,457  INFO Gbl:52 used RAM: 49527808B = 48367kB = 47MB  free: 104088576B = 99MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,487  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 15:00:00 : #links=0 #nodes=0
-2016-04-13 09:30:59,487  INFO QSim:426 SIMULATION (NEW QSim) AT 15:00:00 : #Veh=99 lost=0 simT=32400.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,487  INFO Gbl:52 used RAM: 51381824B = 50177kB = 49MB  free: 102234560B = 97MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,520  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 16:00:00 : #links=1 #nodes=0
-2016-04-13 09:30:59,520  INFO QSim:426 SIMULATION (NEW QSim) AT 16:00:00 : #Veh=99 lost=0 simT=36000.0s realT=0s; (s/r): Infinity
-2016-04-13 09:30:59,520  INFO Gbl:52 used RAM: 53504216B = 52250kB = 51MB  free: 100112168B = 95MB  total: 153616384B = 146MB
-2016-04-13 09:30:59,520  INFO EventsManagerImpl:134  event # 1024
-2016-04-13 09:30:59,523  INFO Gbl:185 Thread performance: Thread=QNetsimEngineRunner_0  cpu-time=0.1248008sec
-2016-04-13 09:30:59,536  INFO AbstractController$8:329 ### ITERATION 0 fires after mobsim event
-2016-04-13 09:30:59,536  INFO ControlerListenerManager:244 calling notifyAfterMobsim on org.matsim.core.controler.corelisteners.EventsHandlingImpl
-2016-04-13 09:30:59,536  INFO ControlerListenerManager:249 calling notifyAfterMobsim on org.matsim.analysis.LegTimesControlerListener
-2016-04-13 09:30:59,536  INFO Gbl:185 Thread performance: Thread=class org.matsim.core.events.SimStepParallelEventsManagerImpl$ProcessEventsRunnable0  cpu-time=0.0936006sec
-2016-04-13 09:30:59,537  INFO LegTimesControlerListener:50 [0] average trip (probably: leg) duration is: 1 seconds = 00:00:01
-2016-04-13 09:30:59,537  INFO ControlerListenerManager:252 [it.0] all ControlerAfterMobsimListeners called.
-2016-04-13 09:30:59,537  INFO AbstractController$4:266 ### ITERATION 0 fires scoring event
-2016-04-13 09:30:59,537  INFO ControlerListenerManager:184 calling notifyScoring on org.matsim.core.controler.corelisteners.PlansScoringImpl
-2016-04-13 09:30:59,538  INFO EventsToScore:178 it: 0 msaStart: null
-2016-04-13 09:30:59,538  INFO ControlerListenerManager:195 [it.0] all ControlerScoringListeners called.
-2016-04-13 09:30:59,538  INFO AbstractController$5:274 ### ITERATION 0 fires iteration end event
-2016-04-13 09:30:59,539  INFO ControlerListenerManager:161 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.EventsHandlingImpl
-2016-04-13 09:30:59,539  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
-2016-04-13 09:30:59,539  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
-2016-04-13 09:30:59,539  INFO ControlerListenerManager:161 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.PlansScoringImpl
-2016-04-13 09:30:59,539  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.scoring.EventsToScore
-2016-04-13 09:30:59,539  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.scoring.EventsToScore
-2016-04-13 09:30:59,540  INFO TravelDistanceStats:122 [TravelDistanceStats] using 2 thread(s).
-2016-04-13 09:30:59,541  INFO TravelDistanceStats:135 [TravelDistanceStats] all threads finished.
-2016-04-13 09:30:59,541  INFO TravelDistanceStats:155 -- average of the average leg distance per plan (executed plans only): 0.0
-2016-04-13 09:30:59,541  INFO TravelDistanceStats:156 (TravelDistanceStats takes an average over all legs where the simulation reports travelled distances. These are car legs, pt legs,
-2016-04-13 09:30:59,541  INFO TravelDistanceStats:157 (and teleported legs whose route contains a distance.)
-2016-04-13 09:30:59,541  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.counts.CountsControlerListener
-2016-04-13 09:30:59,541  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.analysis.ScoreStatsControlerListener
-2016-04-13 09:30:59,541  INFO ScoreStatsControlerListener:187 -- avg. score of the executed plan of each agent: 141.80364413985805
-2016-04-13 09:30:59,541  INFO ScoreStatsControlerListener:188 -- avg. score of the worst plan of each agent: 141.80364413985805
-2016-04-13 09:30:59,541  INFO ScoreStatsControlerListener:189 -- avg. of the avg. plan score per agent: 141.80364413985805
-2016-04-13 09:30:59,541  INFO ScoreStatsControlerListener:190 -- avg. score of the best plan of each agent: 141.80364413985805
-2016-04-13 09:30:59,542  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.LegHistogramListener
-2016-04-13 09:30:59,546  INFO LegHistogramListener:81 number of legs:	198	100%
-2016-04-13 09:30:59,547  INFO LegHistogramListener:88 number of car legs:	198	100.0%
-2016-04-13 09:30:59,547  INFO LegHistogramListener:90 (car legs include legs by pt vehicles)
-2016-04-13 09:30:59,943  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.LinkStatsControlerListener
-2016-04-13 09:30:59,943  INFO ControlerListenerManager:172 [it.0] all ControlerIterationEndsListeners called.
-2016-04-13 09:31:00,049  INFO AbstractController:284 ### ITERATION 0 ENDS
-2016-04-13 09:31:00,049  INFO AbstractController:285 ###################################################
-2016-04-13 09:31:00,049  INFO AbstractController:203 S H U T D O W N   ---   start shutdown.
-2016-04-13 09:31:00,049  INFO ControlerListenerManager:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.EventsHandlingImpl
-2016-04-13 09:31:00,049  INFO ControlerListenerManager:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.PlansScoringImpl
-2016-04-13 09:31:00,050  INFO ControlerListenerManager:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.DumpDataAtEndImpl
-2016-04-13 09:31:00,050  INFO Counter:51 [PopulationWriter] dumped person # 1
-2016-04-13 09:31:00,050  INFO Counter:51 [PopulationWriter] dumped person # 2
-2016-04-13 09:31:00,050  INFO Counter:51 [PopulationWriter] dumped person # 4
-2016-04-13 09:31:00,050  INFO Counter:51 [PopulationWriter] dumped person # 8
-2016-04-13 09:31:00,051  INFO Counter:51 [PopulationWriter] dumped person # 16
-2016-04-13 09:31:00,051  INFO Counter:51 [PopulationWriter] dumped person # 32
-2016-04-13 09:31:00,052  INFO Counter:51 [PopulationWriter] dumped person # 64
-2016-04-13 09:31:00,052  INFO PopulationWriter:95 Population written to: ./output/output_plans.xml.gz
-2016-04-13 09:31:00,053  INFO Counter:57 [PopulationWriter] dumped person # 99
-2016-04-13 09:31:00,055  INFO NetworkWriter:46 Writing network to file: ./output/output_network.xml.gz...
-2016-04-13 09:31:00,056  INFO NetworkWriter:49 done.
-2016-04-13 09:31:00,060  INFO ControlerListenerManager:127 calling notifyShutdown on org.matsim.analysis.ScoreStatsControlerListener
-2016-04-13 09:31:00,060  INFO ControlerListenerManager:130 all ControlerShutdownListeners called.
-2016-04-13 09:31:00,060  INFO AbstractController:226 S H U T D O W N   ---   shutdown completed.
-2016-04-13 09:31:00,060  INFO OutputDirectoryLogging:168 closing the logfile, i.e. messages sent to the logger after this message are not written to the logfile.
+2016-04-13 23:43:06,462  INFO VspConfigConsistencyCheckerImpl:55 NOT running vsp config consistency check because vsp defaults checking level is set to IGNORE
+2016-04-13 23:43:06,462  INFO ControlerUtils:65 Checking consistency of config done.
+2016-04-13 23:43:06,468  INFO NetworkImpl:358 building QuadTree for nodes: xrange(-1.0,100001.0); yrange(-1.0,100001.0)
+2016-04-13 23:43:06,470  INFO NetworkImpl:367 Building QuadTree took 0.002 seconds.
+2016-04-13 23:43:06,472  INFO Counter:51 [PersonPrepareForSim] handled person # 1
+2016-04-13 23:43:06,472  INFO Counter:51 [PersonPrepareForSim] handled person # 2
+2016-04-13 23:43:06,472  INFO Counter:51 [PersonPrepareForSim] handled person # 4
+2016-04-13 23:43:06,473  INFO Counter:51 [PersonPrepareForSim] handled person # 8
+2016-04-13 23:43:06,473  INFO Counter:51 [PersonPrepareForSim] handled person # 16
+2016-04-13 23:43:06,473  INFO Counter:51 [PersonPrepareForSim] handled person # 32
+2016-04-13 23:43:06,474  INFO Counter:51 [PersonPrepareForSim] handled person # 64
+2016-04-13 23:43:06,476  INFO Counter:57 [PersonPrepareForSim] handled person # 99
+2016-04-13 23:43:06,476  INFO AbstractController:240 ###################################################
+2016-04-13 23:43:06,476  INFO AbstractController:241 ### ITERATION 0 BEGINS
+2016-04-13 23:43:06,477  INFO ControlerListenerManager:141 calling notifyIterationStarts on org.matsim.core.controler.corelisteners.PlansScoringImpl
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.scoring.EventsToScore
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.scoring.EventsToScore
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
+2016-04-13 23:43:06,483  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,484  INFO ControlerListenerManager:146 calling notifyIterationStarts on org.matsim.core.controler.corelisteners.LegHistogramListener
+2016-04-13 23:43:06,484  INFO ControlerListenerManager:146 calling notifyIterationStarts on org.matsim.core.controler.corelisteners.LinkStatsControlerListener
+2016-04-13 23:43:06,484  INFO ControlerListenerManager:149 [it.0] all ControlerIterationStartsListeners called.
+2016-04-13 23:43:06,484  INFO ControlerListenerManager:225 calling notifyBeforeMobsim on org.matsim.core.controler.corelisteners.EventsHandlingImpl
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:170 resetting Event-Handlers
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:177   org.matsim.core.trafficmonitoring.TravelTimeCalculator
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:177   org.matsim.analysis.VolumesAnalyzer
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:177   org.matsim.analysis.LegHistogram
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:177   org.matsim.analysis.CalcLegTimes
+2016-04-13 23:43:06,484  INFO EventsManagerImpl:177   org.matsim.core.scoring.EventsToScore
+2016-04-13 23:43:06,486  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
+2016-04-13 23:43:06,486  INFO EventsManagerImpl:148   org.matsim.core.events.algorithms.EventWriter
+2016-04-13 23:43:06,486  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:144 adding Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:148   org.matsim.core.events.algorithms.EventWriter
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:148   org.matsim.core.events.handler.BasicEventHandler
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:207     > org.matsim.api.core.v01.events.Event
+2016-04-13 23:43:06,487  INFO EventsManagerImpl:156 
+2016-04-13 23:43:06,488  INFO ControlerListenerManager:225 calling notifyBeforeMobsim on org.matsim.core.controler.corelisteners.PlansDumpingImpl
+2016-04-13 23:43:06,488  INFO PlansDumpingImpl:93 dumping plans...
+2016-04-13 23:43:06,490  INFO Counter:51 [PopulationWriter] dumped person # 1
+2016-04-13 23:43:06,491  INFO Counter:51 [PopulationWriter] dumped person # 2
+2016-04-13 23:43:06,491  INFO Counter:51 [PopulationWriter] dumped person # 4
+2016-04-13 23:43:06,491  INFO Counter:51 [PopulationWriter] dumped person # 8
+2016-04-13 23:43:06,491  INFO Counter:51 [PopulationWriter] dumped person # 16
+2016-04-13 23:43:06,493  INFO Counter:51 [PopulationWriter] dumped person # 32
+2016-04-13 23:43:06,494  INFO Counter:51 [PopulationWriter] dumped person # 64
+2016-04-13 23:43:06,496  INFO PopulationWriter:95 Population written to: ./output/ITERS/it.0/0.plans.xml.gz
+2016-04-13 23:43:06,496  INFO Counter:57 [PopulationWriter] dumped person # 99
+2016-04-13 23:43:06,496  INFO PlansDumpingImpl:95 finished plans dump.
+2016-04-13 23:43:06,496  INFO ControlerListenerManager:230 calling notifyBeforeMobsim on org.matsim.population.VspPlansCleaner
+2016-04-13 23:43:06,497  INFO ControlerListenerManager:233 [it.0] all ControlerBeforeMobsimListeners called.
+2016-04-13 23:43:06,515  INFO MobsimListenerManager:49 calling addQueueSimulationListener
+2016-04-13 23:43:06,516  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimAfterSimStepListener
+2016-04-13 23:43:06,516  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.vis.snapshotwriters.SnapshotWriterManager
+2016-04-13 23:43:06,516  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimInitializedListener
+2016-04-13 23:43:06,516  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimBeforeCleanupListener
+2016-04-13 23:43:06,516  INFO MobsimListenerManager:53   assigned class org.matsim.core.mobsim.framework.listeners.MobsimListener to interface org.matsim.core.mobsim.framework.listeners.MobsimListener
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,519  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,520  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,520  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,520  WARN QVehicle:74 No VehicleCapacity (= maximum number of passengers) set in Vehicle. Using default value of 4.  This is only a problem if you need vehicles with different capacities, e.g. for minibuses.
+2016-04-13 23:43:06,520  WARN QVehicle:79  Future occurences of this logging statement are suppressed.
+2016-04-13 23:43:06,521  INFO QNetsimEngine:534 Assigned 10 nodes and 10 links to QSimEngineRunner #0
+2016-04-13 23:43:06,523  INFO EventsManagerImpl:134  event # 1
+2016-04-13 23:43:06,530  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 06:00:00 : #links=1 #nodes=0
+2016-04-13 23:43:06,530  INFO EventsManagerImpl:134  event # 2
+2016-04-13 23:43:06,531  INFO QSim:426 SIMULATION (NEW QSim) AT 06:00:00 : #Veh=99 lost=0 simT=0.0s realT=0s; (s/r): 0.0
+2016-04-13 23:43:06,531  INFO Gbl:52 used RAM: 37953664B = 37064kB = 36MB  free: 115662720B = 110MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,531  INFO EventsManagerImpl:134  event # 4
+2016-04-13 23:43:06,531  INFO EventsManagerImpl:134  event # 8
+2016-04-13 23:43:06,531  INFO EventsManagerImpl:134  event # 16
+2016-04-13 23:43:06,532  INFO EventsManagerImpl:134  event # 32
+2016-04-13 23:43:06,532  INFO EventsManagerImpl:134  event # 64
+2016-04-13 23:43:06,534  INFO EventsManagerImpl:134  event # 128
+2016-04-13 23:43:06,536  INFO EventsManagerImpl:134  event # 256
+2016-04-13 23:43:06,543  INFO EventsManagerImpl:134  event # 512
+2016-04-13 23:43:06,580  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 07:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,580  INFO QSim:426 SIMULATION (NEW QSim) AT 07:00:00 : #Veh=99 lost=0 simT=3600.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,580  INFO Gbl:52 used RAM: 40098448B = 39158kB = 38MB  free: 113517936B = 108MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,613  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 08:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,613  INFO QSim:426 SIMULATION (NEW QSim) AT 08:00:00 : #Veh=99 lost=0 simT=7200.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,613  INFO Gbl:52 used RAM: 41974728B = 40990kB = 40MB  free: 111641656B = 106MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,645  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 09:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,645  INFO QSim:426 SIMULATION (NEW QSim) AT 09:00:00 : #Veh=99 lost=0 simT=10800.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,645  INFO Gbl:52 used RAM: 43582544B = 42561kB = 41MB  free: 110033840B = 104MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,679  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 10:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,679  INFO QSim:426 SIMULATION (NEW QSim) AT 10:00:00 : #Veh=99 lost=0 simT=14400.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,679  INFO Gbl:52 used RAM: 44387936B = 43347kB = 42MB  free: 109228448B = 104MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,713  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 11:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,713  INFO QSim:426 SIMULATION (NEW QSim) AT 11:00:00 : #Veh=99 lost=0 simT=18000.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,713  INFO Gbl:52 used RAM: 45995760B = 44917kB = 43MB  free: 107620624B = 102MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,745  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 12:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,745  INFO QSim:426 SIMULATION (NEW QSim) AT 12:00:00 : #Veh=99 lost=0 simT=21600.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,745  INFO Gbl:52 used RAM: 47603592B = 46487kB = 45MB  free: 106012792B = 101MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,778  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 13:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,778  INFO QSim:426 SIMULATION (NEW QSim) AT 13:00:00 : #Veh=99 lost=0 simT=25200.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,778  INFO Gbl:52 used RAM: 48140536B = 47012kB = 45MB  free: 105475848B = 100MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,810  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 14:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,810  INFO QSim:426 SIMULATION (NEW QSim) AT 14:00:00 : #Veh=99 lost=0 simT=28800.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,810  INFO Gbl:52 used RAM: 50016840B = 48844kB = 47MB  free: 103599544B = 98MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,841  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 15:00:00 : #links=0 #nodes=0
+2016-04-13 23:43:06,841  INFO QSim:426 SIMULATION (NEW QSim) AT 15:00:00 : #Veh=99 lost=0 simT=32400.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,841  INFO Gbl:52 used RAM: 51624664B = 50414kB = 49MB  free: 101991720B = 97MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,873  INFO QNetsimEngine:364 SIMULATION (QNetsimEngine) AT 16:00:00 : #links=1 #nodes=0
+2016-04-13 23:43:06,874  INFO QSim:426 SIMULATION (NEW QSim) AT 16:00:00 : #Veh=99 lost=0 simT=36000.0s realT=0s; (s/r): Infinity
+2016-04-13 23:43:06,874  INFO Gbl:52 used RAM: 52698528B = 51463kB = 50MB  free: 100917856B = 96MB  total: 153616384B = 146MB
+2016-04-13 23:43:06,874  INFO EventsManagerImpl:134  event # 1024
+2016-04-13 23:43:06,878  INFO Gbl:185 Thread performance: Thread=QNetsimEngineRunner_0  cpu-time=0.1404009sec
+2016-04-13 23:43:06,878  INFO AbstractController$8:329 ### ITERATION 0 fires after mobsim event
+2016-04-13 23:43:06,878  INFO ControlerListenerManager:244 calling notifyAfterMobsim on org.matsim.core.controler.corelisteners.EventsHandlingImpl
+2016-04-13 23:43:06,878  INFO ControlerListenerManager:249 calling notifyAfterMobsim on org.matsim.analysis.LegTimesControlerListener
+2016-04-13 23:43:06,878  INFO Gbl:185 Thread performance: Thread=class org.matsim.core.events.SimStepParallelEventsManagerImpl$ProcessEventsRunnable0  cpu-time=0.0780005sec
+2016-04-13 23:43:06,879  INFO LegTimesControlerListener:50 [0] average trip (probably: leg) duration is: 1 seconds = 00:00:01
+2016-04-13 23:43:06,879  INFO ControlerListenerManager:252 [it.0] all ControlerAfterMobsimListeners called.
+2016-04-13 23:43:06,879  INFO AbstractController$4:266 ### ITERATION 0 fires scoring event
+2016-04-13 23:43:06,879  INFO ControlerListenerManager:184 calling notifyScoring on org.matsim.core.controler.corelisteners.PlansScoringImpl
+2016-04-13 23:43:06,880  INFO EventsToScore:178 it: 0 msaStart: null
+2016-04-13 23:43:06,880  INFO ControlerListenerManager:195 [it.0] all ControlerScoringListeners called.
+2016-04-13 23:43:06,880  INFO AbstractController$5:274 ### ITERATION 0 fires iteration end event
+2016-04-13 23:43:06,881  INFO ControlerListenerManager:161 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.EventsHandlingImpl
+2016-04-13 23:43:06,882  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
+2016-04-13 23:43:06,882  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.events.algorithms.EventWriterXML
+2016-04-13 23:43:06,882  INFO ControlerListenerManager:161 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.PlansScoringImpl
+2016-04-13 23:43:06,882  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.scoring.EventsToScore
+2016-04-13 23:43:06,882  INFO EventsManagerImpl:161 removing Event-Handler: org.matsim.core.scoring.EventsToScore
+2016-04-13 23:43:06,883  INFO TravelDistanceStats:122 [TravelDistanceStats] using 2 thread(s).
+2016-04-13 23:43:06,884  INFO TravelDistanceStats:135 [TravelDistanceStats] all threads finished.
+2016-04-13 23:43:06,884  INFO TravelDistanceStats:155 -- average of the average leg distance per plan (executed plans only): 0.0
+2016-04-13 23:43:06,884  INFO TravelDistanceStats:156 (TravelDistanceStats takes an average over all legs where the simulation reports travelled distances. These are car legs, pt legs,
+2016-04-13 23:43:06,884  INFO TravelDistanceStats:157 (and teleported legs whose route contains a distance.)
+2016-04-13 23:43:06,884  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.counts.CountsControlerListener
+2016-04-13 23:43:06,884  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.analysis.ScoreStatsControlerListener
+2016-04-13 23:43:06,884  INFO ScoreStatsControlerListener:187 -- avg. score of the executed plan of each agent: 141.80364413985805
+2016-04-13 23:43:06,884  INFO ScoreStatsControlerListener:188 -- avg. score of the worst plan of each agent: 141.80364413985805
+2016-04-13 23:43:06,884  INFO ScoreStatsControlerListener:189 -- avg. of the avg. plan score per agent: 141.80364413985805
+2016-04-13 23:43:06,884  INFO ScoreStatsControlerListener:190 -- avg. score of the best plan of each agent: 141.80364413985805
+2016-04-13 23:43:06,884  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.LegHistogramListener
+2016-04-13 23:43:06,890  INFO LegHistogramListener:81 number of legs:	198	100%
+2016-04-13 23:43:06,890  INFO LegHistogramListener:88 number of car legs:	198	100.0%
+2016-04-13 23:43:06,890  INFO LegHistogramListener:90 (car legs include legs by pt vehicles)
+2016-04-13 23:43:07,197  INFO ControlerListenerManager:168 calling notifyIterationEnds on org.matsim.core.controler.corelisteners.LinkStatsControlerListener
+2016-04-13 23:43:07,197  INFO ControlerListenerManager:172 [it.0] all ControlerIterationEndsListeners called.
+2016-04-13 23:43:07,294  INFO AbstractController:284 ### ITERATION 0 ENDS
+2016-04-13 23:43:07,295  INFO AbstractController:285 ###################################################
+2016-04-13 23:43:07,295  INFO AbstractController:203 S H U T D O W N   ---   start shutdown.
+2016-04-13 23:43:07,295  INFO ControlerListenerManager:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.EventsHandlingImpl
+2016-04-13 23:43:07,295  INFO ControlerListenerManager:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.PlansScoringImpl
+2016-04-13 23:43:07,295  INFO ControlerListenerManager:122 calling notifyShutdown on org.matsim.core.controler.corelisteners.DumpDataAtEndImpl
+2016-04-13 23:43:07,297  INFO Counter:51 [PopulationWriter] dumped person # 1
+2016-04-13 23:43:07,297  INFO Counter:51 [PopulationWriter] dumped person # 2
+2016-04-13 23:43:07,297  INFO Counter:51 [PopulationWriter] dumped person # 4
+2016-04-13 23:43:07,297  INFO Counter:51 [PopulationWriter] dumped person # 8
+2016-04-13 23:43:07,297  INFO Counter:51 [PopulationWriter] dumped person # 16
+2016-04-13 23:43:07,298  INFO Counter:51 [PopulationWriter] dumped person # 32
+2016-04-13 23:43:07,298  INFO Counter:51 [PopulationWriter] dumped person # 64
+2016-04-13 23:43:07,300  INFO PopulationWriter:95 Population written to: ./output/output_plans.xml.gz
+2016-04-13 23:43:07,301  INFO Counter:57 [PopulationWriter] dumped person # 99
+2016-04-13 23:43:07,303  INFO NetworkWriter:46 Writing network to file: ./output/output_network.xml.gz...
+2016-04-13 23:43:07,304  INFO NetworkWriter:49 done.
+2016-04-13 23:43:07,308  INFO ControlerListenerManager:127 calling notifyShutdown on org.matsim.analysis.ScoreStatsControlerListener
+2016-04-13 23:43:07,308  INFO ControlerListenerManager:130 all ControlerShutdownListeners called.
+2016-04-13 23:43:07,308  INFO AbstractController:226 S H U T D O W N   ---   shutdown completed.
+2016-04-13 23:43:07,308  INFO OutputDirectoryLogging:168 closing the logfile, i.e. messages sent to the logger after this message are not written to the logfile.
