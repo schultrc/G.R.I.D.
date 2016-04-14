@@ -8,9 +8,10 @@ public class Road {
 	// Each road is a one way
 	
 	private static final Double ourDefaultValue = (double) 1;
-	
-	private Intersection from;
+
+	private Long Id = -1L;
 	private Intersection to;
+	private Intersection from;
 	
 	// Defined in meters
 	private double Length;
@@ -24,7 +25,6 @@ public class Road {
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
 	private ConcurrentHashMap<Long, Double> roadCapacity = new ConcurrentHashMap<Long, Double>();
 	
-	private Long Id = -1L;
 	
 	public Road(Long theId)
 	{
