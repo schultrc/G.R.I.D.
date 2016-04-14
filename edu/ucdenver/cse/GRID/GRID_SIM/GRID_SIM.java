@@ -18,7 +18,7 @@ public class GRID_SIM {
 
 		System.out.println("It's not hard--you just gotta use finesse!");
 		
-		String configFile = Utils.chooseFile();
+		String configFile = GRIDutils.chooseFile();
 	        
 	    if (configFile == "") {
 	    	System.out.println("You didn't chose a config file!!!");

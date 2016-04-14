@@ -11,12 +11,12 @@ import java.util.*;
 
 public class selfishAlg {
 
-    private ConcurrentMap<Long, Intersection> nodes;
-    private ConcurrentMap<Long, Road> edges;
-    private Set<Intersection> visited;
-    private Set<Intersection> unVisited;
-    private ConcurrentMap<Intersection, Intersection> previousNodes;
-    private ConcurrentMap<Intersection, Double> currentPathTotal;
+    private ConcurrentMap<Long, GRIDintersection> nodes;
+    private ConcurrentMap<Long, GRIDroad> edges;
+    private Set<GRIDintersection> visited;
+    private Set<GRIDintersection> unVisited;
+    private ConcurrentMap<GRIDintersection, GRIDintersection> previousNodes;
+    private ConcurrentMap<GRIDintersection, Double> currentPathTotal;
 
     public selfishAlg(GRIDMap selfishMap){
 
@@ -24,25 +24,25 @@ public class selfishAlg {
         this.edges = selfishMap.getRoads();
     }
 
-    public void findPath(Intersection source){
-        visited = new HashSet<Intersection>();
-        unVisited = new HashSet<Intersection>();
+    public void findPath(GRIDintersection source){
+        visited = new HashSet<GRIDintersection>();
+        unVisited = new HashSet<GRIDintersection>();
         currentPathTotal = new ConcurrentHashMap<>();
         previousNodes = new ConcurrentHashMap<>();
         currentPathTotal.put(source,0D);
         unVisited.add(source);
 
         while(unVisited.size() > 0){
-            Intersection node = getMin(unVisited);
+            GRIDintersection node = getMin(unVisited);
             visited.add(node);
             unVisited.remove(node);
             findOptimalEdges(node);
         }
     }
 
-    private Intersection getMin(Set<Intersection> nodes){
-        Intersection min = null;
-        for(Intersection node : nodes){
+    private GRIDintersection getMin(Set<GRIDintersection> nodes){
+        GRIDintersection min = null;
+        for(GRIDintersection node : nodes){
             if(min == null){
                 min = node;
             }
@@ -56,7 +56,7 @@ public class selfishAlg {
         return min;
     }
 
-    private Double getOptimalEdgeWeight(Intersection endNode){
+    private Double getOptimalEdgeWeight(GRIDintersection endNode){
         Double w = currentPathTotal.get(endNode);
         if(w == null){
             return Double.MAX_VALUE;
@@ -66,9 +66,9 @@ public class selfishAlg {
         }
     }
 
-    private void findOptimalEdges(Intersection node){
-        ArrayList<Intersection> adjNodes = getAdjNodes(node);
-        for(Intersection targetNode : adjNodes){
+    private void findOptimalEdges(GRIDintersection node){
+        ArrayList<GRIDintersection> adjNodes = getAdjNodes(node);
+        for(GRIDintersection targetNode : adjNodes){
             if(getOptimalEdgeWeight(targetNode) > getOptimalEdgeWeight(node) + calcEdgeWeight(node, targetNode)){
                 currentPathTotal.put(targetNode,getOptimalEdgeWeight(targetNode) + calcEdgeWeight(node, targetNode));
                 previousNodes.put(targetNode,node);
@@ -78,7 +78,7 @@ public class selfishAlg {
 
     }
 
-    private Double calcEdgeWeight(Intersection startNode, Intersection endNode){
+    private Double calcEdgeWeight(GRIDintersection startNode, GRIDintersection endNode){
         for(Long key : this.edges.keySet()){
             if(edges.get(key).getFrom().equals(startNode) && edges.get(key).getTo().equals(endNode)){
                 return (edges.get(key).getLength() * edges.get(key).getCurrentSpeed());
@@ -88,8 +88,8 @@ public class selfishAlg {
         return -1D;
     }
 
-    private ArrayList<Intersection> getAdjNodes(Intersection node){
-        ArrayList<Intersection> adjNodes = new ArrayList<Intersection>();
+    private ArrayList<GRIDintersection> getAdjNodes(GRIDintersection node){
+        ArrayList<GRIDintersection> adjNodes = new ArrayList<GRIDintersection>();
 
         for(Long key : edges.keySet()){
             if((edges.get(key).getFrom()).equals(node) && !isVisited(edges.get(key).getTo())){
@@ -100,18 +100,18 @@ public class selfishAlg {
         return adjNodes;
     }
 
-    private Road evalMultipleEdges(){
-        Road bestRoad = new Road(-1L);
+    private GRIDroad evalMultipleEdges(){
+        GRIDroad bestRoad = new GRIDroad(-1L);
 
         return bestRoad;
     }
 
-    private boolean isVisited(Intersection node){
+    private boolean isVisited(GRIDintersection node){
         return visited.contains(node);
     }
 
-    public Route returnFinalPath(){
-        Route finalPath = new Route();
+    public GRIDroute returnFinalPath(){
+        GRIDroute finalPath = new GRIDroute();
 
         return finalPath;
     }
