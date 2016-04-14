@@ -3,15 +3,15 @@ package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-public class Road {
+public class GRIDroad {
 	
 	// Each road is a one way
 	
 	private static final Double ourDefaultValue = (double) 1;
 
 	private Long Id = -1L;
-	private Intersection to;
-	private Intersection from;
+	private GRIDintersection to;
+	private GRIDintersection from;
 	
 	// Defined in meters
 	private double Length;
@@ -26,7 +26,7 @@ public class Road {
 	private ConcurrentHashMap<Long, Double> roadCapacity = new ConcurrentHashMap<Long, Double>();
 	
 	
-	public Road(Long theId)
+	public GRIDroad(Long theId)
 	{
 		Id = theId;
 	}
@@ -40,19 +40,19 @@ public class Road {
 	}
 
 	
-	public Intersection getFrom() {
+	public GRIDintersection getFrom() {
 		return from;
 	}
 
-	public void setFrom(Intersection from) {
+	public void setFrom(GRIDintersection from) {
 		this.from = from;
 	}
 
-	public Intersection getTo() {
+	public GRIDintersection getTo() {
 		return to;
 	}
 
-	public void setTo(Intersection to) {
+	public void setTo(GRIDintersection to) {
 		this.to = to;
 	}
 

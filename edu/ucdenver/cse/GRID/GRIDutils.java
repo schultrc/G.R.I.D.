@@ -3,7 +3,7 @@ package edu.ucdenver.cse.GRID;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class Utils {
+public class GRIDutils {
 	
 	public static String chooseFile() {
 		JFileChooser chooser = new JFileChooser();
