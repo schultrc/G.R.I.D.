@@ -20,7 +20,6 @@
 <!-- ====================================================================== -->
 
 	<links capperiod="01:00:00" effectivecellsize="7.5" effectivelanewidth="3.75">
-		<link id="1" from="1" to="50" length="141421.3562373" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />
 		<link id="2" from="1" to="2" length="1000" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />
 		<link id="3" from="2" to="3" length="1000" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />
 		<link id="4" from="3" to="4" length="1000" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />

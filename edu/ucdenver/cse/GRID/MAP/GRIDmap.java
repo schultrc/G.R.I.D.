@@ -4,12 +4,14 @@ import java.util.concurrent.*;
 
 public class GRIDmap {
 	
-	private ConcurrentMap<Long, GRIDintersection> Intersections = new ConcurrentHashMap<Long, GRIDintersection >();
+	private ConcurrentMap<Long, GRIDintersection> Intersections = new ConcurrentHashMap<Long, GRIDintersection>();
 	private ConcurrentMap<Long, GRIDroad> Roads = new ConcurrentHashMap<Long, GRIDroad >();
-	public ConcurrentMap<Long, GRIDintersection > getIntersections() {
+
+	public ConcurrentMap<Long, GRIDintersection> getIntersections() {
 		return Intersections;
 	}
-	public void setIntersections(ConcurrentMap<Long, GRIDintersection > intersections) {
+	
+	public void setIntersections(ConcurrentMap<Long,GRIDintersection> intersections) {
 		Intersections = intersections;
 	}
 	public ConcurrentMap<Long, GRIDroad > getRoads() {
