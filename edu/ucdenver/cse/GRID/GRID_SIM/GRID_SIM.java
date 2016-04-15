@@ -9,6 +9,7 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
 import org.matsim.core.scenario.ScenarioUtils;
 
+import edu.ucdenver.cse.GRID.*;
 
 public class GRID_SIM {
 
@@ -17,19 +18,28 @@ public class GRID_SIM {
 
 		System.out.println("It's not hard--you just gotta use finesse!");
 		
+		String configFile = GRIDutils.chooseFile();
+	        
+	    if (configFile == "") {
+	    	System.out.println("You didn't chose a config file!!!");
+	    	System.exit(0);
+	    }
+				
 		try {
 			Config config = new Config();
 			
-			ConfigUtils.loadConfig(config, args[0]);
+			ConfigUtils.loadConfig(config, configFile);
 			
-			config.controler().setLastIteration(1);
+			config.controler().setLastIteration(0);
+			config.controler().setOutputDirectory("./output");
+			
 			config.controler().setOverwriteFileSetting(OverwriteFileSetting.deleteDirectoryIfExists);
 
 			Scenario scenario = ScenarioUtils.loadScenario(config) ;
 
 			Controler controler = new Controler( scenario ) ;
 
-			controler.run();
+			controler.run();						
 		} 
 		
 		catch ( Exception ee ) {
@@ -39,14 +49,9 @@ public class GRID_SIM {
 			Assert.fail();
 		}
 		
-		System.out.println("\n\n\n\nWell, we got to the end. \n\n\n\n");
-
-
-		// Here is where we would run our test algorithms
-		
+		System.out.println("\n\n\n\nWell, we got to the end. \n\n\n\n");	
 	}
 	
 	
-
-
+	
 }
