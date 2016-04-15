@@ -71,8 +71,7 @@ public class PopulationGenerator {
 		}
 		
 		MatsimWriter popWriter = new PopulationWriter(population, network);
-		popWriter.write("c:/grid/SmallPopulation.xml");
-		//popWriter.write("c:\\Users\\Matt\\Desktop\\GRID_SIM\\out\\HandMade.xml");
+		popWriter.write(./data/SmallPopulation.xml);
 
 	}
 
