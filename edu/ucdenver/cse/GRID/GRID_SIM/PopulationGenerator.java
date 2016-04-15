@@ -1,6 +1,7 @@
 package edu.ucdenver.cse.GRID.GRID_SIM;
 
 import org.matsim.api.core.v01.Coord;
+
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.api.core.v01.population.*;
@@ -38,6 +39,10 @@ public class PopulationGenerator {
 			Activity activity1 = 
 			  populationFactory.createActivityFromCoord ("h", homeCoordinates);
 			  
+			Id<Link> curLinkId = createLinkId(idSeed);
+			
+			  populationFactory.createActivityFromLinkId("h", Id<Link>(i));
+			
 			// Leave at 6 am - how do we change this???
 			activity1.setEndTime(21600);
 			plan.addActivity(activity1);
