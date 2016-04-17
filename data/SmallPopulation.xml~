@@ -7,10 +7,18 @@
 
 	<person id="1" employed="no">
 		<plan selected="yes">
+<<<<<<< HEAD
+			<act type="h" x="0.0" y="0.0" end_time="01:00:13" />
+=======
 			<act type="h" x="0.0" y="0.0" link="2" end_time="06:00:00" />
+>>>>>>> 23587a70b5dee43a53a25cb0e4216b775af6b798
 			<leg mode="car">
 			</leg>
+<<<<<<< HEAD
+			<act type="w" x="100000.0" y="100000.0" end_time="02:01:40" />
+=======
 			<act type="w" x="100000.0" y="100000.0" link="50" end_time="16:00:00" />
+>>>>>>> 23587a70b5dee43a53a25cb0e4216b775af6b798
 			<leg mode="car">
 			</leg>
 			<act type="h" x="0.0" y="0.0" />

@@ -1,7 +1,10 @@
 package edu.ucdenver.cse.GRID.GRID_SIM;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Random;
+=======
+>>>>>>> 23587a70b5dee43a53a25cb0e4216b775af6b798
 
 import org.matsim.api.core.v01.Coord;
 import org.matsim.api.core.v01.Id;
@@ -61,8 +64,11 @@ public class PopulationGenerator {
 			  
 			//Id<Link> curLinkId = createLinkId(idSeed);
 			
+<<<<<<< HEAD
 			 // populationFactory.createActivityFromLinkId("h", Id<Link>(i));
+=======
 			populationFactory.createActivityFromLinkId("h", curLinkId);
+>>>>>>> 23587a70b5dee43a53a25cb0e4216b775af6b798
 			
 			// Leave at 6 am - how do we change this???
 			activity1.setEndTime(times.get(idSeed));
