@@ -3,7 +3,6 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 import java.util.ArrayList;
 import java.util.Random;
 
-import org.matsim.api.core.v01.Coord;
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.api.core.v01.network.Network;
@@ -17,6 +16,8 @@ import org.matsim.core.api.internal.MatsimWriter;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.scenario.ScenarioUtils;
+
+import edu.ucdenver.cse.GRID.GRIDutils;
 
 public class PopulationGenerator {
 
@@ -55,14 +56,12 @@ public class PopulationGenerator {
 			population.addPerson(person);
 
 			// How do we make these reasonable???
-//			Coord homeCoordinates = sc.createCoord(-1.1644353007143369E7, 4616838.252581435);
-			Coord homeCoordinates = sc.createCoord(0, 0);
-			Activity activity1 =  populationFactory.createActivityFromCoord ("h", homeCoordinates);
-			  
-			//Id<Link> curLinkId = createLinkId(idSeed);
+						  
+			Id<Link> homeLinkId = Id.createLinkId(2);
 			
-			 // populationFactory.createActivityFromLinkId("h", Id<Link>(i));
-			populationFactory.createActivityFromLinkId("h", curLinkId);
+			Activity activity1 = 
+					  //populationFactory.createActivityFromCoord ("h", homeCoordinates);
+			populationFactory.createActivityFromLinkId("h", homeLinkId);
 			
 			// Leave at 6 am - how do we change this???
 			activity1.setEndTime(times.get(idSeed));
@@ -70,11 +69,10 @@ public class PopulationGenerator {
 			
 			plan.addLeg(populationFactory.createLeg("car"));
 
-//			Coord workCoordinates = sc.createCoord(-1.1646500805398736E7, 4623084.819612819);
-			Coord workCoordinates = sc.createCoord(100000, 100000);
-
+			Id<Link> workLinkId = Id.createLinkId(50);
+					
 			Activity activity2 =
-					  populationFactory.createActivityFromCoord("w",workCoordinates);
+					populationFactory.createActivityFromLinkId("w", workLinkId);
 			
 			// Finish work at 4 PM - CHANGE???
 			activity2.setEndTime(times.get(idSeed)+distribution.generateRandom(0, 28800, rnd));
@@ -82,18 +80,24 @@ public class PopulationGenerator {
 			plan.addActivity(activity2);
 			plan.addLeg(populationFactory.createLeg("car"));
 			
-			Activity activity3 =
-					  populationFactory.createActivityFromCoord("h",homeCoordinates);
-					
+			Activity activity3 = populationFactory.createActivityFromLinkId("h", homeLinkId);
+				
 			plan.addActivity(activity3);
 			plan.addLeg(populationFactory.createLeg("car"));
-			
-			
+						
 		}
 		
 		MatsimWriter popWriter = new PopulationWriter(population, network);
-		popWriter.write("./data/SmallPopulation.xml");
-
+		
+		String popFileName = GRIDutils.chooseFile();
+		
+		if (popFileName != "") {
+			popWriter.write(popFileName);
+		}
+		
+		else {
+			System.out.println("\n\nNO OUTPUT FILE SELECTED!!");	
+		}
 	}
 
 }
