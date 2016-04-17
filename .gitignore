@@ -1,1 +1,4 @@
 /Utils.class
+output/
+*.*~
+*.class
