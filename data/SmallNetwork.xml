@@ -32,7 +32,7 @@
 		<link id="10" from="9" to="50" length="8485.28137423" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />
 		
 		
-		<link id="11" from="50" to="1" length="141421.3562373" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />
+		<link id="50" from="50" to="1" length="141421.3562373" freespeed="12.5" capacity="5.0" permlanes="1.0" oneway="1" modes="car" />
 	</links>
 
 <!-- ====================================================================== -->

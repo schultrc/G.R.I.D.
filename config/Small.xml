@@ -2,11 +2,11 @@
 <!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">
 <config>
 	<module name="network">
-		<param name="inputNetworkFile" value="../data/SmallNetwork.xml"/>
+		<param name="inputNetworkFile" value="./data/SmallNetwork.xml"/>
 	</module>
 
 	<module name="plans">
-		<param name="inputPlansFile" value="../data/SmallPopulation.xml"/>
+		<param name="inputPlansFile" value="./data/SmallPopulation.xml"/>
 	</module>
 
 	<module name="controler">

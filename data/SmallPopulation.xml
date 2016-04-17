@@ -7,11 +7,11 @@
 
 	<person id="1" employed="yes">
 		<plan selected="yes">
-			<act type="h" x="0.0" y="0.0" link="1" end_time="06:00:00" />
+			<act type="h" x="0.0" y="0.0" link="2" end_time="06:00:00" />
 			<leg mode="car">
 				<route type="links">1 2 3 4 5 6 7 8 9</route>
 			</leg>
-			<act type="w" x="100000.0" y="100000.0" end_time="16:00:00" />
+			<act type="w" x="100000.0" y="100000.0" link="50" end_time="16:00:00" />
 			<leg mode="car">
 				<route type="links">9 8 7 6 5 4 3 2 1</route>
 			</leg>
