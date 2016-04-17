@@ -88,6 +88,7 @@ public class PopulationGenerator {
 		}
 		
 		MatsimWriter popWriter = new PopulationWriter(population, network);
+<<<<<<< HEAD
 		
 		String popFileName = GRIDutils.chooseFile();
 		
@@ -98,6 +99,10 @@ public class PopulationGenerator {
 		else {
 			System.out.println("\n\nNO OUTPUT FILE SELECTED!!");	
 		}
+=======
+		popWriter.write("./data/SmallPopulation.xml");
+
+>>>>>>> master
 	}
 
 }
