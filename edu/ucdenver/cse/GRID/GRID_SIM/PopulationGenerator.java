@@ -3,6 +3,7 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.matsim.api.core.v01.Coord;
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.api.core.v01.network.Link;
@@ -18,6 +19,9 @@ import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.scenario.ScenarioUtils;
 
+import SmartLocationGeneration.ParseNodes;
+import SmartLocationGeneration.RandomizeLocation;
+import SmartLocationGeneration.StartToDestinationLocation;
 import edu.ucdenver.cse.GRID.GRIDutils;
 
 public class PopulationGenerator {
@@ -30,11 +34,19 @@ public class PopulationGenerator {
 		DriversDistributionOnRoad distribution = new DriversDistributionOnRoad(hour);
 		Random rnd = new Random();
 		int range = 1;
-		int drivers = 100;
+		int drivers = 1000;
 		double [] drivers_on_road_hourly = distribution.calculateDistribution(drivers, range);
 		ArrayList<Integer> times = distribution.generateTimes(drivers_on_road_hourly);
 		drivers = times.size();
 		
+		//=========================Smart randomizing location=========================
+		ParseNodes pn = new ParseNodes();
+		RandomizeLocation rndLoc = new RandomizeLocation(pn);
+		String work_area = "./data/PuebloDowntownNodes.txt";
+		String home_area = "./data/PuebloNodes.txt";
+		ArrayList<StartToDestinationLocation> trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
+		//=============================================================================
+				
 		
 		//End of drivers distribution on road
 				
@@ -58,33 +70,47 @@ public class PopulationGenerator {
 
 			// How do we make these reasonable???
 						  
-			Id<Link> homeLinkId = Id.createLinkId(2);
 			
-			Activity activity1 = 
+			//Id<Link> homeLinkId = Id.createLinkId(2);
+			//Activity activity1 =
 					  //populationFactory.createActivityFromCoord ("h", homeCoordinates);
-			populationFactory.createActivityFromLinkId("h", homeLinkId);
+   				      //populationFactory.createActivityFromLinkId("h", homeLinkId);
+						
 			
-			// Leave at 6 am - how do we change this???
-			activity1.setEndTime(times.get(idSeed));
+			//==============================Activity based on coordinates==================================
+			Coord homeCoordinates = sc.createCoord(trips.get(idSeed).getStartLocation().getX(), trips.get(idSeed).getStartLocation().getY());
+			Activity activity1 =  populationFactory.createActivityFromCoord ("h", homeCoordinates);
+			
+			populationFactory.createActivityFromCoord("h", homeCoordinates);
+			activity1.setEndTime(times.get(idSeed)%86400);
+			
 			plan.addActivity(activity1);
-			
 			plan.addLeg(populationFactory.createLeg("car"));
-
-			Id<Link> workLinkId = Id.createLinkId(50);
-					
-			Activity activity2 =
-					populationFactory.createActivityFromLinkId("w", workLinkId);
+			//=============================================================================================
+						
+			// Leave at 6 am - how do we change this???
+			
+//			Id<Link> workLinkId = Id.createLinkId(50);
+//			Activity activity2 = populationFactory.createActivityFromLinkId("w", workLinkId);
 			
 			// Finish work at 4 PM - CHANGE???
-			activity2.setEndTime(times.get(idSeed)+distribution.generateRandom(0, 28800, rnd));
+			
+			
+			//==============================Activity based on coordinates==================================
+			Coord workCoordinates = sc.createCoord(trips.get(idSeed).getDectinationLocation().getX(), trips.get(idSeed).getDectinationLocation().getY());
+			Activity activity2 =  populationFactory.createActivityFromCoord ("h", workCoordinates);
+			
+			activity2.setEndTime((times.get(idSeed)+distribution.generateRandom(0, 28800, rnd))%86400);
+			activity2.getCoord().setXY(trips.get(idSeed).getDectinationLocation().getX(),trips.get(idSeed).getDectinationLocation().getY());
 			
 			plan.addActivity(activity2);
 			plan.addLeg(populationFactory.createLeg("car"));
+			//=============================================================================================
 			
-			Activity activity3 = populationFactory.createActivityFromLinkId("h", homeLinkId);
-				
-			plan.addActivity(activity3);
-			plan.addLeg(populationFactory.createLeg("car"));
+//			Activity activity3 = populationFactory.createActivityFromLinkId("h", homeLinkId);
+//				
+//			plan.addActivity(activity3);
+//			plan.addLeg(populationFactory.createLeg("car"));
 						
 		}
 		
