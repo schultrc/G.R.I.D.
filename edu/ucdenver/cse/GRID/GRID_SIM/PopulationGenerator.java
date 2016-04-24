@@ -30,6 +30,8 @@ public class PopulationGenerator {
 		DriversDistributionOnRoad distribution = new DriversDistributionOnRoad(hour);
 		Random rnd = new Random();
 		int range = 1;
+		
+		// Make this an input variable
 		int drivers = 100;
 		double [] drivers_on_road_hourly = distribution.calculateDistribution(drivers, range);
 		ArrayList<Integer> times = distribution.generateTimes(drivers_on_road_hourly);

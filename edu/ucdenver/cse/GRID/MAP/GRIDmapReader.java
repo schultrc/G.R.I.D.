@@ -1,42 +1,49 @@
 package edu.ucdenver.cse.GRID.MAP;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.DocumentBuilder;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
+import javax.xml.parsers.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+import javax.xml.parsers.SAXParserFactory;
+
+import org.xml.sax.helpers.DefaultHandler;
 import java.io.File;
-import java.io.IOException;
+
+import edu.ucdenver.cse.GRID.GRIDutils;
+
+import java.util.*;
+import java.io.*;
 
 public class GRIDmapReader {
 
 	public GRIDmap readMapFile(String mapFile){
 		GRIDmap returnMap = new GRIDmap();
 		
-		
-		File fXmlFile = new File("/Users/mkyong/staff.xml");
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder;
-		try {
-			dBuilder = dbFactory.newDocumentBuilder();
-			
-			try {
-				Document doc = dBuilder.parse(fXmlFile);
-			} catch (SAXException ee) {
-				// TODO Auto-generated catch block
-				ee.printStackTrace();
-			} catch (IOException ee) {
-				// TODO Auto-generated catch block
-				ee.printStackTrace();
-			}
-			
-		} catch (ParserConfigurationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (mapFile == "") {
+			mapFile = GRIDutils.getConfigFile(); 
 		}
+		
+		try {	
+	         //File inputFile = new File(mapFile);
+	         
+	         SAXParserFactory factory = SAXParserFactory.newInstance();
+	         SAXParser saxParser = factory.newSAXParser();
+	         
+	         XMLReader xmlreader = saxParser.getXMLReader();
+	         
+	         
+	         GRIDmapParser GMP = new GRIDmapParser();
+	         xmlreader.setContentHandler(GMP);
+	      
+	         xmlreader.parse(new InputSource(mapFile));
+	         
+	         //xmlreader.parse(inputFile.toURI());
+	             
+	         
+	         
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }
+		
 		
 		// If we get here, everything is good. Read all the Roads and intersections
 		
@@ -45,4 +52,6 @@ public class GRIDmapReader {
 		
 		return returnMap;
 	}
+	
+
 }
