@@ -19,9 +19,6 @@ import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigUtils;
 import org.matsim.core.scenario.ScenarioUtils;
 
-import SmartLocationGeneration.ParseNodes;
-import SmartLocationGeneration.RandomizeLocation;
-import SmartLocationGeneration.StartToDestinationLocation;
 import edu.ucdenver.cse.GRID.GRIDutils;
 
 public class PopulationGenerator {
