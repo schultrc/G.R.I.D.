@@ -1,4 +1,4 @@
-package Population;
+package SmartLocationGeneration;
 
 import java.awt.print.Printable;
 import java.util.ArrayList;

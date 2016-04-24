@@ -1,4 +1,4 @@
-package Population;
+package SmartLocationGeneration;
 
 public class StartToDestinationLocation 
 {
