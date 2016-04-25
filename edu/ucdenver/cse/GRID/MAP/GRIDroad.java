@@ -9,7 +9,7 @@ public class GRIDroad {
 	
 	private static final Double ourDefaultValue = (double) 1;
 
-	private Long Id = -1L;
+	private String Id = "";
 	private GRIDintersection to;
 	private GRIDintersection from;
 	
@@ -26,16 +26,16 @@ public class GRIDroad {
 	private ConcurrentHashMap<Long, Double> roadCapacity = new ConcurrentHashMap<Long, Double>();
 	
 	
-	public GRIDroad(Long theId)
+	public GRIDroad(String theId)
 	{
 		Id = theId;
 	}
 	
-	public Long getId() {
+	public String getId() {
 		return Id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		Id = id;
 	}
 

@@ -4,28 +4,27 @@ import java.util.concurrent.*;
 
 public class GRIDmap {
 	
-	private ConcurrentMap<Long, GRIDintersection> Intersections = new ConcurrentHashMap<Long, GRIDintersection>();
-	private ConcurrentMap<Long, GRIDroad> Roads = new ConcurrentHashMap<Long, GRIDroad >();
+	private ConcurrentMap<String, GRIDintersection> Intersections = new ConcurrentHashMap<String, GRIDintersection>();
+	private ConcurrentMap<String, GRIDroad> Roads = new ConcurrentHashMap<String, GRIDroad >();
 
-	public ConcurrentMap<Long, GRIDintersection> getIntersections() {
+	public ConcurrentMap<String, GRIDintersection> getIntersections() {
 		return Intersections;
 	}
 	
-	public void setIntersections(ConcurrentMap<Long,GRIDintersection> intersections) {
+	public void setIntersections(ConcurrentMap<String, GRIDintersection> intersections) {
 		Intersections = intersections;
 	}
-	public ConcurrentMap<Long, GRIDroad > getRoads() {
+	public ConcurrentMap<String, GRIDroad > getRoads() {
 		return Roads;
 	}
-	public void setRoads(ConcurrentMap<Long, GRIDroad > roads) {
+	public void setRoads(ConcurrentMap<String, GRIDroad > roads) {
 		Roads = roads;
 	}
 
 	public boolean addRoad(GRIDroad addMe)
 	{		
 		// Only add a road if it isn't already in the map
-		if(this.Roads.containsKey(addMe.getId()))
-		{
+		if(this.Roads.containsKey(addMe.getId())) {
 			System.out.printf("Road ID %d already exists", addMe.getId());
 			return false;
 		}
@@ -36,5 +35,18 @@ public class GRIDmap {
 		}
 		
 		return true;
+	}
+	
+	public boolean addIntersection(GRIDintersection addMe) {
+		if(this.Intersections.containsKey(addMe.getId())) {
+			System.out.printf("Road ID %d already exists", addMe.getId());
+			return false;
+		}
+		else {
+			this.Intersections.putIfAbsent(addMe.getId(), addMe);
+		}
+		
+		return true;
+			
 	}
 }

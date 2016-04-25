@@ -11,8 +11,8 @@ import java.util.*;
 
 public class selfishAlg {
 
-    private ConcurrentMap<Long, GRIDintersection> nodes;
-    private ConcurrentMap<Long, GRIDroad> edges;
+    private ConcurrentMap<String, GRIDintersection> nodes;
+    private ConcurrentMap<String, GRIDroad> edges;
     private Set<GRIDintersection> visited;
     private Set<GRIDintersection> unVisited;
     private ConcurrentMap<GRIDintersection, GRIDintersection> previousNodes;
@@ -79,7 +79,7 @@ public class selfishAlg {
     }
 
     private Double calcEdgeWeight(GRIDintersection startNode, GRIDintersection endNode){
-        for(Long key : this.edges.keySet()){
+        for(String key : this.edges.keySet()){
             if(edges.get(key).getFrom().equals(startNode) && edges.get(key).getTo().equals(endNode)){
                 return (edges.get(key).getLength() * edges.get(key).getCurrentSpeed());
             }
@@ -91,7 +91,7 @@ public class selfishAlg {
     private ArrayList<GRIDintersection> getAdjNodes(GRIDintersection node){
         ArrayList<GRIDintersection> adjNodes = new ArrayList<GRIDintersection>();
 
-        for(Long key : edges.keySet()){
+        for(String key : edges.keySet()){
             if((edges.get(key).getFrom()).equals(node) && !isVisited(edges.get(key).getTo())){
                 adjNodes.add(edges.get(key).getTo());
             }
@@ -101,7 +101,7 @@ public class selfishAlg {
     }
 
     private GRIDroad evalMultipleEdges(){
-        GRIDroad bestRoad = new GRIDroad(-1L);
+        GRIDroad bestRoad = new GRIDroad("");
 
         return bestRoad;
     }

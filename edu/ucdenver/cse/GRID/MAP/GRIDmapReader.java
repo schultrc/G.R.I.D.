@@ -34,10 +34,7 @@ public class GRIDmapReader {
 	         GRIDmapParser GMP = new GRIDmapParser();
 	         xmlreader.setContentHandler(GMP);
 	      
-	         xmlreader.parse(new InputSource(mapFile));
-	         
-	         //xmlreader.parse(inputFile.toURI());
-	             
+	         xmlreader.parse(new InputSource(mapFile));	             
 	         
 	         
 	      } catch (Exception e) {
@@ -51,7 +48,5 @@ public class GRIDmapReader {
 		// Get the file 
 		
 		return returnMap;
-	}
-	
-
+	}	
 }

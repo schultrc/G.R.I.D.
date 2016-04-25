@@ -10,6 +10,8 @@ import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
 import org.matsim.core.scenario.ScenarioUtils;
 
 import edu.ucdenver.cse.GRID.*;
+import edu.ucdenver.cse.GRID.MAP.GRIDmap;
+import edu.ucdenver.cse.GRID.MAP.GRIDmapReader;
 
 public class GRID_SIM {
 
@@ -17,6 +19,14 @@ public class GRID_SIM {
 		// TODO Auto-generated method stub
 
 		System.out.println("It's not hard--you just gotta use finesse!");
+		
+		GRIDmapReader demoMap = new GRIDmapReader();
+		
+		String mapFile = GRIDutils.getConfigFile();
+		demoMap.readMapFile(mapFile);
+		
+		
+		System.exit(0);
 		
 		String configFile = GRIDutils.getConfigFile();
 	        
