@@ -35,5 +35,4 @@ public class GRIDmapReader {
 		 return null;
 	    }
 	}		
-	return returnMap;
 }
