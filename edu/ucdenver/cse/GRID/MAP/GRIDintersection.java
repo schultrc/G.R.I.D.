@@ -27,4 +27,9 @@ public class GRIDintersection {
 	}
 
 	public String getId(){return Id;}
+
+	@Override
+	public String toString() {
+		return "GRIDintersection [Id=" + Id + ", x=" + x + ", y=" + y + "]";
+	}
 }

@@ -21,17 +21,22 @@ public class GRIDmap {
 		Roads = roads;
 	}
 
+	@Override
+	public String toString() {
+		return "GRIDmap [Intersections=" + Intersections + ", Roads=" + Roads + "]";
+	}
+
 	public boolean addRoad(GRIDroad addMe)
 	{		
 		// Only add a road if it isn't already in the map
 		if(this.Roads.containsKey(addMe.getId())) {
-			System.out.printf("Road ID %d already exists", addMe.getId());
+			System.out.println("Road ID " + addMe.getId() + " already exists");
 			return false;
 		}
 		else
 		{
 			this.Roads.put(addMe.getId(), addMe);
-			System.out.printf("Successfully added road: %d \n", addMe.getId());
+			System.out.println("Successfully added road: " + addMe.getId());
 		}
 		
 		return true;
