@@ -10,6 +10,8 @@ import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
 import org.matsim.core.scenario.ScenarioUtils;
 
 import edu.ucdenver.cse.GRID.*;
+import edu.ucdenver.cse.GRID.MAP.GRIDmap;
+import edu.ucdenver.cse.GRID.MAP.GRIDmapReader;
 
 public class GRID_SIM {
 
@@ -18,6 +20,13 @@ public class GRID_SIM {
 
 		System.out.println("It's not hard--you just gotta use finesse!");
 		
+		// Load our version of the map first
+		GRIDmapReader demoMap = new GRIDmapReader();
+		
+		String mapFile = GRIDutils.getConfigFile();
+		System.out.println("File Chosen: " + mapFile);
+		GRIDmap ourMap = demoMap.readMapFile(mapFile);
+						
 		String configFile = GRIDutils.getConfigFile();
 	        
 	    if (configFile == "") {
@@ -40,7 +49,7 @@ public class GRID_SIM {
 			Controler controler = new Controler( scenario ) ;
 
 			controler.run();						
-		} 
+		}
 		
 		catch ( Exception ee ) {
 			Logger.getLogger("There was an exception: \n" + ee);

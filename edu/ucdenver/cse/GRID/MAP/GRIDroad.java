@@ -9,9 +9,9 @@ public class GRIDroad {
 	
 	private static final Double ourDefaultValue = (double) 1;
 
-	private Long Id = -1L;
-	private GRIDintersection to;
-	private GRIDintersection from;
+	private String Id   = "";
+	private String to   = "";
+	private String from = "";
 	
 	// Defined in meters
 	private double Length;
@@ -26,34 +26,40 @@ public class GRIDroad {
 	private ConcurrentHashMap<Long, Double> roadCapacity = new ConcurrentHashMap<Long, Double>();
 	
 	
-	public GRIDroad(Long theId)
+	public GRIDroad(String theId)
 	{
 		Id = theId;
 	}
 	
-	public Long getId() {
+	public String getId() {
 		return Id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		Id = id;
 	}
 
 	
-	public GRIDintersection getFrom() {
+	public String getFrom() {
 		return from;
 	}
 
-	public void setFrom(GRIDintersection from) {
+	public void setFrom(String from) {
 		this.from = from;
 	}
 
-	public GRIDintersection getTo() {
+	public String getTo() {
 		return to;
 	}
 
-	public void setTo(GRIDintersection to) {
+	public void setTo(String to) {
 		this.to = to;
+	}
+
+	@Override
+	public String toString() {
+		return "GRIDroad [Id=" + Id + ", to=" + to + ", from=" + from + ", Length=" + Length + ", maxSpeed=" + maxSpeed
+				+ ", currentSpeed=" + currentSpeed + ", roadCapacity=" + roadCapacity + "]";
 	}
 
 	public double getLength() {
