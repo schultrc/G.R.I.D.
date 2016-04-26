@@ -31,7 +31,9 @@ public class GRIDmapReader {
 	    } 
 		catch (Exception e) {
 	         e.printStackTrace();
-	         return null;
+	         
+		 return null;
 	    }
 	}		
+	return returnMap;
 }

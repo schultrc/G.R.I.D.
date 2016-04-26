@@ -1,4 +1,4 @@
-package SmartLocationGeneration;
+package edu.ucdenver.cse.GRID.GRID_SIM;
 
 public class StartToDestinationLocation 
 {

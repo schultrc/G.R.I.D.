@@ -5,8 +5,6 @@ public class GRIDintersection {
 	private double x;
 	private double y;
 
-	
-	
     public GRIDintersection(String id, double x, double y) {
 		super();
 		Id = id;
@@ -32,4 +30,29 @@ public class GRIDintersection {
 	public String toString() {
 		return "GRIDintersection [Id=" + Id + ", x=" + x + ", y=" + y + "]";
 	}
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((Id == null) ? 0 : Id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        GRIDintersection other = (GRIDintersection) obj;
+        if (Id == null) {
+            if (other.Id != null)
+                return false;
+        } else if (!Id.equals(other.Id))
+            return false;
+        return true;
+    }
 }

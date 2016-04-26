@@ -1,0 +1,18 @@
+public GRIDroute returnFinalPath(GRIDintersection dest){
+        GRIDroute finalPath = new GRIDroute();
+        GRIDintersection step = dest;
+
+        if(previousNodes.get(step) == null)
+        {
+            return null;
+        }
+        finalPath.nodes.add(step);
+        while(previousNodes.get(step) != null)
+        {
+            step = previousNodes.get(step);
+            finalPath.nodes.add(step);
+        }
+
+        Collections.reverse(finalPath.nodes);
+        return finalPath;
+    }
