@@ -4,13 +4,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class ParseNodes 
+public class ParseLink 
 {
-	public ParseNodes(){}
+	public ParseLink(){}
 	
-	public ArrayList<Node> parse(String trace_path)
+	public ArrayList<Link> parse(String trace_path)
 		{
-			ArrayList<Node> node = new ArrayList<Node>();
+			ArrayList<Link> link = new ArrayList<Link>();
 			String line="";
 					
 			try
@@ -20,19 +20,19 @@ public class ParseNodes
 				
 				while((line = reader.readLine()) != null)
 				{
-					String[] split_line = line.split(" ");
-					node.add(new Node(Double.parseDouble(split_line[1]), Double.parseDouble(split_line[2])));
+					String[] split_line = line.split(",");
+					link.add(new Link(split_line[0]));
 				}
 			
 			}
 			catch(Exception ex){ }
-			//printNodes(node);
-			return node;
+			
+			return link;
 		}
 
-	private void printNodes(ArrayList<Node> node)
+	private void printLinks(ArrayList<Link> link)
 	{
-		for(Node i: node)
+		for(Link i: link)
 			System.out.println(i.toString());
 	}
 
@@ -43,8 +43,9 @@ public class ParseNodes
 
 	public static void main(String[] args) 
 	{
-		String trace_path = "./data/PuebloNodes.txt";
-		ParseNodes node  = new ParseNodes();
-		node.parse(trace_path);
+		String trace_path = "./data/PuebloLinks.txt";
+		ParseLink parse_link  = new ParseLink();
+		ArrayList<Link> link =  parse_link.parse(trace_path);
+		parse_link.printLinks(link);
 	}
 }

@@ -6,24 +6,23 @@ import java.util.Random;
 
 public class RandomizeLocation 
 {
-	private ParseNodes pn;
-	
-	
-	public RandomizeLocation(ParseNodes pn)
+	private ParseLink pl;
+		
+	public RandomizeLocation(ParseLink pl)
 	{
-		 this.pn = pn;
+		 this.pl = pl;
 	}
 	
 	public ArrayList<StartToDestinationLocation> generateHomeToWorkLocations(String work_area, String home_area, int population)
 	{
 		ArrayList<StartToDestinationLocation> trip = new ArrayList<StartToDestinationLocation>();
 		
-		ArrayList<Node> work_node = pn.parse(work_area);
-		ArrayList<Node> home_node = pn.parse(home_area);
+		ArrayList<Link> work_links = pl.parse(work_area);
+		ArrayList<Link> home_links = pl.parse(home_area);
 		
 //		System.out.println("Work_node size: " + work_node.size());
 //		System.out.println("Home_node size: " + home_node.size());
-		home_node = clearWorkNodesFromHomeNodes(work_node, home_node);
+		home_links = clearWorkNodesFromHomeNodes(work_links, home_links);
 //		System.out.println("Home_node size after modification: " + home_node.size());
 		
 		Random rnd_home_node = new Random();
@@ -31,17 +30,16 @@ public class RandomizeLocation
 				
 		for(int i=0; i<population; i++)
 		{
-			int a = rnd_home_node.nextInt(home_node.size());
-			int b = rnd_work_node.nextInt(work_node.size());
-			Node source_node = home_node.get(a);
-			Node destination_node = work_node.get(b);
+			int a = rnd_home_node.nextInt(home_links.size());
+			int b = rnd_work_node.nextInt(work_links.size());
+			Link source_node = home_links.get(a);
+			Link destination_node = work_links.get(b);
 			
 			trip.add(new StartToDestinationLocation(source_node, destination_node));
 			
 			//home_node.remove(a); //only one people from one home
 			
 			//rnd_home_node = new Random(home_node.size());
-			
 		}
 		
 		
@@ -55,40 +53,34 @@ public class RandomizeLocation
 	/**
 	 * removes the work area nodes from the home area nodes, and returns home area nodes
 	 * */
-	private static ArrayList<Node> clearWorkNodesFromHomeNodes(ArrayList<Node> work_node, ArrayList<Node> home_node)
+	private static ArrayList<Link> clearWorkNodesFromHomeNodes(ArrayList<Link> work_links, ArrayList<Link> home_links)
 		{
-			for(int i=0; i<work_node.size(); i++)
+			for(int i=0; i<work_links.size(); i++)
 			{
-				for(int j=0; j<home_node.size(); j++)
+				for(int j=0; j<home_links.size(); j++)
 				{
-					if(work_node.get(i).equals(home_node.get(j)))
+					if(work_links.get(i).equals(home_links.get(j)))
 					{
-						home_node.remove(work_node.get(i));
+						home_links.remove(work_links.get(i));
 					}
 				}
-			}
-		
-			return home_node;
+			}		
+			return home_links;
 		}
 	
 	
 //	public static void main(String[] args) 
 //	{
-//		ParseNodes pn = new ParseNodes();
+//		ParseLink pn = new ParseLink();
 //		RandomizeLocation rndLoc = new RandomizeLocation(pn);
-//		String work_area = "./data/PuebloDowntownNodes.txt";
-//		String home_area = "./data/PuebloNodes.txt";
+//		String work_area = "./data/PubloDowntownLinks.txt";
+//		String home_area = "./data/PuebloLinks.txt";
 //		ArrayList<StartToDestinationLocation> trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, 100);
-//		
 //		for(int i=0; i<trips.size(); i++)
-//				{
-//						System.out.println("X: " + trips.get(i).getStartLocation().getX());
-//						System.out.println("Y: " + trips.get(i).getStartLocation().getY());
-//						
-//						System.out.println("X: " + trips.get(i).getDectinationLocation().getX());
-//						System.out.println("Y: " + trips.get(i).getDectinationLocation().getY());
-//	
-//				}
+//		{
+//			System.out.println(trips.get(i).toString());
+//		}
+//		
 //	}
 	
 	
