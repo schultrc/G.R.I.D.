@@ -2,21 +2,21 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 
 public class StartToDestinationLocation 
 {
-	public Node start;
-	public Node destination;
+	public Link start;
+	public Link destination;
 	
-	public StartToDestinationLocation(Node start, Node destination)
+	public StartToDestinationLocation(Link start, Link destination)
 	{
 		this.start = start;
 		this.destination = destination;
 	}
 
-	public Node getStartLocation()
+	public Link getStartLocation()
 	{
 		return start;
 	}
 	
-	public Node getDectinationLocation()
+	public Link getDectinationLocation()
 	{
 		return destination;
 	}

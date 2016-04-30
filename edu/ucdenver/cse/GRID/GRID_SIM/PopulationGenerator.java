@@ -37,10 +37,10 @@ public class PopulationGenerator {
 		drivers = times.size();
 		
 		//=========================Smart randomizing location=========================
-		ParseNodes pn = new ParseNodes();
+		ParseLink pn = new ParseLink();
 		RandomizeLocation rndLoc = new RandomizeLocation(pn);
-		String work_area = "./data/PuebloDowntownNodes.txt";
-		String home_area = "./data/PuebloNodes.txt";
+		String work_area = "./data/PubloDowntownLinks.txt";
+		String home_area = "./data/PuebloLinks.txt";
 		ArrayList<StartToDestinationLocation> trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
 		//=============================================================================
 				
@@ -67,18 +67,10 @@ public class PopulationGenerator {
 
 			// How do we make these reasonable???
 						  
-			
-			//Id<Link> homeLinkId = Id.createLinkId(2);
-			//Activity activity1 =
-					  //populationFactory.createActivityFromCoord ("h", homeCoordinates);
-   				      //populationFactory.createActivityFromLinkId("h", homeLinkId);
+			//==============================Activity based on links==================================
+			Id<Link> homeLinkId = Id.createLinkId(trips.get(idSeed).getStartLocation().getID());
+			Activity activity1 = populationFactory.createActivityFromLinkId("h", homeLinkId);
 						
-			
-			//==============================Activity based on coordinates==================================
-			Coord homeCoordinates = sc.createCoord(trips.get(idSeed).getStartLocation().getX(), trips.get(idSeed).getStartLocation().getY());
-			Activity activity1 =  populationFactory.createActivityFromCoord ("h", homeCoordinates);
-			
-			populationFactory.createActivityFromCoord("h", homeCoordinates);
 			activity1.setEndTime(times.get(idSeed)%86400);
 			
 			plan.addActivity(activity1);
@@ -87,19 +79,18 @@ public class PopulationGenerator {
 						
 			// Leave at 6 am - how do we change this???
 			
-//			Id<Link> workLinkId = Id.createLinkId(50);
-//			Activity activity2 = populationFactory.createActivityFromLinkId("w", workLinkId);
+			
 			
 			// Finish work at 4 PM - CHANGE???
 			
 			
 			//==============================Activity based on coordinates==================================
-			Coord workCoordinates = sc.createCoord(trips.get(idSeed).getDectinationLocation().getX(), trips.get(idSeed).getDectinationLocation().getY());
-			Activity activity2 =  populationFactory.createActivityFromCoord ("h", workCoordinates);
 			
+			
+			Id<Link> workLinkId = Id.createLinkId(trips.get(idSeed).getDectinationLocation().getID());
+			
+			Activity activity2 = populationFactory.createActivityFromLinkId("w", workLinkId);
 			activity2.setEndTime((times.get(idSeed)+distribution.generateRandom(0, 28800, rnd))%86400);
-			activity2.getCoord().setXY(trips.get(idSeed).getDectinationLocation().getX(),trips.get(idSeed).getDectinationLocation().getY());
-			
 			plan.addActivity(activity2);
 			plan.addLeg(populationFactory.createLeg("car"));
 			//=============================================================================================
