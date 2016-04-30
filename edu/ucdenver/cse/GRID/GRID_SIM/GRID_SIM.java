@@ -9,6 +9,9 @@ import org.matsim.core.controler.Controler;
 import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
 import org.matsim.core.scenario.ScenarioUtils;
 
+import org.matsim.core.controler.AbstractModule;
+
+
 import edu.ucdenver.cse.GRID.*;
 import edu.ucdenver.cse.GRID.MAP.GRIDmap;
 import edu.ucdenver.cse.GRID.MAP.GRIDmapReader;
@@ -48,6 +51,12 @@ public class GRID_SIM {
 
 			Controler controler = new Controler( scenario ) ;
 
+			// Now we need to get some events
+			
+			controler.getEvents().addHandler(new GRIDeventHandler());
+			
+			
+			// Everything is set up, let's run this thing
 			controler.run();						
 		}
 		
