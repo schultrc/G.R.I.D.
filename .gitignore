@@ -3,6 +3,7 @@ output/
 *.*~
 *.class
 out/
+mine/
 .idea
 .settings
 .project

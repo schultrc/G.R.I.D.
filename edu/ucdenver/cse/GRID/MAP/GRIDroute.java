@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class GRIDroute {	
 	long agent_ID;
 
-	ArrayList<GRIDintersection> nodes = new ArrayList<GRIDintersection>();
+	ArrayList<String> nodes = new ArrayList<String>();
 	ArrayList<GRIDroad> edges = new ArrayList<GRIDroad>();
 
 }
