@@ -45,9 +45,11 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
 	    
 	    Collection<MobsimAgent> agentsToReplan = getAgentsToReplan(mobsim); 
 	    for (MobsimAgent ma : agentsToReplan) {
-	    	doReplanning(ma, mobsim);
-	  
-	    
+	    	
+	    	System.out.println("we found agent: " + ma.toString());
+	    	
+	    	//doReplanning(ma, mobsim);
+	  	    
 	    }        
 	}
 	

@@ -107,6 +107,9 @@ public class GRID_SIM {
 
 							// construct qsim and insert listeners:
 							QSim qSim = QSimUtils.createDefaultQSim(controler.getScenario(), controler.getEvents());
+							
+							// replace with our listener?
+							
 							qSim.addQueueSimulationListeners(new MyWithinDayMobsimListener(router));
 							qSim.addQueueSimulationListeners(travelTime);
 							return qSim;
