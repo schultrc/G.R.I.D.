@@ -6,6 +6,7 @@ public class GRIDmap {
 	
 	private ConcurrentMap<String, GRIDintersection> Intersections = new ConcurrentHashMap<String, GRIDintersection>();
 	private ConcurrentMap<String, GRIDroad> Roads = new ConcurrentHashMap<String, GRIDroad >();
+	
 
 	public ConcurrentMap<String, GRIDintersection> getIntersections() {
 		return Intersections;
@@ -51,7 +52,14 @@ public class GRIDmap {
 			this.Intersections.putIfAbsent(addMe.getId(), addMe);
 		}
 		
-		return true;
-			
+		return true;			
+	}
+	
+	public GRIDroad getRoad(String theRoadID) {
+		return this.Roads.get(theRoadID);
+	}
+	
+	public GRIDintersection getIntersection(String theIntersection) {
+		return this.Intersections.get(theIntersection);
 	}
 }

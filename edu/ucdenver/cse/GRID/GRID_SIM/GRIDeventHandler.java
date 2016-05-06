@@ -11,44 +11,61 @@ import org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler;
 import org.matsim.core.mobsim.framework.events.*;
 
-public class GRIDeventHandler  implements LinkEnterEventHandler, LinkLeaveEventHandler, PersonArrivalEventHandler, PersonDepartureEventHandler {
-	@Override
+public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHandler, PersonArrivalEventHandler,
+		PersonDepartureEventHandler {
+	
+	private boolean outputFlag = false;
 
+	public GRIDeventHandler(boolean printFlag) {
+		this.outputFlag = printFlag;
+	}
+
+	@Override	
 	public void reset(int iteration) {
-
-		System.out.println("reset...");
+		if (outputFlag) {
+			System.out.println("reset...");
+		}
 
 	}
+
 	@Override
-		public void handleEvent(LinkEnterEvent event) {
-		System.out.println("LinkEnterEvent");
-		System.out.println("Time: " + event.getTime());
-		System.out.println("LinkId: " + event.getLinkId());
+	public void handleEvent(LinkEnterEvent event) {
+		if (outputFlag) {
+			System.out.println("LinkEnterEvent");
+			System.out.println("Time: " + event.getTime());
+			System.out.println("LinkId: " + event.getLinkId());
+		}
 	}
 
 	@Override
 	public void handleEvent(LinkLeaveEvent event) {
-		
+
 		// This is probably where we want to go get an updated route
-		System.out.println("LinkLeaveEvent");
-		System.out.println("Time: " + event.getTime());
-		System.out.println("LinkId: " + event.getLinkId());
+		if (outputFlag) {
+			System.out.println("LinkLeaveEvent");
+			System.out.println("Time: " + event.getTime());
+			System.out.println("LinkId: " + event.getLinkId());
+		}
 	}
 
 	@Override
 	public void handleEvent(PersonArrivalEvent event) {
-		System.out.println("AgentArrivalEvent");
-		System.out.println("Time: " + event.getTime());
-		System.out.println("LinkId: " + event.getLinkId());
-		System.out.println("PersonId: " + event.getPersonId());
+		if (outputFlag) {
+			System.out.println("AgentArrivalEvent");
+			System.out.println("Time: " + event.getTime());
+			System.out.println("LinkId: " + event.getLinkId());
+			System.out.println("PersonId: " + event.getPersonId());
+		}
 	}
 
 	@Override
 	public void handleEvent(PersonDepartureEvent event) {
-		System.out.println("AgentDepartureEvent");
-		System.out.println("Time: " + event.getTime());
-		System.out.println("LinkId: " + event.getLinkId());
-		System.out.println("PersonId: " + event.getPersonId());
+		if (outputFlag) {
+			System.out.println("AgentDepartureEvent");
+			System.out.println("Time: " + event.getTime());
+			System.out.println("LinkId: " + event.getLinkId());
+			System.out.println("PersonId: " + event.getPersonId());
+		}
 	}
 
 }

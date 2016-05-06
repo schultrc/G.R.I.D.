@@ -54,6 +54,8 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim ) {
 		double now = mobsim.getSimTimer().getTimeOfDay();
 
+		System.out.println("Sim Time is: " + now);
+
 		Plan plan = WithinDayAgentUtils.getModifiablePlan(agent);
 
 		if (plan == null) {
