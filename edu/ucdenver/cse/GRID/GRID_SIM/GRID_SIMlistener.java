@@ -40,6 +40,7 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
 	@Override
 	public void notifyMobsimBeforeSimStep(@SuppressWarnings("rawtypes") MobsimBeforeSimStepEvent event) {
 	
+		System.out.println("We got to the begining of notifyMobsimBeforeSimStep");
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 	    this.scenario = mobsim.getScenario();
 	    

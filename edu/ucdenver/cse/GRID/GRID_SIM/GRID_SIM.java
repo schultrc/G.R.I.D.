@@ -72,7 +72,7 @@ public class GRID_SIM {
 
 			Scenario scenario = ScenarioUtils.loadScenario(config) ;
 
-			Controler controler = new Controler( scenario ) ;
+			final Controler controler = new Controler( scenario ) ;
 			
 			// Uncomment if you want to select a different map than matsim is using
 			// String mapFile = GRIDutils.getConfigFile();
@@ -110,7 +110,7 @@ public class GRID_SIM {
 							
 							// replace with our listener?
 							
-							qSim.addQueueSimulationListeners(new MyWithinDayMobsimListener(router));
+							qSim.addQueueSimulationListeners(new GRID_SIMlistener(router));
 							qSim.addQueueSimulationListeners(travelTime);
 							return qSim;
 						}
@@ -118,7 +118,6 @@ public class GRID_SIM {
 				}
 			});
 			
-										
 			// Everything is set up, let's run this thing
 			controler.run();						
 		}

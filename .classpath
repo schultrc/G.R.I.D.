@@ -7,5 +7,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/guice-3.0"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/MATSIM"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javax.inject"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
