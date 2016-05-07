@@ -91,6 +91,7 @@ public class GRID_SIM {
 			// Add our handler for Link Events			
 			controler.getEvents().addHandler(new GRIDeventHandler(false));
 			
+			
 			// Add listeners for the sim steps
 			controler.addOverridingModule(new AbstractModule() {
 				
@@ -109,8 +110,10 @@ public class GRID_SIM {
 							QSim qSim = QSimUtils.createDefaultQSim(controler.getScenario(), controler.getEvents());
 							
 							// replace with our listener?
+							qSim.addQueueSimulationListeners(new MyWithinDayMobsimListener(router));
+
+							//qSim.addQueueSimulationListeners(new GRID_SIMlistener(router));
 							
-							qSim.addQueueSimulationListeners(new GRID_SIMlistener(router));
 							qSim.addQueueSimulationListeners(travelTime);
 							return qSim;
 						}
