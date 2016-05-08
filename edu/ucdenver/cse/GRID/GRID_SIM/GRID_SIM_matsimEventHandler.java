@@ -72,7 +72,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	@Override
 	public void notifyMobsimBeforeSimStep(@SuppressWarnings("rawtypes") MobsimBeforeSimStepEvent event) {
 	
-		final Logger GRIDLog = Logger.getLogger("ray");
+		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
 
 		GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
 		

@@ -25,7 +25,17 @@ public class GRIDroad {
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
 	private ConcurrentHashMap<Long, Double> roadWeight = new ConcurrentHashMap<Long, Double>();
 	
+	// Max capacity is defined in vehicles per hour
+	private double maxCapacity;
 	
+	public double getMaxCapacity() {
+		return maxCapacity;
+	}
+
+	public void setMaxCapacity(double maxCapacity) {
+		this.maxCapacity = maxCapacity;
+	}
+
 	public GRIDroad(String theId)
 	{
 		Id = theId;

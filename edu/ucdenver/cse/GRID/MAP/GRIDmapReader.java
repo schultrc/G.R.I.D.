@@ -34,5 +34,13 @@ public class GRIDmapReader {
 	         
 		 return null;
 	    }
-	}		
+	}
+	
+	public boolean setDefaultWeights(GRIDmap theMap) {
+		// This eventually should read in real world estimates
+		
+		
+		
+		return true;
+	}
 }
