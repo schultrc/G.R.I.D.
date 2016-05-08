@@ -41,8 +41,7 @@ public class GRID_SIM {
 		 * data sources needed for GRID.
 		 * 
 		 */
-		
-		
+				
 		System.out.println("It's not hard--you just gotta use finesse!");
 		
 		// The list of routes for our agents
@@ -109,10 +108,8 @@ public class GRID_SIM {
 							// construct qsim and insert listeners:
 							QSim qSim = QSimUtils.createDefaultQSim(controler.getScenario(), controler.getEvents());
 							
-							// replace with our listener?
-							qSim.addQueueSimulationListeners(new MyWithinDayMobsimListener(router));
-
-							//qSim.addQueueSimulationListeners(new GRID_SIMlistener(router));
+							// Add the listener for Sim Step End 
+							qSim.addQueueSimulationListeners(new GRID_SIMlistener(router));
 							
 							qSim.addQueueSimulationListeners(travelTime);
 							return qSim;

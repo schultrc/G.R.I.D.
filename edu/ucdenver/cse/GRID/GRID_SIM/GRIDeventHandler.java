@@ -25,7 +25,6 @@ public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHa
 		if (outputFlag) {
 			System.out.println("reset...");
 		}
-
 	}
 
 	@Override
@@ -41,6 +40,7 @@ public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHa
 	public void handleEvent(LinkLeaveEvent event) {
 
 		// This is probably where we want to go get an updated route
+		// so, go get your route young agent!
 		if (outputFlag) {
 			System.out.println("LinkLeaveEvent");
 			System.out.println("Time: " + event.getTime());
@@ -50,6 +50,7 @@ public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHa
 
 	@Override
 	public void handleEvent(PersonArrivalEvent event) {
+		// Time? Do we want to track time here?
 		if (outputFlag) {
 			System.out.println("AgentArrivalEvent");
 			System.out.println("Time: " + event.getTime());
@@ -60,6 +61,9 @@ public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHa
 
 	@Override
 	public void handleEvent(PersonDepartureEvent event) {
+		
+		// If we want to track time above, we probably need to record the start time here
+		
 		if (outputFlag) {
 			System.out.println("AgentDepartureEvent");
 			System.out.println("Time: " + event.getTime());
@@ -67,6 +71,5 @@ public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHa
 			System.out.println("PersonId: " + event.getPersonId());
 		}
 	}
-
 }
 
