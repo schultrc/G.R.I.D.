@@ -36,7 +36,7 @@ public class GRIDmap {
 		else
 		{
 			this.Roads.put(addMe.getId(), addMe);
-			System.out.println("Successfully added road: " + addMe.getId());
+			//System.out.println("Successfully added road: " + addMe.getId());
 		}
 		
 		return true;

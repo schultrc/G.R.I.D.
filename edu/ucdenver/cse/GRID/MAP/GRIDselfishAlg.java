@@ -42,10 +42,22 @@ public class GRIDselfishAlg {
         GRIDroute finalPath = new GRIDroute();
         String step = to;
 
+        /* previousNodes Tester
+        int test000 = previousNodes.size();
+        System.out.print("\nTest000: "+test000);
+        Set keys = previousNodes.keySet();
+
+        for (Iterator i = keys.iterator(); i.hasNext();)
+        {
+            String key = (String) i.next();
+            String value = (String) previousNodes.get(key);
+            System.out.println("Here is the value: " + value);
+        }*/
+
         finalPath.nodes.add(step);
         if(previousNodes.get(step) == null)
         {
-            System.out.println("I guess it's null, friend.");
+            System.out.println("\nI guess it's null, friend.");
             return null;
         }
 
@@ -57,7 +69,7 @@ public class GRIDselfishAlg {
 
         Collections.reverse(finalPath.nodes);
 
-        System.out.println("end of line");
+        System.out.println("\nend of line");
         return finalPath;
     }
 

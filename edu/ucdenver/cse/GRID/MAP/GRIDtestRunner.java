@@ -10,15 +10,43 @@ import org.junit.Test;
 
 public class GRIDtestRunner{
 
-    private GRIDmapReader myReader;
-    private GRIDmap myMap = new GRIDmap(); // myReader.readMapFile("..\\..\\..\\..\\..\\data\\SmallNetwork2.xml"); //
+    private GRIDmapReader myReader = new GRIDmapReader();
+    private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml"); // SmallNetwork2 PuebloNetwork
 
     private GRIDintersection from = new GRIDintersection("test",1d,2d);
     private GRIDintersection to = new GRIDintersection("test",1d,2d);
 
-
     @Test
     public void runTest()
+    {
+        // Pueblo start to finish 34.97s
+        from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
+        to.setId("864162469");   // to.setId("10"); // 864162469 // 50
+
+        GRIDselfishAlg test = new GRIDselfishAlg(myMap);
+        GRIDroute outRoute = new GRIDroute();
+
+        outRoute = test.findPath(from.getId(),to.getId());
+        ListIterator<String> pathIterator = outRoute.nodes.listIterator();
+
+        assertNotNull(myMap);
+        assertNotNull(outRoute);
+        assertTrue(outRoute.nodes.size() > 0);
+
+        System.out.print("\nPath: ");
+        for (String node : outRoute.nodes)
+        {
+            System.out.print(node);
+            if(!node.equals(to.getId()))
+                System.out.print(",");
+        }
+
+        System.out.print("\n\nAnd we're done.");
+    }
+}
+
+/*
+public void runTest()
     {
         from.setId("01");
         to.setId("10");
@@ -73,4 +101,4 @@ public class GRIDtestRunner{
         tempRoad.setCurrentSpeed(currSpeed);
         testMap.addRoad(tempRoad);
     }
-}
+*/
