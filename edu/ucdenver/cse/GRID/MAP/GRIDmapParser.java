@@ -20,6 +20,7 @@ public class GRIDmapParser extends DefaultHandler  {
 			GRIDintersection theNode = new GRIDintersection(attributes.getValue("id"), 
 															Double.parseDouble(attributes.getValue("x")),
 															Double.parseDouble(attributes.getValue("y")));
+			
 		
 			theMap.addIntersection(theNode);
 		}
@@ -29,7 +30,11 @@ public class GRIDmapParser extends DefaultHandler  {
 			
 			theRoad.setFrom(attributes.getValue("from"));
 			theRoad.setTo(attributes.getValue("to"));
+			theRoad.setMaxSpeed(Double.parseDouble(attributes.getValue("freespeed")));
+			theRoad.setLength(Double.parseDouble(attributes.getValue("length")));
+			theRoad.setMaxCapacity(Double.parseDouble(attributes.getValue("capacity")));
 			
+			// Put the new road in the map
 			theMap.addRoad(theRoad);
 		}
 	}

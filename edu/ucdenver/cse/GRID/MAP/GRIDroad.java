@@ -25,7 +25,17 @@ public class GRIDroad {
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
 	private ConcurrentHashMap<Long, Double> roadWeight = new ConcurrentHashMap<Long, Double>();
 	
+	// Max capacity is defined in vehicles per hour
+	private double maxCapacity;
 	
+	public double getMaxCapacity() {
+		return maxCapacity;
+	}
+
+	public void setMaxCapacity(double maxCapacity) {
+		this.maxCapacity = maxCapacity;
+	}
+
 	public GRIDroad(String theId)
 	{
 		Id = theId;
@@ -99,5 +109,20 @@ public class GRIDroad {
 		}
 		
 		return -1;
+	}
+	
+	public boolean setWeightAtTime(Long time, double capacity) {
+		if (this.roadWeight.containsKey(time)) {
+			System.out.println("ERROR: Time already has a value for: " +
+		                       this.Id + " at time: " +
+							   time.toString());	
+
+			return false;
+		}
+		else {
+			this.roadWeight.put(time, capacity);
+			return true;
+		}
+			
 	}
 }

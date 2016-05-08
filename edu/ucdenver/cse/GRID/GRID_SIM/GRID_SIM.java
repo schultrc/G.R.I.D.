@@ -89,6 +89,7 @@ public class GRID_SIM {
 
 			System.out.println("File Chosen: " + mapFile);
 			ourMap = masterMap.readMapFile(mapFile);
+			
 
 			// From WithinDayReplanning
 			Set<String> analyzedModes = new HashSet<String>();
