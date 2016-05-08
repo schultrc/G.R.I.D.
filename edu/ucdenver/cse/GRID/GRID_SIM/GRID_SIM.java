@@ -27,6 +27,7 @@ import org.matsim.withinday.trafficmonitoring.TravelTimeCollector;
 import com.google.inject.Provider;
 
 import edu.ucdenver.cse.GRID.*;
+import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
 import edu.ucdenver.cse.GRID.MAP.GRIDmap;
 import edu.ucdenver.cse.GRID.MAP.GRIDmapReader;
 import edu.ucdenver.cse.GRID.MAP.GRIDroute;
@@ -46,12 +47,21 @@ public class GRID_SIM {
 		
 		// The list of routes for our agents
 		// Change to it's own class for change flag, etc?
-		ConcurrentMap<String, GRIDroute> Routes = new ConcurrentHashMap<String, GRIDroute> ();
+		//ConcurrentMap<String, GRIDroute> Routes = new ConcurrentHashMap<String, GRIDroute> ();
+		
+		// All of our agents
+		
+		// How do we fill this?
+		final ConcurrentMap<String, GRIDagent> myAgents = new ConcurrentHashMap<String, GRIDagent> ();
+		
+		
+		
+		// The official map
+		final GRIDmap ourMap;
 		
 		// Load our version of the map first
 		GRIDmapReader masterMap = new GRIDmapReader();
-		
-		
+				
 		String configFile = GRIDutils.getConfigFile();
 	        
 	    if (configFile == "") {
@@ -78,7 +88,7 @@ public class GRID_SIM {
 			String mapFile = config.network().getInputFile();
 
 			System.out.println("File Chosen: " + mapFile);
-			GRIDmap ourMap = masterMap.readMapFile(mapFile);
+			ourMap = masterMap.readMapFile(mapFile);
 
 			// From WithinDayReplanning
 			Set<String> analyzedModes = new HashSet<String>();
@@ -88,7 +98,8 @@ public class GRID_SIM {
 			// end WithinDayReplanning
 			
 			// Add our handler for Link Events			
-			controler.getEvents().addHandler(new GRIDeventHandler(false));
+			GRID_SIM_agentEventHandler theAgentHandler = new GRID_SIM_agentEventHandler(false);
+			controler.getEvents().addHandler(theAgentHandler);
 			
 			
 			// Add listeners for the sim steps
@@ -102,14 +113,19 @@ public class GRID_SIM {
 							// construct necessary trip router:
 							TripRouter router = new TripRouterProviderImpl(controler.getScenario(),
 									controler.getTravelDisutilityFactory(), travelTime,
-									controler.getLeastCostPathCalculatorFactory(), controler.getTransitRouterFactory())
-											.get();
+									controler.getLeastCostPathCalculatorFactory(), controler.getTransitRouterFactory()).get();
 
 							// construct qsim and insert listeners:
 							QSim qSim = QSimUtils.createDefaultQSim(controler.getScenario(), controler.getEvents());
 							
+							GRID_SIM_matsimEventHandler theSimHandler = new GRID_SIM_matsimEventHandler(router);
+							
+							// add the map to the handler
+							theSimHandler.setTheMap(ourMap);
+							// add the agents to the handler
+							
 							// Add the listener for Sim Step End 
-							qSim.addQueueSimulationListeners(new GRID_SIMlistener(router));
+							qSim.addQueueSimulationListeners(theSimHandler);
 							
 							qSim.addQueueSimulationListeners(travelTime);
 							return qSim;

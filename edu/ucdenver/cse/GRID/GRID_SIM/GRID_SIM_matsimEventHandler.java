@@ -3,6 +3,8 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
@@ -27,24 +29,63 @@ import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimLink;
 import org.matsim.core.router.TripRouter;
 import org.matsim.withinday.utils.EditRoutes;
 
+import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.MAP.GRIDmap;
+import edu.ucdenver.cse.GRID.MAP.GRIDroad;
 
-public class GRID_SIMlistener implements MobsimBeforeSimStepListener, MobsimAfterSimStepListener {
 
+public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener, MobsimAfterSimStepListener {
+
+	GRIDmap theMap;
+	
+	ConcurrentMap<String, GRIDagent> theAgents;
+	
+	public GRIDmap getTheMap() {
+		// This should NEVER get called
+		return theMap;
+	}
+
+	public void setTheMap(GRIDmap theMap) {
+		this.theMap = theMap;
+	}
+
+	public ConcurrentMap<String, GRIDagent> getTheAgents() {
+		// This should NEVER get called
+		return theAgents;
+	}
+
+	public void setTheAgents(ConcurrentMap<String, GRIDagent> theAgents) {
+		this.theAgents = theAgents;
+	}
+
+
+	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
 	
 	private TripRouter tripRouter;
 	private Scenario scenario;
 
-	GRID_SIMlistener(TripRouter tripRouter) {
+	GRID_SIM_matsimEventHandler(TripRouter tripRouter) {
 		this.tripRouter = tripRouter;
 	}
 
 	@Override
 	public void notifyMobsimBeforeSimStep(@SuppressWarnings("rawtypes") MobsimBeforeSimStepEvent event) {
 	
-		System.out.println("We got to the begining of notifyMobsimBeforeSimStep: " + event.toString() + " " + event.getSimulationTime() );
+		final Logger GRIDLog = Logger.getLogger("ray");
+
+		GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
+		
+		//System.out.println("We got to the begining of notifyMobsimBeforeSimStep: " + event.toString() + " " + event.getSimulationTime() );
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 	    this.scenario = mobsim.getScenario();
+	    
+	    for(String roadID:theMap.getRoads().keySet()) {
+	    	System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
+	    			
+	    	theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);
+	    	
+	    }
 	    
 	    Collection<MobsimAgent> agentsToReplan = getAgentsToReplan(mobsim); 
 	    for (MobsimAgent ma : agentsToReplan) {
@@ -93,6 +134,7 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener, MobsimAfte
 		
 		List<MobsimAgent> set = new ArrayList<MobsimAgent>();
 
+
 		// don't do anything for most time steps:
 		if (Math.floor(mobsim.getSimTimer().getTimeOfDay()) != 22000.0) {
 			return set;
@@ -103,7 +145,7 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener, MobsimAfte
 				MobsimDriverAgent agent = vehicle.getDriver();
 				System.out.println(agent.getId());
 				if (true) { // some condition ...
-					System.out.println("found agent");
+					System.out.println("found agent" + agent.toString());
 					set.add(agent);
 				}
 			}

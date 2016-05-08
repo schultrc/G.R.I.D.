@@ -11,12 +11,12 @@ import org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler;
 import org.matsim.core.mobsim.framework.events.*;
 
-public class GRIDeventHandler implements LinkEnterEventHandler, LinkLeaveEventHandler, PersonArrivalEventHandler,
+public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLeaveEventHandler, PersonArrivalEventHandler,
 		PersonDepartureEventHandler {
 	
 	private boolean outputFlag = false;
 
-	public GRIDeventHandler(boolean printFlag) {
+	public GRID_SIM_agentEventHandler(boolean printFlag) {
 		this.outputFlag = printFlag;
 	}
 
