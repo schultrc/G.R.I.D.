@@ -23,7 +23,7 @@ public class GRIDroad {
 	private double currentSpeed;
 
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
-	private ConcurrentHashMap<Long, Double> roadCapacity = new ConcurrentHashMap<Long, Double>();
+	private ConcurrentHashMap<Long, Double> roadWeight = new ConcurrentHashMap<Long, Double>();
 	
 	
 	public GRIDroad(String theId)
@@ -59,7 +59,7 @@ public class GRIDroad {
 	@Override
 	public String toString() {
 		return "GRIDroad [Id=" + Id + ", to=" + to + ", from=" + from + ", Length=" + Length + ", maxSpeed=" + maxSpeed
-				+ ", currentSpeed=" + currentSpeed + ", roadCapacity=" + roadCapacity + "]";
+				+ ", currentSpeed=" + currentSpeed + ", roadCapacity=" + roadWeight + "]";
 	}
 
 	public double getLength() {
@@ -88,14 +88,14 @@ public class GRIDroad {
 	
 	public void addToCapacity(Long time) {
 		// replace checks to ensure it already exists
-			if (this.roadCapacity.replace(time, (this.roadCapacity.get(time) + 1)) == null) {
-				this.roadCapacity.put(time, ourDefaultValue);
+			if (this.roadWeight.replace(time, (this.roadWeight.get(time) + 1)) == null) {
+				this.roadWeight.put(time, ourDefaultValue);
 			}		
 	}
 	
 	public double getCapacityAtTime(Long time) {
-		if (this.roadCapacity.containsKey(time) ) {
-			return this.roadCapacity.get(time);
+		if (this.roadWeight.containsKey(time) ) {
+			return this.roadWeight.get(time);
 		}
 		
 		return -1;
