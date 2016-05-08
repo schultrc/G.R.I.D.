@@ -27,6 +27,8 @@ public class GRIDmapReader {
 	         
 	         GRIDmap theMap = GMP.getMap();
 	         
+	         setDefaultWeights(theMap);
+	         
 	         return theMap;
 	    } 
 		catch (Exception e) {
@@ -34,5 +36,36 @@ public class GRIDmapReader {
 	         
 		 return null;
 	    }
-	}		
+	}
+	
+	private boolean setDefaultWeights(GRIDmap theMap) {
+		// This eventually should read in real world estimates
+		
+		int maxSecInDay = 86400;
+		
+		for(String roadID:theMap.getRoads().keySet()) {
+			
+			GRIDroad curRoad = theMap.getRoad(roadID);
+			
+			// Calc the default weight
+			
+			double theWeight = curRoad.getLength() / curRoad.getMaxSpeed();
+			
+			for(long i =0; i <maxSecInDay; ++i) {
+				if (curRoad.setWeightAtTime(i, theWeight)) {
+					//System.out.println("adding weight: " + theWeight +
+					//		           " to road: " + curRoad.getId());	
+
+				}
+				else
+				{
+					
+				}
+			}
+		}
+		
+		
+		
+		return true;
+	}
 }
