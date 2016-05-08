@@ -1,5 +1,6 @@
 package edu.ucdenver.cse.GRID.MAP;
 
+import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,22 +12,23 @@ import org.junit.Test;
 public class GRIDtestRunner{
 
     private GRIDmapReader myReader = new GRIDmapReader();
-    private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml"); // SmallNetwork2 PuebloNetwork
+    private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
 
-    private GRIDintersection from = new GRIDintersection("test",1d,2d);
-    private GRIDintersection to = new GRIDintersection("test",1d,2d);
+    private GRIDagent testAgent001 = getTestAgent();
+    // private GRIDintersection from = new GRIDintersection("test",1d,2d);
+    // private GRIDintersection to = new GRIDintersection("test",1d,2d);
 
     @Test
     public void runTest()
     {
         // Pueblo start to finish 34.97s
-        from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
-        to.setId("864162469");   // to.setId("10"); // 864162469 // 50
+        // from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
+        // to.setId("864162469");   // to.setId("10"); // 864162469 // 50
 
-        GRIDselfishAlg test = new GRIDselfishAlg(myMap);
+        GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, myMap, 0L);
         GRIDroute outRoute = new GRIDroute();
 
-        outRoute = test.findPath(from.getId(),to.getId());
+        outRoute = test001.findPath();
         ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
         assertNotNull(myMap);
@@ -37,68 +39,28 @@ public class GRIDtestRunner{
         for (String intrx : outRoute.Intersections)
         {
             System.out.print(intrx);
-            if(!intrx.equals(to.getId()))
+            if(!intrx.equals(testAgent001.getDestination()))
                 System.out.print(",");
         }
 
         System.out.print("\n\nAnd we're done.");
+    }
+
+    private GRIDagent getTestAgent()
+    { // String Id, String newLink, String origin, String destination
+        String agtID = "testAgent001",
+                currentLink = "myLink001",
+                currentIntrx = "2", // 1040921516 // 2
+                destIntrx = "50";    // 864162469  // 50
+
+
+        GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);
+
+        return myAgent;
     }
 }
 
+
+
 /*
-public void runTest()
-    {
-        from.setId("01");
-        to.setId("10");
-
-        GRIDselfishAlg test = new GRIDselfishAlg(myMap);
-        GRIDroute outRoute = new GRIDroute();
-
-        addRoad("01","01","02",10.0,50.0,myMap);
-        addRoad("02","02","03",11.0,50.0,myMap);
-        addRoad("03","02","04",10.0,50.0,myMap);
-        addRoad("04","03","05",10.0,50.0,myMap);
-        addRoad("05","04","05",10.0,50.0,myMap);
-
-        addRoad("06","05","06",10.0,50.0,myMap);
-        addRoad("07","05","07",11.0,50.0,myMap);
-        addRoad("08","06","08",10.0,50.0,myMap);
-        addRoad("09","07","08",10.0,50.0,myMap);
-        addRoad("10","08","10",12.0,50.0,myMap);
-        addRoad("11","08","09",5.0,50.0,myMap);
-        addRoad("12","09","10",6.0,50.0,myMap);
-
-        outRoute = test.findPath(from.getId(),to.getId());
-        ListIterator<String> pathIterator = outRoute.nodes.listIterator();
-
-        assertNotNull(myMap);
-        assertNotNull(outRoute);
-        assertTrue(outRoute.nodes.size() > 0);
-
-        System.out.print("\nPath: ");
-        for (String node : outRoute.nodes)
-        {
-            System.out.print(node);
-            if(!node.equals(to.getId()))
-                System.out.print(",");
-        }
-
-        System.out.print("\n\nAnd we're done.");
-    }
-
-    private void addRoad(String rdId, String fromId, String toId, Double length, Double currSpeed, GRIDmap testMap)
-    {
-        GRIDintersection tempFrom = new GRIDintersection("test",1d,2d);
-        tempFrom.setId(fromId);
-        GRIDintersection tempTo   = new GRIDintersection("test",1d,2d);
-        tempTo.setId(toId);
-
-        GRIDroad tempRoad = new GRIDroad(rdId);
-
-        tempRoad.setFrom(tempFrom.getId());
-        tempRoad.setTo(tempTo.getId());
-        tempRoad.setLength(length);
-        tempRoad.setCurrentSpeed(currSpeed);
-        testMap.addRoad(tempRoad);
-    }
 */

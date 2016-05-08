@@ -17,23 +17,19 @@ import java.util.*;
 public class GRIDagent {
     private String Id = "";
     private GRIDroute travelPath;
-    private Long x;
-    private Long y;
-    private String currentLink;
+    private Long x; private Long y; // Future Use for now 05/08
+    private String currentLink;     // Future Use 05/08
     private String origin;
     private String destination;
     private Long fuelEconomy;
     private Long vehOccupancy;
     private Long vehSize;
 
-    public GRIDagent(String Id, Long x, Long y, String newLink, String origin, String destination) {
+    public GRIDagent(String Id, String newLink, String origin, String destination) {
         super();
 
         travelPath = new GRIDroute();
         this.Id = Id;
-        this.x = x;
-        this.y = y;
-        currentLink = newLink;
         this.origin = origin;
         this.destination = destination;
     }

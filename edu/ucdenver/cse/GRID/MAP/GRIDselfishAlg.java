@@ -6,31 +6,41 @@
 
 package edu.ucdenver.cse.GRID.MAP;
 
+import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+
 import java.util.concurrent.*;
 import java.util.*;
 
 public class GRIDselfishAlg {
 
+    private int testCounter;
     private ConcurrentMap<String, GRIDintersection> intersections;
     private ConcurrentMap<String, GRIDroad> roads;
+    private String agtFrom;
+    private String agtTo;
+    private Long currentTime;
     private Set<String> visited;
     private Set<String> unVisited;
     private ConcurrentMap<String, Double> currentPathTotal;
     private Map<String,String> previousIntersections;
 
-    public GRIDselfishAlg(GRIDmap selfishMap){
+    public GRIDselfishAlg(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
 
+        testCounter = 0;
         this.intersections = selfishMap.getIntersections();
         this.roads = selfishMap.getRoads();
+        agtFrom = thisAgent.getOrigin();
+        agtTo = thisAgent.getDestination();
+        this.currentTime = currentTime;
     }
 
-    public GRIDroute findPath(String from, String to){
+    public GRIDroute findPath(){
         visited = new HashSet<String>();
         unVisited = new HashSet<String>();
         currentPathTotal = new ConcurrentHashMap<>();
         previousIntersections = new HashMap<String,String>();
-        currentPathTotal.put(from,0D);
-        unVisited.add(from);
+        currentPathTotal.put(agtFrom,0D);
+        unVisited.add(agtFrom);
 
         while(unVisited.size() > 0){
             String node = getMin(unVisited);
@@ -40,7 +50,7 @@ public class GRIDselfishAlg {
         }
 
         GRIDroute finalPath = new GRIDroute();
-        String step = to;
+        String step = agtTo;
 
         /* previousNodes Tester
         int test000 = previousNodes.size();
@@ -114,12 +124,14 @@ public class GRIDselfishAlg {
                 unVisited.add(endNode);
             }
         }
+        /*String key = "key", value = "val";
         Set keys = previousIntersections.keySet();
         for (Iterator i = keys.iterator(); i.hasNext();)
         {
-            String key = (String) i.next();
-            String value = (String) previousIntersections.get(key);
+            key = (String) i.next();
+            value = (String) previousIntersections.get(key);
         }
+        System.out.println("Timestep " + testCounter++ + ": " + "(K: " + key + ")" + "(V: " + value + ")");*/
     }
 
     private Double getOptimalEdgeWeight(String endNode)
@@ -139,10 +151,17 @@ public class GRIDselfishAlg {
     {
         for(String roadId : roads.keySet())
         {
+            //roads.get(roadId).getFrom()
             if(roads.get(roadId).getFrom().equals(startNode)
                && roads.get(roadId).getTo().equals(endNode))
             {
-                return (roads.get(roadId).getLength() * roads.get(roadId).getCurrentSpeed());
+                // return (roads.get(roadId).getLength() * roads.get(roadId).getCurrentSpeed());
+                // return roads.get(roadId).getWeight(currentTime);
+                System.out.println("calcEdge: " + roads.get(roadId).getLength() +" "+ roads.get(roadId).getCurrentSpeed());
+                System.out.println("roads size: " + roads.size());
+                System.out.println("road time: " + intersections);
+                System.out.println("Weight: " + roads.get(roadId).getWeight(currentTime));
+                return roads.get(roadId).getWeight(currentTime);
             }
         }
 
