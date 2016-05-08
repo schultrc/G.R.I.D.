@@ -110,4 +110,19 @@ public class GRIDroad {
 		
 		return -1;
 	}
+	
+	public boolean setWeightAtTime(Long time, double capacity) {
+		if (this.roadWeight.containsKey(time)) {
+			System.out.println("ERROR: Time already has a value for: " +
+		                       this.Id + " at time: " +
+							   time.toString());	
+
+			return false;
+		}
+		else {
+			this.roadWeight.put(time, capacity);
+			return true;
+		}
+			
+	}
 }
