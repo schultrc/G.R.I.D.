@@ -63,6 +63,8 @@ public class GRIDagent {
     @Override
     // step through both arrays in order, do something like:
     // intx - road - intx - road - intx - road etc
+    // we need a method to translate intersections into roads and store the roads
+    // in the GRIDroute class object
     public String toString()
     {
         for (String intx : travelPath.getIntersections())
