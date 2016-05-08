@@ -96,14 +96,14 @@ public class GRIDroad {
 		this.currentSpeed = currentSpeed;
 	}
 	
-	public void addToCapacity(Long time) {
+	public void addToWeight(Long time) {
 		// replace checks to ensure it already exists
 			if (this.roadWeight.replace(time, (this.roadWeight.get(time) + 1)) == null) {
 				this.roadWeight.put(time, ourDefaultValue);
 			}		
 	}
 	
-	public double getCapacityAtTime(Long time) {
+	public double getWeightAtTime(Long time) {
 		if (this.roadWeight.containsKey(time) ) {
 			return this.roadWeight.get(time);
 		}
