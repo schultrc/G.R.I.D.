@@ -11,24 +11,24 @@ import java.util.*;
 
 public class GRIDselfishAlg {
 
-    private ConcurrentMap<String, GRIDintersection> nodes;
-    private ConcurrentMap<String, GRIDroad> edges;
+    private ConcurrentMap<String, GRIDintersection> intersections;
+    private ConcurrentMap<String, GRIDroad> roads;
     private Set<String> visited;
     private Set<String> unVisited;
     private ConcurrentMap<String, Double> currentPathTotal;
-    private Map<String,String> previousNodes;
+    private Map<String,String> previousIntersections;
 
     public GRIDselfishAlg(GRIDmap selfishMap){
 
-        this.nodes = selfishMap.getIntersections();
-        this.edges = selfishMap.getRoads();
+        this.intersections = selfishMap.getIntersections();
+        this.roads = selfishMap.getRoads();
     }
 
     public GRIDroute findPath(String from, String to){
         visited = new HashSet<String>();
         unVisited = new HashSet<String>();
         currentPathTotal = new ConcurrentHashMap<>();
-        previousNodes = new HashMap<String,String>();
+        previousIntersections = new HashMap<String,String>();
         currentPathTotal.put(from,0D);
         unVisited.add(from);
 
@@ -54,20 +54,20 @@ public class GRIDselfishAlg {
             System.out.println("Here is the value: " + value);
         }*/
 
-        finalPath.nodes.add(step);
-        if(previousNodes.get(step) == null)
+        finalPath.Intersections.add(step);
+        if(previousIntersections.get(step) == null)
         {
             System.out.println("\nI guess it's null, friend.");
             return null;
         }
 
-        while(previousNodes.get(step)!= null)
+        while(previousIntersections.get(step)!= null)
         {
-            step = previousNodes.get(step);
-            finalPath.nodes.add(step);
+            step = previousIntersections.get(step);
+            finalPath.Intersections.add(step);
         }
 
-        Collections.reverse(finalPath.nodes);
+        Collections.reverse(finalPath.Intersections);
 
         System.out.println("\nend of line");
         return finalPath;
@@ -102,23 +102,23 @@ public class GRIDselfishAlg {
             {
                 currentPathTotal.put(endNode,getOptimalEdgeWeight(startNode) + calcEdgeWeight(startNode, endNode));
 
-                Set keys = previousNodes.keySet();
+                Set keys = previousIntersections.keySet();
 
                 for (Iterator i = keys.iterator(); i.hasNext();)
                 {
                     String key = (String) i.next();
-                    String value = (String) previousNodes.get(key);
+                    String value = (String) previousIntersections.get(key);
                 }
 
-                previousNodes.put(endNode,startNode);
+                previousIntersections.put(endNode,startNode);
                 unVisited.add(endNode);
             }
         }
-        Set keys = previousNodes.keySet();
+        Set keys = previousIntersections.keySet();
         for (Iterator i = keys.iterator(); i.hasNext();)
         {
             String key = (String) i.next();
-            String value = (String) previousNodes.get(key);
+            String value = (String) previousIntersections.get(key);
         }
     }
 
@@ -137,12 +137,12 @@ public class GRIDselfishAlg {
 
     private Double calcEdgeWeight(String startNode, String endNode)
     {
-        for(String roadId : edges.keySet())
+        for(String roadId : roads.keySet())
         {
-            if(edges.get(roadId).getFrom().equals(startNode)
-               && edges.get(roadId).getTo().equals(endNode))
+            if(roads.get(roadId).getFrom().equals(startNode)
+               && roads.get(roadId).getTo().equals(endNode))
             {
-                return (edges.get(roadId).getLength() * edges.get(roadId).getCurrentSpeed());
+                return (roads.get(roadId).getLength() * roads.get(roadId).getCurrentSpeed());
             }
         }
 
@@ -153,11 +153,11 @@ public class GRIDselfishAlg {
     {
         ArrayList<String> adjNodes = new ArrayList<String>();
 
-        for(String key : edges.keySet())
+        for(String key : roads.keySet())
         {
-            if(edges.get(key).getFrom().equals(node) && !isVisited(edges.get(key).getTo()))
+            if(roads.get(key).getFrom().equals(node) && !isVisited(roads.get(key).getTo()))
             {
-                adjNodes.add(edges.get(key).getTo());
+                adjNodes.add(roads.get(key).getTo());
             }
         }
 

@@ -27,17 +27,17 @@ public class GRIDtestRunner{
         GRIDroute outRoute = new GRIDroute();
 
         outRoute = test.findPath(from.getId(),to.getId());
-        ListIterator<String> pathIterator = outRoute.nodes.listIterator();
+        ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
         assertNotNull(myMap);
         assertNotNull(outRoute);
-        assertTrue(outRoute.nodes.size() > 0);
+        assertTrue(outRoute.Intersections.size() > 0);
 
         System.out.print("\nPath: ");
-        for (String node : outRoute.nodes)
+        for (String intrx : outRoute.Intersections)
         {
-            System.out.print(node);
-            if(!node.equals(to.getId()))
+            System.out.print(intrx);
+            if(!intrx.equals(to.getId()))
                 System.out.print(",");
         }
 
