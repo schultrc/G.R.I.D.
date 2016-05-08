@@ -16,7 +16,9 @@ import org.matsim.api.core.v01.population.PlanElement;
 import org.matsim.core.mobsim.framework.HasPerson;
 import org.matsim.core.mobsim.framework.MobsimAgent;
 import org.matsim.core.mobsim.framework.MobsimDriverAgent;
+import org.matsim.core.mobsim.framework.events.MobsimAfterSimStepEvent;
 import org.matsim.core.mobsim.framework.events.MobsimBeforeSimStepEvent;
+import org.matsim.core.mobsim.framework.listeners.MobsimAfterSimStepListener;
 import org.matsim.core.mobsim.framework.listeners.MobsimBeforeSimStepListener;
 import org.matsim.core.mobsim.qsim.agents.WithinDayAgentUtils;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
@@ -26,7 +28,7 @@ import org.matsim.core.router.TripRouter;
 import org.matsim.withinday.utils.EditRoutes;
 
 
-public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
+public class GRID_SIMlistener implements MobsimBeforeSimStepListener, MobsimAfterSimStepListener {
 
 	private static final Logger log = Logger.getLogger("dummy");
 	
@@ -40,19 +42,23 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
 	@Override
 	public void notifyMobsimBeforeSimStep(@SuppressWarnings("rawtypes") MobsimBeforeSimStepEvent event) {
 	
+		System.out.println("We got to the begining of notifyMobsimBeforeSimStep: " + event.toString() + " " + event.getSimulationTime() );
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 	    this.scenario = mobsim.getScenario();
 	    
 	    Collection<MobsimAgent> agentsToReplan = getAgentsToReplan(mobsim); 
 	    for (MobsimAgent ma : agentsToReplan) {
-	    	doReplanning(ma, mobsim);
-	  
-	    
+	    	
+	    	System.out.println("we found agent: " + ma.toString());
+	    	
+	    	doReplanning(ma, mobsim);	  	    
 	    }        
 	}
 	
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim ) {
 		double now = mobsim.getSimTimer().getTimeOfDay();
+
+		System.out.println("Sim Time is: " + now);
 
 		Plan plan = WithinDayAgentUtils.getModifiablePlan(agent);
 
@@ -85,9 +91,6 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
 
 		// Change this to be our list of agents
 		
-		// FIX
-		
-		
 		List<MobsimAgent> set = new ArrayList<MobsimAgent>();
 
 		// don't do anything for most time steps:
@@ -103,10 +106,17 @@ public class GRID_SIMlistener implements MobsimBeforeSimStepListener {
 					System.out.println("found agent");
 					set.add(agent);
 				}
-
 			}
 		}
 
 		return set;
+	}
+	
+
+	@Override
+	public void notifyMobsimAfterSimStep(@SuppressWarnings("rawtypes") MobsimAfterSimStepEvent event) {
+
+		//System.out.println("We got to the beginning of notifyMobsimBeforeSimStep at time: " + event.getSimulationTime());
+
 	}
 }
