@@ -12,7 +12,8 @@ import org.junit.Test;
 public class GRIDtestRunner{
 
     private GRIDmapReader myReader = new GRIDmapReader();
-    private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
+    //private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
+    private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml"); // SmallNetwork2 PuebloNetwork
 
     private GRIDagent testAgent001 = getTestAgent();
     // private GRIDintersection from = new GRIDintersection("test",1d,2d);
@@ -24,7 +25,8 @@ public class GRIDtestRunner{
         // Pueblo start to finish 34.97s
         // from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
         // to.setId("864162469");   // to.setId("10"); // 864162469 // 50
-
+    	long startTime = System.nanoTime();
+    	
         GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, myMap, 0L);
         GRIDroute outRoute = new GRIDroute();
 
@@ -43,6 +45,11 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
 
+        long stopTime = System.nanoTime();
+        
+        long timeToRun = ((stopTime - startTime)/1000000);
+        
+        System.out.print("Took " + timeToRun + " Seconds");
         System.out.print("\n\nAnd we're done.");
     }
 
@@ -50,8 +57,8 @@ public class GRIDtestRunner{
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
                 currentLink = "myLink001",
-                currentIntrx = "2", // 1040921516 // 2
-                destIntrx = "50";    // 864162469  // 50
+                currentIntrx = "1040921516", // 1040921516 // 2
+                destIntrx = "864162469";    // 864162469  // 50
 
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);
@@ -59,8 +66,3 @@ public class GRIDtestRunner{
         return myAgent;
     }
 }
-
-
-
-/*
-*/
