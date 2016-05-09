@@ -145,7 +145,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 				MobsimDriverAgent agent = vehicle.getDriver();
 				System.out.println(agent.getId());
 				if (true) { // some condition ...
-					System.out.println("found agent" + agent.toString());
+					//System.out.println("found agent" + agent.toString());
 					set.add(agent);
 				}
 			}

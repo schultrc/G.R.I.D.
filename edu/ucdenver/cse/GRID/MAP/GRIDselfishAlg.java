@@ -157,6 +157,11 @@ public class GRIDselfishAlg {
                && roads.get(roadId).getTo().equals(endNode))
             {
                 // return (roads.get(roadId).getLength() * roads.get(roadId).getCurrentSpeed());
+                // return roads.get(roadId).getWeight(currentTime);
+                //System.out.println("calcEdge: " + roads.get(roadId).getLength() +" "+ roads.get(roadId).getCurrentSpeed());
+                //System.out.println("roads size: " + roads.size());
+                //System.out.println("road time: " + intersections);
+                //System.out.println("Weight: " + roads.get(roadId).getWeightAtTime(currentTime));
                 return roads.get(roadId).getWeightAtTime(currentTime);
             }
         }
