@@ -74,16 +74,17 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	
 		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
 
-		GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
+		// RCS Is this working, but sending it to the console?????
+		//GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
 		
 		//System.out.println("We got to the begining of notifyMobsimBeforeSimStep: " + event.toString() + " " + event.getSimulationTime() );
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 	    this.scenario = mobsim.getScenario();
 	    
 	    for(String roadID:theMap.getRoads().keySet()) {
-	    	System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
+	    	//System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
 	    			
-	    	theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);
+	    	//theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);
 	    	
 	    }
 	    
