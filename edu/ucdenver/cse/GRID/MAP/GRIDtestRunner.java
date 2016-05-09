@@ -21,7 +21,9 @@ public class GRIDtestRunner{
 
     @Test
     public void runTest()
-    {
+    { // Pueblo start to finish 34.97s
+        
+	System.out.println("Starting runTest. . .");
         // Pueblo start to finish 34.97s
         // from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
         // to.setId("864162469");   // to.setId("10"); // 864162469 // 50
@@ -44,6 +46,18 @@ public class GRIDtestRunner{
             if(!intrx.equals(testAgent001.getDestination()))
                 System.out.print(",");
         }
+        
+	ArrayList<String> tempPathList = new ArrayList<>();
+        tempPathList = myMap.getPathByRoad(outRoute.Intersections);
+
+        System.out.print("\nPath by Link: ");
+        for (String path : tempPathList)
+        {
+            System.out.print(path);
+            if(!tempPathList.isEmpty()
+               && !path.equals(tempPathList.get(tempPathList.size() - 1)))
+                System.out.print(",");
+        }
 
         long stopTime = System.nanoTime();
         
@@ -57,9 +71,8 @@ public class GRIDtestRunner{
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
                 currentLink = "myLink001",
-                currentIntrx = "1040921516", // 1040921516 // 2
-                destIntrx = "864162469";    // 864162469  // 50
-
+                currentIntrx = "2", // 1040921516 // 2
+                destIntrx = "50"; // 864162469 // 177890694 PNet3 // 177849670 // 50
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);
 

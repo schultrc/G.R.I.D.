@@ -1,6 +1,8 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.concurrent.*;
+import java.util.*;
+//import java.util.ArrayList;
 
 public class GRIDmap {
 	
@@ -58,8 +60,31 @@ public class GRIDmap {
 	public GRIDroad getRoad(String theRoadID) {
 		return this.Roads.get(theRoadID);
 	}
-	
 	public GRIDintersection getIntersection(String theIntersection) {
 		return this.Intersections.get(theIntersection);
 	}
+
+	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
+	{
+		ArrayList<String> pathByRoad = new ArrayList<String>();
+		Set keys = Roads.keySet();
+
+		for (Iterator itr = keys.iterator(); itr.hasNext();)
+		{
+			String key = (String) itr.next();
+			GRIDroad value = (GRIDroad) Roads.get(key);
+
+			for(int i = 0; i < pathByNode.size()-1; i++)
+			{
+				if(pathByNode.get(i).equals(value.getFrom())
+				   && pathByNode.get(i+1).equals(value.getTo()))
+				{
+					pathByRoad.add(value.getId());
+				}
+			}
+		}
+
+		return  pathByRoad;
+	}
+
 }

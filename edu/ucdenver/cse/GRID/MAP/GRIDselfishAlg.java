@@ -79,12 +79,13 @@ public class GRIDselfishAlg {
 
         Collections.reverse(finalPath.Intersections);
 
-        System.out.println("\nend of line");
+        System.out.println("Returning path. . .");
         return finalPath;
     }
 
     private String getMin(Set<String> nodes){
         String min = null;
+
         for(String node : nodes){
             if(min == null)
             {

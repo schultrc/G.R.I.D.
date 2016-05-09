@@ -28,8 +28,9 @@ public class GRIDagent {
     public GRIDagent(String Id, String newLink, String origin, String destination) {
         super();
 
-        travelPath = new GRIDroute();
         this.Id = Id;
+        travelPath = new GRIDroute();
+        this.currentLink = newLink;
         this.origin = origin;
         this.destination = destination;
     }
