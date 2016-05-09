@@ -105,10 +105,10 @@ public class GRIDroad {
 	
 	public double getWeightAtTime(Long time) {
 		if (this.roadWeight.containsKey(time) ) {
-			return this.roadWeight.get(time);
+			return this.roadWeight.get(time) + this.getDefaultWeight();
 		}
 		
-		return -1;
+		return this.getDefaultWeight();
 	}
 	
 	public boolean setWeightAtTime(Long time, double capacity) {
@@ -122,7 +122,15 @@ public class GRIDroad {
 		else {
 			this.roadWeight.put(time, capacity);
 			return true;
-		}
-			
+		}			
 	}
+	
+	private double getDefaultWeight() {
+		double theWeight;
+		
+		// using maxSpeed. Should this be currentSpeed???
+		theWeight = this.Length / this.maxSpeed;
+		
+		return theWeight;
+		}
 }

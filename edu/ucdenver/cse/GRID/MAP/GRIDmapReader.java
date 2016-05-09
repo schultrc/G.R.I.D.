@@ -27,7 +27,8 @@ public class GRIDmapReader {
 	         
 	         GRIDmap theMap = GMP.getMap();
 	         
-	         setDefaultWeights(theMap);
+	         // This breaks shit
+	         //setDefaultWeights(theMap);
 	         
 	         return theMap;
 	    } 
@@ -38,18 +39,25 @@ public class GRIDmapReader {
 	    }
 	}
 	
+	// Currently not in use, unimaginable memory costs
 	private boolean setDefaultWeights(GRIDmap theMap) {
 		// This eventually should read in real world estimates
 		
 		int maxSecInDay = 86400;
 		
+		int roadCount = 0;
+		
 		for(String roadID:theMap.getRoads().keySet()) {
+			
+			roadCount++; 
 			
 			GRIDroad curRoad = theMap.getRoad(roadID);
 			
 			// Calc the default weight
 			
 			double theWeight = curRoad.getLength() / curRoad.getMaxSpeed();
+			System.out.println("adding weight: " + + theWeight +
+							   " to road # " + roadCount + "  ID: " + curRoad.getId());	
 			
 			for(long i =0; i <maxSecInDay; ++i) {
 				if (curRoad.setWeightAtTime(i, theWeight)) {
