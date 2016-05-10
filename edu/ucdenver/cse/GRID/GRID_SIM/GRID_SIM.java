@@ -44,15 +44,11 @@ public class GRID_SIM {
 		 */
 				
 		System.out.println("It's not hard--you just gotta use finesse!");
-		
-		// The list of routes for our agents
-		// Change to it's own class for change flag, etc?
-		//ConcurrentMap<String, GRIDroute> Routes = new ConcurrentHashMap<String, GRIDroute> ();
-		
-		// All of our agents
-		
+				
 		// This will get filled and emptied via departure / arrival events
 		final ConcurrentHashMap<String, GRIDagent> masterAgents = new ConcurrentHashMap<String, GRIDagent> ();	
+		
+		double totalTravelTime = 0;
 		
 		// The official map
 		final GRIDmap ourMap;
@@ -137,7 +133,10 @@ public class GRID_SIM {
 			});
 			
 			// Everything is set up, let's run this thing
-			controler.run();						
+			controler.run();
+			
+			//System.out.println("Total travel time was: " + theAgentHandler.getTotalTravelTime());
+			totalTravelTime = theAgentHandler.getTotalTravelTime();
 		}
 		
 		catch ( Exception ee ) {
@@ -147,7 +146,9 @@ public class GRID_SIM {
 			Assert.fail();
 		}
 		
-		System.out.println("\n\n\n\nWell, we got to the end. \n\n\n\n");	
+		System.out.println("\n\nTotal travel time was: " + totalTravelTime + " seconds");
+		
+		System.out.println("\n\nWell, we got to the end. \n\n\n\n");	
 	}
 	
 	

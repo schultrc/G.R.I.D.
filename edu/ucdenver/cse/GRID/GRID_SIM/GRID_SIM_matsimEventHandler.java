@@ -60,7 +60,6 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		this.theAgents = theAgents;
 	}
 
-
 	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
 	

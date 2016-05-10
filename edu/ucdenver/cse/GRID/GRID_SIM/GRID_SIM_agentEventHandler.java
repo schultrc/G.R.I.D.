@@ -31,6 +31,16 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	// The map as we know it
 	GRIDmap ourMap;
 	
+	double totalTravelTime = 0;
+	
+	public double getTotalTravelTime() {
+		return totalTravelTime;
+	}
+
+	public void setTotalTravelTime(double totalTravelTime) {
+		this.totalTravelTime = totalTravelTime;
+	}
+
 	// This should NEVER get called
 	public GRIDmap getOurMap() {
 		return ourMap;
@@ -69,8 +79,8 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		double timeToTransit = (ourMap.getRoad(event.getLinkId().toString()).getLength() /
 				                ourMap.getRoad(event.getLinkId().toString()).getCurrentSpeed());
         
-		System.out.println("Time to transit link: " + event.getLinkId().toString() +
-				           " is currently: " + timeToTransit);
+		//System.out.println("Time to transit link: " + event.getLinkId().toString() +
+		//		           " is currently: " + timeToTransit);
 		
 		// So, from now (sim now) until sim now + timeToTransit, this Agent will be on this link
 		// lets add to the weight of this link so we know this road is busier
@@ -112,14 +122,17 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			double departureTime = tempAgent.getDepartureTime();
 			
 			double travelTime = event.getTime() - departureTime;
-			System.out.println("Agent: " + tempAgent.getId() +
-					           " took: " + travelTime +
-					           " seconds to arrive at: " +
-					           event.getLinkId() + " from: " +
-					           tempAgent.getOrigin()
-					           );
+			//System.out.println("Agent: " + tempAgent.getId() +
+			//		           " took: " + travelTime +
+			//		           " seconds to arrive at: " +
+			//		           event.getLinkId() + " from: " +
+			//		           tempAgent.getOrigin()
+			//		           );
 			
+			totalTravelTime += travelTime;
 			theAgents.remove(event.getPersonId().toString());
+			
+			System.out.println("totalTravelTime increased to: " + totalTravelTime);
 		}
 		
 		else {
