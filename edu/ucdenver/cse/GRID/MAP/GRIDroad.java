@@ -20,7 +20,7 @@ public class GRIDroad {
 	private double maxSpeed;
 
 	// Defined in km/hr
-	private double currentSpeed;
+	private double currentSpeed = -1;
 
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
 	private ConcurrentHashMap<Long, Double> roadWeight = new ConcurrentHashMap<Long, Double>();
@@ -89,6 +89,9 @@ public class GRIDroad {
 	}
 
 	public double getCurrentSpeed() {
+		if (currentSpeed < 0) {
+			return this.getMaxSpeed();
+		}
 		return currentSpeed;
 	}
 
@@ -97,10 +100,13 @@ public class GRIDroad {
 	}
 	
 	public void addToWeight(Long time) {
-		// replace checks to ensure it already exists
-			if (this.roadWeight.replace(time, (this.roadWeight.get(time) + 1)) == null) {
-				this.roadWeight.put(time, ourDefaultValue);
-			}		
+		// If there is already an offset, add to it
+		if(this.roadWeight.containsKey(time)) {
+			this.roadWeight.replace(time, (this.roadWeight.get(time) + 1));
+		}
+		else {
+			this.roadWeight.put(time, ourDefaultValue + 1);
+		}
 	}
 	
 	public double getWeightAtTime(Long time) {

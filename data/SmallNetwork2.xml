@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE network SYSTEM "http://www.matsim.org/files/dtd/network_v1.dtd">
+<!DOCTYPE network SYSTEM "../dtd/network_v1.dtd">
 <network>
 
 <!-- ====================================================================== -->
@@ -15,6 +15,7 @@
 		<node id="8" x="4000" y="3000" />
 		<node id="9" x="4000" y="4000" />
 		<node id="50" x="100000" y="100000" />
+		<node id="51" x="101000" y="100000" />
 	</nodes>	
 
 <!-- ====================================================================== -->
@@ -31,7 +32,8 @@
 		<link id="10" from="9" to="50" length="8485.28137423" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 		
 		
-		<link id="50" from="50" to="1" length="141421.3562373" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
+		<link id="49" from="50" to="51" length="1000" freespeed="10" capacity="36" permlanes="1.0" oneway="1" modes="car" />
+		<link id="50" from="51" to="1" length="141421.3562373" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 	</links>
 
 <!-- ====================================================================== -->
