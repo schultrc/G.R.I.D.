@@ -52,7 +52,7 @@ public class GRID_SIM {
 		// All of our agents
 		
 		// This will get filled and emptied via departure / arrival events
-		final ConcurrentMap<String, GRIDagent> myAgents = new ConcurrentHashMap<String, GRIDagent> ();	
+		final ConcurrentHashMap<String, GRIDagent> masterAgents = new ConcurrentHashMap<String, GRIDagent> ();	
 		
 		// The official map
 		final GRIDmap ourMap;
@@ -98,7 +98,8 @@ public class GRID_SIM {
 			
 			// Add our handler for Link Events			
 			GRID_SIM_agentEventHandler theAgentHandler = new GRID_SIM_agentEventHandler(false);
-			theAgentHandler.setTheAgents(myAgents);
+			theAgentHandler.setOurMap(ourMap);
+			theAgentHandler.setTheAgents(masterAgents);
 			
 			controler.getEvents().addHandler(theAgentHandler);
 			
@@ -124,7 +125,7 @@ public class GRID_SIM {
 							// add the map to the handler
 							theSimHandler.setTheMap(ourMap);
 							// add the agents to the handler
-							
+							theSimHandler.setTheAgents(masterAgents);
 							// Add the listener for Sim Step End 
 							qSim.addQueueSimulationListeners(theSimHandler);
 							

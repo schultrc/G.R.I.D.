@@ -1,5 +1,6 @@
 package edu.ucdenver.cse.GRID.GRID_SIM;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 import org.matsim.api.core.v01.events.LinkEnterEvent;
@@ -15,21 +16,35 @@ import org.matsim.core.mobsim.framework.events.*;
 import org.matsim.core.mobsim.qsim.interfaces.Netsim;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.MAP.GRIDmap;
 
 public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLeaveEventHandler, PersonArrivalEventHandler,
 		PersonDepartureEventHandler {
 	
 	// Used for debugging output
-	private boolean outputFlag = false;
+	// This doesn't work, btw is always false
+	boolean outputFlag = false;
 
 	// The list of agents we know about
-	ConcurrentMap<String, GRIDagent> theAgents;
+	ConcurrentHashMap<String, GRIDagent> theAgents;
 	
+	// The map as we know it
+	GRIDmap ourMap;
+	
+	// This should NEVER get called
+	public GRIDmap getOurMap() {
+		return ourMap;
+	}
+
+	public void setOurMap(GRIDmap ourMap) {
+		this.ourMap = ourMap;
+	}
+
 	public ConcurrentMap<String, GRIDagent> getMyAgents() {
 		return theAgents;
 	}
 
-	public void setTheAgents(ConcurrentMap<String, GRIDagent> myAgents) {
+	public void setTheAgents(ConcurrentHashMap<String, GRIDagent> myAgents) {
 		this.theAgents = myAgents;
 	}
 
@@ -47,6 +62,27 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 
 	@Override
 	public void handleEvent(LinkEnterEvent event) {
+		
+		// If an agent enters a link, it will be there for the duration of:
+		// length / current speed
+		
+		double timeToTransit = (ourMap.getRoad(event.getLinkId().toString()).getLength() /
+				                ourMap.getRoad(event.getLinkId().toString()).getCurrentSpeed());
+        
+		System.out.println("Time to transit link: " + event.getLinkId().toString() +
+				           " is currently: " + timeToTransit);
+		
+		// So, from now (sim now) until sim now + timeToTransit, this Agent will be on this link
+		// lets add to the weight of this link so we know this road is busier
+		
+		for (int i = 0; i < timeToTransit; ++i) {
+			ourMap.getRoad(event.getLinkId().toString()).addToWeight((long) (event.getTime() + i));
+			//System.out.println("adding to link: " + event.getLinkId() +
+			//		           " at time: " + (event.getTime() + i) );
+					
+		}
+		
+
 		if (outputFlag) {
 			System.out.println("LinkEnterEvent");
 			System.out.println("Time: " + event.getTime());
@@ -68,7 +104,9 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 
 	@Override
 	public void handleEvent(PersonArrivalEvent event) {
-		if( theAgents.containsKey(event.getPersonId())) {
+		
+		//System.out.println("attempting to remove agent: " + event.getPersonId().toString());
+		if( theAgents.containsKey(event.getPersonId().toString())) {
 			GRIDagent tempAgent = theAgents.get(event.getPersonId().toString());
 			
 			double departureTime = tempAgent.getDepartureTime();
@@ -77,10 +115,11 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			System.out.println("Agent: " + tempAgent.getId() +
 					           " took: " + travelTime +
 					           " seconds to arrive at: " +
-					           event.getLegMode() 
+					           event.getLinkId() + " from: " +
+					           tempAgent.getOrigin()
 					           );
 			
-			theAgents.remove(tempAgent);
+			theAgents.remove(event.getPersonId().toString());
 		}
 		
 		else {
@@ -121,6 +160,8 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		System.out.println("Adding Agent: " + newAgent.getId() + " at time: " + event.getTime());
 		
 		theAgents.put(newAgent.getId(), newAgent);
+		
+		System.out.println("There are: " + theAgents.size() + " agents now");
 				
 		if (outputFlag) {
 			System.out.println("AgentDepartureEvent");
