@@ -40,7 +40,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 	GRIDmap theMap;
 	
-	static ConcurrentHashMap<String, GRIDagent> theAgents;
+	ConcurrentHashMap<String, GRIDagent> theAgents;
 	
 	public GRIDmap getTheMap() {
 		// This should NEVER get called
@@ -93,9 +93,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    	// This shows how many vehicles are on a link at any give time
 
 	    //}
-	    
-	    
-	    
+    
 	    //this.scenario.getNetwork().getLinks()
 	    Map<Id<Link>, Link> theOtherLinks = (Map<Id<Link>, Link>) this.scenario.getNetwork().getLinks();
 	    
@@ -108,16 +106,14 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    
 	    for(String roadID:theMap.getRoads().keySet()) {
 	    	//System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
-	    	
-	    		    	
-	    	//theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);
-	    	
+	    	    		    	
+	    	//theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);	    	
 	    }
 	    
 	    Collection<MobsimAgent> agentsToReplan = getAgentsToReplan(mobsim); 
 	    for (MobsimAgent ma : agentsToReplan) {
 	    	
-	    	System.out.println("we found agent: " + ma.toString());
+	    	//System.out.println("we found agent: " + ma.toString());
 	    	
 	    	doReplanning(ma, mobsim);	  	    
 	    }        
@@ -126,7 +122,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim ) {
 		double now = mobsim.getSimTimer().getTimeOfDay();
 
-		System.out.println("Sim Time is: " + now);
+		//System.out.println("Sim Time is: " + now);
 
 		Plan plan = WithinDayAgentUtils.getModifiablePlan(agent);
 
@@ -174,7 +170,9 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		for (NetsimLink link : mobsim.getNetsimNetwork().getNetsimLinks().values()) {
 			for (MobsimVehicle vehicle : link.getAllNonParkedVehicles()) {
 				MobsimDriverAgent agent = vehicle.getDriver();
-				System.out.println(agent.getId());
+				
+				//System.out.println(agent.getId());
+				
 				if (true) { // some condition ...
 					//System.out.println("found agent" + agent.toString());
 					set.add(agent);

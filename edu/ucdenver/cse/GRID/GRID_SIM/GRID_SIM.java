@@ -93,7 +93,7 @@ public class GRID_SIM {
 			// end WithinDayReplanning
 			
 			// Add our handler for Link Events			
-			GRID_SIM_agentEventHandler theAgentHandler = new GRID_SIM_agentEventHandler(false);
+			GRID_SIM_agentEventHandler theAgentHandler = new GRID_SIM_agentEventHandler();
 			theAgentHandler.setOurMap(ourMap);
 			theAgentHandler.setTheAgents(masterAgents);
 			
