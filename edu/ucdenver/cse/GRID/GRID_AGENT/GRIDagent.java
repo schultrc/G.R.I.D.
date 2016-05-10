@@ -24,8 +24,9 @@ public class GRIDagent {
     private Long fuelEconomy;
     private Long vehOccupancy;
     private Long vehSize;
+    private double departureTime;
 
-    public GRIDagent(String Id, String newLink, String origin, String destination) {
+	public GRIDagent(String Id, String newLink, String origin, String destination) {
         super();
 
         this.Id = Id;
@@ -48,6 +49,7 @@ public class GRIDagent {
     public void setFuelEconomy(Long fuelEconomy){ this.fuelEconomy = fuelEconomy; }
     public void setVehOccupancy(Long vehOccupancy){ this.vehOccupancy = vehOccupancy; }
     public void setvehSize(Long vehSize){ this.vehSize = vehSize; }
+	public void setDepartureTime(double departureTime) { this.departureTime = departureTime; }
 
     public String getId(){return Id;}
     public GRIDroute getTravelPath(){ return travelPath;}
@@ -56,7 +58,8 @@ public class GRIDagent {
     public Long getFuelEconomy(){ return fuelEconomy; }
     public Long getVehOccupancy(){ return vehOccupancy; }
     public Long getVehSize(){ return vehSize; }
-
+    public double getDepartureTime() { return departureTime; }
+    
     @Override
     // step through both arrays in order, do something like:
     // intx - road - intx - road - intx - road etc

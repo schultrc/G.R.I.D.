@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 import org.apache.log4j.Logger;
@@ -26,6 +27,7 @@ import org.matsim.core.mobsim.qsim.agents.WithinDayAgentUtils;
 import org.matsim.core.mobsim.qsim.interfaces.MobsimVehicle;
 import org.matsim.core.mobsim.qsim.interfaces.Netsim;
 import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimLink;
+import org.matsim.core.mobsim.qsim.qnetsimengine.NetsimNetwork;
 import org.matsim.core.router.TripRouter;
 import org.matsim.withinday.utils.EditRoutes;
 
@@ -38,7 +40,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 	GRIDmap theMap;
 	
-	ConcurrentMap<String, GRIDagent> theAgents;
+	static ConcurrentHashMap<String, GRIDagent> theAgents;
 	
 	public GRIDmap getTheMap() {
 		// This should NEVER get called
@@ -54,10 +56,9 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		return theAgents;
 	}
 
-	public void setTheAgents(ConcurrentMap<String, GRIDagent> theAgents) {
+	public void setTheAgents(ConcurrentHashMap<String, GRIDagent> theAgents) {
 		this.theAgents = theAgents;
 	}
-
 
 	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
@@ -74,16 +75,42 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	
 		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
 
-		GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
+		// RCS Is this working, but sending it to the console?????
+		//GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
 		
 		//System.out.println("We got to the begining of notifyMobsimBeforeSimStep: " + event.toString() + " " + event.getSimulationTime() );
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 	    this.scenario = mobsim.getScenario();
 	    
+	    NetsimNetwork thesimNetwork = mobsim.getNetsimNetwork();
+	    	    
+	    Map<Id<Link>, NetsimLink> theLinks = (Map<Id<Link>, NetsimLink>) thesimNetwork.getNetsimLinks();
+	    
+	    //for(Id<Link> roadId:theLinks.keySet()) {
+	    	//System.out.println("DAFUQ? ID=" + roadId.toString());
+	    	//System.out.println("DAFUQ? " + thesimNetwork.getNetsimLink(roadId).getAllNonParkedVehicles().size());
+	    	
+	    	// This shows how many vehicles are on a link at any give time
+
+	    //}
+	    
+	    
+	    
+	    //this.scenario.getNetwork().getLinks()
+	    Map<Id<Link>, Link> theOtherLinks = (Map<Id<Link>, Link>) this.scenario.getNetwork().getLinks();
+	    
+//	    for(Id<Link> roadId:theOtherLinks.keySet()) {
+//	    	System.out.println("DAFUQ? " + roadId.toString());	
+//	    	System.out.println("DAFUQ? " + this.scenario.getNetwork().getLinks().get(roadId).getCapacity()  );
+//	    	System.out.println("DAFUQ? " + roadId.toString());	
+//	    	System.out.println("DAFUQ? " + roadId.toString());	
+//	    }
+	    
 	    for(String roadID:theMap.getRoads().keySet()) {
-	    	System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
-	    			
-	    	theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);
+	    	//System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
+	    	
+	    		    	
+	    	//theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);
 	    	
 	    }
 	    
@@ -131,6 +158,10 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	private static List<MobsimAgent> getAgentsToReplan(Netsim mobsim) {
 
 		// Change this to be our list of agents
+		
+		// Can we see the agents we've added?
+		// System.out.println("In matsimEventHandler: There are: " + theAgents.size() + " agents now");
+
 		
 		List<MobsimAgent> set = new ArrayList<MobsimAgent>();
 
