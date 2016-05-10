@@ -39,9 +39,35 @@ public class PopulationGenerator {
 		//=========================Smart randomizing location=========================
 		ParseLink pn = new ParseLink();
 		RandomizeLocation rndLoc = new RandomizeLocation(pn);
-		String work_area = "./data/PubloDowntownLinks.txt";
-		String home_area = "./data/PuebloLinks.txt";
-		ArrayList<StartToDestinationLocation> trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
+	   
+        int randomize_type = 1;//1 or 2
+        String work_area = "";
+        String home_area = "";
+        ArrayList<StartToDestinationLocation> trips = null;
+        
+        if(randomize_type == 1) //outside to downtown population generation
+        {
+            work_area = "./data/AlamosaDowntownLinks.txt";
+            home_area = "./data/AlamosaLinks.txt";
+            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
+            
+        }
+        else if (randomize_type == 2)//full randomization
+        {
+            work_area = "./data/AlamosaDowntownLinks.txt"; //home and work area should be the same
+            home_area = "./data/AlamosaDowntownLinks.txt";
+            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
+        }
+        else
+        {
+            System.out.println("Please chose:\n1 for outside to downtown population generation,\n2 for full randomization");
+            
+        }
+        
+       
+        
+        
+        
 		//=============================================================================
 				
 		
