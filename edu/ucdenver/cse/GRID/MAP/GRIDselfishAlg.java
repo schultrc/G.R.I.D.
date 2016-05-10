@@ -113,13 +113,13 @@ public class GRIDselfishAlg {
             {
                 currentPathTotal.put(endNode,getOptimalEdgeWeight(startNode) + calcEdgeWeight(startNode, endNode));
 
-                Set keys = previousIntersections.keySet();
+                /*Set keys = previousIntersections.keySet();
 
                 for (Iterator i = keys.iterator(); i.hasNext();)
                 {
                     String key = (String) i.next();
                     String value = (String) previousIntersections.get(key);
-                }
+                }*/
 
                 previousIntersections.put(endNode,startNode);
                 unVisited.add(endNode);

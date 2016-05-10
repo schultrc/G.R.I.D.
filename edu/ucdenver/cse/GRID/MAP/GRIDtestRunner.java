@@ -13,7 +13,7 @@ public class GRIDtestRunner{
 
     private GRIDmapReader myReader = new GRIDmapReader();
     //private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
-    private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml"); // SmallNetwork2 PuebloNetwork
+    private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
 
     private GRIDagent testAgent001 = getTestAgent();
     // private GRIDintersection from = new GRIDintersection("test",1d,2d);
@@ -60,10 +60,9 @@ public class GRIDtestRunner{
         }
 
         long stopTime = System.nanoTime();
-        
         long timeToRun = ((stopTime - startTime)/1000000);
         
-        System.out.print("Took " + timeToRun + " Seconds");
+        System.out.print("\nTook " + timeToRun/1000.0 + " Seconds");
         System.out.print("\n\nAnd we're done.");
     }
 
