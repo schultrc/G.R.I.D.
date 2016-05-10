@@ -59,7 +59,7 @@ public class GRID_SIM {
 		String configFile = GRIDutils.getConfigFile();
 	        
 	    if (configFile == "") {
-	    	System.out.println("You didn't chose a config file!!!");
+	    	System.out.println("You didn't choose a config file!!!");
 	    	System.exit(0);
 	    }
 				
