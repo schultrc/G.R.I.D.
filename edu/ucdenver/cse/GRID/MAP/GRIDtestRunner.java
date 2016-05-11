@@ -2,8 +2,6 @@ package edu.ucdenver.cse.GRID.MAP;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.ListIterator;
 
 import static org.junit.Assert.*;
@@ -27,12 +25,14 @@ public class GRIDtestRunner{
         // Pueblo start to finish 34.97s
         // from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
         // to.setId("864162469");   // to.setId("10"); // 864162469 // 50
-    	long startTime = System.nanoTime();
+    	Long startTime = System.nanoTime();
     	
-        GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, myMap, 0L);
+        //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, myMap, 0L); // GRIDpathrecalc
+        GRIDpathrecalc test002 = new GRIDpathrecalc(testAgent001, myMap, 0L);
         GRIDroute outRoute = new GRIDroute();
 
-        outRoute = test001.findPath();
+        //outRoute = test001.findPath();
+        outRoute = test002.findPath();
         ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
         assertNotNull(myMap);
@@ -47,7 +47,7 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
         
-	ArrayList<String> tempPathList = new ArrayList<>();
+	    ArrayList<String> tempPathList = new ArrayList<>();
         tempPathList = myMap.getPathByRoad(outRoute.Intersections);
 
         System.out.print("\nPath by Link: ");
@@ -69,9 +69,9 @@ public class GRIDtestRunner{
     private GRIDagent getTestAgent()
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
-                currentLink = "myLink001",
-                currentIntrx = "1040921516", // 1040921516 // 2
-                destIntrx = "177890694"; // 864162469 // 177890694 PNet3 // 177849670 // 50
+                currentLink = "1",
+                currentIntrx = "1", // 1040921516 // 2
+                destIntrx = "50"; // 864162469 // 177890694 PNet3 // 177849670 // 50
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);
 
