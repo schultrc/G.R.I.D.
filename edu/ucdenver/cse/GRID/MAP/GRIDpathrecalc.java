@@ -18,7 +18,6 @@ public class GRIDpathrecalc {
     private String agtFrom;
     private String agtTo;
     private Long currentTime;
-    private Long adjustedTime;
     private Set<String> visited;
     private Set<String> unVisited;
     private ConcurrentMap<String, Double> currentPathTotal;
@@ -29,8 +28,9 @@ public class GRIDpathrecalc {
         this.roads = selfishMap.getRoads();
         agtFrom = thisAgent.getCurrentLink();
         agtTo = thisAgent.getDestination();
-        this.currentTime = currentTime;
-        this.adjustedTime = currentTime;
+        this.currentTime = currentTime/1000;
+
+        //roads.get("10").fillRoadWeight();
     }
 
     public GRIDroute findPath(){
@@ -92,7 +92,6 @@ public class GRIDpathrecalc {
 
     private void findOptimalEdges(String startNode)
     {
-        System.out.println("Adjusted Time: "+adjustedTime);
         ArrayList<String> adjNodes = getAdjNodes(startNode);
 
         for(String endNode : adjNodes)
@@ -105,15 +104,6 @@ public class GRIDpathrecalc {
                 unVisited.add(endNode);
             }
         }
-        /*String key = "key", value = "val";
-        Set keys = previousIntersections.keySet();
-        for (Iterator i = keys.iterator(); i.hasNext();)
-        {
-            key = (String) i.next();
-            value = (String) previousIntersections.get(key);
-        }
-        System.out.println("Timestep " + testCounter++ + ": " + "(K: " + key + ")" + "(V: " + value + ")");*/
-        adjustedTime++;
     }
 
     private Double getOptimalEdgeWeight(String endNode)
@@ -133,11 +123,10 @@ public class GRIDpathrecalc {
     {
         for(String roadId : roads.keySet())
         {
-            //roads.get(roadId).getFrom().equals(startNode);
             if(roads.get(roadId).getFrom().equals(startNode)
                     && roads.get(roadId).getTo().equals(endNode))
             {
-                return roads.get(roadId).getWeightAtTime(adjustedTime);
+                return roads.get(roadId).getWeightOverInterval(currentTime);
             }
         }
 

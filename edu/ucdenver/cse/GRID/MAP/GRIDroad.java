@@ -2,6 +2,8 @@ package edu.ucdenver.cse.GRID.MAP;
 
 
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GRIDroad {
 	
@@ -116,6 +118,15 @@ public class GRIDroad {
 		
 		return this.getDefaultWeight();
 	}
+
+	/* so an agent arrives at link01 at time 0.0
+	*  the link is 1000 long and fspeed is 12/5, so 80s req'd to traverse link01
+	*  so we take all the weights from roadWeight[0] to roadWeight[79] and either AVG or MAX them
+	*  and that is the weight for that link*/
+	public double getWeightOverInterval(Long currentTime)
+	{
+			return this.getMaxWeight(currentTime) + this.getDefaultWeight();
+	}
 	
 	public boolean setWeightAtTime(Long time, double capacity) {
 		if (this.roadWeight.containsKey(time)) {
@@ -137,6 +148,29 @@ public class GRIDroad {
 		// using maxSpeed. Should this be currentSpeed???
 		theWeight = this.Length / this.maxSpeed;
 		
-		return theWeight;
+		return theWeight; }
+
+	private double getMaxWeight(Long currentTime){
+		Double maxWeight = 0.0,
+			   timeOnLink = this.Length/this.maxSpeed,
+			   timeInterval = currentTime + timeOnLink;
+
+		for(Long i = currentTime; i < timeInterval; i++){
+			if(this.roadWeight.containsKey(i) && this.roadWeight.get(i) > maxWeight){
+				maxWeight = this.roadWeight.get(i);}
 		}
+
+		return maxWeight;
+	}
+
+	public void fillRoadWeight() // ConcurrentHashMap<Long, Double>
+	{
+		List<Long> weights = new LinkedList<>();
+		ConcurrentHashMap<Long,Double> weightMap = new ConcurrentHashMap<>();
+
+		for(Long i=0L; i<50; i++)
+			weightMap.put(i,5.0+i);
+
+		this.roadWeight = weightMap;
+	}
 }

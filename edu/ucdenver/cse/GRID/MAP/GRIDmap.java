@@ -66,20 +66,23 @@ public class GRIDmap {
 
 	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
 	{
-		ArrayList<String> pathByRoad = new ArrayList<String>();
+		ArrayList<String> pathByRoad = new ArrayList<>();
 		Set keys = Roads.keySet();
 
-		for (Iterator itr = keys.iterator(); itr.hasNext();)
+		for(int i = 0; i < pathByNode.size()-1; i++)
 		{
-			String key = (String) itr.next();
-			GRIDroad value = (GRIDroad) Roads.get(key);
+			GRIDroad tempRoad = new GRIDroad("temp");
+			tempRoad.setFrom(pathByNode.get(i));
+			tempRoad.setTo(pathByNode.get(i+1));
 
-			for(int i = 0; i < pathByNode.size()-1; i++)
+			for (Iterator itr = keys.iterator(); itr.hasNext();)
 			{
-				if(pathByNode.get(i).equals(value.getFrom())
-				   && pathByNode.get(i+1).equals(value.getTo()))
-				{
-					pathByRoad.add(value.getId());
+				String key = (String) itr.next();
+				GRIDroad testRoad = (GRIDroad) Roads.get(key);
+
+				if(tempRoad.getFrom().equals(testRoad.getFrom())
+				   && tempRoad.getTo().equals(testRoad.getTo())) {
+					pathByRoad.add(testRoad.getId());
 				}
 			}
 		}
