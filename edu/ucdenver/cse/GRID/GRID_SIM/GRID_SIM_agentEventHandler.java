@@ -47,17 +47,11 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	}
 
 	// This should NEVER get called
-	public GRIDmap getOurMap() {
-		return ourMap;
-	}
+	public GRIDmap getOurMap() { return ourMap; }
 
-	public void setOurMap(GRIDmap ourMap) {
-		this.ourMap = ourMap;
-	}
+	public void setOurMap(GRIDmap ourMap) { this.ourMap = ourMap; }
 
-	public ConcurrentMap<String, GRIDagent> getMyAgents() {
-		return theAgents;
-	}
+	public ConcurrentMap<String, GRIDagent> getMyAgents() { return theAgents; }
 
 	public void setTheAgents(ConcurrentHashMap<String, GRIDagent> myAgents) {
 		this.theAgents = myAgents;

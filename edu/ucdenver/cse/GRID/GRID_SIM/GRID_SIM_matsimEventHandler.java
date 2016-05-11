@@ -79,7 +79,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	
 		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
 
-		// Map updates? cur speed
+		// Map updates - Do we need anything else from the matsim map?
 		if (event.getSimulationTime() % 5 == 0) {
 			Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 			NetsimNetwork thesimNetwork = mobsim.getNetsimNetwork();
@@ -92,10 +92,6 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 			while (iter.hasNext()) {
 				Link tempLink = iter.next();
 				theMap.getRoad(tempLink.getId().toString() ).setCurrentSpeed(tempLink.getFreespeed());
-				
-				//System.out.println("Setting the speed of link: " + tempLink.getId().toString() +
-				//		           " to: " + tempLink.getFreespeed() + 
-				//		           " at time: " + event.getSimulationTime() );
 			}
 		}
 		
