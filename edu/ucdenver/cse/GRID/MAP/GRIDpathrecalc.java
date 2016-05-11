@@ -28,7 +28,9 @@ public class GRIDpathrecalc {
         this.roads = selfishMap.getRoads();
         agtFrom = thisAgent.getCurrentLink();
         agtTo = thisAgent.getDestination();
-        this.currentTime = currentTime;
+        this.currentTime = currentTime/1000;
+
+        //roads.get("10").fillRoadWeight();
     }
 
     public GRIDroute findPath(){
@@ -102,14 +104,6 @@ public class GRIDpathrecalc {
                 unVisited.add(endNode);
             }
         }
-        /*String key = "key", value = "val";
-        Set keys = previousIntersections.keySet();
-        for (Iterator i = keys.iterator(); i.hasNext();)
-        {
-            key = (String) i.next();
-            value = (String) previousIntersections.get(key);
-        }
-        System.out.println("Timestep " + testCounter++ + ": " + "(K: " + key + ")" + "(V: " + value + ")");*/
     }
 
     private Double getOptimalEdgeWeight(String endNode)
@@ -129,7 +123,6 @@ public class GRIDpathrecalc {
     {
         for(String roadId : roads.keySet())
         {
-            //roads.get(roadId).getFrom().equals(startNode);
             if(roads.get(roadId).getFrom().equals(startNode)
                     && roads.get(roadId).getTo().equals(endNode))
             {

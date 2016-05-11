@@ -2,8 +2,6 @@ package edu.ucdenver.cse.GRID.MAP;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.ListIterator;
 
 import static org.junit.Assert.*;
@@ -49,7 +47,7 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
         
-	ArrayList<String> tempPathList = new ArrayList<>();
+	    ArrayList<String> tempPathList = new ArrayList<>();
         tempPathList = myMap.getPathByRoad(outRoute.Intersections);
 
         System.out.print("\nPath by Link: ");
@@ -71,8 +69,8 @@ public class GRIDtestRunner{
     private GRIDagent getTestAgent()
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
-                currentLink = "2",
-                currentIntrx = "2", // 1040921516 // 2
+                currentLink = "1",
+                currentIntrx = "1", // 1040921516 // 2
                 destIntrx = "50"; // 864162469 // 177890694 PNet3 // 177849670 // 50
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);

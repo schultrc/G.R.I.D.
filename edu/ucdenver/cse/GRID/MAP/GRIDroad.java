@@ -2,6 +2,8 @@ package edu.ucdenver.cse.GRID.MAP;
 
 
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GRIDroad {
 	
@@ -150,7 +152,7 @@ public class GRIDroad {
 
 	private double getMaxWeight(Long currentTime){
 		Double maxWeight = 0.0,
-			   timeOnLink = this.Length/this.currentSpeed,
+			   timeOnLink = this.Length/this.maxSpeed,
 			   timeInterval = currentTime + timeOnLink;
 
 		for(Long i = currentTime; i < timeInterval; i++){
@@ -159,5 +161,16 @@ public class GRIDroad {
 		}
 
 		return maxWeight;
+	}
+
+	public void fillRoadWeight() // ConcurrentHashMap<Long, Double>
+	{
+		List<Long> weights = new LinkedList<>();
+		ConcurrentHashMap<Long,Double> weightMap = new ConcurrentHashMap<>();
+
+		for(Long i=0L; i<50; i++)
+			weightMap.put(i,5.0+i);
+
+		this.roadWeight = weightMap;
 	}
 }
