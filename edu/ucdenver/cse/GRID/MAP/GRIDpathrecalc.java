@@ -18,7 +18,6 @@ public class GRIDpathrecalc {
     private String agtFrom;
     private String agtTo;
     private Long currentTime;
-    private Long adjustedTime;
     private Set<String> visited;
     private Set<String> unVisited;
     private ConcurrentMap<String, Double> currentPathTotal;
@@ -30,7 +29,6 @@ public class GRIDpathrecalc {
         agtFrom = thisAgent.getCurrentLink();
         agtTo = thisAgent.getDestination();
         this.currentTime = currentTime;
-        this.adjustedTime = currentTime;
     }
 
     public GRIDroute findPath(){
@@ -92,7 +90,6 @@ public class GRIDpathrecalc {
 
     private void findOptimalEdges(String startNode)
     {
-        System.out.println("Adjusted Time: "+adjustedTime);
         ArrayList<String> adjNodes = getAdjNodes(startNode);
 
         for(String endNode : adjNodes)
@@ -113,7 +110,6 @@ public class GRIDpathrecalc {
             value = (String) previousIntersections.get(key);
         }
         System.out.println("Timestep " + testCounter++ + ": " + "(K: " + key + ")" + "(V: " + value + ")");*/
-        adjustedTime++;
     }
 
     private Double getOptimalEdgeWeight(String endNode)
@@ -137,7 +133,7 @@ public class GRIDpathrecalc {
             if(roads.get(roadId).getFrom().equals(startNode)
                     && roads.get(roadId).getTo().equals(endNode))
             {
-                return roads.get(roadId).getWeightAtTime(adjustedTime);
+                return roads.get(roadId).getWeightOverInterval(currentTime);
             }
         }
 
