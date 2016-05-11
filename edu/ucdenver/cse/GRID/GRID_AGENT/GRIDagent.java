@@ -53,6 +53,7 @@ public class GRIDagent {
 
     public String getId(){return Id;}
     public GRIDroute getTravelPath(){ return travelPath;}
+    public String getCurrentLink(){ return currentLink; }
     public String getOrigin(){ return origin; }
     public String getDestination(){ return destination; }
     public Long getFuelEconomy(){ return fuelEconomy; }
