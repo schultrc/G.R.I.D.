@@ -150,9 +150,10 @@ public class GRIDroad {
 
 	private double getMaxWeight(Long currentTime){
 		Double maxWeight = 0.0,
-			   timeOnLink = this.Length/this.currentSpeed;
+			   timeOnLink = this.Length/this.currentSpeed,
+			   timeInterval = currentTime + timeOnLink;
 
-		for(Long i = currentTime; i < timeOnLink; i++){
+		for(Long i = currentTime; i < timeInterval; i++){
 			if(this.roadWeight.containsKey(i) && this.roadWeight.get(i) > maxWeight){
 				maxWeight = this.roadWeight.get(i);}
 		}
