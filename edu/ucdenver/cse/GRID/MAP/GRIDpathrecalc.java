@@ -20,7 +20,8 @@ public class GRIDpathrecalc {
     private Long thisTimeslice;
     private Set<String> visited;
     private Set<String> unVisited;
-    private ConcurrentMap<String, Double> currentPathTotal;
+    private ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal;
+    GRIDnodeWeightTime startNodeValues;
     private Map<String,String> previousIntersections;
 
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
@@ -43,7 +44,10 @@ public class GRIDpathrecalc {
         unVisited = new HashSet<String>();
         currentPathTotal = new ConcurrentHashMap<>();
         previousIntersections = new HashMap<String,String>();
-        currentPathTotal.put(agtFrom,0D);
+        startNodeValues = new GRIDnodeWeightTime();
+        startNodeValues.setNodeWtTotal(0.0);
+        startNodeValues.setNodeTmTotal(this.thisTimeslice);
+        currentPathTotal.put(agtFrom,startNodeValues);
         unVisited.add(agtFrom);
 
         while(unVisited.size() > 0){
@@ -70,6 +74,8 @@ public class GRIDpathrecalc {
         }
 
         Collections.reverse(finalPath.Intersections);
+
+        finalPath.setcalculatedTravelTime(currentPathTotal.get(agtTo).getNodeTmTotal());
 
         System.out.println("Returning path. . .");
         return finalPath;
@@ -98,12 +104,20 @@ public class GRIDpathrecalc {
     private void findOptimalEdges(String startNode)
     {
         ArrayList<String> adjNodes = getAdjNodes(startNode);
+        GRIDnodeWeightTime tempNode = new GRIDnodeWeightTime();
 
         for(String endNode : adjNodes)
         {
-            if(getOptimalEdgeWeight(endNode) > getOptimalEdgeWeight(startNode) + calcEdgeWeight(startNode, endNode))
+            tempNode = calcEdgeWeight(startNode, endNode);
+            if(getOptimalEdgeWeight(endNode) > getOptimalEdgeWeight(startNode) + tempNode.getNodeWtTotal())
             {
-                currentPathTotal.put(endNode,getOptimalEdgeWeight(startNode) + calcEdgeWeight(startNode, endNode));
+                Double tempWeight = getOptimalEdgeWeight(startNode);
+                tempNode.setNodeWtTotal(tempWeight+tempNode.getNodeWtTotal());
+                Long tempTime = currentPathTotal.get(startNode).getNodeTmTotal();
+                tempNode.setNodeTmTotal(tempTime+tempNode.getNodeTmTotal());
+                // add getOptEdgeWeight to first part of data structure tempNode
+
+                currentPathTotal.put(endNode,tempNode);
 
                 previousIntersections.put(endNode,startNode);
 
@@ -114,7 +128,9 @@ public class GRIDpathrecalc {
 
     private Double getOptimalEdgeWeight(String endNode)
     {
-        Double w = currentPathTotal.get(endNode);
+        Double w = null;
+        if(currentPathTotal.containsKey(endNode))
+            w = currentPathTotal.get(endNode).getNodeWtTotal();
 
         if(w == null)
         {
@@ -125,9 +141,12 @@ public class GRIDpathrecalc {
         }
     }
 
-    private Double calcEdgeWeight(String startNode, String endNode)
+    private GRIDnodeWeightTime calcEdgeWeight(String startNode, String endNode)
     {
+        Double tempWeight = 0.0;
         Long tempTimeslice = 0L;
+        Long startTime = currentPathTotal.get(startNode).getNodeTmTotal();
+        GRIDnodeWeightTime tempNode = new GRIDnodeWeightTime();
 
         for(String roadId : roads.keySet())
         {
@@ -135,12 +154,17 @@ public class GRIDpathrecalc {
                     && roads.get(roadId).getTo().equals(endNode))
             {
                 tempTimeslice = roads.get(roadId).getTravelTime();
-                System.out.println("slice: "+tempTimeslice);
-                return roads.get(roadId).getWeightOverInterval(tempTimeslice);
+                tempWeight = roads.get(roadId).getWeightOverInterval(startTime);
+                tempNode.setNodeWtTotal(tempWeight);
+                tempNode.setNodeTmTotal(tempTimeslice);
+
+                return tempNode;
             }
         }
 
-        return -1D;
+        tempNode.setNodeWtTotal(-1D);
+        tempNode.setNodeTmTotal(0L);
+        return tempNode;
     }
 
     private ArrayList<String> getAdjNodes(String node)

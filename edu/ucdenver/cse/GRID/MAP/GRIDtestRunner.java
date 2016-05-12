@@ -59,6 +59,8 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
 
+        System.out.println("\n\nCalculated Travel Time: "+outRoute.getcalculatedTravelTime());
+
         long stopTime = System.nanoTime();
         long timeToRun = ((stopTime - startTime)/1000000);
         
