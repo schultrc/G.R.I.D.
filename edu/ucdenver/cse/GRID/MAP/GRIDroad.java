@@ -10,6 +10,7 @@ public class GRIDroad {
 	// Each road is a one way
 	
 	private static final Double ourDefaultValue = (double) 1;
+	private static final Double MAX_WEIGHT = 2000000.0;
 
 	private String Id   = "";
 	private String to   = "";
@@ -25,7 +26,7 @@ public class GRIDroad {
 	private double currentSpeed = -1;
 
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
-	private ConcurrentHashMap<Long, Double> roadWeight = new ConcurrentHashMap<Long, Double>();
+	private ConcurrentHashMap<Long, Double> vehiclesCurrentlyOnRoadAtTime = new ConcurrentHashMap<Long, Double>();
 	
 	// Max capacity is defined in vehicles per hour
 	private double maxCapacity;
@@ -71,7 +72,7 @@ public class GRIDroad {
 	@Override
 	public String toString() {
 		return "GRIDroad [Id=" + Id + ", to=" + to + ", from=" + from + ", Length=" + Length + ", maxSpeed=" + maxSpeed
-				+ ", currentSpeed=" + currentSpeed + ", roadCapacity=" + roadWeight + "]";
+				+ ", currentSpeed=" + currentSpeed + ", roadCapacity=" + vehiclesCurrentlyOnRoadAtTime + "]";
 	}
 
 	public double getLength() {
@@ -91,10 +92,10 @@ public class GRIDroad {
 	}
 
 	public double getCurrentSpeed() {
-		if (currentSpeed < 0) {
+		if (this.currentSpeed < 0) {
 			return this.getMaxSpeed();
 		}
-		return currentSpeed;
+		return this.currentSpeed;
 	}
 
 	public void setCurrentSpeed(double currentSpeed) {
@@ -103,17 +104,17 @@ public class GRIDroad {
 	
 	public void addToWeight(Long time) {
 		// If there is already an offset, add to it
-		if(this.roadWeight.containsKey(time)) {
-			this.roadWeight.replace(time, (this.roadWeight.get(time) + 1));
+		if(this.vehiclesCurrentlyOnRoadAtTime.containsKey(time)) {
+			this.vehiclesCurrentlyOnRoadAtTime.replace(time, (this.vehiclesCurrentlyOnRoadAtTime.get(time) + 1));
 		}
 		else {
-			this.roadWeight.put(time, ourDefaultValue + 1);
+			this.vehiclesCurrentlyOnRoadAtTime.put(time, ourDefaultValue + 1);
 		}
 	}
 	
 	public double getWeightAtTime(Long time) {
-		if (this.roadWeight.containsKey(time) ) {
-			return this.roadWeight.get(time) + this.getDefaultWeight();
+		if (this.vehiclesCurrentlyOnRoadAtTime.containsKey(time) ) {
+			return this.vehiclesCurrentlyOnRoadAtTime.get(time) + this.getDefaultWeight();
 		}
 		
 		return this.getDefaultWeight();
@@ -123,13 +124,23 @@ public class GRIDroad {
 	*  the link is 1000 long and fspeed is 12/5, so 80s req'd to traverse link01
 	*  so we take all the weights from roadWeight[0] to roadWeight[79] and either AVG or MAX them
 	*  and that is the weight for that link*/
-	public double getWeightOverInterval(Long currentTime)
-	{
-			return this.getMaxWeight(currentTime) + this.getDefaultWeight();
+	public double getWeightOverInterval(Long intervalStartTime)
+	{ // vehiclesCurrentlyOnRoad
+		Double theWeight = 0.0,
+			   capMinusActual = maxCapacity-this.getAvgVehicleCount(intervalStartTime);
+		if(getCurrentSpeed() == 0)
+			return MAX_WEIGHT;
+
+		if(capMinusActual <= 0.0)
+			theWeight = this.Length/this.getCurrentSpeed();
+		else
+			theWeight = this.Length/(this.getCurrentSpeed()*capMinusActual);
+
+		return theWeight;
 	}
 	
 	public boolean setWeightAtTime(Long time, double capacity) {
-		if (this.roadWeight.containsKey(time)) {
+		if (this.vehiclesCurrentlyOnRoadAtTime.containsKey(time)) {
 			System.out.println("ERROR: Time already has a value for: " +
 		                       this.Id + " at time: " +
 							   time.toString());	
@@ -137,7 +148,7 @@ public class GRIDroad {
 			return false;
 		}
 		else {
-			this.roadWeight.put(time, capacity);
+			this.vehiclesCurrentlyOnRoadAtTime.put(time, capacity);
 			return true;
 		}			
 	}
@@ -146,31 +157,50 @@ public class GRIDroad {
 		double theWeight;
 		
 		// using maxSpeed. Should this be currentSpeed???
-		theWeight = this.Length / this.maxSpeed;
+		theWeight = this.Length / (this.maxSpeed*this.maxCapacity);
 		
 		return theWeight; }
 
-	private double getMaxWeight(Long currentTime){
-		Double maxWeight = 0.0,
-			   timeOnLink = this.Length/this.maxSpeed,
-			   timeInterval = currentTime + timeOnLink;
+	private double getAvgVehicleCount(Long intervalStartTime){
+		int numberOfKeys = 0;
+		Double avgVehicleCount = 0.0,
+			   timeOnLink = this.Length/this.getCurrentSpeed(),
+			   timeInterval = intervalStartTime + timeOnLink;
 
-		for(Long i = currentTime; i < timeInterval; i++){
-			if(this.roadWeight.containsKey(i) && this.roadWeight.get(i) > maxWeight){
-				maxWeight = this.roadWeight.get(i);}
+		for(Long i = intervalStartTime; i < timeInterval; i++)
+		{
+			if(this.vehiclesCurrentlyOnRoadAtTime.containsKey(i)) {
+				avgVehicleCount += this.vehiclesCurrentlyOnRoadAtTime.get(i);
+				numberOfKeys++;
+			}
 		}
+		if( numberOfKeys > 1 )
+			avgVehicleCount /= numberOfKeys;
 
-		return maxWeight;
+		return avgVehicleCount;
 	}
 
-	public void fillRoadWeight() // ConcurrentHashMap<Long, Double>
+	public Long getTravelTime()
+	{
+		return Math.round(this.Length/this.getCurrentSpeed());
+	}
+
+
+	public void fillRoadWeight(int rdID) // ConcurrentHashMap<Long, Double>
 	{
 		List<Long> weights = new LinkedList<>();
 		ConcurrentHashMap<Long,Double> weightMap = new ConcurrentHashMap<>();
 
-		for(Long i=0L; i<50; i++)
-			weightMap.put(i,5.0+i);
+		for(Long i=0L; i<500; i++)
+		{
+			if(rdID==10)
+				weightMap.put(i,5.0+i);
+			if(rdID==11)
+				weightMap.put(i,5.0+i);
+			if(rdID==12)
+				weightMap.put(i,1.0+i);
+		}
 
-		this.roadWeight = weightMap;
+		this.vehiclesCurrentlyOnRoadAtTime = weightMap;
 	}
 }
