@@ -17,7 +17,7 @@ public class GRIDpathrecalc {
     private ConcurrentMap<String, GRIDroad> roads;
     private String agtFrom;
     private String agtTo;
-    private Long currentTime;
+    private Long thisTimeslice;
     private Set<String> visited;
     private Set<String> unVisited;
     private ConcurrentMap<String, Double> currentPathTotal;
@@ -28,9 +28,14 @@ public class GRIDpathrecalc {
         this.roads = selfishMap.getRoads();
         agtFrom = thisAgent.getCurrentLink();
         agtTo = thisAgent.getDestination();
-        this.currentTime = currentTime/1000;
+        this.thisTimeslice = currentTime/1000;
 
-        //roads.get("10").fillRoadWeight();
+        /* These are for setting vehiclesCurrentlyOnRoadAtTime
+         * for testing purposes; comment out to run without using
+         * vehiclesCurrentlyOnRoadAtTime in program run */
+        roads.get("10").fillRoadWeight(10);
+        roads.get("11").fillRoadWeight(11);
+        roads.get("12").fillRoadWeight(12);
     }
 
     public GRIDroute findPath(){
@@ -101,6 +106,7 @@ public class GRIDpathrecalc {
                 currentPathTotal.put(endNode,getOptimalEdgeWeight(startNode) + calcEdgeWeight(startNode, endNode));
 
                 previousIntersections.put(endNode,startNode);
+
                 unVisited.add(endNode);
             }
         }
@@ -121,12 +127,16 @@ public class GRIDpathrecalc {
 
     private Double calcEdgeWeight(String startNode, String endNode)
     {
+        Long tempTimeslice = 0L;
+
         for(String roadId : roads.keySet())
         {
             if(roads.get(roadId).getFrom().equals(startNode)
                     && roads.get(roadId).getTo().equals(endNode))
             {
-                return roads.get(roadId).getWeightOverInterval(currentTime);
+                tempTimeslice = roads.get(roadId).getTravelTime();
+                System.out.println("slice: "+tempTimeslice);
+                return roads.get(roadId).getWeightOverInterval(tempTimeslice);
             }
         }
 
