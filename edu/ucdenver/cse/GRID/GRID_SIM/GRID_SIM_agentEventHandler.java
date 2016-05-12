@@ -107,6 +107,12 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			System.out.println("ERROR in LinkLeaveEvent: Agent: " + event.getPersonId().toString() +
 					           " does not exist in our system!");
 		}
+		
+		if(tempAgent.getId().equals("1")) {
+			System.out.println("Person 1 left link: " + event.getLinkId().toString() + 
+					           " at time: " + event.getTime() ); 
+			
+		}
 	}
 
 	@Override
