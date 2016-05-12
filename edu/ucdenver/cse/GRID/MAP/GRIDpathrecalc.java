@@ -34,9 +34,9 @@ public class GRIDpathrecalc {
         /* These are for setting vehiclesCurrentlyOnRoadAtTime
          * for testing purposes; comment out to run without using
          * vehiclesCurrentlyOnRoadAtTime in program run */
-        roads.get("10").fillRoadWeight(10);
-        roads.get("11").fillRoadWeight(11);
-        roads.get("12").fillRoadWeight(12);
+        //roads.get("10").fillRoadWeight(10); // 177937741
+        //roads.get("11").fillRoadWeight(11); // 4041297308
+        //roads.get("12").fillRoadWeight(12); // 665844624
     }
 
     public GRIDroute findPath(){
