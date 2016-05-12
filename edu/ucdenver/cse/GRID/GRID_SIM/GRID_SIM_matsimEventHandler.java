@@ -2,8 +2,10 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -41,20 +43,22 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	GRIDmap theMap;
 	
 	ConcurrentHashMap<String, GRIDagent> theAgents;
+	Queue<String> agentsToReplan;
 	
-	public GRIDmap getTheMap() {
-		// This should NEVER get called
-		return theMap;
+	// Should NEVER be called
+	public Queue<String> getAgentsToReplan() { return agentsToReplan; }
+
+	public void setAgentsToReplan(Queue<String> agentsToReplan) { 
+		this.agentsToReplan = agentsToReplan;
 	}
 
-	public void setTheMap(GRIDmap theMap) {
-		this.theMap = theMap;
-	}
+	// This should NEVER get called
+	public GRIDmap getTheMap() { return theMap; }
 
-	public ConcurrentMap<String, GRIDagent> getTheAgents() {
-		// This should NEVER get called
-		return theAgents;
-	}
+	public void setTheMap(GRIDmap theMap) { this.theMap = theMap; }
+
+	// This should NEVER get called
+	public ConcurrentMap<String, GRIDagent> getTheAgents() { return theAgents; }
 
 	public void setTheAgents(ConcurrentHashMap<String, GRIDagent> theAgents) {
 		this.theAgents = theAgents;
@@ -75,16 +79,47 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	
 		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
 
+		// Map updates - Do we need anything else from the matsim map?
+		if (event.getSimulationTime() % 5 == 0) {
+			Netsim mobsim = (Netsim) event.getQueueSimulation() ;
+			NetsimNetwork thesimNetwork = mobsim.getNetsimNetwork();
+			
+			Iterator<? extends Link> iter = thesimNetwork.getNetwork().getLinks().values().iterator();
+			
+			
+			//Iterator<? extends NetsimLink> iter = thesimNetwork.getNetsimLinks().values().iterator();
+			
+			while (iter.hasNext()) {
+				Link tempLink = iter.next();
+				theMap.getRoad(tempLink.getId().toString() ).setCurrentSpeed(tempLink.getFreespeed());
+			}
+		}
+		
+		// Agent route updates  - every time
+		while (!agentsToReplan.isEmpty() ) {
+			
+			// We can change this by sorting the list prior to removing
+			GRIDagent tempAgent = theAgents.get(agentsToReplan.remove());
+			
+			// we need to ID which agents get replanned - % based
+			
+		}
+		
+		// recalc routes - every X steps?
+		
+		
 		// RCS Is this working, but sending it to the console?????
 		//GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
 		
 		//System.out.println("We got to the begining of notifyMobsimBeforeSimStep: " + event.toString() + " " + event.getSimulationTime() );
-		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
-	    this.scenario = mobsim.getScenario();
+		//Netsim mobsim = (Netsim) event.getQueueSimulation() ;
+	    //this.scenario = mobsim.getScenario();
 	    
-	    NetsimNetwork thesimNetwork = mobsim.getNetsimNetwork();
+	    //NetsimNetwork thesimNetwork = mobsim.getNetsimNetwork();
 	    	    
-	    Map<Id<Link>, NetsimLink> theLinks = (Map<Id<Link>, NetsimLink>) thesimNetwork.getNetsimLinks();
+	    //Map<Id<Link>, NetsimLink> theLinks = (Map<Id<Link>, NetsimLink>) thesimNetwork.getNetsimLinks();
+	    
+	    //Iterator iter = thesimNetwork.getNetsimLinks().values().iterator();
 	    
 	    //for(Id<Link> roadId:theLinks.keySet()) {
 	    	//System.out.println("DAFUQ? ID=" + roadId.toString());
@@ -95,7 +130,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    //}
     
 	    //this.scenario.getNetwork().getLinks()
-	    Map<Id<Link>, Link> theOtherLinks = (Map<Id<Link>, Link>) this.scenario.getNetwork().getLinks();
+	    //Map<Id<Link>, Link> theOtherLinks = (Map<Id<Link>, Link>) this.scenario.getNetwork().getLinks();
 	    
 //	    for(Id<Link> roadId:theOtherLinks.keySet()) {
 //	    	System.out.println("DAFUQ? " + roadId.toString());	
@@ -104,19 +139,19 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 //	    	System.out.println("DAFUQ? " + roadId.toString());	
 //	    }
 	    
-	    for(String roadID:theMap.getRoads().keySet()) {
+	    //for(String roadID:theMap.getRoads().keySet()) {
 	    	//System.out.println("Start: " + theMap.getRoad(roadID).getCurrentSpeed());
 	    	    		    	
 	    	//theMap.getRoad(roadID).setCurrentSpeed(theMap.getRoad(roadID).getCurrentSpeed() + 1);	    	
-	    }
+	   // }
 	    
-	    Collection<MobsimAgent> agentsToReplan = getAgentsToReplan(mobsim); 
-	    for (MobsimAgent ma : agentsToReplan) {
+	    //Collection<MobsimAgent> agentsToReplan = getAgentsToReplan(mobsim); 
+	   // for (MobsimAgent ma : agentsToReplan) {
 	    	
 	    	//System.out.println("we found agent: " + ma.toString());
 	    	
-	    	doReplanning(ma, mobsim);	  	    
-	    }        
+	    	//doReplanning(ma, mobsim);	  	    
+	   // }        
 	}
 	
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim ) {

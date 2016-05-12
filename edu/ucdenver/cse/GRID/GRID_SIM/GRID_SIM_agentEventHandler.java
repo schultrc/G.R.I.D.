@@ -1,5 +1,6 @@
 package edu.ucdenver.cse.GRID.GRID_SIM;
 
+import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -29,9 +30,16 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	
 	double totalTravelTime = 0;
 	
-	public double getTotalTravelTime() {
-		return totalTravelTime;
+	Queue<String> agentsToReplan;
+	
+	// This should NEVER be called
+	public Queue<String> getAgentsToReplan() { return agentsToReplan; }
+
+	public void setAgentsToReplan(Queue<String> agentsToReplan) {
+		this.agentsToReplan = agentsToReplan;
 	}
+
+	public double getTotalTravelTime() { return totalTravelTime; }
 
 	// This should NEVER get called
 	public void setTotalTravelTime(double totalTravelTime) {
@@ -39,17 +47,11 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	}
 
 	// This should NEVER get called
-	public GRIDmap getOurMap() {
-		return ourMap;
-	}
+	public GRIDmap getOurMap() { return ourMap; }
 
-	public void setOurMap(GRIDmap ourMap) {
-		this.ourMap = ourMap;
-	}
+	public void setOurMap(GRIDmap ourMap) { this.ourMap = ourMap; }
 
-	public ConcurrentMap<String, GRIDagent> getMyAgents() {
-		return theAgents;
-	}
+	public ConcurrentMap<String, GRIDagent> getMyAgents() { return theAgents; }
 
 	public void setTheAgents(ConcurrentHashMap<String, GRIDagent> myAgents) {
 		this.theAgents = myAgents;
@@ -84,11 +86,33 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void handleEvent(LinkLeaveEvent event) {
+		
+		GRIDagent tempAgent = theAgents.get(event.getPersonId().toString());
+		if (tempAgent != null) {
+			// We found the agent, see if it's route has changed
+			if (tempAgent.getRouteHasChanged()) {
+				// the agent's route has changed, so lets tell the sim handler to update this agent
+				agentsToReplan.add(tempAgent.getId());
+			}
+			else {
+				// We are good to continue our original route
 
-		// This is probably where we want to go get an updated route
-		// so, go get your route young agent!
+			}				
+		}
+		else {
+			// This is bad, an agent we don't know about just left a link
+			System.out.println("ERROR in LinkLeaveEvent: Agent: " + event.getPersonId().toString() +
+					           " does not exist in our system!");
+		}
+		
+		if(tempAgent.getId().equals("1")) {
+			System.out.println("Person 1 left link: " + event.getLinkId().toString() + 
+					           " at time: " + event.getTime() ); 
+			
+		}
 	}
 
 	@Override

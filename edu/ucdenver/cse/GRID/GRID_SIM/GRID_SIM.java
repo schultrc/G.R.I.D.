@@ -1,6 +1,8 @@
 package edu.ucdenver.cse.GRID.GRID_SIM;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -42,12 +44,16 @@ public class GRID_SIM {
 		 * data sources needed for GRID.
 		 * 
 		 */
-				
+		
+		Long startTime = System.currentTimeMillis();
+		
 		System.out.println("It's not hard--you just gotta use finesse!");
 				
 		// This will get filled and emptied via departure / arrival events
 		final ConcurrentHashMap<String, GRIDagent> masterAgents = new ConcurrentHashMap<String, GRIDagent> ();	
-		
+		final ConcurrentHashMap<String, GRIDagent> agentsNeedingDest = new ConcurrentHashMap<String, GRIDagent> ();	
+
+		final Queue<String> agentsToReplan = new LinkedList<String>();
 		double totalTravelTime = 0;
 		
 		// The official map
@@ -96,6 +102,7 @@ public class GRID_SIM {
 			GRID_SIM_agentEventHandler theAgentHandler = new GRID_SIM_agentEventHandler();
 			theAgentHandler.setOurMap(ourMap);
 			theAgentHandler.setTheAgents(masterAgents);
+			theAgentHandler.setAgentsToReplan(agentsToReplan);
 			
 			controler.getEvents().addHandler(theAgentHandler);
 			
@@ -122,6 +129,8 @@ public class GRID_SIM {
 							theSimHandler.setTheMap(ourMap);
 							// add the agents to the handler
 							theSimHandler.setTheAgents(masterAgents);
+							// add the queue to pass agent ids from agentEvenHandler to simHandler
+							theSimHandler.setAgentsToReplan(agentsToReplan);
 							// Add the listener for Sim Step End 
 							qSim.addQueueSimulationListeners(theSimHandler);
 							
@@ -147,6 +156,11 @@ public class GRID_SIM {
 		}
 		
 		System.out.println("\n\nTotal travel time was: " + totalTravelTime + " seconds");
+		
+		Long stopTime = System.currentTimeMillis();
+		
+		Long timeToRun = (stopTime - startTime) / 1000;
+		System.out.println("\n it took: " + timeToRun + " seconds to run this sim");
 		
 		System.out.println("\n\nWell, we got to the end. \n\n\n\n");	
 	}

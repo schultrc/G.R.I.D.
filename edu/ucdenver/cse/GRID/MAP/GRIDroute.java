@@ -10,4 +10,6 @@ public class GRIDroute {
 	ArrayList<String> Roads = new ArrayList<String>();
 
 	public ArrayList<String> getIntersections(){ return Intersections; }
+	
+	
 }
