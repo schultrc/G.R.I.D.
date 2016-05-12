@@ -174,6 +174,7 @@ public class GRIDroad {
 				numberOfKeys++;
 			}
 		}
+
 		if( numberOfKeys > 1 )
 			avgVehicleCount /= numberOfKeys;
 
@@ -191,12 +192,12 @@ public class GRIDroad {
 		List<Long> weights = new LinkedList<>();
 		ConcurrentHashMap<Long,Double> weightMap = new ConcurrentHashMap<>();
 
-		for(Long i=0L; i<500; i++)
+		for(Long i=0L; i<5000; i++)
 		{
 			if(rdID==10)
 				weightMap.put(i,5.0+i);
 			if(rdID==11)
-				weightMap.put(i,5.0+i);
+				weightMap.put(i,5000.0+i);
 			if(rdID==12)
 				weightMap.put(i,1.0+i);
 		}

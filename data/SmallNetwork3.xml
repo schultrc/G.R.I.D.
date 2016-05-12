@@ -30,7 +30,7 @@
 		<link id="7" from="6" to="7" length="1000" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 		<link id="8" from="7" to="8" length="1000" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 		<link id="9" from="8" to="9" length="1000" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
-		<link id="10" from="9" to="50" length="84.28137423" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
+		<link id="10" from="9" to="50" length="184.28137423" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 		<link id="11" from="9" to="10" length="84.28137423" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 		<link id="12" from="10" to="11" length="84.28137423" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />
 		<link id="13" from="11" to="50" length="84.28137423" freespeed="12.5" capacity="36" permlanes="1.0" oneway="1" modes="car" />

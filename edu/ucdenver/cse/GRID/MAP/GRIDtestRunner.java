@@ -11,7 +11,7 @@ public class GRIDtestRunner{
 
     private GRIDmapReader myReader = new GRIDmapReader();
     //private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
-    private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
+    private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml"); // SmallNetwork2 PuebloNetwork
 
     private GRIDagent testAgent001 = getTestAgent();
     // private GRIDintersection from = new GRIDintersection("test",1d,2d);
@@ -59,6 +59,8 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
 
+        System.out.println("\n\nCalculated Travel Time: "+outRoute.getcalculatedTravelTime());
+
         long stopTime = System.nanoTime();
         long timeToRun = ((stopTime - startTime)/1000000);
         
@@ -69,9 +71,9 @@ public class GRIDtestRunner{
     private GRIDagent getTestAgent()
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
-                currentLink = "1",
-                currentIntrx = "1", // 1040921516 // 2
-                destIntrx = "50"; // 864162469 // 177890694 PNet3 // 177849670 // 50
+                currentLink = "1040921516",
+                currentIntrx = "1040921516", // 1040921516 // 2
+                destIntrx = "864162469"; // 864162469 // 177890694 PNet3 // 177849670 // 50
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);
 
