@@ -90,6 +90,9 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	@Override
 	public void handleEvent(LinkLeaveEvent event) {
 		
+		
+		// Somehow here we need to decide which agents get replanned
+		
 		GRIDagent tempAgent = theAgents.get(event.getPersonId().toString());
 		if (tempAgent != null) {
 			// We found the agent, see if it's route has changed
@@ -99,7 +102,6 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			}
 			else {
 				// We are good to continue our original route
-
 			}				
 		}
 		else {
@@ -111,6 +113,9 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		if(tempAgent.getId().equals("1")) {
 			System.out.println("Person 1 left link: " + event.getLinkId().toString() + 
 					           " at time: " + event.getTime() ); 
+			
+			// Force this onto the list for testing
+			agentsToReplan.add("1");
 			
 		}
 	}
