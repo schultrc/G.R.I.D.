@@ -7,13 +7,13 @@
 
 	<person id="1" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -24,13 +24,13 @@
 
 	<person id="10" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -41,13 +41,13 @@
 
 	<person id="11" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -58,13 +58,13 @@
 
 	<person id="12" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -75,13 +75,13 @@
 
 	<person id="13" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -92,13 +92,13 @@
 
 	<person id="14" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -109,13 +109,13 @@
 
 	<person id="15" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -126,13 +126,13 @@
 
 	<person id="16" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -143,13 +143,13 @@
 
 	<person id="17" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -160,13 +160,13 @@
 
 	<person id="18" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -177,13 +177,13 @@
 
 	<person id="19" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -194,13 +194,13 @@
 
 	<person id="2" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -211,13 +211,13 @@
 
 	<person id="20" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -228,13 +228,13 @@
 
 	<person id="21" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -245,13 +245,13 @@
 
 	<person id="22" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -262,13 +262,13 @@
 
 	<person id="23" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -279,13 +279,13 @@
 
 	<person id="24" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -296,13 +296,13 @@
 
 	<person id="25" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -313,13 +313,13 @@
 
 	<person id="26" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -330,13 +330,13 @@
 
 	<person id="27" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -347,13 +347,13 @@
 
 	<person id="28" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -364,13 +364,13 @@
 
 	<person id="29" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -381,13 +381,13 @@
 
 	<person id="3" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -398,13 +398,13 @@
 
 	<person id="30" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -415,13 +415,13 @@
 
 	<person id="31" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -432,13 +432,13 @@
 
 	<person id="32" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -449,13 +449,13 @@
 
 	<person id="33" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -466,13 +466,13 @@
 
 	<person id="34" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -483,13 +483,13 @@
 
 	<person id="35" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -500,13 +500,13 @@
 
 	<person id="36" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -517,13 +517,13 @@
 
 	<person id="37" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -534,13 +534,13 @@
 
 	<person id="38" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -551,13 +551,13 @@
 
 	<person id="39" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -568,13 +568,13 @@
 
 	<person id="4" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -585,13 +585,13 @@
 
 	<person id="40" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -602,13 +602,13 @@
 
 	<person id="41" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -619,13 +619,13 @@
 
 	<person id="42" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -636,13 +636,13 @@
 
 	<person id="43" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -653,13 +653,13 @@
 
 	<person id="44" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -670,13 +670,13 @@
 
 	<person id="45" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -687,13 +687,13 @@
 
 	<person id="46" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -704,13 +704,13 @@
 
 	<person id="47" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -721,13 +721,13 @@
 
 	<person id="48" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -738,13 +738,13 @@
 
 	<person id="49" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -755,13 +755,13 @@
 
 	<person id="5" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -772,13 +772,13 @@
 
 	<person id="50" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -789,13 +789,13 @@
 
 	<person id="51" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -806,13 +806,13 @@
 
 	<person id="52" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -823,13 +823,13 @@
 
 	<person id="53" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -840,13 +840,13 @@
 
 	<person id="54" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -857,13 +857,13 @@
 
 	<person id="55" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -874,13 +874,13 @@
 
 	<person id="56" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -891,13 +891,13 @@
 
 	<person id="57" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -908,13 +908,13 @@
 
 	<person id="58" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -925,13 +925,13 @@
 
 	<person id="59" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -942,13 +942,13 @@
 
 	<person id="6" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -959,13 +959,13 @@
 
 	<person id="60" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -976,13 +976,13 @@
 
 	<person id="61" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -993,13 +993,13 @@
 
 	<person id="62" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1010,13 +1010,13 @@
 
 	<person id="63" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1027,13 +1027,13 @@
 
 	<person id="64" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1044,13 +1044,13 @@
 
 	<person id="65" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1061,13 +1061,13 @@
 
 	<person id="66" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1078,13 +1078,13 @@
 
 	<person id="67" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1095,13 +1095,13 @@
 
 	<person id="68" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1112,13 +1112,13 @@
 
 	<person id="69" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1129,13 +1129,13 @@
 
 	<person id="7" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1146,13 +1146,13 @@
 
 	<person id="70" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1163,13 +1163,13 @@
 
 	<person id="71" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1180,13 +1180,13 @@
 
 	<person id="72" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1197,13 +1197,13 @@
 
 	<person id="73" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1214,13 +1214,13 @@
 
 	<person id="74" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1231,13 +1231,13 @@
 
 	<person id="75" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1248,13 +1248,13 @@
 
 	<person id="76" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1265,13 +1265,13 @@
 
 	<person id="77" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1282,13 +1282,13 @@
 
 	<person id="78" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1299,13 +1299,13 @@
 
 	<person id="79" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1316,13 +1316,13 @@
 
 	<person id="8" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1333,13 +1333,13 @@
 
 	<person id="80" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1350,13 +1350,13 @@
 
 	<person id="81" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1367,13 +1367,13 @@
 
 	<person id="82" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1384,13 +1384,13 @@
 
 	<person id="83" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1401,13 +1401,13 @@
 
 	<person id="84" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1418,13 +1418,13 @@
 
 	<person id="85" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1435,13 +1435,13 @@
 
 	<person id="86" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1452,13 +1452,13 @@
 
 	<person id="87" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1469,13 +1469,13 @@
 
 	<person id="88" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1486,13 +1486,13 @@
 
 	<person id="89" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1503,13 +1503,13 @@
 
 	<person id="9" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1520,13 +1520,13 @@
 
 	<person id="90" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1537,13 +1537,13 @@
 
 	<person id="91" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1554,13 +1554,13 @@
 
 	<person id="92" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1571,13 +1571,13 @@
 
 	<person id="93" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1588,13 +1588,13 @@
 
 	<person id="94" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1605,13 +1605,13 @@
 
 	<person id="95" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1622,13 +1622,13 @@
 
 	<person id="96" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1639,13 +1639,13 @@
 
 	<person id="97" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1656,13 +1656,13 @@
 
 	<person id="98" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>
@@ -1673,13 +1673,13 @@
 
 	<person id="99" employed="no">
 		<plan selected="yes">
-			<act type="home" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" end_time="06:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="work" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
+			<act type="w" x="-1.1644353007143369E7" y="4616838.252581435" end_time="16:00:00" />
 			<leg mode="car">
 			</leg>
-			<act type="h6" x="-1.1644353007143369E7" y="4616838.252581435" />
+			<act type="h" x="-1.1644353007143369E7" y="4616838.252581435" />
 			<leg mode="car">
 			</leg>
 		</plan>

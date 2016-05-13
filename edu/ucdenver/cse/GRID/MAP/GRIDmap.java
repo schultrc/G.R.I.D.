@@ -1,11 +1,14 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.concurrent.*;
+import java.util.*;
+//import java.util.ArrayList;
 
 public class GRIDmap {
 	
 	private ConcurrentMap<String, GRIDintersection> Intersections = new ConcurrentHashMap<String, GRIDintersection>();
 	private ConcurrentMap<String, GRIDroad> Roads = new ConcurrentHashMap<String, GRIDroad >();
+	
 
 	public ConcurrentMap<String, GRIDintersection> getIntersections() {
 		return Intersections;
@@ -36,7 +39,7 @@ public class GRIDmap {
 		else
 		{
 			this.Roads.put(addMe.getId(), addMe);
-			System.out.println("Successfully added road: " + addMe.getId());
+			//System.out.println("Successfully added road: " + addMe.getId());
 		}
 		
 		return true;
@@ -51,7 +54,40 @@ public class GRIDmap {
 			this.Intersections.putIfAbsent(addMe.getId(), addMe);
 		}
 		
-		return true;
-			
+		return true;			
 	}
+	
+	public GRIDroad getRoad(String theRoadID) {
+		return this.Roads.get(theRoadID);
+	}
+	public GRIDintersection getIntersection(String theIntersection) {
+		return this.Intersections.get(theIntersection);
+	}
+
+	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
+	{
+		ArrayList<String> pathByRoad = new ArrayList<>();
+		Set keys = Roads.keySet();
+
+		for(int i = 0; i < pathByNode.size()-1; i++)
+		{
+			GRIDroad tempRoad = new GRIDroad("temp");
+			tempRoad.setFrom(pathByNode.get(i));
+			tempRoad.setTo(pathByNode.get(i+1));
+
+			for (Iterator itr = keys.iterator(); itr.hasNext();)
+			{
+				String key = (String) itr.next();
+				GRIDroad testRoad = (GRIDroad) Roads.get(key);
+
+				if(tempRoad.getFrom().equals(testRoad.getFrom())
+				   && tempRoad.getTo().equals(testRoad.getTo())) {
+					pathByRoad.add(testRoad.getId());
+				}
+			}
+		}
+
+		return  pathByRoad;
+	}
+
 }

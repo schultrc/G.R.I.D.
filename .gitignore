@@ -3,7 +3,9 @@ output/
 *.*~
 *.class
 out/
+mine/
 .idea
 .settings
 .project
 GRID.iml
+G.R.I.D.iml

@@ -1,12 +1,18 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import java.util.ArrayList;
-
+import java.util.*;
 
 public class GRIDroute {	
-	long agent_ID;
+	private Long agent_ID;
+	private Long calculatedTravelTime;
 
-	ArrayList<GRIDintersection> nodes = new ArrayList<GRIDintersection>();
-	ArrayList<GRIDroad> edges = new ArrayList<GRIDroad>();
+	ArrayList<String> Intersections = new ArrayList<String>();
+	ArrayList<String> Roads = new ArrayList<String>();
 
+	public void setcalculatedTravelTime(Long inTime){ this.calculatedTravelTime = inTime; }
+
+	public ArrayList<String> getIntersections(){ return Intersections; }
+	public Long getAgent_ID(){ return agent_ID; }
+	public Long getcalculatedTravelTime(){ return calculatedTravelTime; }
 }
