@@ -1,5 +1,8 @@
 package edu.ucdenver.cse.GRID.GRID_SIM;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -31,7 +34,29 @@ public class PopulationGenerator {
 		DriversDistributionOnRoad distribution = new DriversDistributionOnRoad(hour);
 		Random rnd = new Random();
 		int range = 1;
-		int drivers = 1000;
+		int drivers = 0;
+		
+		System.out.print("Enter the number of Agents: ");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		try {
+			drivers = Integer.parseInt(br.readLine());
+		} 
+		catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.exit(1);
+
+		} 
+		catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.exit(1);
+
+		}
+		
+		System.out.println("Using: " + drivers + " drivers");
+		
 		double [] drivers_on_road_hourly = distribution.calculateDistribution(drivers, range);
 		ArrayList<Integer> times = distribution.generateTimes(drivers_on_road_hourly);
 		drivers = times.size();
@@ -39,8 +64,8 @@ public class PopulationGenerator {
 		//=========================Smart randomizing location=========================
 		ParseLink pn = new ParseLink();
 		RandomizeLocation rndLoc = new RandomizeLocation(pn);
-	   
-        int randomize_type = 1;//1 or 2
+		
+        int randomize_type = 2;//1 or 2
         String work_area = "";
         String home_area = "";
         ArrayList<StartToDestinationLocation> trips = null;
@@ -49,28 +74,24 @@ public class PopulationGenerator {
         {
             work_area = "./data/AlamosaDowntownLinks.txt";
             home_area = "./data/AlamosaLinks.txt";
-            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
+            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
             
         }
         else if (randomize_type == 2)//full randomization
         {
+        	
             work_area = "./data/AlamosaDowntownLinks.txt"; //home and work area should be the same
             home_area = "./data/AlamosaDowntownLinks.txt";
-            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
+            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
         }
         else
         {
             System.out.println("Please chose:\n1 for outside to downtown population generation,\n2 for full randomization");
             
-        }
-        
-       
-        
-        
+        }       
         
 		//=============================================================================
-				
-		
+					
 		//End of drivers distribution on road
 				
 		Config config = ConfigUtils.createConfig();
@@ -120,11 +141,6 @@ public class PopulationGenerator {
 			plan.addActivity(activity2);
 			plan.addLeg(populationFactory.createLeg("car"));
 			//=============================================================================================
-			
-//			Activity activity3 = populationFactory.createActivityFromLinkId("h", homeLinkId);
-//				
-//			plan.addActivity(activity3);
-//			plan.addLeg(populationFactory.createLeg("car"));
 						
 		}
 		
