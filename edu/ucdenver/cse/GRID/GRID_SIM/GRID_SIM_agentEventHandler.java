@@ -92,12 +92,12 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		
 		
 		// Somehow here we need to decide which agents get replanned
-		
+
 		GRIDagent tempAgent = theAgents.get(event.getPersonId().toString());
 		if (tempAgent != null) {
-			// We found the agent, see if it's route has changed
-			if (tempAgent.getRouteHasChanged()) {
-				// the agent's route has changed, so lets tell the sim handler to update this agent
+
+			// Check if this is OUR agent, and if so, add it to the replanning agents
+			if (tempAgent.getSimCalcFlag()) {
 				agentsToReplan.add(tempAgent.getId());
 			}
 			else {
@@ -110,14 +110,13 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 					           " does not exist in our system!");
 		}
 		
-		if(tempAgent.getId().equals("1")) {
-			System.out.println("Person 1 left link: " + event.getLinkId().toString() + 
-					           " at time: " + event.getTime() ); 
+		//if(tempAgent.getId().equals("1")) {
+		//	System.out.println("Person 1 left link: " + event.getLinkId().toString() + 
+		//			           " at time: " + event.getTime() ); 
 			
 			// Force this onto the list for testing
-			agentsToReplan.add("1");
-			
-		}
+		//	agentsToReplan.add("1");			
+		//}
 	}
 
 	@Override
@@ -150,12 +149,19 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	public void handleEvent(PersonDepartureEvent event) {	
 		
 		// Here, we need to create a new agent. 
+		
+		// Is this going to be one of OUR agents?  change the % value to change how many we do. %5 = 20 % of all agents
+		boolean simFlag = ((Double.parseDouble(event.getPersonId().toString()) % 5) == 0);
+		
+		// Get the destination - future MOD
+		
 		GRIDagent newAgent = new GRIDagent(event.getPersonId().toString(),
 				                           event.getLinkId().toString(),
 				                           event.getLinkId().toString(),
-				                           "");  
+				                           "", simFlag, true );  
 		
-		newAgent.setDepartureTime(event.getTime());		                           
+		newAgent.setDepartureTime(event.getTime());	
+		
 		
 		//System.out.println("Adding Agent: " + newAgent.getId() + " at time: " + event.getTime());
 		

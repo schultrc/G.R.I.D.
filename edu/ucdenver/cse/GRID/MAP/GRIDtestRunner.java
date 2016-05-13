@@ -75,7 +75,7 @@ public class GRIDtestRunner{
                 currentIntrx = "1040921516", // 1040921516 // 2
                 destIntrx = "864162469"; // 864162469 // 177890694 PNet3 // 177849670 // 50
 
-        GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx);
+        GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx, false, false);
 
         return myAgent;
     }

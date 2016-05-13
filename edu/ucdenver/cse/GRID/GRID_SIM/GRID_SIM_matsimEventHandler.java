@@ -84,6 +84,21 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 		
+		ConcurrentHashMap<String, MobsimAgent>  mobsimAgents = getAgentsToReplan(mobsim, theAgents);
+		
+		// Need to update any agent that doesn't have a destination
+		for(GRIDagent agent : theAgents.values() ) {
+			if (agent.getNeedsDestination()) {
+				
+				// EVERY agent will need a destination, not just the replan ones.
+				agent.setDestination(mobsimAgents.get(agent.getId()).getDestinationLinkId().toString());
+				agent.setNeedsDestinationFlag(false);
+				System.out.println("Setting agent: " + agent.getId() +
+						           " destination to: " + agent.getDestination() ); 
+						
+			}				
+		}
+		
 		// Map updates - Do we need anything else from the matsim map?
 		if (event.getSimulationTime() % 5 == 0) {
 			
@@ -99,8 +114,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		
 		// Agent route updates  - every time
 		while (!agentsToReplan.isEmpty() ) {
-			ConcurrentHashMap<String, MobsimAgent>  mobsimAgents = getAgentsToReplan(mobsim);
-			
+						
 			// We can change this by sorting the list prior to removing
 			GRIDagent tempAgent = theAgents.get(agentsToReplan.remove());
 			
@@ -181,21 +195,12 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		else {
 			System.out.println("Not changing for link: " + currentLinkId);
 		}
-		//int currentLinkIndex = WithinDayAgentUtils.getCurrentRouteLinkIdIndex(withinDayAgent);
-		
-        
-		
-//		if (!(planElements.get(planElementsIndex + 1) instanceof Activity
-//				|| !(planElements.get(planElementsIndex + 2) instanceof Leg))) {
-//			log.error(
-//					"this version of withinday replanning cannot deal with plans where legs and acts do not alternate; returning ...");
-//			return false;
-//		}
 
 		return true;
 	}
 	
-	private static ConcurrentHashMap<String, MobsimAgent> getAgentsToReplan(Netsim mobsim) {
+	private static ConcurrentHashMap<String, MobsimAgent> getAgentsToReplan(Netsim mobsim, 
+			                                                                ConcurrentHashMap<String, GRIDagent> theAgents ) {
 
 		ConcurrentHashMap<String, MobsimAgent> theMobsimAgents = new ConcurrentHashMap<String, MobsimAgent>();
 
@@ -206,22 +211,29 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 				
 				//Obviously, we don't want to hard code this. eventually
 				
-				if (agent.getId().toString().equals("1")) { // some condition ...
-					System.out.println("found agent" + agent.toString());
-					theMobsimAgents.put("1", agent);
+				if (theAgents.containsKey(agent.getId().toString())) {
+					if (theAgents.get(agent.getId().toString()).getSimCalcFlag()) {
+						theMobsimAgents.put(agent.getId().toString(), agent);
+						
+						System.out.println("Adding agent: " + agent.getId() + " to the list");
+					}
 				}
+				
+//				if (agent.getId().toString().equals("1")) { // some condition ...
+//					System.out.println("found agent" + agent.toString());
+//					theMobsimAgents.put("1", agent);
+//				}
 			}
 		}
 
 		return theMobsimAgents;
 	}
 	
-
 	@Override
 	public void notifyMobsimAfterSimStep(@SuppressWarnings("rawtypes") MobsimAfterSimStepEvent event) {
-
+		
+		// Not currently used.
 		//System.out.println("We got to the beginning of notifyMobsimBeforeSimStep at time: " + event.getSimulationTime());
-
 	}
 }
 
@@ -231,7 +243,16 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 
 
+//int currentLinkIndex = WithinDayAgentUtils.getCurrentRouteLinkIdIndex(withinDayAgent);
 
+
+
+//if (!(planElements.get(planElementsIndex + 1) instanceof Activity
+//		|| !(planElements.get(planElementsIndex + 2) instanceof Leg))) {
+//	log.error(
+//			"this version of withinday replanning cannot deal with plans where legs and acts do not alternate; returning ...");
+//	return false;
+//}
 //Iterator<? extends NetsimLink> iter = thesimNetwork.getNetsimLinks().values().iterator();
 
 
