@@ -101,7 +101,7 @@ public class GRID_SIM {
 			// Add our handler for Link Events			
 			GRID_SIM_agentEventHandler theAgentHandler = new GRID_SIM_agentEventHandler();
 			theAgentHandler.setOurMap(ourMap);
-			theAgentHandler.setTheAgents(masterAgents);
+			theAgentHandler.setOurAgents(masterAgents);
 			theAgentHandler.setAgentsToReplan(agentsToReplan);
 			
 			controler.getEvents().addHandler(theAgentHandler);

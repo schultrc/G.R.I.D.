@@ -23,7 +23,7 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		PersonDepartureEventHandler {
 
 	// The list of agents we know about
-	ConcurrentHashMap<String, GRIDagent> theAgents;
+	ConcurrentHashMap<String, GRIDagent> ourAgents;
 	
 	// The map as we know it
 	GRIDmap ourMap;
@@ -51,10 +51,10 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 
 	public void setOurMap(GRIDmap ourMap) { this.ourMap = ourMap; }
 
-	public ConcurrentMap<String, GRIDagent> getMyAgents() { return theAgents; }
+	public ConcurrentMap<String, GRIDagent> getOurAgents() { return ourAgents; }
 
-	public void setTheAgents(ConcurrentHashMap<String, GRIDagent> myAgents) {
-		this.theAgents = myAgents;
+	public void setOurAgents(ConcurrentHashMap<String, GRIDagent> myAgents) {
+		this.ourAgents = myAgents;
 	}
 
 	@Override	
@@ -84,16 +84,15 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			//		           " at time: " + (event.getTime() + i) );
 					
 		}
+		// Tell our agent where it is
+		ourAgents.get(event.getPersonId().toString()).setLink(event.getLinkId().toString());	
 	}
 
 	@SuppressWarnings("deprecation")
 	@Override
 	public void handleEvent(LinkLeaveEvent event) {
-		
-		
-		// Somehow here we need to decide which agents get replanned
 
-		GRIDagent tempAgent = theAgents.get(event.getPersonId().toString());
+		GRIDagent tempAgent = ourAgents.get(event.getPersonId().toString());
 		if (tempAgent != null) {
 
 			// Check if this is OUR agent, and if so, add it to the replanning agents
@@ -109,26 +108,17 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			System.out.println("ERROR in LinkLeaveEvent: Agent: " + event.getPersonId().toString() +
 					           " does not exist in our system!");
 		}
-		
-		//if(tempAgent.getId().equals("1")) {
-		//	System.out.println("Person 1 left link: " + event.getLinkId().toString() + 
-		//			           " at time: " + event.getTime() ); 
-			
-			// Force this onto the list for testing
-		//	agentsToReplan.add("1");			
-		//}
 	}
 
 	@Override
 	public void handleEvent(PersonArrivalEvent event) {
-		
-		//System.out.println("attempting to remove agent: " + event.getPersonId().toString());
-		if( theAgents.containsKey(event.getPersonId().toString())) {
-			GRIDagent tempAgent = theAgents.get(event.getPersonId().toString());
+
+		if( ourAgents.containsKey(event.getPersonId().toString())) {
+			GRIDagent tempAgent = ourAgents.get(event.getPersonId().toString());
 			
-			double departureTime = tempAgent.getDepartureTime();
-			
+			double departureTime = tempAgent.getDepartureTime();			
 			double travelTime = event.getTime() - departureTime;
+
 			//System.out.println("Agent: " + tempAgent.getId() +
 			//		           " took: " + travelTime +
 			//		           " seconds to arrive at: " +
@@ -137,7 +127,7 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			//		           );
 			
 			totalTravelTime += travelTime;
-			theAgents.remove(event.getPersonId().toString());
+			ourAgents.remove(event.getPersonId().toString());
 		}
 		
 		else {
@@ -148,27 +138,20 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 	@Override
 	public void handleEvent(PersonDepartureEvent event) {	
 		
-		// Here, we need to create a new agent. 
 		
 		// Is this going to be one of OUR agents?  change the % value to change how many we do. %5 = 20 % of all agents
 		boolean simFlag = ((Double.parseDouble(event.getPersonId().toString()) % 5) == 0);
 		
-		// Get the destination - future MOD
+		// Get the destination - future MOD ?
 		
 		GRIDagent newAgent = new GRIDagent(event.getPersonId().toString(),
 				                           event.getLinkId().toString(),
 				                           event.getLinkId().toString(),
 				                           "", simFlag, true );  
-		
-		newAgent.setDepartureTime(event.getTime());	
-		
-		
-		//System.out.println("Adding Agent: " + newAgent.getId() + " at time: " + event.getTime());
-		
-		theAgents.put(newAgent.getId(), newAgent);
-		
-		//System.out.println("There are: " + theAgents.size() + " agents now");
-				
+
+		// Here, we need to create a new agent. 
+		newAgent.setDepartureTime(event.getTime());			
+		ourAgents.put(newAgent.getId(), newAgent);
 	}
 }
 

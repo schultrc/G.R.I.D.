@@ -16,7 +16,7 @@ import java.util.*;
 
 public class GRIDagent {
     private String Id = "";
-    private GRIDroute travelPath;
+    private GRIDroute myRoute;
     private Long x; private Long y; // Future Use for now 05/08
     private String currentLink;     // Future Use 05/08
     private String origin;
@@ -35,7 +35,7 @@ public class GRIDagent {
         super();
 
         this.Id = Id;
-        this.travelPath = new GRIDroute();
+        this.myRoute = new GRIDroute();
         this.currentLink = curLink;
         this.origin = origin;
         this.destination = destination;
@@ -43,7 +43,7 @@ public class GRIDagent {
         this.needsDestination = needDest;
     }
 
-    public void setTravelPath(GRIDroute newPath){ travelPath = newPath;}
+    public void setRoute(GRIDroute newPath){ myRoute = newPath;}
     public void setX(Long x) {
         this.x = x;
     }
@@ -51,8 +51,8 @@ public class GRIDagent {
         this.y = y;
     }
     public void setLink(String newLink){ this.currentLink = newLink; }
-    public void setOrigin(String origin){ this.origin = origin; }
-    public void setDestination(String origin){ this.origin = destination; }
+    public void setOrigin(String newOrigin){ this.origin = newOrigin; }
+    public void setDestination(String newDest){ this.destination = newDest; }
     public void setFuelEconomy(Long fuelEconomy){ this.fuelEconomy = fuelEconomy; }
     public void setVehOccupancy(Long vehOccupancy){ this.vehOccupancy = vehOccupancy; }
     public void setvehSize(Long vehSize){ this.vehSize = vehSize; }
@@ -64,7 +64,7 @@ public class GRIDagent {
 	public void setNeedsDestinationFlag(boolean theFlag) { this.needsDestination = theFlag; } 
 
     public String getId(){return this.Id;}
-    public GRIDroute getTravelPath(){ return this.travelPath;}
+    public GRIDroute getRoute(){ return this.myRoute;}
     public String getCurrentLink(){ return this.currentLink; }
     public String getOrigin(){ return this.origin; }
     public String getDestination(){ return this.destination; }
@@ -85,7 +85,7 @@ public class GRIDagent {
     // in the GRIDroute class object
     public String toString()
     {
-        for (String intx : travelPath.getIntersections())
+        for (String intx : myRoute.getIntersections())
         {
 
         }
