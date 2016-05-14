@@ -13,17 +13,15 @@ public class RandomizeLocation
 		 this.pl = pl;
 	}
 	
-	public ArrayList<StartToDestinationLocation> generateHomeToWorkLocations(String work_area, String home_area, int population)
+	public ArrayList<StartToDestinationLocation> generateHomeToWorkLocations(String work_area, String home_area, int population, int randomize_type)
 	{
 		ArrayList<StartToDestinationLocation> trip = new ArrayList<StartToDestinationLocation>();
 		
 		ArrayList<Link> work_links = pl.parse(work_area);
 		ArrayList<Link> home_links = pl.parse(home_area);
 		
-//		System.out.println("Work_node size: " + work_node.size());
-//		System.out.println("Home_node size: " + home_node.size());
-		home_links = clearWorkNodesFromHomeNodes(work_links, home_links);
-//		System.out.println("Home_node size after modification: " + home_node.size());
+		if (randomize_type == 1)
+			home_links = clearWorkNodesFromHomeNodes(work_links, home_links);
 		
 		Random rnd_home_node = new Random();
 		Random rnd_work_node = new Random();
@@ -37,16 +35,7 @@ public class RandomizeLocation
 			
 			trip.add(new StartToDestinationLocation(source_node, destination_node));
 			
-			//home_node.remove(a); //only one people from one home
-			
-			//rnd_home_node = new Random(home_node.size());
 		}
-		
-		
-//		for(int i=1; i<work_node.size(); i++)
-//				{
-//					System.out.println(work_node.get(i).toString());
-//				}
 		return trip;
 	}
 	

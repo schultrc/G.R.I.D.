@@ -74,7 +74,7 @@ public class PopulationGenerator {
         {
             work_area = "./data/AlamosaDowntownLinks.txt";
             home_area = "./data/AlamosaLinks.txt";
-            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
+            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
             
         }
         else if (randomize_type == 2)//full randomization
@@ -82,7 +82,7 @@ public class PopulationGenerator {
         	
             work_area = "./data/AlamosaDowntownLinks.txt"; //home and work area should be the same
             home_area = "./data/AlamosaDowntownLinks.txt";
-            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers);
+            trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
         }
         else
         {
