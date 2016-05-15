@@ -111,6 +111,8 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 				Link tempLink = iter.next();
 				theMap.getRoad(tempLink.getId().toString() ).setCurrentSpeed(tempLink.getFreespeed());
 			}
+			
+			// We should remove any info in the road.vehiclesCurrentlyOnRoad at time - 1
 		}
 		
 		// Agent route updates  - every time
@@ -144,7 +146,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 			return false;
 		}
 			
-		
+		// Subtract 0.5 so round always goes to the current second
 		Long timeNow = Math.round(now - 0.5);
 		
 		Plan plan = WithinDayAgentUtils.getModifiablePlan(agent);
@@ -163,8 +165,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 			log.info("not a car leg; can only replan car legs; returning ... ");
 			return false;
 		}
-		
-		
+				
 		Leg currentLeg = (Leg)  WithinDayAgentUtils.getCurrentPlanElement(agent);
 				
 		// Is there a better way to get a Network Route???
@@ -177,8 +178,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    tempGRIDagent.setLink(agent.getCurrentLinkId().toString());
 	    
 	    GRIDpathrecalc theALG = new GRIDpathrecalc(tempGRIDagent, theMap, timeNow);
-	    
-	 
+	    	 
 	    // Recalculate the route from here to destination
 	    Long startTime = System.currentTimeMillis();	    
 	    
@@ -194,12 +194,12 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    
 	    //System.out.println("Recalculating route for agent: " + tempGRIDagent.getId() +
 	    //		           " took: " + (totalTime/1000) + "seconds" ); 
-	    
-	    
+	    	    
 	    //Compare the 2 routes    
 	    if (origRoute.equalsIntersections(tempRoute)) {
 	    
 	    	// This doesn't work, it never gets here. 
+	    	// If it does, we don't have to make any map updates
 	    	// I don't think we are setting the new routes into the agent, so the new is ALWAYS diff from orig
 	    	System.out.println("Routes did not change for agent: " + agent.getId());
 	    	return false;
@@ -220,11 +220,13 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    		    	
 	    	// This is Kludgy, but hey
 	    	// matsim keeps an internal index into it's route that we cannot change
+	    	// fill the array with dummy entries
 	    	for (int i = 0; i < currentLinkIndex; i++) {
 	    		mobsimLinks.add(agent.getCurrentLinkId());
 	    	}
 	    	  	
 	    	for(String ourRoad:theRoute) {
+	    		// Add the road to the list for mobsim
 	    		mobsimLinks.add(Id.createLinkId(ourRoad));
 	    	}
 	    	//System.out.println("\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
@@ -239,8 +241,6 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    	
 	    	//System.out.println("agent is on" + agent.getCurrentLinkId().toString());
 	    	
-	    	
-	    	
 	    	netRoute.setLinkIds(agent.getCurrentLinkId(), 
 	    					            mobsimLinks, 
 	    					            currentLeg.getRoute().getEndLinkId());
@@ -249,31 +249,29 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    			
 	    	// Reset so the sim uses the new route
 	    	WithinDayAgentUtils.resetCaches(agent);
+	    	
+	    	// Now we update the map, both removing ALL entries from before now
+		    // and adding the new traffic in the future
+		    for(String ourRoad:theRoute) {
+		    	// Add vehicle count to the roads
+		    	for (Long i = 0L; i < theMap.getRoad(ourRoad).getTravelTime(); i++) {
+		    		// This isn't correct, but we aren't running matsim with a real now
+		    		// Should have timeNow added to i
+		    		theMap.getRoad(ourRoad).addToWeight(i);
+		    	}
+		    }
+		    
+		    for (String ourRoad:origRoute.getRoads()) {
+		    	// Remove vehicles from the roads
+		    	for (Long i = 0L; i < theMap.getRoad(ourRoad).getTravelTime(); i++) {
+		    		// This isn't correct, but we aren't running matsim with a real now
+		    		// Should have timeNow added to i
+		    		theMap.getRoad(ourRoad).subFromWeight(i);
+		    	}
+		    }
 	    }
 	    
 	    
-	    //List<Id<Link>> theList = new ArrayList<Id<Link>>();
-	    //theList.add(Id.createLinkId("2to3"));
-	    //theList.add(Id.createLinkId("3to8"));
-	    //theList.add(Id.createLinkId("8to13"));
-	    //theList.add(Id.createLinkId("13to18"));
-	    //theList.add(Id.createLinkId("18to24"));
-	    		    
-	    //if(agent.getCurrentLinkId().toString().equals("2to3")) {
-
-			//netRoute.setLinkIds(currentLeg.getRoute().getStartLinkId(), 
-			//		            theList, 
-			//		            currentLeg.getRoute().getEndLinkId());
-
-			//currentLeg.setRoute(netRoute);
-			// Reset so the sim uses the new route
-			//WithinDayAgentUtils.resetCaches(agent);
-		//}
-	    
-		//else {
-		//	System.out.println("Not changing for link: " + currentLinkId);
-		//}
-
 		return true;
 	}
 	
@@ -299,7 +297,8 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	@Override
 	public void notifyMobsimAfterSimStep(@SuppressWarnings("rawtypes") MobsimAfterSimStepEvent event) {
 		
-		// Not currently used.
+		// Not currently used. May change call to replan to here so the agents haven't entered
+		// the next link. Currently, we plan from the end of the the next road
 		//System.out.println("We got to the beginning of notifyMobsimAfterSimStep at time: " + event.getSimulationTime());
 	}
 }
@@ -308,6 +307,28 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 // LEFTOVER STUFF. REMOVE WHEN HAPPY WITH ABOVE CODE
 
+
+//List<Id<Link>> theList = new ArrayList<Id<Link>>();
+//theList.add(Id.createLinkId("2to3"));
+//theList.add(Id.createLinkId("3to8"));
+//theList.add(Id.createLinkId("8to13"));
+//theList.add(Id.createLinkId("13to18"));
+//theList.add(Id.createLinkId("18to24"));
+		    
+//if(agent.getCurrentLinkId().toString().equals("2to3")) {
+
+	//netRoute.setLinkIds(currentLeg.getRoute().getStartLinkId(), 
+	//		            theList, 
+	//		            currentLeg.getRoute().getEndLinkId());
+
+	//currentLeg.setRoute(netRoute);
+	// Reset so the sim uses the new route
+	//WithinDayAgentUtils.resetCaches(agent);
+//}
+
+//else {
+//	System.out.println("Not changing for link: " + currentLinkId);
+//}
 
 /*
 if (ourAgents.containsKey(agent.getId().toString())) {

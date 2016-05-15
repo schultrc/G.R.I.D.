@@ -7,10 +7,10 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.IOException;
 
-public class LogWriter {
+public class logWriter {
     private static File selectedFile;
 
-    public LogWriter(){
+    public logWriter(){
         //Create a file chooser
         final JFileChooser fc = new JFileChooser("data/");
 
