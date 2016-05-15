@@ -144,8 +144,10 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		
 		// Get the destination - future MOD ?
 		
+		//String theOriginIntersection = ourMap.getRoad(event.getLinkId().toString()).getFrom();
+		
 		GRIDagent newAgent = new GRIDagent(event.getPersonId().toString(),
-				                           event.getLinkId().toString(),
+										   event.getLinkId().toString(),
 				                           event.getLinkId().toString(),
 				                           "", simFlag, true );  
 

@@ -123,7 +123,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 				//System.out.println("Found Agent to replan: " + tempAgent.getId());
 				if(mobsimAgents.containsKey(tempAgent.getId()))
 				{
-					System.out.println("Replacing the route for agent: " + tempAgent.getId());
+					//System.out.println("Replacing the route for agent: " + tempAgent.getId());
 					doReplanning(mobsimAgents.get(tempAgent.getId()), mobsim, tempAgent.getCurrentLink());
 				}
 			}						
@@ -134,8 +134,17 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	}
 	
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim, String currentLinkId ) {
+		
 		double now = mobsim.getSimTimer().getTimeOfDay();
-
+		
+		GRIDagent tempGRIDagent = theAgents.get(agent.getId().toString());
+		if (tempGRIDagent.getCurrentLink().equals(tempGRIDagent.getDestination()) ) {
+			// We must already be at our destination!
+			System.out.println("Agent: " + agent.getId().toString() + " has arrived at its destination");
+			return false;
+		}
+			
+		
 		Long timeNow = Math.round(now - 0.5);
 		
 		Plan plan = WithinDayAgentUtils.getModifiablePlan(agent);
@@ -155,37 +164,93 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 			return false;
 		}
 		
-		List<PlanElement> planElements = plan.getPlanElements();
 		
 		Leg currentLeg = (Leg)  WithinDayAgentUtils.getCurrentPlanElement(agent);
 				
 		// Is there a better way to get a Network Route???
 	    NetworkRoute netRoute =  (NetworkRoute) currentLeg.getRoute().clone();
-	    
-	    GRIDagent tempGRIDagent = theAgents.get(agent.getId().toString());
-	    
+	        
 	    // Keep the original so we can determine if it has changed
 	    GRIDroute origRoute = tempGRIDagent.getRoute(); 
 	    
-	    // Create the new route
-	    GRIDroute tempRoute = new GRIDroute();
-
-	    //GRIDselfishAlg theALG = new GRIDselfishAlg(tempGRIDagent, theMap, timeNow);
+	    //System.out.println("The agent is: " + tempGRIDagent.toString());
+	    tempGRIDagent.setLink(agent.getCurrentLinkId().toString());
 	    
-	    System.out.println("The agent is: " + tempGRIDagent.toString());
 	    GRIDpathrecalc theALG = new GRIDpathrecalc(tempGRIDagent, theMap, timeNow);
-	    Long startTime = System.currentTimeMillis();
-	    theALG.findPath();
-	    Long stopTime = System.currentTimeMillis();
 	    
+	 
+	    // Recalculate the route from here to destination
+	    Long startTime = System.currentTimeMillis();	    
+	    
+	    GRIDroute tempRoute = theALG.findPath();
+	    
+	    if (tempRoute == null) { return false; }
+	    
+	    //System.out.println("New route for agent: " + tempGRIDagent.getId());
+	    //System.out.println(tempRoute.toString());
+	    
+	    Long stopTime = System.currentTimeMillis();	    	    
 	    Long totalTime = stopTime - startTime;
 	    
-	    System.out.println("Recalculating route for agent: " + tempGRIDagent.getId() +
-	    		           " took: " + (totalTime/1000) + "seconds" ); 
-	    //Compare the 2 routes?
+	    //System.out.println("Recalculating route for agent: " + tempGRIDagent.getId() +
+	    //		           " took: " + (totalTime/1000) + "seconds" ); 
 	    
 	    
-	    // If the routes were different, need to update the map, both add and remove
+	    //Compare the 2 routes    
+	    if (origRoute.equalsIntersections(tempRoute)) {
+	    
+	    	// This doesn't work, it never gets here. 
+	    	// I don't think we are setting the new routes into the agent, so the new is ALWAYS diff from orig
+	    	System.out.println("Routes did not change for agent: " + agent.getId());
+	    	return false;
+	    }
+	    
+	    else
+	    {
+	    	// If the routes were different, need to update the map, both add and remove
+	    	tempRoute.setRoads(theMap.getPathByRoad(tempRoute.getIntersections()));
+	    	tempGRIDagent.setRoute(tempRoute);
+	    	
+	    	ArrayList<String> theRoute = tempRoute.getRoads();
+	    	List<Id<Link>> mobsimLinks = new ArrayList<Id<Link>>();
+	    	
+	    	int currentLinkIndex = WithinDayAgentUtils.getCurrentRouteLinkIdIndex(agent);
+	    	
+	    	//System.out.println("Agent Route Index: " + currentLinkIndex);
+	    		    	
+	    	// This is Kludgy, but hey
+	    	// matsim keeps an internal index into it's route that we cannot change
+	    	for (int i = 0; i < currentLinkIndex; i++) {
+	    		mobsimLinks.add(agent.getCurrentLinkId());
+	    	}
+	    	  	
+	    	for(String ourRoad:theRoute) {
+	    		mobsimLinks.add(Id.createLinkId(ourRoad));
+	    	}
+	    	//System.out.println("\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
+	    	//		           " destination is: " + tempGRIDagent.getDestination());
+	    	
+	    	//System.out.print("Mobsim links are: ");
+	    	//for(Id<Link> mobsimlink:mobsimLinks) {
+	    	//	System.out.print(mobsimlink.toString() + " ");
+	    	//}
+	    	
+	    	//System.out.print("\n");
+	    	
+	    	//System.out.println("agent is on" + agent.getCurrentLinkId().toString());
+	    	
+	    	
+	    	
+	    	netRoute.setLinkIds(agent.getCurrentLinkId(), 
+	    					            mobsimLinks, 
+	    					            currentLeg.getRoute().getEndLinkId());
+
+	    	currentLeg.setRoute(netRoute);
+	    			
+	    	// Reset so the sim uses the new route
+	    	WithinDayAgentUtils.resetCaches(agent);
+	    }
+	    
 	    
 	    //List<Id<Link>> theList = new ArrayList<Id<Link>>();
 	    //theList.add(Id.createLinkId("2to3"));
@@ -219,25 +284,12 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		ConcurrentHashMap<String, MobsimAgent> theMobsimAgents = new 
 				ConcurrentHashMap<String, MobsimAgent>();
 
-		// find agents that are en-route (more interesting case)
+		// find agents that are en-route
 		for (NetsimLink link : mobsim.getNetsimNetwork().getNetsimLinks().values()) {
 			for (MobsimVehicle vehicle : link.getAllNonParkedVehicles()) {
 				MobsimDriverAgent agent = vehicle.getDriver();
 
 				theMobsimAgents.put(agent.getId().toString(), agent);
-				/*
-				if (ourAgents.containsKey(agent.getId().toString())) {
-					if (ourAgents.get(agent.getId().toString()).getSimCalcFlag()) {
-						theMobsimAgents.put(agent.getId().toString(), agent);
-						
-						System.out.println("Adding agent: " + agent.getId() + " to the list");
-					}
-				}*/
-				
-//				if (agent.getId().toString().equals("1")) { // some condition ...
-//					System.out.println("found agent" + agent.toString());
-//					theMobsimAgents.put("1", agent);
-//				}
 			}
 		}
 
@@ -248,7 +300,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	public void notifyMobsimAfterSimStep(@SuppressWarnings("rawtypes") MobsimAfterSimStepEvent event) {
 		
 		// Not currently used.
-		//System.out.println("We got to the beginning of notifyMobsimBeforeSimStep at time: " + event.getSimulationTime());
+		//System.out.println("We got to the beginning of notifyMobsimAfterSimStep at time: " + event.getSimulationTime());
 	}
 }
 
@@ -257,6 +309,23 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 // LEFTOVER STUFF. REMOVE WHEN HAPPY WITH ABOVE CODE
 
 
+/*
+if (ourAgents.containsKey(agent.getId().toString())) {
+	if (ourAgents.get(agent.getId().toString()).getSimCalcFlag()) {
+		theMobsimAgents.put(agent.getId().toString(), agent);
+		
+		System.out.println("Adding agent: " + agent.getId() + " to the list");
+	}
+}*/
+
+//if (agent.getId().toString().equals("1")) { // some condition ...
+//	System.out.println("found agent" + agent.toString());
+//	theMobsimAgents.put("1", agent);
+//}
+
+
+
+//		List<PlanElement> planElements = plan.getPlanElements();
 
 //final Integer planElementsIndex = WithinDayAgentUtils.getCurrentPlanElementIndex(agent);
 

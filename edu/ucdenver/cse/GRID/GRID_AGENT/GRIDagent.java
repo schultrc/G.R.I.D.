@@ -89,7 +89,7 @@ public class GRIDagent {
         {
 
         }
-        return "GRIDagent [Id=" + "path goes here]";
+        return "GRIDagent Id=" + this.Id + " Origin: " + this.origin + " Dest: " + this.destination;
     }
 
 
