@@ -6,7 +6,7 @@
 	</module>
 
 	<module name="plans">
-		<param name="inputPlansFile" value="./data/AlamosaPopulation.xml"/>
+		<param name="inputPlansFile" value="./data/AlamosaPopulation_1000.xml"/>
 	</module>
 
 	<module name="controler">
