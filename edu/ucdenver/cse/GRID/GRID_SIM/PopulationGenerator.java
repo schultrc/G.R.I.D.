@@ -28,39 +28,39 @@ public class PopulationGenerator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		//Drivers distribution on road
 		double [] hour = {2.33, 2.33, 2.33, 2.33, 2.33, 2.33, 3.68, 6.00, 7.68, 6.68, 5.33, 4.33, 4.00, 3.68, 4.33, 5.68, 7.33, 5.63, 5.00, 4.68, 4.00, 3.33, 2.33, 2.33};
 		DriversDistributionOnRoad distribution = new DriversDistributionOnRoad(hour);
 		Random rnd = new Random();
 		int range = 1;
 		int drivers = 0;
-		
+
 		System.out.print("Enter the number of Agents: ");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		try {
 			drivers = Integer.parseInt(br.readLine());
-		} 
+		}
 		catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.exit(1);
 
-		} 
+		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.exit(1);
 
 		}
-		
+
 		System.out.println("Using: " + drivers + " drivers");
-		
+
 		double [] drivers_on_road_hourly = distribution.calculateDistribution(drivers, range);
 		ArrayList<Integer> times = distribution.generateTimes(drivers_on_road_hourly);
 		drivers = times.size();
-		
+
 		//=========================Smart randomizing location=========================
 		ParseLink pn = new ParseLink();
 		RandomizeLocation rndLoc = new RandomizeLocation(pn);
@@ -91,37 +91,35 @@ public class PopulationGenerator {
         }       
         
 		//=============================================================================
-					
+
 		//End of drivers distribution on road
-				
+
 		Config config = ConfigUtils.createConfig();
 		Scenario sc = ScenarioUtils.createScenario(config);
-		
+
 		Network network = sc.getNetwork();
-		Population population = sc.getPopulation();   
+		Population population = sc.getPopulation();
 		PopulationFactory populationFactory = population.getFactory();
-		
+
 		int idSeed;
-		
-		for(idSeed = 1; idSeed < drivers; ++idSeed){		
-			
+
+		for(idSeed = 1; idSeed < drivers; ++idSeed){
+
 			Person person = populationFactory.createPerson(Id.createPersonId(idSeed));
-			
+
 			Plan plan = populationFactory.createPlan();
 			person.addPlan(plan);
-			
+
 			population.addPerson(person);
-		  
 			Id<Link> homeLinkId = Id.createLinkId(trips.get(idSeed).getStartLocation().getID());
 			Activity activity1 = populationFactory.createActivityFromLinkId("h", homeLinkId);
-						
+
 			activity1.setEndTime(times.get(idSeed)%86400);
-			
+
 			plan.addActivity(activity1);
 			plan.addLeg(populationFactory.createLeg("car"));
-			
 			Id<Link> workLinkId = Id.createLinkId(trips.get(idSeed).getDectinationLocation().getID());
-			
+
 			Activity activity2 = populationFactory.createActivityFromLinkId("w", workLinkId);
 			activity2.setEndTime((times.get(idSeed)+distribution.generateRandom(0, 28800, rnd))%86400);
 			plan.addActivity(activity2);
@@ -132,7 +130,7 @@ public class PopulationGenerator {
 			plan.addActivity(activity3);
 			plan.addLeg(populationFactory.createLeg("car"));
 		}
-		
+
 		MatsimWriter popWriter = new PopulationWriter(population, network);
 				
 		//String popFileName = GRIDutils.chooseFile();
@@ -141,9 +139,9 @@ public class PopulationGenerator {
 		if (popFileName != "") {
 			popWriter.write(popFileName);
 		}
-		
+
 		else {
-			System.out.println("\n\nNO OUTPUT FILE SELECTED!!");	
+			System.out.println("\n\nNO OUTPUT FILE SELECTED!!");
 		}
 	}
 
