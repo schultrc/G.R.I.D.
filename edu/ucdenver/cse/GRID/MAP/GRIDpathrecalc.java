@@ -27,7 +27,8 @@ public class GRIDpathrecalc {
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
         this.intersections = selfishMap.getIntersections();
         this.roads = selfishMap.getRoads();
-        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getFrom();
+        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();  // Changed from getFrom to accomodate matsim stupidity
+        
         agtTo = selfishMap.getRoad(thisAgent.getDestination()).getTo();
         this.thisTimeslice = currentTime/1000;
 

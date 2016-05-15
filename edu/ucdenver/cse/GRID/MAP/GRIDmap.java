@@ -67,7 +67,7 @@ public class GRIDmap {
 	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
 	{
 		ArrayList<String> pathByRoad = new ArrayList<>();
-		Set keys = Roads.keySet();
+		Set<String> keys = Roads.keySet();
 
 		for(int i = 0; i < pathByNode.size()-1; i++)
 		{
@@ -75,7 +75,7 @@ public class GRIDmap {
 			tempRoad.setFrom(pathByNode.get(i));
 			tempRoad.setTo(pathByNode.get(i+1));
 
-			for (Iterator itr = keys.iterator(); itr.hasNext();)
+			for (Iterator<String> itr = keys.iterator(); itr.hasNext();)
 			{
 				String key = (String) itr.next();
 				GRIDroad testRoad = (GRIDroad) Roads.get(key);
