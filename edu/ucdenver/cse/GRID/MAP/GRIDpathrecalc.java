@@ -27,8 +27,8 @@ public class GRIDpathrecalc {
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
         this.intersections = selfishMap.getIntersections();
         this.roads = selfishMap.getRoads();
-        agtFrom = thisAgent.getCurrentLink();
-        agtTo = thisAgent.getDestination();
+        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getFrom();
+        agtTo = selfishMap.getRoad(thisAgent.getDestination()).getTo();
         this.thisTimeslice = currentTime/1000;
 
         /* These are for setting vehiclesCurrentlyOnRoadAtTime
@@ -40,6 +40,13 @@ public class GRIDpathrecalc {
     }
 
     public GRIDroute findPath(){
+    	
+    	// DUMB check - prevent elsewhere
+    	if (this.agtTo.equals(this.agtFrom)) { 
+    		return null;
+    	}
+    		
+    	
         visited = new HashSet<String>();
         unVisited = new HashSet<String>();
         currentPathTotal = new ConcurrentHashMap<>();
@@ -63,7 +70,7 @@ public class GRIDpathrecalc {
         finalPath.Intersections.add(step);
         if(previousIntersections.get(step) == null)
         {
-            System.out.println("\nI guess it's null, friend.");
+            System.out.println("\nI guess it's null, friend. Tried: " + agtFrom + " to " + agtTo);
             return null;
         }
 
@@ -73,11 +80,14 @@ public class GRIDpathrecalc {
             finalPath.Intersections.add(step);
         }
 
-        Collections.reverse(finalPath.Intersections);
+       Collections.reverse(finalPath.Intersections);
 
         finalPath.setcalculatedTravelTime(currentPathTotal.get(agtTo).getNodeTmTotal());
 
-        System.out.println("Returning path. . .");
+        // We need to convert this to roads, as well
+        
+        
+        //System.out.println("Returning path. . .");
         return finalPath;
     }
 

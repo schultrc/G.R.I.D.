@@ -80,8 +80,8 @@ public class PopulationGenerator {
         else if (randomize_type == 2)//full randomization
         {
         	
-            work_area = "./data/AlamosaDowntownLinks.txt"; //home and work area should be the same
-            home_area = "./data/AlamosaDowntownLinks.txt";
+            work_area = "./data/PuebloLinks.txt"; //home and work area should be the same
+            home_area = work_area;
             trips = rndLoc.generateHomeToWorkLocations(work_area, home_area, drivers, randomize_type);
         }
         else
@@ -111,10 +111,7 @@ public class PopulationGenerator {
 			person.addPlan(plan);
 			
 			population.addPerson(person);
-
-			// How do we make these reasonable???
-						  
-			//==============================Activity based on links==================================
+		  
 			Id<Link> homeLinkId = Id.createLinkId(trips.get(idSeed).getStartLocation().getID());
 			Activity activity1 = populationFactory.createActivityFromLinkId("h", homeLinkId);
 						
@@ -122,17 +119,6 @@ public class PopulationGenerator {
 			
 			plan.addActivity(activity1);
 			plan.addLeg(populationFactory.createLeg("car"));
-			//=============================================================================================
-						
-			// Leave at 6 am - how do we change this???
-			
-			
-			
-			// Finish work at 4 PM - CHANGE???
-			
-			
-			//==============================Activity based on coordinates==================================
-			
 			
 			Id<Link> workLinkId = Id.createLinkId(trips.get(idSeed).getDectinationLocation().getID());
 			
@@ -140,13 +126,17 @@ public class PopulationGenerator {
 			activity2.setEndTime((times.get(idSeed)+distribution.generateRandom(0, 28800, rnd))%86400);
 			plan.addActivity(activity2);
 			plan.addLeg(populationFactory.createLeg("car"));
-			//=============================================================================================
-						
+
+			Activity activity3 = populationFactory.createActivityFromLinkId("h", homeLinkId);
+			activity3.setEndTime((activity2.getEndTime()+distribution.generateRandom(0, 28800, rnd))%86400);
+			plan.addActivity(activity3);
+			plan.addLeg(populationFactory.createLeg("car"));
 		}
 		
 		MatsimWriter popWriter = new PopulationWriter(population, network);
-		
-		String popFileName = GRIDutils.chooseFile();
+				
+		//String popFileName = GRIDutils.chooseFile();
+		String popFileName = "./data/PuebloPopulation_25000.xml";
 		
 		if (popFileName != "") {
 			popWriter.write(popFileName);
