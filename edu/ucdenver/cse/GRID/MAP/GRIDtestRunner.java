@@ -1,7 +1,7 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
-import edu.ucdenver.cse.GRID.GRID_SIM.LogWriter;
+import edu.ucdenver.cse.GRID.GRID_SIM.logWriter;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -22,7 +22,7 @@ public class GRIDtestRunner{
     public void runTest()
     { // Pueblo start to finish 34.97s
 
-        LogWriter testLW = new LogWriter();
+        logWriter testLW = new logWriter();
 
         testLW.writeOutput("this is a test");
 

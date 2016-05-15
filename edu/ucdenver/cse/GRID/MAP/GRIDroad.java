@@ -112,6 +112,20 @@ public class GRIDroad {
 		}
 	}
 	
+	public void subFromWeight(Long time) {
+		// If there is already an offset, add to it
+		
+		if(this.vehiclesCurrentlyOnRoadAtTime.containsKey(time)) {
+			this.vehiclesCurrentlyOnRoadAtTime.replace(time, (this.vehiclesCurrentlyOnRoadAtTime.get(time) - 1));
+			if (this.vehiclesCurrentlyOnRoadAtTime.get(time) < 0) {
+				this.vehiclesCurrentlyOnRoadAtTime.replace(time, 0.0);
+			}
+		}
+		else {
+			// This should never happen
+			this.vehiclesCurrentlyOnRoadAtTime.put(time, 0.0);
+		}
+	}
 	public double getWeightAtTime(Long time) {
 		if (this.vehiclesCurrentlyOnRoadAtTime.containsKey(time) ) {
 			return this.vehiclesCurrentlyOnRoadAtTime.get(time) + this.getDefaultWeight();
