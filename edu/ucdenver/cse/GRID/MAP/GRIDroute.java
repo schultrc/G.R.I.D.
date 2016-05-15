@@ -16,6 +16,7 @@ public class GRIDroute {
 	public Long getAgent_ID(){ return agent_ID; }
 	public Long getcalculatedTravelTime(){ return calculatedTravelTime; }
 	public ArrayList<String> getRoads() {return this.Roads; }
+	public void setRoads(ArrayList<String> theRoads) { this.Roads = theRoads; }
 	
 	public boolean equalsRoads(GRIDroute otherRoute) {
 		if (this.Roads.isEmpty() || otherRoute.getRoads().isEmpty()) { return false; }

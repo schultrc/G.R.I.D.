@@ -174,6 +174,8 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    GRIDroute origRoute = tempGRIDagent.getRoute(); 
 	    
 	    //System.out.println("The agent is: " + tempGRIDagent.toString());
+	    tempGRIDagent.setLink(agent.getCurrentLinkId().toString());
+	    
 	    GRIDpathrecalc theALG = new GRIDpathrecalc(tempGRIDagent, theMap, timeNow);
 	    
 	 
@@ -184,8 +186,8 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    
 	    if (tempRoute == null) { return false; }
 	    
-	    System.out.println("New route for agent: " + tempGRIDagent.getId());
-	    System.out.println(tempRoute.toString());
+	    //System.out.println("New route for agent: " + tempGRIDagent.getId());
+	    //System.out.println(tempRoute.toString());
 	    
 	    Long stopTime = System.currentTimeMillis();	    	    
 	    Long totalTime = stopTime - startTime;
@@ -206,9 +208,48 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    else
 	    {
 	    	// If the routes were different, need to update the map, both add and remove
+	    	tempRoute.setRoads(theMap.getPathByRoad(tempRoute.getIntersections()));
+	    	tempGRIDagent.setRoute(tempRoute);
 	    	
+	    	ArrayList<String> theRoute = tempRoute.getRoads();
+	    	List<Id<Link>> mobsimLinks = new ArrayList<Id<Link>>();
+	    	
+	    	int currentLinkIndex = WithinDayAgentUtils.getCurrentRouteLinkIdIndex(agent);
+	    	
+	    	//System.out.println("Agent Route Index: " + currentLinkIndex);
+	    		    	
+	    	// This is Kludgy, but hey
+	    	// matsim keeps an internal index into it's route that we cannot change
+	    	for (int i = 0; i < currentLinkIndex; i++) {
+	    		mobsimLinks.add(agent.getCurrentLinkId());
+	    	}
+	    	  	
+	    	for(String ourRoad:theRoute) {
+	    		mobsimLinks.add(Id.createLinkId(ourRoad));
+	    	}
+	    	//System.out.println("\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
+	    	//		           " destination is: " + tempGRIDagent.getDestination());
+	    	
+	    	//System.out.print("Mobsim links are: ");
+	    	//for(Id<Link> mobsimlink:mobsimLinks) {
+	    	//	System.out.print(mobsimlink.toString() + " ");
+	    	//}
+	    	
+	    	//System.out.print("\n");
+	    	
+	    	//System.out.println("agent is on" + agent.getCurrentLinkId().toString());
+	    	
+	    	
+	    	
+	    	netRoute.setLinkIds(agent.getCurrentLinkId(), 
+	    					            mobsimLinks, 
+	    					            currentLeg.getRoute().getEndLinkId());
+
+	    	currentLeg.setRoute(netRoute);
+	    			
+	    	// Reset so the sim uses the new route
+	    	WithinDayAgentUtils.resetCaches(agent);
 	    }
-	    
 	    
 	    
 	    //List<Id<Link>> theList = new ArrayList<Id<Link>>();
@@ -259,7 +300,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	public void notifyMobsimAfterSimStep(@SuppressWarnings("rawtypes") MobsimAfterSimStepEvent event) {
 		
 		// Not currently used.
-		//System.out.println("We got to the beginning of notifyMobsimBeforeSimStep at time: " + event.getSimulationTime());
+		//System.out.println("We got to the beginning of notifyMobsimAfterSimStep at time: " + event.getSimulationTime());
 	}
 }
 
