@@ -1,6 +1,7 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.GRID_SIM.LogWriter;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
@@ -10,8 +11,8 @@ import org.junit.Test;
 public class GRIDtestRunner{
 
     private GRIDmapReader myReader = new GRIDmapReader();
-    //private GRIDmap myMap = myReader.readMapFile("data/SmallNetwork3.xml"); // SmallNetwork2 PuebloNetwork
-    private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml"); // SmallNetwork2 PuebloNetwork
+    // SmallNetwork2 PuebloNetwork 5x5network
+    private GRIDmap myMap = myReader.readMapFile("data/5x5network.xml");
 
     private GRIDagent testAgent001 = getTestAgent();
     // private GRIDintersection from = new GRIDintersection("test",1d,2d);
@@ -20,8 +21,12 @@ public class GRIDtestRunner{
     @Test
     public void runTest()
     { // Pueblo start to finish 34.97s
-        
-	System.out.println("Starting runTest. . .");
+
+        LogWriter testLW = new LogWriter();
+
+        testLW.writeOutput("this is a test");
+
+	    System.out.println("Starting runTest. . .");
         // Pueblo start to finish 34.97s
         // from.setId("1040921516"); // from.setId("01"); // 1040921516 // 2
         // to.setId("864162469");   // to.setId("10"); // 864162469 // 50
@@ -71,9 +76,9 @@ public class GRIDtestRunner{
     private GRIDagent getTestAgent()
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
-                currentLink = "1040921516",
-                currentIntrx = "1040921516", // 1040921516 // 2
-                destIntrx = "864162469"; // 864162469 // 177890694 PNet3 // 177849670 // 50
+                currentLink = "1",
+                currentIntrx = "1", // 1040921516 // 2
+                destIntrx = "25"; // 864162469 // 177890694 PNet3 // 177849670 // 50
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx, false, false);
 
