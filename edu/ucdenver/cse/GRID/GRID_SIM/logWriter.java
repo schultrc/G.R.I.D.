@@ -15,7 +15,7 @@ public class logWriter {
 
     public logWriter(){
         //Create a file chooser
-        final JFileChooser fc = new JFileChooser("data/");
+        final JFileChooser fc = new JFileChooser("./");
 
         //In response to a button click:
         int returnVal = fc.showOpenDialog(null);
