@@ -22,9 +22,9 @@ public class GRIDtestRunner{
     public void runTest()
     { // Pueblo start to finish 34.97s
 
-        logWriter testLW = new logWriter();
+        logWriter testLW = new logWriter("data/test_output003.txt");
 
-        testLW.writeOutput("this is a test");
+        testLW.writeOutput("this is another nother test");
 
 	    System.out.println("Starting runTest. . .");
         // Pueblo start to finish 34.97s
@@ -33,7 +33,7 @@ public class GRIDtestRunner{
     	Long startTime = System.nanoTime();
     	
         //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, myMap, 0L); // GRIDpathrecalc
-        GRIDpathrecalc test002 = new GRIDpathrecalc(testAgent001, myMap, 0L);
+        /*GRIDpathrecalc test002 = new GRIDpathrecalc(testAgent001, myMap, 0L);
         GRIDroute outRoute = new GRIDroute();
 
         //outRoute = test001.findPath();
@@ -69,7 +69,7 @@ public class GRIDtestRunner{
         long stopTime = System.nanoTime();
         long timeToRun = ((stopTime - startTime)/1000000);
         
-        System.out.print("\nTook " + timeToRun/1000.0 + " Seconds");
+        System.out.print("\nTook " + timeToRun/1000.0 + " Seconds");*/
         System.out.print("\n\nAnd we're done.");
     }
 

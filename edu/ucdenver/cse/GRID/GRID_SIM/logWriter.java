@@ -8,15 +8,20 @@ import java.io.PrintWriter;
 import java.io.IOException;
 
 public class logWriter {
-    private static File selectedFile;
+    private static File logFile; // selectedFile
+    private static FileWriter fw;
+    private static BufferedWriter bw;
+    private static PrintWriter out;
 
-    public logWriter(){
-        //Create a file chooser
-        final JFileChooser fc = new JFileChooser("data/");
+    public logWriter(String logFileName){
+        /*//Create a file chooser
+        final JFileChooser fc = new JFileChooser("./");
 
         //In response to a button click:
         int returnVal = fc.showOpenDialog(null);
-        selectedFile = fc.getSelectedFile();
+        selectedFile = fc.getSelectedFile();*/
+        this.logFile = new File(logFileName);
+
     }
 
     public static void main(String args[])
@@ -28,18 +33,34 @@ public class logWriter {
         writeOutput("test004");
     }
 
-    public static void writeOutput(String outputString){
-        try(FileWriter fw = new FileWriter(selectedFile, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw)){
+    public static void writeOutput(String outputString) {
+        try (FileWriter fw = new FileWriter(logFile, true);
+             BufferedWriter bw = new BufferedWriter(fw);
+             PrintWriter out = new PrintWriter(bw)) {
 
             out.println(outputString);
 
-            out.close();
-            bw.close();
-            fw.close();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (out != null) {
+                out.close();
+            }
+            if (bw != null) {
+                try {
+                    bw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (fw != null){
+                try {
+                    fw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 }
