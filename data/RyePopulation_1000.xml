@@ -15256,13 +15256,13 @@
 
 	<person id="907" employed="no">
 		<plan selected="yes">
-			<act type="h" link="23515849_0" end_time="21:14:00" />
+			<act type="h" link="23515849_0" end_time="00:14:00" />
 			<leg mode="car">
 			</leg>
-			<act type="w" link="23474482_0" end_time="00:12:35" />
+			<act type="w" link="23474482_0" end_time="06:12:35" />
 			<leg mode="car">
 			</leg>
-			<act type="h" link="23515849_0" end_time="06:25:23" />
+			<act type="h" link="23515849_0" end_time="16:25:23" />
 			<leg mode="car">
 			</leg>
 		</plan>
