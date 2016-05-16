@@ -22,7 +22,7 @@ public class GRIDtestRunner{
     public void runTest()
     { // Pueblo start to finish 34.97s
 
-        logWriter testLW = new logWriter();
+        logWriter testLW = new logWriter("data/test_output003.txt");
 
         testLW.writeOutput("this is another nother test");
 
