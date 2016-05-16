@@ -39,35 +39,19 @@ public class GRIDroad {
 		this.maxCapacity = maxCapacity;
 	}
 
-	public GRIDroad(String theId)
-	{
-		Id = theId;
-	}
+	public GRIDroad(String theId) { Id = theId; }
 	
-	public String getId() {
-		return Id;
-	}
+	public String getId() { return Id; 	}
 
-	public void setId(String id) {
-		Id = id;
-	}
-
+	public void setId(String id) { Id = id; }
 	
-	public String getFrom() {
-		return from;
-	}
+	public String getFrom() { return from; }
 
-	public void setFrom(String from) {
-		this.from = from;
-	}
+	public void setFrom(String from) { this.from = from; }
 
-	public String getTo() {
-		return to;
-	}
+	public String getTo() { return to; }
 
-	public void setTo(String to) {
-		this.to = to;
-	}
+	public void setTo(String to) { this.to = to; }
 
 	@Override
 	public String toString() {

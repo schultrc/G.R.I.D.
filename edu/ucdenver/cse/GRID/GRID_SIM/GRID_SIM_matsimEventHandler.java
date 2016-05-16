@@ -46,6 +46,12 @@ import edu.ucdenver.cse.GRID.MAP.GRIDpathrecalc;
 
 public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener, MobsimAfterSimStepListener {
 
+	GRID_SIM_matsimEventHandler() {
+		
+	}
+	
+	//logWriter testLW;
+	
 	GRIDmap theMap;
 	
 	ConcurrentHashMap<String, GRIDagent> theAgents;
@@ -72,6 +78,8 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
+	
+	logWriter testLW = new logWriter();
 	
 	private TripRouter tripRouter;
 	private Scenario scenario;
@@ -126,7 +134,9 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 				if(mobsimAgents.containsKey(tempAgent.getId()))
 				{
 					//System.out.println("Replacing the route for agent: " + tempAgent.getId());
-					doReplanning(mobsimAgents.get(tempAgent.getId()), mobsim, tempAgent.getCurrentLink());
+					if (!doReplanning(mobsimAgents.get(tempAgent.getId()), mobsim, tempAgent.getCurrentLink())) {
+						System.out.println("Agent: " + tempAgent.getId() + " failed replanning");
+					}
 				}
 			}						
 		}
@@ -136,14 +146,21 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	}
 	
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim, String currentLinkId ) {
-		
+
 		double now = mobsim.getSimTimer().getTimeOfDay();
+		boolean fixFlag = false;
 		
+		logWriter.writeOutput("Starting replanning for agent: " + agent.getId().toString() + 
+				              "at time: " + now); 
+
 		GRIDagent tempGRIDagent = theAgents.get(agent.getId().toString());
 		if (tempGRIDagent.getCurrentLink().equals(tempGRIDagent.getDestination()) ) {
 			// We must already be at our destination!
-			System.out.println("Agent: " + agent.getId().toString() + " has arrived at its destination");
-			return false;
+			
+			logWriter.writeOutput("Agent " + agent.getId().toString() + " has arrived at its destination");
+    		System.out.println("GOT THERE - Agent: " + agent.getId().toString());
+
+			return true;
 		}
 			
 		// Subtract 0.5 so round always goes to the current second
@@ -153,16 +170,22 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 		if (plan == null) {
 			log.info(" we don't have a modifiable plan; returning ... ");
+    		System.out.println("PLAN NULL");
+
 			return false;
 		}
 		
 		if (!(WithinDayAgentUtils.getCurrentPlanElement(agent) instanceof Leg)) {
 			log.info("agent not on leg; returning ... ");
+    		System.out.println("NOT LEG");
+
 			return false;
 		}
 		
 		if (!((Leg) WithinDayAgentUtils.getCurrentPlanElement(agent)).getMode().equals(TransportMode.car)) {
 			log.info("not a car leg; can only replan car legs; returning ... ");
+    		System.out.println("NOT CAR");
+
 			return false;
 		}
 				
@@ -183,9 +206,59 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    Long startTime = System.currentTimeMillis();	    
 	    
 	    GRIDroute tempRoute = theALG.findPath();
-	    
-	    if (tempRoute == null) { return false; }
-	    
+	    if (tempRoute == null) {
+	    	System.out.println("ROUTE FROM ALG NULL");
+
+	    	return false; 
+	    	}
+
+	    // Initially, routes only have intersections, so set the roads
+    	tempRoute.setRoads(theMap.getPathByRoad(tempRoute.getIntersections()));
+    		    
+	    // If our new route's last road isn't the destination (due to intersection vs. road calculating)
+	    // We need to add 1 more road, basically a u-turn
+    	String destinationRoad = tempGRIDagent.getDestination().toString();
+    	String routeLastRoad = tempRoute.getRoads().get(tempRoute.getRoads().size() - 1);
+    	
+	    if (!routeLastRoad.equals(destinationRoad)) {
+	    	logWriter.writeOutput("We can't get from: " + routeLastRoad + " to: " + destinationRoad);
+	    	
+	    	// Check to see if we can fix the route (U-turn)
+	    	String routeTo  = theMap.getRoad(routeLastRoad).getTo();
+	    	String destFrom = theMap.getRoad(destinationRoad).getFrom();
+	    	String destTo   = theMap.getRoad(destinationRoad).getTo();
+	    	
+	    	logWriter.writeOutput(" Checking: " + routeTo + " to: " + destFrom);
+	    	
+	    	if (routeTo.equals(destTo)) {	    		
+	    		// the end goal was the same, let's see if there is a road that fixes this:
+	    		String additionalRoad = theMap.hasRoad(routeTo, destFrom);
+	    		if (!additionalRoad.equals("")) {
+	    			logWriter.writeOutput("Adding road: " + additionalRoad);
+	    			tempRoute.getRoads().add(additionalRoad);    			
+	    		}
+	    		else
+	    		{
+	    			logWriter.writeOutput("WE SUCK AGAIN");
+	    			tempRoute.getRoads().clear();
+	    			fixFlag = true;
+	    			    			
+
+	    			//return false;
+	    		}
+	    	}
+	    	
+	    	else {
+	    		// This is bad, our new route doesn't go to where our agent wants to go
+	    		logWriter.writeOutput("ERROR: Cannot fix route");
+	    		System.out.println("CANT FIX");
+	    		return false;
+	    	}
+	    			
+	    	//String newRoad = theMap.getPathByRoad(new ArrayList<String>())
+	    	
+	    }
+	    	    
 	    //System.out.println("New route for agent: " + tempGRIDagent.getId());
 	    //System.out.println(tempRoute.toString());
 	    
@@ -208,7 +281,9 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    else
 	    {
 	    	// If the routes were different, need to update the map, both add and remove
-	    	tempRoute.setRoads(theMap.getPathByRoad(tempRoute.getIntersections()));
+	    	
+	    	
+	    	// Add the new route to our agent
 	    	tempGRIDagent.setRoute(tempRoute);
 	    	
 	    	ArrayList<String> theRoute = tempRoute.getRoads();
@@ -221,6 +296,9 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    	// This is Kludgy, but hey
 	    	// matsim keeps an internal index into it's route that we cannot change
 	    	// fill the array with dummy entries
+	    	
+	    	// To get the matsim index, try: WithinDayAgentUtils.getCurrentRouteLinkIdIndex(agent)
+	    	
 	    	for (int i = 0; i < currentLinkIndex; i++) {
 	    		mobsimLinks.add(agent.getCurrentLinkId());
 	    	}
@@ -229,21 +307,23 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    		// Add the road to the list for mobsim
 	    		mobsimLinks.add(Id.createLinkId(ourRoad));
 	    	}
-	    	//System.out.println("\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
-	    	//		           " destination is: " + tempGRIDagent.getDestination());
+	    	logWriter.writeOutput("\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
+	    	 		              " destination is: " + tempGRIDagent.getDestination());
 	    	
-	    	//System.out.print("Mobsim links are: ");
-	    	//for(Id<Link> mobsimlink:mobsimLinks) {
-	    	//	System.out.print(mobsimlink.toString() + " ");
-	    	//}
+	    	logWriter.writeOutput("Mobsim links are: ");
+	    	for(Id<Link> mobsimlink:mobsimLinks) {
+	    		logWriter.writeOutput(mobsimlink.toString() + " ");
+	    	}
 	    	
 	    	//System.out.print("\n");
 	    	
 	    	//System.out.println("agent is on" + agent.getCurrentLinkId().toString());
 	    	
-	    	netRoute.setLinkIds(agent.getCurrentLinkId(), 
-	    					            mobsimLinks, 
-	    					            currentLeg.getRoute().getEndLinkId());
+	    	
+	    		netRoute.setLinkIds(agent.getCurrentLinkId(), 
+	    							mobsimLinks, 
+	    							currentLeg.getRoute().getEndLinkId());
+	    	
 
 	    	currentLeg.setRoute(netRoute);
 	    			
@@ -255,7 +335,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		    for(String ourRoad:theRoute) {
 		    	// Add vehicle count to the roads
 		    	for (Long i = 0L; i < theMap.getRoad(ourRoad).getTravelTime(); i++) {
-		    		// This isn't correct, but we aren't running matsim with a real now
+		    		// This isn't correct, but we aren't running matsim with a real now time
 		    		// Should have timeNow added to i
 		    		theMap.getRoad(ourRoad).addToWeight(i);
 		    	}
@@ -264,14 +344,13 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		    for (String ourRoad:origRoute.getRoads()) {
 		    	// Remove vehicles from the roads
 		    	for (Long i = 0L; i < theMap.getRoad(ourRoad).getTravelTime(); i++) {
-		    		// This isn't correct, but we aren't running matsim with a real now
+		    		// This isn't correct, but we aren't running matsim with a real now time
 		    		// Should have timeNow added to i
 		    		theMap.getRoad(ourRoad).subFromWeight(i);
 		    	}
 		    }
 	    }
-	    
-	    
+  
 		return true;
 	}
 	

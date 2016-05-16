@@ -63,9 +63,31 @@ public class GRIDmap {
 	public GRIDintersection getIntersection(String theIntersection) {
 		return this.Intersections.get(theIntersection);
 	}
+	
+	public String hasRoad(String from, String to) {
+		// determine if we have a road that goes from "from" to "to"
+		ArrayList<String> theWantedRoad = new ArrayList<>();
+		theWantedRoad.add(from);
+		theWantedRoad.add(to);
+		
+		ArrayList<String> returnList = this.getPathByRoad(theWantedRoad);
+		
+		if (returnList.size() != 1) {
+			System.out.println("Could not find a road from: " + from + " to: " + to);
+			return "";
+		}
+		
+		else {
+			return returnList.get(0);
+		}
+	}
 
 	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
 	{
+		// Turns a route made of intersections into a route made of roads
+		// Can also be used to find a single road based on start / end intersections
+		// Note: This will return a road, but not necessarily a specific road, in the 
+		// cul-desac world where 2 or more roads have the same start / end intersections
 		ArrayList<String> pathByRoad = new ArrayList<>();
 		Set<String> keys = Roads.keySet();
 
