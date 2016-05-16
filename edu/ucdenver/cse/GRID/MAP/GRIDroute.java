@@ -13,8 +13,8 @@ public class GRIDroute {
 	public void setcalculatedTravelTime(Long inTime){ this.calculatedTravelTime = inTime; }
 
 	public ArrayList<String> getIntersections(){ return this.Intersections; }
-	public Long getAgent_ID(){ return agent_ID; }
-	public Long getcalculatedTravelTime(){ return calculatedTravelTime; }
+	public Long getAgent_ID(){ return this.agent_ID; }
+	public Long getcalculatedTravelTime(){ return this.calculatedTravelTime; }
 	public ArrayList<String> getRoads() {return this.Roads; }
 	public void setRoads(ArrayList<String> theRoads) { this.Roads = theRoads; }
 	

@@ -140,8 +140,8 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		
 		
 		// Is this going to be one of OUR agents?  change the % value to change how many we do. %5 = 20 % of all agents
-		boolean simFlag = ((Double.parseDouble(event.getPersonId().toString()) % 5) == 0);
-		
+		boolean simFlag = ((Double.parseDouble(event.getPersonId().toString()) % 2) == 0);
+		simFlag = true;
 		// Get the destination - future MOD ?
 		
 		//String theOriginIntersection = ourMap.getRoad(event.getLinkId().toString()).getFrom();
