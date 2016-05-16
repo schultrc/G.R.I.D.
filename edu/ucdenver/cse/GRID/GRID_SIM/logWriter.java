@@ -9,6 +9,9 @@ import java.io.IOException;
 
 public class logWriter {
     private static File selectedFile;
+    private static FileWriter fw;
+    private static BufferedWriter bw;
+    private static PrintWriter out;
 
     public logWriter(){
         //Create a file chooser
@@ -28,18 +31,21 @@ public class logWriter {
         writeOutput("test004");
     }
 
-    public static void writeOutput(String outputString){
-        try(FileWriter fw = new FileWriter(selectedFile, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            PrintWriter out = new PrintWriter(bw)){
+
+
+    public static void writeOutput(String outputString) {
+        try (FileWriter fw = new FileWriter(selectedFile, true);
+             BufferedWriter bw = new BufferedWriter(fw);
+             PrintWriter out = new PrintWriter(bw)) {
 
             out.println(outputString);
 
-            out.close();
-            bw.close();
-            fw.close();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (out != null) {
+                out.close();
+            }
         }
     }
 }
