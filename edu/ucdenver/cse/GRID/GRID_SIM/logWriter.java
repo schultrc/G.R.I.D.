@@ -31,8 +31,6 @@ public class logWriter {
         writeOutput("test004");
     }
 
-
-
     public static void writeOutput(String outputString) {
         try (FileWriter fw = new FileWriter(selectedFile, true);
              BufferedWriter bw = new BufferedWriter(fw);
@@ -46,6 +44,21 @@ public class logWriter {
             if (out != null) {
                 out.close();
             }
+            if (bw != null) {
+                try {
+                    bw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (fw != null){
+                try {
+                    fw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 }
