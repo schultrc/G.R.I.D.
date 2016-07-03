@@ -23,14 +23,22 @@ public class GRIDpathrecalc {
     private ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal;
     GRIDnodeWeightTime startNodeValues;
     private Map<String,String> previousIntersections;
+    private Hashtable<String,GRIDroad> thisRoadList;
+    private long totalCalcTime;
 
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
         this.intersections = selfishMap.getIntersections();
         this.roads = selfishMap.getRoads();
+        selfishMap.loadRoadList(selfishMap.getRoads());
+        this.thisRoadList = selfishMap.getRoadList();
         agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();  // Changed from getFrom to accomodate matsim stupidity
-        
-        agtTo = selfishMap.getRoad(thisAgent.getDestination()).getTo();
+        agtTo = selfishMap.getRoad("72823276_0_r").getTo();
+        totalCalcTime = 0L;
+
         this.thisTimeslice = currentTime/1000;
+
+        System.out.println("agtFrom: "+agtFrom);
+        System.out.println("agtTo: "+agtTo);
 
         /* These are for setting vehiclesCurrentlyOnRoadAtTime
          * for testing purposes; comment out to run without using
@@ -75,19 +83,21 @@ public class GRIDpathrecalc {
             return null;
         }
 
+        //System.out.println("all previous intersections:"+previousIntersections);
         while(previousIntersections.get(step)!= null)
         {
             step = previousIntersections.get(step);
             finalPath.Intersections.add(step);
         }
 
-       Collections.reverse(finalPath.Intersections);
+        Collections.reverse(finalPath.Intersections);
 
         finalPath.setcalculatedTravelTime(currentPathTotal.get(agtTo).getNodeTmTotal());
 
         // We need to convert this to roads, as well
-        
-        
+
+        System.out.println("hash time: "+totalCalcTime/1000000000.0+"s");
+        //System.out.println("for loop time: "+totalCalcTime/1000000000.0+"s");
         //System.out.println("Returning path. . .");
         return finalPath;
     }
@@ -120,6 +130,14 @@ public class GRIDpathrecalc {
         for(String endNode : adjNodes)
         {
             tempNode = calcEdgeWeight(startNode, endNode);
+            //System.out.println("start: "+startNode+"|end: "+endNode);
+            if(startNode.equals("177956314") || endNode.equals("177956314") ||
+               endNode.equals("177958998") || startNode.equals("177926280") ||
+               startNode.equals("177958998") || startNode.equals("177922522")) {
+                System.out.println("start: "+startNode+"|end: "+endNode);
+                System.out.println("weight: "+(getOptimalEdgeWeight(startNode))+"+"+(tempNode.getNodeWtTotal()));
+                // 177922522
+            }
             if(getOptimalEdgeWeight(endNode) > getOptimalEdgeWeight(startNode) + tempNode.getNodeWtTotal())
             {
                 Double tempWeight = getOptimalEdgeWeight(startNode);
@@ -129,7 +147,6 @@ public class GRIDpathrecalc {
                 // add getOptEdgeWeight to first part of data structure tempNode
 
                 currentPathTotal.put(endNode,tempNode);
-
                 previousIntersections.put(endNode,startNode);
 
                 unVisited.add(endNode);
@@ -154,12 +171,33 @@ public class GRIDpathrecalc {
 
     private GRIDnodeWeightTime calcEdgeWeight(String startNode, String endNode)
     {
-        Double tempWeight = 0.0;
-        Long tempTimeslice = 0L;
-        Long startTime = currentPathTotal.get(startNode).getNodeTmTotal();
+        double tempWeight = 0.0;
+        long tempTimeslice = 0L;
+        long startTime = currentPathTotal.get(startNode).getNodeTmTotal();
         GRIDnodeWeightTime tempNode = new GRIDnodeWeightTime();
 
-        for(String roadId : roads.keySet())
+        long startTimeCounter = System.nanoTime();
+
+        tempTimeslice = thisRoadList.get(startNode+endNode).getTravelTime();
+        tempWeight = thisRoadList.get(startNode+endNode).getWeightOverInterval(startTime);
+        tempNode.setNodeWtTotal(tempWeight);
+        tempNode.setNodeTmTotal(tempTimeslice);
+
+        long stopTimeCounter = System.nanoTime();
+        long timeToRun = ((stopTimeCounter - startTimeCounter));
+
+        //System.out.println("tempTimeslice: "+tempTimeslice);
+        /*System.out.println("startTime: "+startTime);
+
+        System.out.println("tempWeight: "+tempWeight);*/
+
+        totalCalcTime += timeToRun;
+
+        //System.out.println(timeToRun + "ns required for hashtable");
+
+        return tempNode;
+
+        /*for(String roadId : roads.keySet())
         {
             if(roads.get(roadId).getFrom().equals(startNode)
                     && roads.get(roadId).getTo().equals(endNode))
@@ -169,13 +207,17 @@ public class GRIDpathrecalc {
                 tempNode.setNodeWtTotal(tempWeight);
                 tempNode.setNodeTmTotal(tempTimeslice);
 
+                long stopTimeCounter = System.nanoTime();
+                long timeToRun = ((stopTimeCounter - startTimeCounter));
+
+                totalCalcTime += timeToRun;
                 return tempNode;
             }
         }
 
         tempNode.setNodeWtTotal(-1D);
         tempNode.setNodeTmTotal(0L);
-        return tempNode;
+        return tempNode;*/
     }
 
     private ArrayList<String> getAdjNodes(String node)

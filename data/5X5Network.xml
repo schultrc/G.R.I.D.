@@ -35,7 +35,7 @@
 <!-- ====================================================================== -->
 
 	<links capperiod="01:00:00" effectivecellsize="7.5" effectivelanewidth="3.75">
-		<link id="1to2"   from="1"  to="2"  length="1000" freespeed="10.0" capacity="120" permlanes="1.0" oneway="1" modes="car" />
+		<link id="1to2"   from="1"  to="2"  length="10" freespeed="10.0" capacity="120" permlanes="1.0" oneway="1" modes="car" />
 		<link id="1to6"   from="1"  to="6"  length="1000" freespeed="10.0" capacity="120" permlanes="1.0" oneway="1" modes="car" />
 		<link id="2to1"   from="2"  to="1"  length="1000" freespeed="10.0" capacity="120" permlanes="1.0" oneway="1" modes="car" />
 		<link id="2to3"   from="2"  to="3"  length="1000" freespeed="10.0" capacity="120" permlanes="1.0" oneway="1" modes="car" />

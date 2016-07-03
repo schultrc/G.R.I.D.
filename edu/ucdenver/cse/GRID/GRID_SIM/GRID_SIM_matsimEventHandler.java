@@ -79,7 +79,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
 	
-	logWriter testLW = new logWriter();
+	logWriter testLW = new logWriter("logs/Rye50.000.log.txt");
 	
 	private TripRouter tripRouter;
 	private Scenario scenario;
