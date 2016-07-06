@@ -41,12 +41,13 @@ public class GRIDtestRunner{
         GRIDheapAlg greedy = new GRIDheapAlg();
         GRIDheapDynamicAlg dyna = new GRIDheapDynamicAlg();
         //myPathGreedy = greedy.shortestPath(networkMap,"1040921516","864162469");
-        myPathDynamic = dyna.shortestPath(networkMap,testAgent001, 0L);
 
         //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         //GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         GRIDroute outRoute = new GRIDroute();
-        //outRoute = test001.findPath();
+        /*GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
+        outRoute = test001.findPath();*/
+        outRoute = dyna.shortestPath(networkMap,testAgent001, 0L);
 
         //ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
@@ -55,9 +56,9 @@ public class GRIDtestRunner{
         assertTrue(outRoute.Intersections.size() > 0);*/
 
         //System.out.println("\nShortest path: "+myPathGreedy);
-        System.out.println("\nShortest path: "+myPathDynamic);
+        //System.out.println("\nShortest path: "+myPathDynamic);
 
-        System.out.print("\nPath: ");
+        System.out.print("\nPath:\n");
         for (String intrx : outRoute.Intersections)
         {
             System.out.print(intrx);
@@ -65,10 +66,9 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
         
-	    ArrayList<String> tempPathList = new ArrayList<>();
-        tempPathList = myMap.getPathByRoad(outRoute.Intersections);
+	    ArrayList<String> tempPathList  = myMap.getPathByRoad(outRoute.Intersections);
 
-        System.out.print("\nPath by Link: ");
+        System.out.print("\n\nPath by Link:\n");
         for (String path : tempPathList)
         {
             System.out.print(path);
@@ -83,7 +83,7 @@ public class GRIDtestRunner{
         long timeToRun = ((stopTime - startTime)/1000000);
         
         System.out.print("\nTook " + timeToRun/1000.0 + " Seconds");
-        System.out.print("\n\nAnd we're done.");
+        System.out.print("\n\nAnd we're done.\n");
     }
 
     private GRIDagent getTestAgent()

@@ -91,41 +91,10 @@ public final class GRIDmap implements Iterable<String> {
 		}
 	}
 
-	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
-	{
-		// Turns a route made of intersections into a route made of roads
-		// Can also be used to find a single road based on start / end intersections
-		// Note: This will return a road, but not necessarily a specific road, in the 
-		// cul-desac world where 2 or more roads have the same start / end intersections
-		ArrayList<String> pathByRoad = new ArrayList<>();
-		Set<String> keys = Roads.keySet();
-
-		for(int i = 0; i < pathByNode.size()-1; i++)
-		{
-			GRIDroad tempRoad = new GRIDroad("temp");
-			tempRoad.setFrom(pathByNode.get(i));
-			tempRoad.setTo(pathByNode.get(i+1));
-
-			for (Iterator<String> itr = keys.iterator(); itr.hasNext();)
-			{
-				String key = (String) itr.next();
-				GRIDroad testRoad = (GRIDroad) Roads.get(key);
-
-				if(tempRoad.getFrom().equals(testRoad.getFrom())
-				   && tempRoad.getTo().equals(testRoad.getTo())) {
-					pathByRoad.add(testRoad.getId());
-				}
-			}
-		}
-
-		return  pathByRoad;
-	}
-
     public GRIDnodeWeightTime calcWeight(String startNode, String endNode, long startTime)
     {
         double tempWeight = 0.0;
         long tempTimeslice = 0L;
-        //long startTime = currentPathTotal.get(startNode).getNodeTmTotal();
         GRIDnodeWeightTime tempNode = new GRIDnodeWeightTime();
 
         tempTimeslice = this.getRoadListItem(startNode+endNode).getTravelTime();
@@ -133,20 +102,33 @@ public final class GRIDmap implements Iterable<String> {
         tempNode.setNodeWtTotal(tempWeight);
         tempNode.setNodeTmTotal(tempTimeslice);
 
-        //System.out.println("tempTimeslice: "+tempTimeslice);
-        /*if(startNode.equals("177956314") || endNode.equals("177956314") ||
-                endNode.equals("177958998") || startNode.equals("177926280") ||
-                startNode.equals("177958998") || startNode.equals("177922522")) {
-            System.out.println("start: "+startNode+"|end: "+endNode);
-            System.out.println("weight: "+tempNode.getNodeWtTotal());
-            // 177922522
-        }*/
-        /*System.out.println("startTime: "+startTime);
-
-        System.out.println("tempWeight: "+tempWeight);*/
-
         return tempNode;
     }
+
+	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
+	{
+		// Turns a route made of intersections into a route made of roads
+		// Can also be used to find a single road based on start / end intersections
+		// Note: This will return a road, but not necessarily a specific road, in the
+		// cul-desac world where 2 or more roads have the same start / end intersections
+		ArrayList<String> pathByRoad = new ArrayList<>();
+
+		for(int i = 0; i < pathByNode.size()-1; i++)
+		{
+			GRIDroad tempRoad = this.getRoadListItem(pathByNode.get(i)+pathByNode.get(i+1));
+			pathByRoad.add(tempRoad.getId());
+		}
+
+		return  pathByRoad;
+	}
+
+	/*  *
+	* The following functions are transplanted from the DirectedGraph class.
+	* These need to be reviewed and cleaned up for better integration, i.e.,
+	* eliminating the need for the 'middleware' function and using only roads
+	* rather than pulling from the edge list as created by the original
+	* DirectedGraph class.
+	* * */
 
 	private final Map<String, Map<String, Double>> mGraph = new HashMap<String, Map<String, Double>>();
 	public class graphEdge{

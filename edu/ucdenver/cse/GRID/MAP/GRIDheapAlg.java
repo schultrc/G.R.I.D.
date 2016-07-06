@@ -40,7 +40,7 @@ public class GRIDheapAlg {
         /* Update the source so that it's at distance 0.0 from itself; after
          * all, we can get there with a path of length zero!
          */
-        pq.decreaseKey(entries.get(source), 0.0, 0.0);
+        pq.decreaseKey(entries.get(source), 0.0, 0.0, 0L);
 
         /* Grab the current node.  The algorithm guarantees that we now
              * have the shortest distance to it.
@@ -79,7 +79,7 @@ public class GRIDheapAlg {
                 GRIDfibHeap.Entry dest = entries.get(arc.getKey());
                 if (pathCost < dest.getPriority())
                 {
-                    pq.decreaseKey(dest, pathCost, 0.0);
+                    pq.decreaseKey(dest, pathCost, 0.0, 0L);
                     previousIntersections.put(dest.getValue(),curr.getValue());
                 }
             }

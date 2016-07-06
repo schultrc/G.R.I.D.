@@ -365,7 +365,7 @@ public final class GRIDfibHeap {
      * @throws IllegalArgumentException If the new priority exceeds the old
      *         priority, or if the argument is not a finite double.
      */
-    public void decreaseKey(Entry entry, double newPriority, double newWtTotal) {
+    public void decreaseKey(Entry entry, double newPriority, double newWtTotal, long newTmTotal) {
         checkPriority(newPriority);
         //if (newPriority > entry.mPriority)
         if (newWtTotal > entry.mWtTotal)
@@ -373,7 +373,7 @@ public final class GRIDfibHeap {
 
         /* Forward this to a helper function. */
 
-        decreaseKeyUnchecked(entry, newPriority, newWtTotal);
+        decreaseKeyUnchecked(entry, newPriority, newWtTotal, newTmTotal);
     }
 
     /**
@@ -388,7 +388,7 @@ public final class GRIDfibHeap {
         /* Use decreaseKey to drop the entry's key to -infinity.  This will
          * guarantee that the node is cut and set to the global minimum.
          */
-        decreaseKeyUnchecked(entry, Double.NEGATIVE_INFINITY, entry.mWtTotal);
+        decreaseKeyUnchecked(entry, Double.NEGATIVE_INFINITY, entry.mWtTotal, entry.mTmTotal);
 
         /* Call dequeueMin to remove it. */
         dequeueMin();
@@ -488,10 +488,11 @@ public final class GRIDfibHeap {
      * @param entry The node whose key should be decreased.
      * @param priority The node's new priority.
      */
-    private void decreaseKeyUnchecked(Entry entry, double priority, double wtTotal) {
+    private void decreaseKeyUnchecked(Entry entry, double priority, double wtTotal, long tmTotal) {
         /* First, change the node's priority. */
         entry.mPriority = priority;
         entry.mWtTotal = wtTotal;
+        entry.mTmTotal = tmTotal;
 
         /* If the node no longer has a higher priority than its parent, cut it.
          * Note that this also means that if we try to run a delete operation

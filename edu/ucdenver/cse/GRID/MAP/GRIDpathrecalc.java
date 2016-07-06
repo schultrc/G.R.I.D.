@@ -25,6 +25,7 @@ public class GRIDpathrecalc {
     private Map<String,String> previousIntersections;
     private Hashtable<String,GRIDroad> thisRoadList;
     private long totalCalcTime;
+    private long totalTravelTime;
 
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
         this.intersections = selfishMap.getIntersections();
@@ -34,6 +35,7 @@ public class GRIDpathrecalc {
         agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();  // Changed from getFrom to accomodate matsim stupidity
         agtTo = selfishMap.getRoad("72823276_0_r").getTo();
         totalCalcTime = 0L;
+        totalTravelTime = 0L;
 
         this.thisTimeslice = currentTime/1000;
 
@@ -86,8 +88,16 @@ public class GRIDpathrecalc {
         //System.out.println("all previous intersections:"+previousIntersections);
         while(previousIntersections.get(step)!= null)
         {
+            // test code begin
+            long tempLong = currentPathTotal.get(step).getNodeTmTotal();
+            // test code end
             step = previousIntersections.get(step);
             finalPath.Intersections.add(step);
+            // test code begin
+            System.out.println("step: "+(tempLong));
+            System.out.println("time: "+(tempLong-currentPathTotal.get(step).getNodeTmTotal()));
+            totalTravelTime += currentPathTotal.get(step).getNodeTmTotal();
+            // test code end
         }
 
         Collections.reverse(finalPath.Intersections);
@@ -96,7 +106,7 @@ public class GRIDpathrecalc {
 
         // We need to convert this to roads, as well
 
-        System.out.println("hash time: "+totalCalcTime/1000000000.0+"s");
+        System.out.println("total time (439): "+totalTravelTime);
         //System.out.println("for loop time: "+totalCalcTime/1000000000.0+"s");
         //System.out.println("Returning path. . .");
         return finalPath;
@@ -130,14 +140,7 @@ public class GRIDpathrecalc {
         for(String endNode : adjNodes)
         {
             tempNode = calcEdgeWeight(startNode, endNode);
-            //System.out.println("start: "+startNode+"|end: "+endNode);
-            if(startNode.equals("177956314") || endNode.equals("177956314") ||
-               endNode.equals("177958998") || startNode.equals("177926280") ||
-               startNode.equals("177958998") || startNode.equals("177922522")) {
-                System.out.println("start: "+startNode+"|end: "+endNode);
-                System.out.println("weight: "+(getOptimalEdgeWeight(startNode))+"+"+(tempNode.getNodeWtTotal()));
-                // 177922522
-            }
+
             if(getOptimalEdgeWeight(endNode) > getOptimalEdgeWeight(startNode) + tempNode.getNodeWtTotal())
             {
                 Double tempWeight = getOptimalEdgeWeight(startNode);
