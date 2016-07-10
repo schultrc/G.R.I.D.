@@ -79,7 +79,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
 	
-	logWriter testLW = new logWriter();
+	logWriter testLW = new logWriter("matsimEventHander_LOG");
 	
 	private TripRouter tripRouter;
 	private Scenario scenario;
@@ -135,7 +135,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 				{
 					//System.out.println("Replacing the route for agent: " + tempAgent.getId());
 					if (!doReplanning(mobsimAgents.get(tempAgent.getId()), mobsim, tempAgent.getCurrentLink())) {
-						System.out.println("Agent: " + tempAgent.getId() + " failed replanning");
+						System.out.println("Agent: " + tempAgent.getId() + " failed replanning \n\n\n");
 					}
 				}
 			}						
@@ -148,48 +148,54 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim, String currentLinkId ) {
 
 		double now = mobsim.getSimTimer().getTimeOfDay();
-		boolean fixFlag = false;
-		
 		logWriter.writeOutput("Starting replanning for agent: " + agent.getId().toString() + 
 				              "at time: " + now); 
 
 		GRIDagent tempGRIDagent = theAgents.get(agent.getId().toString());
-		if (tempGRIDagent.getCurrentLink().equals(tempGRIDagent.getDestination()) ) {
+		if (tempGRIDagent.getCurrentLink().equals(tempGRIDagent.getDestination() ) ) {
 			// We must already be at our destination!
 			
 			logWriter.writeOutput("Agent " + agent.getId().toString() + " has arrived at its destination");
-    		System.out.println("GOT THERE - Agent: " + agent.getId().toString());
+    		System.out.println("GOT THERE - Agent: " + agent.getId().toString()+ "\n\n  ****  \n\n");
 
 			return true;
 		}
 			
+		if(theMap.getRoad(tempGRIDagent.getCurrentLink()).getTo().equals(
+				 theMap.getRoad(tempGRIDagent.getDestination()).getFrom()) ) {
+			// There is no other path needed, this check prevents our alg from barfing
+			logWriter.writeOutput("Agent " + agent.getId().toString() + " can no longer change route - almost there");
+    		System.out.println("Almost there! " + agent.getId().toString()+ "\n");
+    		
+    		return true;
+		}
 		// Subtract 0.5 so round always goes to the current second
 		Long timeNow = Math.round(now - 0.5);
 		
 		Plan plan = WithinDayAgentUtils.getModifiablePlan(agent);
 
 		if (plan == null) {
-			log.info(" we don't have a modifiable plan; returning ... ");
+			log.info(" we don't have a modifiable plan; aborting ... ");
     		System.out.println("PLAN NULL");
 
 			return false;
 		}
 		
 		if (!(WithinDayAgentUtils.getCurrentPlanElement(agent) instanceof Leg)) {
-			log.info("agent not on leg; returning ... ");
+			log.info("agent not on leg; aborting ... ");
     		System.out.println("NOT LEG");
 
 			return false;
 		}
 		
 		if (!((Leg) WithinDayAgentUtils.getCurrentPlanElement(agent)).getMode().equals(TransportMode.car)) {
-			log.info("not a car leg; can only replan car legs; returning ... ");
+			log.info("not a car leg; can only replan car legs; aborting ... ");
     		System.out.println("NOT CAR");
 
 			return false;
 		}
 				
-		Leg currentLeg = (Leg)  WithinDayAgentUtils.getCurrentPlanElement(agent);
+		Leg currentLeg = (Leg)WithinDayAgentUtils.getCurrentPlanElement(agent);
 				
 		// Is there a better way to get a Network Route???
 	    NetworkRoute netRoute =  (NetworkRoute) currentLeg.getRoute().clone();
@@ -197,7 +203,6 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    // Keep the original so we can determine if it has changed
 	    GRIDroute origRoute = tempGRIDagent.getRoute(); 
 	    
-	    //System.out.println("The agent is: " + tempGRIDagent.toString());
 	    tempGRIDagent.setLink(agent.getCurrentLinkId().toString());
 	    
 	    GRIDpathrecalc theALG = new GRIDpathrecalc(tempGRIDagent, theMap, timeNow);
@@ -214,59 +219,29 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 	    // Initially, routes only have intersections, so set the roads
     	tempRoute.setRoads(theMap.getPathByRoad(tempRoute.getIntersections()));
-    		    
-	    // If our new route's last road isn't the destination (due to intersection vs. road calculating)
-	    // We need to add 1 more road, basically a u-turn
-    	String destinationRoad = tempGRIDagent.getDestination().toString();
-    	String routeLastRoad = tempRoute.getRoads().get(tempRoute.getRoads().size() - 1);
     	
-	    if (!routeLastRoad.equals(destinationRoad)) {
-	    	logWriter.writeOutput("We can't get from: " + routeLastRoad + " to: " + destinationRoad);
-	    	
-	    	// Check to see if we can fix the route (U-turn)
-	    	String routeTo  = theMap.getRoad(routeLastRoad).getTo();
-	    	String destFrom = theMap.getRoad(destinationRoad).getFrom();
-	    	String destTo   = theMap.getRoad(destinationRoad).getTo();
-	    	
-	    	logWriter.writeOutput(" Checking: " + routeTo + " to: " + destFrom);
-	    	
-	    	if (routeTo.equals(destTo)) {	    		
-	    		// the end goal was the same, let's see if there is a road that fixes this:
-	    		String additionalRoad = theMap.hasRoad(routeTo, destFrom);
-	    		if (!additionalRoad.equals("")) {
-	    			logWriter.writeOutput("Adding road: " + additionalRoad);
-	    			tempRoute.getRoads().add(additionalRoad);    			
-	    		}
-	    		else
-	    		{
-	    			logWriter.writeOutput("WE SUCK AGAIN");
-	    			tempRoute.getRoads().clear();
-	    			fixFlag = true;
-	    			    			
-
-	    			//return false;
-	    		}
-	    	}
-	    	
-	    	else {
-	    		// This is bad, our new route doesn't go to where our agent wants to go
-	    		logWriter.writeOutput("ERROR: Cannot fix route");
-	    		System.out.println("CANT FIX");
-	    		return false;
-	    	}
-	    			
-	    	//String newRoad = theMap.getPathByRoad(new ArrayList<String>())
-	    	
-	    }
-	    	    
-	    //System.out.println("New route for agent: " + tempGRIDagent.getId());
-	    //System.out.println(tempRoute.toString());
-	    
-	    Long stopTime = System.currentTimeMillis();	    	    
-	    Long totalTime = stopTime - startTime;
-	    
-	    //System.out.println("Recalculating route for agent: " + tempGRIDagent.getId() +
-	    //		           " took: " + (totalTime/1000) + "seconds" ); 
+    	
+    	// FIX STARTS HERE
+	    // Our destination is on a road, but our calcs are based on intersections. 
+    	// Find the intersection that starts the road our destination is on
+    	
+    	String destinationRoad = tempGRIDagent.getDestination();
+    	String destinationIntersection = theMap.getRoad(destinationRoad).getFrom();
+    	
+    	logWriter.writeOutput("Agent: " + agent.getId().toString() + " is going to: " + destinationIntersection);
+    	
+    	String routeLastRoad = tempRoute.getRoads().get(tempRoute.getRoads().size() - 1);
+    	if (!destinationIntersection.equals(theMap.getRoad(routeLastRoad).getFrom() )) {
+    		
+    	}
+	    		    	
+		else {
+			// This is bad, our new route doesn't go to where our agent wants to
+			// go
+			logWriter.writeOutput("ERROR: Cannot get to INT: " + destinationIntersection);
+			System.out.println("CANT RE-ROUTE");
+			return false;
+		}
 	    	    
 	    //Compare the 2 routes    
 	    if (origRoute.equalsIntersections(tempRoute)) {

@@ -27,9 +27,12 @@ public class GRIDpathrecalc {
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
         this.intersections = selfishMap.getIntersections();
         this.roads = selfishMap.getRoads();
-        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();  // Changed from getFrom to accomodate matsim stupidity
         
-        agtTo = selfishMap.getRoad(thisAgent.getDestination()).getTo();
+        // The agent is already on the link, so we need its endpoint
+        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();  
+        
+        // The agent will end somewhere on the final link, so we need to get to its "from end"
+        agtTo = selfishMap.getRoad(thisAgent.getDestination()).getFrom();
         this.thisTimeslice = currentTime/1000;
 
         /* These are for setting vehiclesCurrentlyOnRoadAtTime
@@ -44,6 +47,7 @@ public class GRIDpathrecalc {
     	
     	// DUMB check - prevent elsewhere
     	if (this.agtTo.equals(this.agtFrom)) { 
+    		System.out.println("to and from are the same");
     		return null;
     	}
     		
