@@ -98,6 +98,9 @@ public final class GRIDmap implements Iterable<String> {
         GRIDnodeWeightTime tempNode = new GRIDnodeWeightTime();
 
         tempTimeslice = this.getRoadListItem(startNode+endNode).getTravelTime();
+		// test code begin
+		//System.out.println("tempTimeslice: "+tempTimeslice);
+		// test code end
         tempWeight = this.getRoadListItem(startNode+endNode).getWeightOverInterval(startTime);
         tempNode.setNodeWtTotal(tempWeight);
         tempNode.setNodeTmTotal(tempTimeslice);

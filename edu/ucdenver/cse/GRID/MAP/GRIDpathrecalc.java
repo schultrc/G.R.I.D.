@@ -33,10 +33,11 @@ public class GRIDpathrecalc {
         selfishMap.loadRoadList(selfishMap.getRoads());
         this.thisRoadList = selfishMap.getRoadList();
         // The agent is already on the link, so we need its endpoint
-        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();
-
+        //agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();
         // The agent will end somewhere on the final link, so we need to get to its "from end"
-        agtTo = selfishMap.getRoad(thisAgent.getDestination()).getFrom();
+        //agtTo = selfishMap.getRoad(thisAgent.getDestination()).getFrom();
+        agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();
+        agtTo = thisAgent.getDestination();
         totalCalcTime = 0L;
         totalTravelTime = 0L;
         this.thisTimeslice = currentTime/1000;
@@ -97,8 +98,8 @@ public class GRIDpathrecalc {
             step = previousIntersections.get(step);
             finalPath.Intersections.add(step);
             // test code begin
-            System.out.println("step: "+(tempLong));
-            System.out.println("time: "+(tempLong-currentPathTotal.get(step).getNodeTmTotal()));
+            //System.out.println("step: "+(tempLong));
+            //System.out.println("time: "+(tempLong-currentPathTotal.get(step).getNodeTmTotal()));
             totalTravelTime += currentPathTotal.get(step).getNodeTmTotal();
             // test code end
         }
@@ -149,9 +150,18 @@ public class GRIDpathrecalc {
                 Double tempWeight = getOptimalEdgeWeight(startNode);
                 tempNode.setNodeWtTotal(tempWeight+tempNode.getNodeWtTotal());
                 Long tempTime = currentPathTotal.get(startNode).getNodeTmTotal();
+                System.out.println(startNode+" tmTotal: "+tempTime);
+                System.out.println(endNode+" tmTotal: "+tempNode.getNodeTmTotal());
                 tempNode.setNodeTmTotal(tempTime+tempNode.getNodeTmTotal());
+                System.out.println("tempTmTotal: "+tempNode.getNodeTmTotal());
                 // add getOptEdgeWeight to first part of data structure tempNode
 
+                // test code begin
+                /*System.out.println("tempWeight :"+tempWeight);
+                System.out.println("tempTime :"+tempTime);
+                System.out.println("wtTotal: "+(tempWeight+tempNode.getNodeWtTotal()));*/
+                // test code end
+                System.out.println(startNode+" to "+endNode+"wt: "+tempNode.getNodeWtTotal());
                 currentPathTotal.put(endNode,tempNode);
                 previousIntersections.put(endNode,startNode);
 

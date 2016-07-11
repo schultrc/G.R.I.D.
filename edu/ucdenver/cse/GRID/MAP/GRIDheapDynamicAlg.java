@@ -45,11 +45,6 @@ public class GRIDheapDynamicAlg {
             return null;
         }
 
-        // test code begin
-        List<Long> testSet = new ArrayList<>();
-
-        // test code end
-
         // roadList forEach test 455935394177911580 106292026_0
         graph.loadRoadList(roads);
 
@@ -60,9 +55,13 @@ public class GRIDheapDynamicAlg {
 
         // prime the while loop with the start node, which is the starting min
         GRIDfibHeap.Entry curr = pq.dequeueMin();
+        System.out.println("curr: "+curr.getValue()+" wt: "+curr.getWtTotal()+ " tm: "+curr.getTmTotal());
+
+        Long tempTmTotal = 0L;
 
         while (!pq.isEmpty())
         {
+            //System.out.println("\nnew while iteration");
             currentPathTotal.put(curr.getValue(), tempNode);
 
             /* Update the priorities/weights of all of its edges.
@@ -84,16 +83,17 @@ public class GRIDheapDynamicAlg {
 
                 if ((tempNode.getNodeWtTotal()+curr.getWtTotal()) < dest.getWtTotal())
                 {
-                    Long tempTmTotal = currentPathTotal.get(curr.getValue()).getNodeTmTotal();
-                    //tempTmTotal = tempTmTotal + tempNode.getNodeTmTotal();
-
-                    // test code begin:
-                    totalTravelTime = tempTmTotal;
-                    //System.out.println("totalTravelTime: "+tempTmTotal);
+                    // test code begin
+                    //System.out.println(curr.getValue()+" tmTotal: "+currentPathTotal.get(curr.getValue()).getNodeTmTotal());
+                    Long tempTime = currentPathTotal.get(curr.getValue()).getNodeTmTotal();
+                    //System.out.println(arc.getKey()+" TmTotal: "+tempNode.getNodeTmTotal());
+                    tempNode.setNodeTmTotal(tempTime+tempNode.getNodeTmTotal());
+                    tempTmTotal = tempNode.getNodeTmTotal();
+                    //System.out.println("tempTmTotal: "+tempTmTotal);
                     // test code end
 
+                    //System.out.println("decreasing key for "+dest);
                     pq.decreaseKey(dest, 0D, (tempNode.getNodeWtTotal()+curr.getWtTotal()),tempTmTotal);
-
                     previousIntersections.put(dest.getValue(),curr.getValue());
                 }
             }
@@ -101,8 +101,13 @@ public class GRIDheapDynamicAlg {
             /* Grab the current node.  The algorithm guarantees that we now
              * have the shortest distance to it.
              */
+
             curr = pq.dequeueMin();
+            tempNode.setNodeTmTotal(curr.getTmTotal());
+            //System.out.println("curr: "+curr.getValue()+" wt: "+curr.getWtTotal()+ " tm: "+curr.getTmTotal());
+            if(curr.getValue().equals(agtTo)) totalTravelTime = curr.getTmTotal();
         }
+        //totalTravelTime = curr.getTmTotal();
 
         GRIDroute finalPath = new GRIDroute();
         String step = agtTo;
@@ -116,24 +121,33 @@ public class GRIDheapDynamicAlg {
 
         // test code begin
         long finalTravelTime = 0L;
-        int counter = 0;
         // test code end
 
         /* Create the final path from source to destination */
         while(previousIntersections.get(step)!= null)
         {
+            // test code begin
+            long tempLong = currentPathTotal.get(step).getNodeTmTotal();
+            // test code end
+
             step = previousIntersections.get(step);
             finalPath.Intersections.add(step);
+
             // test code begin
-            ++counter;
             finalTravelTime += currentPathTotal.get(step).getNodeTmTotal();
+            //System.out.println("step: "+(tempLong));
+            //System.out.println("time: "+(tempLong-currentPathTotal.get(step).getNodeTmTotal()));
             // test code end
         }
 
         Collections.reverse(finalPath.Intersections);
 
+        // test code begin
+        //System.out.println("size: "+currentPathTotal.size());
         System.out.println("total time (439): "+totalTravelTime);
-        System.out.println("final total time: "+finalTravelTime+" | counter: "+counter);
+        System.out.println("totalCalcTime: "+totalCalcTime);
+        //System.out.println("final total time: "+finalTravelTime);
+        // test code end
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * *
          * START OUTPUT FOR TESTING

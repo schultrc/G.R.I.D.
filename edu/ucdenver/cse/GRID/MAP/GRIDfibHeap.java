@@ -88,7 +88,7 @@ public final class GRIDfibHeap {
             mTmTotal = tmTotal;
         }
         @Override
-        public String toString(){return "[String: "+mElem+" Weight Total: "+mWtTotal+"]";} // mWtTotal mPriority
+        public String toString(){return "[String: "+mElem+" Weight Total: "+mWtTotal+" Time Total: "+mTmTotal+"]";} // mWtTotal mPriority
     }
     @Override
     public String toString(){return "\nEntry "+getmMin();}
@@ -372,7 +372,6 @@ public final class GRIDfibHeap {
             throw new IllegalArgumentException("New priority exceeds old.");
 
         /* Forward this to a helper function. */
-
         decreaseKeyUnchecked(entry, newPriority, newWtTotal, newTmTotal);
     }
 

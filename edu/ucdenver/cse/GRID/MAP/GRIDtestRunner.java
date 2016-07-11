@@ -89,7 +89,7 @@ public class GRIDtestRunner{
     private GRIDagent getTestAgent()
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
-                currentLink = "40963664_0",
+                currentLink = "40963664_0", // 40963664_0
                 currentIntrx = "1040921516", // 1040921516 // 2
                 destIntrx = "864162469"; // 864162469 - 1400447055 // 177890694 PNet3 // 177849670 // 50
 
