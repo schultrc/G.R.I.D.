@@ -89,9 +89,10 @@ public class GRIDtestRunner{
     private GRIDagent getTestAgent()
     { // String Id, String newLink, String origin, String destination
         String agtID = "testAgent001",
-                currentLink = "40963664_0", // 40963664_0
+                currentLink = "106292026_0", // 40963664_0 106292026_0
                 currentIntrx = "1040921516", // 1040921516 // 2
-                destIntrx = "864162469"; // 864162469 - 1400447055 // 177890694 PNet3 // 177849670 // 50
+                destIntrx = "72823276_0";
+        // 864162469 - 1400447055 99282649_0_r [72823276_0 problem link]
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx, false, false);
 

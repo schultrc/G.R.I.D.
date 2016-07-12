@@ -32,12 +32,13 @@ public class GRIDpathrecalc {
         this.roads = selfishMap.getRoads();
         selfishMap.loadRoadList(selfishMap.getRoads());
         this.thisRoadList = selfishMap.getRoadList();
+
+        // agtTo = thisAgent.getDestination();
         // The agent is already on the link, so we need its endpoint
-        //agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();
-        // The agent will end somewhere on the final link, so we need to get to its "from end"
-        //agtTo = selfishMap.getRoad(thisAgent.getDestination()).getFrom();
         agtFrom = selfishMap.getRoad(thisAgent.getCurrentLink()).getTo();
-        agtTo = thisAgent.getDestination();
+        // The agent will end somewhere on the final link, so we need to get to its "from end"
+        agtTo = selfishMap.getRoad(thisAgent.getDestination()).getFrom();
+
         totalCalcTime = 0L;
         totalTravelTime = 0L;
         this.thisTimeslice = currentTime/1000;
@@ -110,7 +111,7 @@ public class GRIDpathrecalc {
 
         // We need to convert this to roads, as well
 
-        System.out.println("total time (439): "+totalTravelTime);
+        System.out.println("total time: "+totalTravelTime);
         //System.out.println("for loop time: "+totalCalcTime/1000000000.0+"s");
         //System.out.println("Returning path. . .");
         return finalPath;
@@ -150,10 +151,10 @@ public class GRIDpathrecalc {
                 Double tempWeight = getOptimalEdgeWeight(startNode);
                 tempNode.setNodeWtTotal(tempWeight+tempNode.getNodeWtTotal());
                 Long tempTime = currentPathTotal.get(startNode).getNodeTmTotal();
-                System.out.println(startNode+" tmTotal: "+tempTime);
-                System.out.println(endNode+" tmTotal: "+tempNode.getNodeTmTotal());
+                //System.out.println(startNode+" tmTotal: "+tempTime);
+                //System.out.println(endNode+" tmTotal: "+tempNode.getNodeTmTotal());
                 tempNode.setNodeTmTotal(tempTime+tempNode.getNodeTmTotal());
-                System.out.println("tempTmTotal: "+tempNode.getNodeTmTotal());
+                //System.out.println("tempTmTotal: "+tempNode.getNodeTmTotal());
                 // add getOptEdgeWeight to first part of data structure tempNode
 
                 // test code begin
@@ -161,7 +162,7 @@ public class GRIDpathrecalc {
                 System.out.println("tempTime :"+tempTime);
                 System.out.println("wtTotal: "+(tempWeight+tempNode.getNodeWtTotal()));*/
                 // test code end
-                System.out.println(startNode+" to "+endNode+"wt: "+tempNode.getNodeWtTotal());
+                //System.out.println(startNode+" to "+endNode+"wt: "+tempNode.getNodeWtTotal());
                 currentPathTotal.put(endNode,tempNode);
                 previousIntersections.put(endNode,startNode);
 
