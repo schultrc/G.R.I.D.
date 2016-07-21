@@ -17,9 +17,15 @@ import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
 import java.util.concurrent.*;
 import java.util.*;
 
-final class GRIDheapDynamicAlg {
+public class GRIDheapDynamicAlg {
+    private GRIDmap graph;
 
-    GRIDroute shortestPath(GRIDmap graph, GRIDagent thisAgent, Long currentTime) {
+    public GRIDheapDynamicAlg(GRIDmap thisMap) {
+        //graph = thisMap;
+        graph = graphMiddleware(thisMap);
+    }
+
+    public GRIDroute findPath(GRIDagent thisAgent, Long currentTime) {
         GRIDfibHeap pq = new GRIDfibHeap();
 
         Map<String, GRIDfibHeap.Entry> entries = new HashMap<>();
@@ -137,6 +143,31 @@ final class GRIDheapDynamicAlg {
 
         finalPath.setcalculatedTravelTime(totalTravelTime);
         return finalPath;
+    }
+
+    private GRIDmap graphMiddleware(GRIDmap myGraph) {
+        Long startTime = System.nanoTime();
+
+        ArrayList<String> networkIntersections = new ArrayList<>(myGraph.getIntersections().keySet());
+        ArrayList<GRIDroad> networkRoads = new ArrayList<>(myGraph.getRoads().values());
+
+        for(int i = 0; i < networkIntersections.size(); i++)
+        {
+            //if(i+1 == networkIntersections.size()){System.out.println("nodes: "+(i+1));}
+            myGraph.addNode(networkIntersections.get(i));
+        }
+
+        for(int i = 0; i < networkRoads.size(); i++)
+        {
+            //if(i+1 == networkRoads.size()){System.out.println("edges: "+(i+1));}
+            myGraph.addEdge(networkRoads.get(i).getFrom(), networkRoads.get(i).getTo(), networkRoads.get(i).getLength());
+        }
+
+        long stopTime = System.nanoTime();
+        long timeToRun = ((stopTime - startTime)/1000000);
+
+        //System.out.println(timeToRun/1000.0 + "s required for middleware\n");
+        return myGraph;
     }
 
 /* END GRIDheapDynamicAlg CLASS */

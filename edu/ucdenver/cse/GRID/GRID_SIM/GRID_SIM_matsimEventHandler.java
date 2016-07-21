@@ -9,6 +9,7 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+import edu.ucdenver.cse.GRID.MAP.*;
 import org.apache.log4j.Logger;
 import org.matsim.api.core.v01.Id;
 import org.matsim.api.core.v01.Scenario;
@@ -38,11 +39,6 @@ import org.matsim.core.router.TripRouter;
 import org.matsim.withinday.utils.EditRoutes;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
-import edu.ucdenver.cse.GRID.MAP.GRIDmap;
-import edu.ucdenver.cse.GRID.MAP.GRIDroad;
-import edu.ucdenver.cse.GRID.MAP.GRIDroute;
-import edu.ucdenver.cse.GRID.MAP.GRIDselfishAlg;
-import edu.ucdenver.cse.GRID.MAP.GRIDpathrecalc;
 
 public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener, MobsimAfterSimStepListener {
 
@@ -204,13 +200,15 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    GRIDroute origRoute = tempGRIDagent.getRoute(); 
 	    
 	    tempGRIDagent.setLink(agent.getCurrentLinkId().toString());
-	    
-	    GRIDpathrecalc theALG = new GRIDpathrecalc(tempGRIDagent, theMap, timeNow);
+
+		GRIDheapDynamicAlg theALG = new GRIDheapDynamicAlg(theMap);
+	    //GRIDpathrecalc theNaiveALG = new GRIDpathrecalc(tempGRIDagent, theMap, timeNow);
 	    	 
 	    // Recalculate the route from here to destination
 	    Long startTime = System.currentTimeMillis();	    
-	    
-	    GRIDroute tempRoute = theALG.findPath();
+
+		GRIDroute tempRoute = theALG.findPath(tempGRIDagent, timeNow);
+	    //GRIDroute tempRoute = theNaiveALG.findPath();
 	    if (tempRoute == null) {
 	    	System.out.println("ROUTE FROM ALG NULL");
 
