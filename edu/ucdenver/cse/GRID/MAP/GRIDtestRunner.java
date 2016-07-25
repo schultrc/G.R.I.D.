@@ -16,7 +16,7 @@ public class GRIDtestRunner{
     private GRIDmapReader myReader = new GRIDmapReader();
     // SmallNetwork2 PuebloNetwork 5x5network RyeNetwork
     private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml");
-    private GRIDmap networkMap = graphMiddleware(myMap);
+    //private GRIDmap networkMap = graphMiddleware(myMap);
     private ArrayList myPathGreedy = new ArrayList();
     private ArrayList myPathDynamic = new ArrayList();
 
@@ -39,7 +39,7 @@ public class GRIDtestRunner{
     	Long startTime = System.nanoTime();
 
         GRIDheapAlg greedy = new GRIDheapAlg();
-        GRIDheapDynamicAlg dyna = new GRIDheapDynamicAlg();
+        GRIDheapDynamicAlg dyna = new GRIDheapDynamicAlg(myMap); //
         //myPathGreedy = greedy.shortestPath(networkMap,"1040921516","864162469");
 
         //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
@@ -47,7 +47,7 @@ public class GRIDtestRunner{
         GRIDroute outRoute = new GRIDroute();
         /*GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         outRoute = test001.findPath();*/
-        outRoute = dyna.shortestPath(networkMap,testAgent001, 0L);
+        outRoute = dyna.findPath(testAgent001, 0L);
 
         //ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
