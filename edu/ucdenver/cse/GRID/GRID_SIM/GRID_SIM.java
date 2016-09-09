@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
+import java.util.logging.Level;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -18,24 +18,22 @@ import org.matsim.core.controler.OutputDirectoryHierarchy.OverwriteFileSetting;
 import org.matsim.core.scenario.ScenarioUtils;
 import org.matsim.withinday.trafficmonitoring.TravelTimeCollector;
 import org.matsim.core.controler.AbstractModule;
-import org.matsim.api.core.v01.TransportMode;
 import org.matsim.core.mobsim.framework.Mobsim;
 import org.matsim.core.mobsim.qsim.QSim;
 import org.matsim.core.mobsim.qsim.QSimUtils;
 import org.matsim.core.router.TripRouter;
 import org.matsim.core.router.TripRouterProviderImpl;
-import org.matsim.withinday.trafficmonitoring.TravelTimeCollector;
-
 import com.google.inject.Provider;
 
 import edu.ucdenver.cse.GRID.*;
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.GRID_UTILS.logWriter;
 import edu.ucdenver.cse.GRID.MAP.GRIDmap;
 import edu.ucdenver.cse.GRID.MAP.GRIDmapReader;
 import edu.ucdenver.cse.GRID.MAP.GRIDroute;
 
 public class GRID_SIM {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -49,6 +47,9 @@ public class GRID_SIM {
 		
 		System.out.println("It's not hard--you just gotta use finesse!");
 				
+		logWriter.log(Level.INFO, "Starting SIM");
+		
+		
 		// This will get filled and emptied via departure / arrival events
 		final ConcurrentHashMap<String, GRIDagent> masterAgents = new ConcurrentHashMap<String, GRIDagent> ();	
 		final ConcurrentHashMap<String, GRIDagent> agentsNeedingDest = new ConcurrentHashMap<String, GRIDagent> ();	
@@ -65,9 +66,11 @@ public class GRID_SIM {
 		String configFile = GRIDutils.getConfigFile();
 	        
 	    if (configFile == "") {
-	    	System.out.println("You didn't choose a config file!!!");
+	    	logWriter.log(Level.WARNING, "You didn't choose a config file!!!");
 	    	System.exit(0);
 	    }
+	    
+	    logWriter.log(Level.INFO, "CONFIG FILE: " + configFile + " in use\n\n\n");
 				
 		try {
 			Config config = new Config();

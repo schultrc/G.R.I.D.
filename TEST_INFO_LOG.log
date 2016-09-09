@@ -1,0 +1,1935 @@
+Sep 08, 2016 10:22:41 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Starting SIM
+Sep 08, 2016 10:22:46 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: CONFIG FILE: C:\Users\Ray\git\G.R.I.D\config\5x5Config_500.xml in use
+
+
+
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 482 has arrived at its destinationat time: 543.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 478 has arrived at its destinationat time: 652.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 488 has arrived at its destinationat time: 1845.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 481 has arrived at its destinationat time: 1890.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 484 has arrived at its destinationat time: 2216.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 487 has arrived at its destinationat time: 2246.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 479 has arrived at its destinationat time: 2334.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 483 has arrived at its destinationat time: 2356.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 481 has arrived at its destinationat time: 2538.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 485 has arrived at its destinationat time: 3120.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 480 has arrived at its destinationat time: 3220.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 486 has arrived at its destinationat time: 3512.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 488 has arrived at its destinationat time: 3741.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 4 has arrived at its destinationat time: 3968.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 4 has arrived at its destinationat time: 4326.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 1 has arrived at its destinationat time: 4361.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 8 has arrived at its destinationat time: 5355.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 10 has arrived at its destinationat time: 5412.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 6 has arrived at its destinationat time: 5705.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 7 has arrived at its destinationat time: 6014.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 9 has arrived at its destinationat time: 6201.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 5 has arrived at its destinationat time: 6359.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 2 has arrived at its destinationat time: 6718.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 3 has arrived at its destinationat time: 7487.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 20 has arrived at its destinationat time: 8201.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 487 has arrived at its destinationat time: 8242.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 16 has arrived at its destinationat time: 8386.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 18 has arrived at its destinationat time: 8544.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 21 has arrived at its destinationat time: 8624.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 14 has arrived at its destinationat time: 9020.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 15 has arrived at its destinationat time: 9206.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 17 has arrived at its destinationat time: 9230.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 482 has arrived at its destinationat time: 9258.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 11 has arrived at its destinationat time: 9492.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 13 has arrived at its destinationat time: 9605.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 12 has arrived at its destinationat time: 9861.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 15 has arrived at its destinationat time: 10033.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 485 has arrived at its destinationat time: 10362.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 13 has arrived at its destinationat time: 10380.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 3 has arrived at its destinationat time: 10469.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 19 has arrived at its destinationat time: 10816.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 19 has arrived at its destinationat time: 11321.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 26 has arrived at its destinationat time: 11424.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 22 has arrived at its destinationat time: 11858.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 28 has arrived at its destinationat time: 11878.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 26 has arrived at its destinationat time: 12030.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 23 has arrived at its destinationat time: 12607.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 30 has arrived at its destinationat time: 12658.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 27 has arrived at its destinationat time: 13368.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 25 has arrived at its destinationat time: 14336.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 41 has arrived at its destinationat time: 14529.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 31 has arrived at its destinationat time: 14600.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 32 has arrived at its destinationat time: 14615.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 24 has arrived at its destinationat time: 14682.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 29 has arrived at its destinationat time: 14800.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 36 has arrived at its destinationat time: 14865.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 33 has arrived at its destinationat time: 14971.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 35 has arrived at its destinationat time: 15647.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 14 has arrived at its destinationat time: 16190.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 34 has arrived at its destinationat time: 16484.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 36 has arrived at its destinationat time: 16655.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 38 has arrived at its destinationat time: 17151.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 7 has arrived at its destinationat time: 17244.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 20 has arrived at its destinationat time: 17708.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 37 has arrived at its destinationat time: 17809.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 40 has arrived at its destinationat time: 17822.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 42 has arrived at its destinationat time: 17827.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 43 has arrived at its destinationat time: 17931.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 28 has arrived at its destinationat time: 18261.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 44 has arrived at its destinationat time: 18335.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 39 has arrived at its destinationat time: 18365.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 52 has arrived at its destinationat time: 18429.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 37 has arrived at its destinationat time: 18694.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 45 has arrived at its destinationat time: 19327.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 2 has arrived at its destinationat time: 19396.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 50 has arrived at its destinationat time: 19969.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 48 has arrived at its destinationat time: 20443.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 41 has arrived at its destinationat time: 20502.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 54 has arrived at its destinationat time: 20647.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 46 has arrived at its destinationat time: 20860.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 47 has arrived at its destinationat time: 20919.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 53 has arrived at its destinationat time: 21368.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 49 has arrived at its destinationat time: 21686.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 54 has arrived at its destinationat time: 22002.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 51 has arrived at its destinationat time: 22094.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 57 has arrived at its destinationat time: 22378.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 55 has arrived at its destinationat time: 22555.0
+Sep 08, 2016 10:22:48 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 56 has arrived at its destinationat time: 22648.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 18 has arrived at its destinationat time: 23166.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 64 has arrived at its destinationat time: 23222.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 21 has arrived at its destinationat time: 23549.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 27 has arrived at its destinationat time: 23638.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 59 has arrived at its destinationat time: 23991.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 62 has arrived at its destinationat time: 24140.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 60 has arrived at its destinationat time: 24494.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 484 has arrived at its destinationat time: 24499.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 483 has arrived at its destinationat time: 24521.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 58 has arrived at its destinationat time: 24810.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 63 has arrived at its destinationat time: 24826.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 65 has arrived at its destinationat time: 24978.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 61 has arrived at its destinationat time: 25136.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 478 has arrived at its destinationat time: 25440.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 69 has arrived at its destinationat time: 25477.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 52 has arrived at its destinationat time: 25567.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 76 has arrived at its destinationat time: 25717.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 51 has arrived at its destinationat time: 25951.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 81 has arrived at its destinationat time: 26118.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 70 has arrived at its destinationat time: 26145.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 69 has arrived at its destinationat time: 26192.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 31 has arrived at its destinationat time: 26394.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 68 has arrived at its destinationat time: 26473.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 74 has arrived at its destinationat time: 26533.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 82 has arrived at its destinationat time: 26598.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 486 has arrived at its destinationat time: 26625.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 67 has arrived at its destinationat time: 26763.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 1 has arrived at its destinationat time: 26897.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 479 has arrived at its destinationat time: 27025.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 17 has arrived at its destinationat time: 27159.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 75 has arrived at its destinationat time: 27194.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 83 has arrived at its destinationat time: 27202.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 71 has arrived at its destinationat time: 27265.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 71 has arrived at its destinationat time: 27669.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 44 has arrived at its destinationat time: 27757.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 66 has arrived at its destinationat time: 28007.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 77 has arrived at its destinationat time: 28058.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 12 has arrived at its destinationat time: 28130.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 78 has arrived at its destinationat time: 28374.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 72 has arrived at its destinationat time: 28512.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 73 has arrived at its destinationat time: 28518.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 55 has arrived at its destinationat time: 28649.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 80 has arrived at its destinationat time: 29005.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 79 has arrived at its destinationat time: 29055.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 110 has arrived at its destinationat time: 29181.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 91 has arrived at its destinationat time: 29314.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 38 has arrived at its destinationat time: 29339.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 480 has arrived at its destinationat time: 29470.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 86 has arrived at its destinationat time: 29610.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 107 has arrived at its destinationat time: 29716.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 112 has arrived at its destinationat time: 29747.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 88 has arrived at its destinationat time: 29748.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 40 has arrived at its destinationat time: 29844.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 96 has arrived at its destinationat time: 29892.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 108 has arrived at its destinationat time: 29896.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 105 has arrived at its destinationat time: 29904.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 8 has arrived at its destinationat time: 29971.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 33 has arrived at its destinationat time: 30020.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 93 has arrived at its destinationat time: 30134.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 101 has arrived at its destinationat time: 30235.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 104 has arrived at its destinationat time: 30308.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 102 has arrived at its destinationat time: 30490.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 97 has arrived at its destinationat time: 30527.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 111 has arrived at its destinationat time: 30614.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 100 has arrived at its destinationat time: 30654.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 6 has arrived at its destinationat time: 30791.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 89 has arrived at its destinationat time: 30860.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 94 has arrived at its destinationat time: 30984.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 23 has arrived at its destinationat time: 31104.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 87 has arrived at its destinationat time: 31166.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 109 has arrived at its destinationat time: 31210.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 32 has arrived at its destinationat time: 31272.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 84 has arrived at its destinationat time: 31306.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 112 has arrived at its destinationat time: 31343.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 95 has arrived at its destinationat time: 31361.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 106 has arrived at its destinationat time: 31362.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 113 has arrived at its destinationat time: 31473.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 90 has arrived at its destinationat time: 31659.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 92 has arrived at its destinationat time: 31664.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 58 has arrived at its destinationat time: 31700.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 85 has arrived at its destinationat time: 31725.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 99 has arrived at its destinationat time: 31736.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 92 has arrived at its destinationat time: 31967.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 42 has arrived at its destinationat time: 32015.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 103 has arrived at its destinationat time: 32086.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 10 has arrived at its destinationat time: 32116.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 5 has arrived at its destinationat time: 32302.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 66 has arrived at its destinationat time: 32374.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 95 has arrived at its destinationat time: 32432.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 98 has arrived at its destinationat time: 32521.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 134 has arrived at its destinationat time: 32626.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 87 has arrived at its destinationat time: 32793.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 130 has arrived at its destinationat time: 33050.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 140 has arrived at its destinationat time: 33123.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 114 has arrived at its destinationat time: 33298.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 137 has arrived at its destinationat time: 33375.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 129 has arrived at its destinationat time: 33480.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 120 has arrived at its destinationat time: 33525.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 149 has arrived at its destinationat time: 33537.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 147 has arrived at its destinationat time: 33596.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 80 has arrived at its destinationat time: 33619.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 124 has arrived at its destinationat time: 33670.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 128 has arrived at its destinationat time: 33701.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 139 has arrived at its destinationat time: 33709.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 133 has arrived at its destinationat time: 33824.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 117 has arrived at its destinationat time: 33836.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 148 has arrived at its destinationat time: 33951.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 150 has arrived at its destinationat time: 33952.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 89 has arrived at its destinationat time: 34022.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 9 has arrived at its destinationat time: 34136.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 144 has arrived at its destinationat time: 34207.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 142 has arrived at its destinationat time: 34320.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 64 has arrived at its destinationat time: 34366.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 103 has arrived at its destinationat time: 34432.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 122 has arrived at its destinationat time: 34434.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 131 has arrived at its destinationat time: 34554.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 83 has arrived at its destinationat time: 34557.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 81 has arrived at its destinationat time: 34597.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 76 has arrived at its destinationat time: 34613.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 145 has arrived at its destinationat time: 34632.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 16 has arrived at its destinationat time: 34693.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 133 has arrived at its destinationat time: 34713.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 125 has arrived at its destinationat time: 34728.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 121 has arrived at its destinationat time: 34846.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 144 has arrived at its destinationat time: 34962.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 119 has arrived at its destinationat time: 35127.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 126 has arrived at its destinationat time: 35153.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 143 has arrived at its destinationat time: 35231.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 118 has arrived at its destinationat time: 35299.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 114 has arrived at its destinationat time: 35496.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 132 has arrived at its destinationat time: 35499.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 136 has arrived at its destinationat time: 35578.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 116 has arrived at its destinationat time: 35595.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 11 has arrived at its destinationat time: 35645.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 135 has arrived at its destinationat time: 35656.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 123 has arrived at its destinationat time: 35737.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 141 has arrived at its destinationat time: 35784.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 115 has arrived at its destinationat time: 35805.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 127 has arrived at its destinationat time: 35973.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 146 has arrived at its destinationat time: 35978.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 138 has arrived at its destinationat time: 36012.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 151 has arrived at its destinationat time: 36226.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 34 has arrived at its destinationat time: 36293.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 35 has arrived at its destinationat time: 36310.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 39 has arrived at its destinationat time: 36337.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 172 has arrived at its destinationat time: 36523.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 123 has arrived at its destinationat time: 36545.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 175 has arrived at its destinationat time: 36576.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 176 has arrived at its destinationat time: 36684.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 97 has arrived at its destinationat time: 36737.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 183 has arrived at its destinationat time: 36935.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 163 has arrived at its destinationat time: 36957.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 156 has arrived at its destinationat time: 37056.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 172 has arrived at its destinationat time: 37129.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 84 has arrived at its destinationat time: 37135.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 104 has arrived at its destinationat time: 37220.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 158 has arrived at its destinationat time: 37255.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 159 has arrived at its destinationat time: 37358.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 142 has arrived at its destinationat time: 37384.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 157 has arrived at its destinationat time: 37385.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 182 has arrived at its destinationat time: 37423.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 101 has arrived at its destinationat time: 37555.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 166 has arrived at its destinationat time: 37576.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 149 has arrived at its destinationat time: 37584.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 167 has arrived at its destinationat time: 37627.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 162 has arrived at its destinationat time: 37647.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 168 has arrived at its destinationat time: 37696.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 177 has arrived at its destinationat time: 37827.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 173 has arrived at its destinationat time: 38038.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 22 has arrived at its destinationat time: 38178.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 181 has arrived at its destinationat time: 38193.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 65 has arrived at its destinationat time: 38326.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 178 has arrived at its destinationat time: 38335.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 109 has arrived at its destinationat time: 38383.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 179 has arrived at its destinationat time: 38391.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 160 has arrived at its destinationat time: 38395.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 137 has arrived at its destinationat time: 38589.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 127 has arrived at its destinationat time: 38595.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 184 has arrived at its destinationat time: 38617.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 121 has arrived at its destinationat time: 38662.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 24 has arrived at its destinationat time: 38739.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 153 has arrived at its destinationat time: 38759.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 115 has arrived at its destinationat time: 38773.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 170 has arrived at its destinationat time: 38789.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 174 has arrived at its destinationat time: 38820.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 164 has arrived at its destinationat time: 38846.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 49 has arrived at its destinationat time: 38879.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 180 has arrived at its destinationat time: 38938.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 47 has arrived at its destinationat time: 38969.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 155 has arrived at its destinationat time: 39007.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 154 has arrived at its destinationat time: 39018.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 96 has arrived at its destinationat time: 39044.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 162 has arrived at its destinationat time: 39072.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 155 has arrived at its destinationat time: 39310.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 29 has arrived at its destinationat time: 39341.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 152 has arrived at its destinationat time: 39345.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 59 has arrived at its destinationat time: 39482.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 67 has arrived at its destinationat time: 39494.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 161 has arrived at its destinationat time: 39525.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 56 has arrived at its destinationat time: 39650.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 171 has arrived at its destinationat time: 39829.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 169 has arrived at its destinationat time: 39874.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 207 has arrived at its destinationat time: 40043.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 153 has arrived at its destinationat time: 40126.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 108 has arrived at its destinationat time: 40199.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 208 has arrived at its destinationat time: 40624.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 30 has arrived at its destinationat time: 40633.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 148 has arrived at its destinationat time: 40715.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 209 has arrived at its destinationat time: 40743.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 203 has arrived at its destinationat time: 40761.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 201 has arrived at its destinationat time: 40942.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 190 has arrived at its destinationat time: 40949.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 189 has arrived at its destinationat time: 40963.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 206 has arrived at its destinationat time: 41055.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 25 has arrived at its destinationat time: 41215.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 206 has arrived at its destinationat time: 41358.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 130 has arrived at its destinationat time: 41370.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 198 has arrived at its destinationat time: 41522.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 200 has arrived at its destinationat time: 41583.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 74 has arrived at its destinationat time: 41672.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 202 has arrived at its destinationat time: 41688.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 70 has arrived at its destinationat time: 41857.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 185 has arrived at its destinationat time: 41997.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 193 has arrived at its destinationat time: 42088.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 43 has arrived at its destinationat time: 42099.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 210 has arrived at its destinationat time: 42123.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 191 has arrived at its destinationat time: 42123.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 205 has arrived at its destinationat time: 42267.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 73 has arrived at its destinationat time: 42355.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 195 has arrived at its destinationat time: 42369.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 120 has arrived at its destinationat time: 42389.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 196 has arrived at its destinationat time: 42480.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 188 has arrived at its destinationat time: 42484.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 117 has arrived at its destinationat time: 42488.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 152 has arrived at its destinationat time: 42578.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 194 has arrived at its destinationat time: 42609.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 78 has arrived at its destinationat time: 42614.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 210 has arrived at its destinationat time: 42648.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 192 has arrived at its destinationat time: 42763.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 187 has arrived at its destinationat time: 42783.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 197 has arrived at its destinationat time: 42785.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 199 has arrived at its destinationat time: 42862.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 192 has arrived at its destinationat time: 43073.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 60 has arrived at its destinationat time: 43085.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 205 has arrived at its destinationat time: 43195.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 186 has arrived at its destinationat time: 43203.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 204 has arrived at its destinationat time: 43245.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 150 has arrived at its destinationat time: 43313.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 231 has arrived at its destinationat time: 43449.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 99 has arrived at its destinationat time: 43668.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 143 has arrived at its destinationat time: 43819.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 46 has arrived at its destinationat time: 43823.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 53 has arrived at its destinationat time: 44037.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 50 has arrived at its destinationat time: 44098.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 219 has arrived at its destinationat time: 44142.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 226 has arrived at its destinationat time: 44313.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 215 has arrived at its destinationat time: 44353.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 186 has arrived at its destinationat time: 44369.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 220 has arrived at its destinationat time: 44433.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 102 has arrived at its destinationat time: 44593.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 45 has arrived at its destinationat time: 44601.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 222 has arrived at its destinationat time: 44901.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 224 has arrived at its destinationat time: 44971.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 221 has arrived at its destinationat time: 45097.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 212 has arrived at its destinationat time: 45119.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 229 has arrived at its destinationat time: 45124.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 211 has arrived at its destinationat time: 45238.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 223 has arrived at its destinationat time: 45311.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 228 has arrived at its destinationat time: 45344.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 171 has arrived at its destinationat time: 45412.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 146 has arrived at its destinationat time: 45460.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 75 has arrived at its destinationat time: 45552.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 79 has arrived at its destinationat time: 45591.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 62 has arrived at its destinationat time: 46046.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 156 has arrived at its destinationat time: 46127.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 227 has arrived at its destinationat time: 46319.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 214 has arrived at its destinationat time: 46354.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 61 has arrived at its destinationat time: 46354.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 151 has arrived at its destinationat time: 46425.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 225 has arrived at its destinationat time: 46432.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 213 has arrived at its destinationat time: 46437.0
+Sep 08, 2016 10:22:49 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 98 has arrived at its destinationat time: 46472.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 230 has arrived at its destinationat time: 46561.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 217 has arrived at its destinationat time: 46603.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 157 has arrived at its destinationat time: 46604.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 86 has arrived at its destinationat time: 46705.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 216 has arrived at its destinationat time: 46947.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 122 has arrived at its destinationat time: 47017.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 48 has arrived at its destinationat time: 47098.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 247 has arrived at its destinationat time: 47157.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 72 has arrived at its destinationat time: 47338.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 243 has arrived at its destinationat time: 47342.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 217 has arrived at its destinationat time: 47469.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 234 has arrived at its destinationat time: 47512.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 233 has arrived at its destinationat time: 47749.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 236 has arrived at its destinationat time: 47865.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 239 has arrived at its destinationat time: 48010.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 248 has arrived at its destinationat time: 48043.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 57 has arrived at its destinationat time: 48139.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 246 has arrived at its destinationat time: 48184.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 244 has arrived at its destinationat time: 48434.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 106 has arrived at its destinationat time: 48555.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 169 has arrived at its destinationat time: 48698.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 100 has arrived at its destinationat time: 48713.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 185 has arrived at its destinationat time: 48737.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 241 has arrived at its destinationat time: 48812.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 187 has arrived at its destinationat time: 48813.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 90 has arrived at its destinationat time: 49008.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 251 has arrived at its destinationat time: 49119.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 125 has arrived at its destinationat time: 49191.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 238 has arrived at its destinationat time: 49239.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 232 has arrived at its destinationat time: 49245.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 237 has arrived at its destinationat time: 49318.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 240 has arrived at its destinationat time: 49323.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 246 has arrived at its destinationat time: 49453.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 189 has arrived at its destinationat time: 49475.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 235 has arrived at its destinationat time: 49548.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 128 has arrived at its destinationat time: 49581.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 179 has arrived at its destinationat time: 49621.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 249 has arrived at its destinationat time: 49929.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 250 has arrived at its destinationat time: 50094.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 245 has arrived at its destinationat time: 50153.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 132 has arrived at its destinationat time: 50291.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 202 has arrived at its destinationat time: 50347.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 198 has arrived at its destinationat time: 50364.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 107 has arrived at its destinationat time: 50415.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 113 has arrived at its destinationat time: 50539.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 242 has arrived at its destinationat time: 50684.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 82 has arrived at its destinationat time: 50740.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 68 has arrived at its destinationat time: 50762.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 116 has arrived at its destinationat time: 50785.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 255 has arrived at its destinationat time: 50963.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 119 has arrived at its destinationat time: 51025.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 267 has arrived at its destinationat time: 51083.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 129 has arrived at its destinationat time: 51224.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 195 has arrived at its destinationat time: 51247.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 194 has arrived at its destinationat time: 51343.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 258 has arrived at its destinationat time: 51636.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 181 has arrived at its destinationat time: 51666.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 266 has arrived at its destinationat time: 51773.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 259 has arrived at its destinationat time: 51823.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 160 has arrived at its destinationat time: 51892.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 263 has arrived at its destinationat time: 51948.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 158 has arrived at its destinationat time: 51976.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 253 has arrived at its destinationat time: 52058.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 159 has arrived at its destinationat time: 52193.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 252 has arrived at its destinationat time: 52425.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 262 has arrived at its destinationat time: 52438.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 256 has arrived at its destinationat time: 52948.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 229 has arrived at its destinationat time: 52952.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 105 has arrived at its destinationat time: 53139.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 261 has arrived at its destinationat time: 53194.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 265 has arrived at its destinationat time: 53209.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 91 has arrived at its destinationat time: 53231.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 264 has arrived at its destinationat time: 53304.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 63 has arrived at its destinationat time: 53521.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 239 has arrived at its destinationat time: 53538.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 168 has arrived at its destinationat time: 53552.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 201 has arrived at its destinationat time: 53581.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 254 has arrived at its destinationat time: 53611.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 257 has arrived at its destinationat time: 53624.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 110 has arrived at its destinationat time: 53667.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 94 has arrived at its destinationat time: 53692.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 268 has arrived at its destinationat time: 53734.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 219 has arrived at its destinationat time: 53769.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 173 has arrived at its destinationat time: 54156.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 111 has arrived at its destinationat time: 54156.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 269 has arrived at its destinationat time: 54214.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 260 has arrived at its destinationat time: 54254.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 124 has arrived at its destinationat time: 54289.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 235 has arrived at its destinationat time: 54292.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 282 has arrived at its destinationat time: 54391.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 170 has arrived at its destinationat time: 54498.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 204 has arrived at its destinationat time: 54556.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 290 has arrived at its destinationat time: 54576.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 287 has arrived at its destinationat time: 54595.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 273 has arrived at its destinationat time: 54659.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 284 has arrived at its destinationat time: 54672.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 272 has arrived at its destinationat time: 55053.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 163 has arrived at its destinationat time: 55073.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 77 has arrived at its destinationat time: 55202.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 175 has arrived at its destinationat time: 55279.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 140 has arrived at its destinationat time: 55282.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 285 has arrived at its destinationat time: 55321.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 93 has arrived at its destinationat time: 55374.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 279 has arrived at its destinationat time: 55468.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 134 has arrived at its destinationat time: 55474.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 288 has arrived at its destinationat time: 55502.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 141 has arrived at its destinationat time: 55668.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 203 has arrived at its destinationat time: 55687.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 274 has arrived at its destinationat time: 55896.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 276 has arrived at its destinationat time: 55942.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 280 has arrived at its destinationat time: 56181.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 215 has arrived at its destinationat time: 56208.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 85 has arrived at its destinationat time: 56319.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 177 has arrived at its destinationat time: 56349.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 278 has arrived at its destinationat time: 56495.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 249 has arrived at its destinationat time: 56829.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 166 has arrived at its destinationat time: 56833.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 241 has arrived at its destinationat time: 56834.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 283 has arrived at its destinationat time: 56867.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 251 has arrived at its destinationat time: 56875.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 260 has arrived at its destinationat time: 57073.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 277 has arrived at its destinationat time: 57185.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 271 has arrived at its destinationat time: 57194.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 275 has arrived at its destinationat time: 57302.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 88 has arrived at its destinationat time: 57422.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 118 has arrived at its destinationat time: 57451.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 240 has arrived at its destinationat time: 57543.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 220 has arrived at its destinationat time: 57554.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 281 has arrived at its destinationat time: 57573.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 256 has arrived at its destinationat time: 57608.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 270 has arrived at its destinationat time: 57623.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 213 has arrived at its destinationat time: 57628.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 286 has arrived at its destinationat time: 57666.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 224 has arrived at its destinationat time: 57741.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 145 has arrived at its destinationat time: 57881.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 289 has arrived at its destinationat time: 57988.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 258 has arrived at its destinationat time: 58018.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 302 has arrived at its destinationat time: 58032.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 291 has arrived at its destinationat time: 58053.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 281 has arrived at its destinationat time: 58062.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 298 has arrived at its destinationat time: 58125.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 182 has arrived at its destinationat time: 58349.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 317 has arrived at its destinationat time: 58405.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 293 has arrived at its destinationat time: 58479.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 139 has arrived at its destinationat time: 58499.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 306 has arrived at its destinationat time: 58531.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 316 has arrived at its destinationat time: 58543.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 308 has arrived at its destinationat time: 58631.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 315 has arrived at its destinationat time: 58643.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 176 has arrived at its destinationat time: 58692.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 297 has arrived at its destinationat time: 58716.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 311 has arrived at its destinationat time: 59066.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 267 has arrived at its destinationat time: 59101.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 303 has arrived at its destinationat time: 59166.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 131 has arrived at its destinationat time: 59195.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 285 has arrived at its destinationat time: 59254.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 236 has arrived at its destinationat time: 59316.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 294 has arrived at its destinationat time: 59331.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 250 has arrived at its destinationat time: 59377.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 126 has arrived at its destinationat time: 59429.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 310 has arrived at its destinationat time: 59590.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 184 has arrived at its destinationat time: 59620.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 295 has arrived at its destinationat time: 59651.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 304 has arrived at its destinationat time: 59777.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 305 has arrived at its destinationat time: 59849.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 301 has arrived at its destinationat time: 59881.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 180 has arrived at its destinationat time: 60084.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 306 has arrived at its destinationat time: 60216.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 183 has arrived at its destinationat time: 60303.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 303 has arrived at its destinationat time: 60405.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 230 has arrived at its destinationat time: 60436.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 296 has arrived at its destinationat time: 60508.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 225 has arrived at its destinationat time: 60556.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 178 has arrived at its destinationat time: 60639.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 309 has arrived at its destinationat time: 60717.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 313 has arrived at its destinationat time: 60739.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 292 has arrived at its destinationat time: 60772.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 190 has arrived at its destinationat time: 60791.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 135 has arrived at its destinationat time: 60922.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 299 has arrived at its destinationat time: 60946.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 307 has arrived at its destinationat time: 61053.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 312 has arrived at its destinationat time: 61215.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 209 has arrived at its destinationat time: 61235.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 314 has arrived at its destinationat time: 61243.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 300 has arrived at its destinationat time: 61467.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 321 has arrived at its destinationat time: 61521.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 318 has arrived at its destinationat time: 61573.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 326 has arrived at its destinationat time: 61684.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 341 has arrived at its destinationat time: 61687.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 352 has arrived at its destinationat time: 61705.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 314 has arrived at its destinationat time: 61748.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 333 has arrived at its destinationat time: 61894.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 147 has arrived at its destinationat time: 61960.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 245 has arrived at its destinationat time: 61999.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 136 has arrived at its destinationat time: 62039.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 321 has arrived at its destinationat time: 62127.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 271 has arrived at its destinationat time: 62169.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 138 has arrived at its destinationat time: 62283.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 247 has arrived at its destinationat time: 62366.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 340 has arrived at its destinationat time: 62476.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 329 has arrived at its destinationat time: 62538.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 313 has arrived at its destinationat time: 62595.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 347 has arrived at its destinationat time: 62607.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 288 has arrived at its destinationat time: 62734.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 307 has arrived at its destinationat time: 62752.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 319 has arrived at its destinationat time: 62762.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 332 has arrived at its destinationat time: 62771.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 320 has arrived at its destinationat time: 62827.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 337 has arrived at its destinationat time: 62829.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 154 has arrived at its destinationat time: 62846.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 262 has arrived at its destinationat time: 62883.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 330 has arrived at its destinationat time: 62960.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 349 has arrived at its destinationat time: 63041.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 335 has arrived at its destinationat time: 63063.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 323 has arrived at its destinationat time: 63079.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 320 has arrived at its destinationat time: 63130.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 354 has arrived at its destinationat time: 63268.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 174 has arrived at its destinationat time: 63295.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 348 has arrived at its destinationat time: 63325.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 343 has arrived at its destinationat time: 63333.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 344 has arrived at its destinationat time: 63364.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 243 has arrived at its destinationat time: 63555.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 351 has arrived at its destinationat time: 63563.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 322 has arrived at its destinationat time: 63596.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 273 has arrived at its destinationat time: 63608.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 339 has arrived at its destinationat time: 63649.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 336 has arrived at its destinationat time: 63682.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 325 has arrived at its destinationat time: 63712.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 349 has arrived at its destinationat time: 63855.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 300 has arrived at its destinationat time: 63912.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 346 has arrived at its destinationat time: 64018.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 328 has arrived at its destinationat time: 64023.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 299 has arrived at its destinationat time: 64024.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 242 has arrived at its destinationat time: 64027.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 353 has arrived at its destinationat time: 64044.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 297 has arrived at its destinationat time: 64115.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 351 has arrived at its destinationat time: 64236.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 237 has arrived at its destinationat time: 64328.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 216 has arrived at its destinationat time: 64333.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 345 has arrived at its destinationat time: 64337.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 338 has arrived at its destinationat time: 64387.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 350 has arrived at its destinationat time: 64447.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 253 has arrived at its destinationat time: 64453.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 228 has arrived at its destinationat time: 64497.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 327 has arrived at its destinationat time: 64540.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 193 has arrived at its destinationat time: 64582.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 324 has arrived at its destinationat time: 64590.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 208 has arrived at its destinationat time: 64631.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 161 has arrived at its destinationat time: 64763.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 338 has arrived at its destinationat time: 64793.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 275 has arrived at its destinationat time: 64819.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 261 has arrived at its destinationat time: 64829.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 211 has arrived at its destinationat time: 64829.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 345 has arrived at its destinationat time: 64842.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 342 has arrived at its destinationat time: 64911.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 374 has arrived at its destinationat time: 64915.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 327 has arrived at its destinationat time: 65045.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 376 has arrived at its destinationat time: 65061.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 334 has arrived at its destinationat time: 65084.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 342 has arrived at its destinationat time: 65214.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 379 has arrived at its destinationat time: 65226.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 191 has arrived at its destinationat time: 65268.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 207 has arrived at its destinationat time: 65314.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 200 has arrived at its destinationat time: 65321.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 376 has arrived at its destinationat time: 65364.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 346 has arrived at its destinationat time: 65484.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 365 has arrived at its destinationat time: 65538.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 343 has arrived at its destinationat time: 65559.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 379 has arrived at its destinationat time: 65630.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 371 has arrived at its destinationat time: 65656.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 362 has arrived at its destinationat time: 65666.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 375 has arrived at its destinationat time: 65741.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 222 has arrived at its destinationat time: 65792.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 334 has arrived at its destinationat time: 65923.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 263 has arrived at its destinationat time: 66117.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 363 has arrived at its destinationat time: 66122.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 167 has arrived at its destinationat time: 66135.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 375 has arrived at its destinationat time: 66147.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 373 has arrived at its destinationat time: 66151.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 227 has arrived at its destinationat time: 66152.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 214 has arrived at its destinationat time: 66155.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 382 has arrived at its destinationat time: 66168.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 359 has arrived at its destinationat time: 66179.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 367 has arrived at its destinationat time: 66194.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 364 has arrived at its destinationat time: 66253.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 370 has arrived at its destinationat time: 66333.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 368 has arrived at its destinationat time: 66380.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 369 has arrived at its destinationat time: 66412.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 199 has arrived at its destinationat time: 66624.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 377 has arrived at its destinationat time: 66681.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 292 has arrived at its destinationat time: 66779.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 326 has arrived at its destinationat time: 66849.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 322 has arrived at its destinationat time: 66850.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 226 has arrived at its destinationat time: 66850.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 369 has arrived at its destinationat time: 66917.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 289 has arrived at its destinationat time: 66923.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 323 has arrived at its destinationat time: 66967.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 188 has arrived at its destinationat time: 67022.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 164 has arrived at its destinationat time: 67080.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 340 has arrived at its destinationat time: 67091.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 377 has arrived at its destinationat time: 67186.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 231 has arrived at its destinationat time: 67211.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 366 has arrived at its destinationat time: 67306.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 274 has arrived at its destinationat time: 67351.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 360 has arrived at its destinationat time: 67441.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 355 has arrived at its destinationat time: 67561.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 301 has arrived at its destinationat time: 67588.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 357 has arrived at its destinationat time: 67599.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 293 has arrived at its destinationat time: 67658.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 265 has arrived at its destinationat time: 67706.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 357 has arrived at its destinationat time: 67801.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 355 has arrived at its destinationat time: 67965.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 378 has arrived at its destinationat time: 67972.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 358 has arrived at its destinationat time: 68042.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 361 has arrived at its destinationat time: 68062.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 372 has arrived at its destinationat time: 68104.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 356 has arrived at its destinationat time: 68142.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 381 has arrived at its destinationat time: 68264.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 380 has arrived at its destinationat time: 68335.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 238 has arrived at its destinationat time: 68432.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 378 has arrived at its destinationat time: 68578.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 405 has arrived at its destinationat time: 68695.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 398 has arrived at its destinationat time: 68712.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 354 has arrived at its destinationat time: 68777.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 385 has arrived at its destinationat time: 68811.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 383 has arrived at its destinationat time: 68994.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 248 has arrived at its destinationat time: 68999.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 398 has arrived at its destinationat time: 69015.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 391 has arrived at its destinationat time: 69016.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 394 has arrived at its destinationat time: 69068.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 365 has arrived at its destinationat time: 69147.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 392 has arrived at its destinationat time: 69318.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 252 has arrived at its destinationat time: 69325.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 386 has arrived at its destinationat time: 69529.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 390 has arrived at its destinationat time: 69844.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 400 has arrived at its destinationat time: 69846.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 392 has arrived at its destinationat time: 69926.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 197 has arrived at its destinationat time: 69956.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 404 has arrived at its destinationat time: 70034.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 390 has arrived at its destinationat time: 70046.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 395 has arrived at its destinationat time: 70075.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 255 has arrived at its destinationat time: 70125.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 401 has arrived at its destinationat time: 70160.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 393 has arrived at its destinationat time: 70185.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 396 has arrived at its destinationat time: 70239.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 352 has arrived at its destinationat time: 70338.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 395 has arrived at its destinationat time: 70479.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 388 has arrived at its destinationat time: 70571.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 396 has arrived at its destinationat time: 70744.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 406 has arrived at its destinationat time: 70849.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 387 has arrived at its destinationat time: 70850.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 388 has arrived at its destinationat time: 70975.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 196 has arrived at its destinationat time: 71001.0
+Sep 08, 2016 10:22:50 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 284 has arrived at its destinationat time: 71154.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 397 has arrived at its destinationat time: 71328.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 356 has arrived at its destinationat time: 71479.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 391 has arrived at its destinationat time: 71548.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 406 has arrived at its destinationat time: 71556.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 254 has arrived at its destinationat time: 71597.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 405 has arrived at its destinationat time: 71672.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 402 has arrived at its destinationat time: 71679.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 309 has arrived at its destinationat time: 71716.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 407 has arrived at its destinationat time: 71728.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 374 has arrived at its destinationat time: 71839.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 384 has arrived at its destinationat time: 71847.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 399 has arrived at its destinationat time: 72028.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 389 has arrived at its destinationat time: 72110.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 244 has arrived at its destinationat time: 72232.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 296 has arrived at its destinationat time: 72250.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 404 has arrived at its destinationat time: 72403.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 399 has arrived at its destinationat time: 72432.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 414 has arrived at its destinationat time: 72554.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 233 has arrived at its destinationat time: 72572.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 430 has arrived at its destinationat time: 72600.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 325 has arrived at its destinationat time: 72606.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 414 has arrived at its destinationat time: 72655.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 223 has arrived at its destinationat time: 72880.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 259 has arrived at its destinationat time: 72921.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 234 has arrived at its destinationat time: 72974.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 336 has arrived at its destinationat time: 73002.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 384 has arrived at its destinationat time: 73072.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 407 has arrived at its destinationat time: 73138.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 350 has arrived at its destinationat time: 73193.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 411 has arrived at its destinationat time: 73208.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 408 has arrived at its destinationat time: 73274.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 232 has arrived at its destinationat time: 73319.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 347 has arrived at its destinationat time: 73506.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 212 has arrived at its destinationat time: 73534.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 221 has arrived at its destinationat time: 73744.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 409 has arrived at its destinationat time: 73750.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 425 has arrived at its destinationat time: 73753.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 294 has arrived at its destinationat time: 73796.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 266 has arrived at its destinationat time: 73867.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 425 has arrived at its destinationat time: 73955.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 424 has arrived at its destinationat time: 73990.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 385 has arrived at its destinationat time: 74138.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 286 has arrived at its destinationat time: 74224.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 394 has arrived at its destinationat time: 74288.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 421 has arrived at its destinationat time: 74290.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 422 has arrived at its destinationat time: 74325.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 426 has arrived at its destinationat time: 74370.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 424 has arrived at its destinationat time: 74394.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 429 has arrived at its destinationat time: 74412.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 380 has arrived at its destinationat time: 74450.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 409 has arrived at its destinationat time: 74457.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 410 has arrived at its destinationat time: 74522.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 418 has arrived at its destinationat time: 74635.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 368 has arrived at its destinationat time: 74646.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 426 has arrived at its destinationat time: 74673.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 428 has arrived at its destinationat time: 74690.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 423 has arrived at its destinationat time: 74705.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 418 has arrived at its destinationat time: 74736.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 360 has arrived at its destinationat time: 74768.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 417 has arrived at its destinationat time: 74772.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 421 has arrived at its destinationat time: 74795.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 427 has arrived at its destinationat time: 74832.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 387 has arrived at its destinationat time: 74982.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 333 has arrived at its destinationat time: 74988.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 428 has arrived at its destinationat time: 74993.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 420 has arrived at its destinationat time: 75031.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 416 has arrived at its destinationat time: 75040.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 412 has arrived at its destinationat time: 75059.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 389 has arrived at its destinationat time: 75080.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 419 has arrived at its destinationat time: 75321.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 315 has arrived at its destinationat time: 75342.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 298 has arrived at its destinationat time: 75393.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 413 has arrived at its destinationat time: 75403.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 420 has arrived at its destinationat time: 75962.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 366 has arrived at its destinationat time: 76009.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 372 has arrived at its destinationat time: 76038.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 429 has arrived at its destinationat time: 76143.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 434 has arrived at its destinationat time: 76219.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 268 has arrived at its destinationat time: 76343.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 276 has arrived at its destinationat time: 76379.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 434 has arrived at its destinationat time: 76623.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 439 has arrived at its destinationat time: 76669.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 332 has arrived at its destinationat time: 76707.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 308 has arrived at its destinationat time: 76737.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 440 has arrived at its destinationat time: 76759.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 317 has arrived at its destinationat time: 76876.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 443 has arrived at its destinationat time: 76931.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 436 has arrived at its destinationat time: 76946.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 443 has arrived at its destinationat time: 77032.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 381 has arrived at its destinationat time: 77050.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 439 has arrived at its destinationat time: 77077.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 431 has arrived at its destinationat time: 77092.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 353 has arrived at its destinationat time: 77312.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 432 has arrived at its destinationat time: 77523.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 436 has arrived at its destinationat time: 77552.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 442 has arrived at its destinationat time: 77618.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 445 has arrived at its destinationat time: 77745.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 435 has arrived at its destinationat time: 77869.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 442 has arrived at its destinationat time: 77921.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 432 has arrived at its destinationat time: 78028.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 282 has arrived at its destinationat time: 78049.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 437 has arrived at its destinationat time: 78102.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 445 has arrived at its destinationat time: 78149.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 295 has arrived at its destinationat time: 78175.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 283 has arrived at its destinationat time: 78252.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 269 has arrived at its destinationat time: 78313.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 344 has arrived at its destinationat time: 78337.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 450 has arrived at its destinationat time: 78527.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 412 has arrived at its destinationat time: 78540.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 290 has arrived at its destinationat time: 78554.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 402 has arrived at its destinationat time: 78625.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 438 has arrived at its destinationat time: 78663.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 433 has arrived at its destinationat time: 78672.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 361 has arrived at its destinationat time: 78678.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 272 has arrived at its destinationat time: 78756.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 449 has arrived at its destinationat time: 78788.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 401 has arrived at its destinationat time: 78844.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 257 has arrived at its destinationat time: 78855.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 438 has arrived at its destinationat time: 78865.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 437 has arrived at its destinationat time: 78910.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 287 has arrived at its destinationat time: 78947.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 446 has arrived at its destinationat time: 78948.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 433 has arrived at its destinationat time: 78975.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 450 has arrived at its destinationat time: 79032.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 448 has arrived at its destinationat time: 79084.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 444 has arrived at its destinationat time: 79090.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 444 has arrived at its destinationat time: 79092.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 447 has arrived at its destinationat time: 79181.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 278 has arrived at its destinationat time: 79224.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 449 has arrived at its destinationat time: 79295.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 341 has arrived at its destinationat time: 79295.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 446 has arrived at its destinationat time: 79352.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 411 has arrived at its destinationat time: 79473.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 328 has arrived at its destinationat time: 79576.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 447 has arrived at its destinationat time: 79585.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 417 has arrived at its destinationat time: 79593.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 316 has arrived at its destinationat time: 79593.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 337 has arrived at its destinationat time: 79711.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 448 has arrived at its destinationat time: 79791.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 311 has arrived at its destinationat time: 79862.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 410 has arrived at its destinationat time: 79904.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 455 has arrived at its destinationat time: 79920.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 367 has arrived at its destinationat time: 80005.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 319 has arrived at its destinationat time: 80041.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 465 has arrived at its destinationat time: 80058.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 363 has arrived at its destinationat time: 80200.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 462 has arrived at its destinationat time: 80200.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 462 has arrived at its destinationat time: 80301.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 386 has arrived at its destinationat time: 80345.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 364 has arrived at its destinationat time: 80353.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 422 has arrived at its destinationat time: 80368.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 305 has arrived at its destinationat time: 80474.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 457 has arrived at its destinationat time: 80492.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 463 has arrived at its destinationat time: 80504.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 465 has arrived at its destinationat time: 80563.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 335 has arrived at its destinationat time: 80620.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 460 has arrived at its destinationat time: 80647.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 277 has arrived at its destinationat time: 80729.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 454 has arrived at its destinationat time: 80786.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 397 has arrived at its destinationat time: 80856.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 452 has arrived at its destinationat time: 80928.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 463 has arrived at its destinationat time: 80929.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 451 has arrived at its destinationat time: 80943.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 318 has arrived at its destinationat time: 80968.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 430 has arrived at its destinationat time: 80989.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 264 has arrived at its destinationat time: 81019.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 416 has arrived at its destinationat time: 81028.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 460 has arrived at its destinationat time: 81051.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 457 has arrived at its destinationat time: 81098.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 456 has arrived at its destinationat time: 81111.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 362 has arrived at its destinationat time: 81173.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 454 has arrived at its destinationat time: 81190.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 452 has arrived at its destinationat time: 81231.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 461 has arrived at its destinationat time: 81386.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 459 has arrived at its destinationat time: 81391.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 371 has arrived at its destinationat time: 81410.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 456 has arrived at its destinationat time: 81515.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 451 has arrived at its destinationat time: 81549.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 466 has arrived at its destinationat time: 81564.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 373 has arrived at its destinationat time: 81586.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 461 has arrived at its destinationat time: 81891.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 427 has arrived at its destinationat time: 81891.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 459 has arrived at its destinationat time: 81896.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 440 has arrived at its destinationat time: 81971.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 458 has arrived at its destinationat time: 82064.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 464 has arrived at its destinationat time: 82193.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 464 has arrived at its destinationat time: 82496.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 453 has arrived at its destinationat time: 82574.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 358 has arrived at its destinationat time: 82580.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 348 has arrived at its destinationat time: 82591.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 330 has arrived at its destinationat time: 82770.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 453 has arrived at its destinationat time: 82776.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 339 has arrived at its destinationat time: 82781.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 304 has arrived at its destinationat time: 83058.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 477 has arrived at its destinationat time: 83332.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 413 has arrived at its destinationat time: 83418.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 475 has arrived at its destinationat time: 83466.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 472 has arrived at its destinationat time: 83546.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 477 has arrived at its destinationat time: 83748.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 383 has arrived at its destinationat time: 83794.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 279 has arrived at its destinationat time: 83804.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 312 has arrived at its destinationat time: 83817.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 474 has arrived at its destinationat time: 83882.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 471 has arrived at its destinationat time: 84021.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 475 has arrived at its destinationat time: 84072.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 472 has arrived at its destinationat time: 84152.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 400 has arrived at its destinationat time: 84155.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 393 has arrived at its destinationat time: 84265.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 324 has arrived at its destinationat time: 84284.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 474 has arrived at its destinationat time: 84387.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 280 has arrived at its destinationat time: 84412.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 471 has arrived at its destinationat time: 84425.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 423 has arrived at its destinationat time: 84517.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 476 has arrived at its destinationat time: 84769.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 435 has arrived at its destinationat time: 84989.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 476 has arrived at its destinationat time: 85274.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 473 has arrived at its destinationat time: 85388.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 329 has arrived at its destinationat time: 85505.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 359 has arrived at its destinationat time: 85532.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 302 has arrived at its destinationat time: 85645.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 468 has arrived at its destinationat time: 85668.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 466 has arrived at its destinationat time: 85866.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 473 has arrived at its destinationat time: 85893.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 458 has arrived at its destinationat time: 85901.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 419 has arrived at its destinationat time: 85948.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 408 has arrived at its destinationat time: 85977.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 431 has arrived at its destinationat time: 85978.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 270 has arrived at its destinationat time: 86120.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 468 has arrived at its destinationat time: 86274.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 467 has arrived at its destinationat time: 86322.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 455 has arrived at its destinationat time: 86322.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 469 has arrived at its destinationat time: 86351.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 382 has arrived at its destinationat time: 86470.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 470 has arrived at its destinationat time: 86485.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 370 has arrived at its destinationat time: 86503.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 469 has arrived at its destinationat time: 86553.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 291 has arrived at its destinationat time: 86573.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 467 has arrived at its destinationat time: 86726.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 470 has arrived at its destinationat time: 86889.0
+Sep 08, 2016 10:22:51 PM edu.ucdenver.cse.GRID.GRID_UTILS.logWriter log
+INFO: Agent 310 has arrived at its destinationat time: 86959.0

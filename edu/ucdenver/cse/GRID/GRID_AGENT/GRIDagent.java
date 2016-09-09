@@ -32,7 +32,7 @@ public class GRIDagent {
     private boolean needsDestination;  // The event we use to create new agents does not have access to their destination
 
 	public GRIDagent(String Id, String curLink, String origin, String destination, boolean simFlag, boolean needDest) {
-        super();
+        //super();
 
         this.Id = Id;
         this.myRoute = new GRIDroute();
