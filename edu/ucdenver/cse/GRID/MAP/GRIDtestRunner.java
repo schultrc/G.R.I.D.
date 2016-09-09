@@ -1,18 +1,21 @@
 package edu.ucdenver.cse.GRID.MAP;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
-import edu.ucdenver.cse.GRID.GRID_SIM.logWriter;
+import edu.ucdenver.cse.GRID.GRID_UTILS.logWriter;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Set;
+import java.util.logging.Level;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class GRIDtestRunner{
 
+	static logWriter testLW;
+	
     private GRIDmapReader myReader = new GRIDmapReader();
     // SmallNetwork2 PuebloNetwork 5x5network RyeNetwork
     private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml");
@@ -28,9 +31,9 @@ public class GRIDtestRunner{
     public void runTest()
     { // Pueblo start to finish 34.97s
 
-        logWriter testLW = new logWriter("data/test_output003.txt");
+        
 
-        testLW.writeOutput("this is another nother test");
+        testLW.log(Level.INFO, "this is another nother test");
 
 	    System.out.println("\nStarting test. . .");
         // Pueblo start to finish 34.97s

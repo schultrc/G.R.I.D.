@@ -3,6 +3,7 @@ package edu.ucdenver.cse.GRID.GRID_SIM;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.logging.Level;
 
 import org.matsim.api.core.v01.events.LinkEnterEvent;
 
@@ -13,10 +14,8 @@ import org.matsim.api.core.v01.events.handler.LinkEnterEventHandler;
 import org.matsim.api.core.v01.events.handler.LinkLeaveEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonArrivalEventHandler;
 import org.matsim.api.core.v01.events.handler.PersonDepartureEventHandler;
-import org.matsim.core.mobsim.framework.events.*;
-import org.matsim.core.mobsim.qsim.interfaces.Netsim;
-
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.GRID_UTILS.logWriter;
 import edu.ucdenver.cse.GRID.MAP.GRIDmap;
 
 public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLeaveEventHandler, PersonArrivalEventHandler,
@@ -63,6 +62,7 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		System.out.println("EVENT reset happened. ? ");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void handleEvent(LinkEnterEvent event) {
 		
@@ -107,6 +107,7 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 			// This is bad, an agent we don't know about just left a link
 			System.out.println("ERROR in LinkLeaveEvent: Agent: " + event.getPersonId().toString() +
 					           " does not exist in our system!");
+			logWriter.log(Level.WARNING, "Agent: " + event.getPersonId().toString() + " just left a link, but we don't know that agent!");
 		}
 	}
 
@@ -141,7 +142,7 @@ public class GRID_SIM_agentEventHandler implements LinkEnterEventHandler, LinkLe
 		
 		// Is this going to be one of OUR agents?  change the % value to change how many we do. %5 = 20 % of all agents
 		boolean simFlag = ((Double.parseDouble(event.getPersonId().toString()) % 2) == 0);
-		//simFlag = true;
+		simFlag = true;
 		// Get the destination - future MOD ?
 		
 		//String theOriginIntersection = ourMap.getRoad(event.getLinkId().toString()).getFrom();

@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.logging.Level;
 
 import edu.ucdenver.cse.GRID.MAP.*;
 import org.apache.log4j.Logger;
@@ -39,15 +40,13 @@ import org.matsim.core.router.TripRouter;
 import org.matsim.withinday.utils.EditRoutes;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.GRID_UTILS.logWriter;
 
 public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener, MobsimAfterSimStepListener {
-
+	
 	GRID_SIM_matsimEventHandler() {
-		
 	}
-	
-	//logWriter testLW;
-	
+
 	GRIDmap theMap;
 	
 	ConcurrentHashMap<String, GRIDagent> theAgents;
@@ -75,8 +74,6 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	// How do we use this? Can we make our own?
 	private static final Logger log = Logger.getLogger("dummy");
 
-	logWriter testLW = new logWriter("matsimEventHander_LOG");
-	
 	private TripRouter tripRouter;
 	private Scenario scenario;
 
@@ -87,7 +84,8 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	@Override
 	public void notifyMobsimBeforeSimStep(@SuppressWarnings("rawtypes") MobsimBeforeSimStepEvent event) {
 	
-		final Logger GRIDLog = Logger.getLogger("GRIDlogger");
+		//logWriter.log(Level.INFO, "notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
+
 		Netsim mobsim = (Netsim) event.getQueueSimulation() ;
 		
 		ConcurrentHashMap<String, MobsimAgent>  mobsimAgents = getAgentsToReplan(mobsim, theAgents);
@@ -135,33 +133,29 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 					}
 				}
 			}						
-		}
-		
-		// RCS Is this working, but sending it to the console?????
-		//GRIDLog.info("notifyMobsimBeforeSimStep " + event.toString() + " " + event.getSimulationTime() );
+		}		
 	}
 	
 	private boolean doReplanning(MobsimAgent agent, Netsim mobsim, String currentLinkId ) {
 
 		double now = mobsim.getSimTimer().getTimeOfDay();
-		logWriter.writeOutput("Starting replanning for agent: " + agent.getId().toString() + 
-				              "at time: " + now); 
-
+		//logWriter.log(Level.INFO,"Starting replanning for agent: " + agent.getId().toString() + "at time: " + now); 
+		
 		GRIDagent tempGRIDagent = theAgents.get(agent.getId().toString());
 		if (tempGRIDagent.getCurrentLink().equals(tempGRIDagent.getDestination() ) ) {
 			// We must already be at our destination!
 			
-			logWriter.writeOutput("Agent " + agent.getId().toString() + " has arrived at its destination");
-    		System.out.println("GOT THERE - Agent: " + agent.getId().toString()+ "\n\n  ****  \n\n");
+			logWriter.log(Level.INFO, "Agent " + agent.getId().toString() + " has arrived at its destination" + 
+			                          "at time: " + now);
 
+			// Is this where we die in MATSIM (no route in plan) ?
 			return true;
 		}
 			
 		if(theMap.getRoad(tempGRIDagent.getCurrentLink()).getTo().equals(
 				 theMap.getRoad(tempGRIDagent.getDestination()).getFrom()) ) {
-			// There is no other path needed, this check prevents our alg from barfing
-			logWriter.writeOutput("Agent " + agent.getId().toString() + " can no longer change route - almost there");
-    		System.out.println("Almost there! " + agent.getId().toString()+ "\n");
+			// If we can get to the start intersection of our destination link, we are there. Do no replan
+			//logWriter.log(Level.INFO,"Agent " + agent.getId().toString() + " can no longer change route - almost there");
     		
     		return true;
 		}
@@ -217,16 +211,14 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 
 	    // Initially, routes only have intersections, so set the roads
     	tempRoute.setRoads(theMap.getPathByRoad(tempRoute.getIntersections()));
-    	
-    	
-    	// FIX STARTS HERE
+    	   	
 	    // Our destination is on a road, but our calcs are based on intersections. 
     	// Find the intersection that starts the road our destination is on
     	
     	String destinationRoad = tempGRIDagent.getDestination();
     	String destinationIntersection = theMap.getRoad(destinationRoad).getFrom();
     	
-    	logWriter.writeOutput("Agent: " + agent.getId().toString() + " is going to: " + destinationIntersection);
+//    	logWriter.log(Level.INFO, "Agent: " + agent.getId().toString() + " is going to: " + destinationIntersection);
     	
     	String routeLastRoad = tempRoute.getRoads().get(tempRoute.getRoads().size() - 1);
     	if (!destinationIntersection.equals(theMap.getRoad(routeLastRoad).getFrom() )) {
@@ -236,7 +228,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 		else {
 			// This is bad, our new route doesn't go to where our agent wants to
 			// go
-			logWriter.writeOutput("ERROR: Cannot get to INT: " + destinationIntersection);
+			logWriter.log(Level.WARNING, "ERROR: Cannot get to INT: " + destinationIntersection);
 			System.out.println("CANT RE-ROUTE");
 			return false;
 		}
@@ -254,8 +246,7 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    else
 	    {
 	    	// If the routes were different, need to update the map, both add and remove
-	    	
-	    	
+    	
 	    	// Add the new route to our agent
 	    	tempGRIDagent.setRoute(tempRoute);
 	    	
@@ -280,23 +271,23 @@ public class GRID_SIM_matsimEventHandler implements MobsimBeforeSimStepListener,
 	    		// Add the road to the list for mobsim
 	    		mobsimLinks.add(Id.createLinkId(ourRoad));
 	    	}
-	    	logWriter.writeOutput("\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
-	    	 		              " destination is: " + tempGRIDagent.getDestination());
+//	    	logWriter.log(Level.INFO,"\n\n\nAgent " + agent.getId().toString() + " start: " + tempGRIDagent.getCurrentLink() + 
+//	    	 		              " destination is: " + tempGRIDagent.getDestination());
 	    	
-	    	logWriter.writeOutput("Mobsim links are: ");
-	    	for(Id<Link> mobsimlink:mobsimLinks) {
-	    		logWriter.writeOutput(mobsimlink.toString() + " ");
-	    	}
+	    	//logWriter.log(Level.INFO,"Mobsim links are: ");
+	    	//for(Id<Link> mobsimlink:mobsimLinks) {
+	    	//	logWriter.log(Level.INFO,mobsimlink.toString() + " ");
+	    	//}
 	    	
 	    	//System.out.print("\n");
 	    	
 	    	//System.out.println("agent is on" + agent.getCurrentLinkId().toString());
 	    	
 	    	
-	    		netRoute.setLinkIds(agent.getCurrentLinkId(), 
-	    							mobsimLinks, 
-	    							currentLeg.getRoute().getEndLinkId());
-	    	
+    		netRoute.setLinkIds(agent.getCurrentLinkId(), 
+    							mobsimLinks, 
+    							currentLeg.getRoute().getEndLinkId());
+    	
 
 	    	currentLeg.setRoute(netRoute);
 	    			
