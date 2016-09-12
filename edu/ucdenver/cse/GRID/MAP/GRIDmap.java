@@ -9,7 +9,9 @@ public final class GRIDmap implements Iterable<String> {
 	
 	private ConcurrentMap<String, GRIDintersection> Intersections = new ConcurrentHashMap<String, GRIDintersection>();
 	private ConcurrentMap<String, GRIDroad> Roads = new ConcurrentHashMap<String, GRIDroad >();
-	private Hashtable<String, GRIDroad> roadList = new Hashtable<>();
+
+	private ConcurrentMap<String, GRIDroad> roadList = new ConcurrentHashMap<>();
+	private ConcurrentMap<String, Long> intersectionList = new ConcurrentHashMap<>();
 
 	public ConcurrentMap<String, GRIDintersection> getIntersections() {
 		return Intersections;
@@ -25,13 +27,21 @@ public final class GRIDmap implements Iterable<String> {
 		Roads = roads;
 	}
 
-    public void loadRoadList(ConcurrentMap<String, GRIDroad > roads) {
-        roads.forEach((item,value)->
+    public void loadRoadList() {
+		this.Roads.forEach((item,value)->
                 roadList.put(value.getFrom()+value.getTo(),value));
+		this.Intersections.forEach((item,value)->
+				intersectionList.put(value.getId(),0L));
     }
-    public Hashtable getRoadList() { return roadList; }
+
+    public ConcurrentMap getRoadList() { return roadList; }
 
     public GRIDroad getRoadListItem(String itemID) { return roadList.get(itemID); }
+
+    public Long getIntersectionListItem(String itemID) { return intersectionList.get(itemID); }
+	public void setIntersectionListItemTimeAtExit(String itemID, Long exitTime) {
+		//GRIDintersection tempIntersection = new GRIDintersection();
+	}
 
 	@Override
 	public String toString() {
