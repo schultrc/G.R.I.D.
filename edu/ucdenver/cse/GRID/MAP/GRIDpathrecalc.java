@@ -23,14 +23,15 @@ public class GRIDpathrecalc {
     private ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal;
     GRIDnodeWeightTime startNodeValues;
     private Map<String,String> previousIntersections;
-    private Hashtable<String,GRIDroad> thisRoadList;
+    private Map<String,GRIDroad> thisRoadList;
     private long totalCalcTime;
     private long totalTravelTime;
 
     public GRIDpathrecalc(GRIDagent thisAgent, GRIDmap selfishMap, Long currentTime){
         this.intersections = selfishMap.getIntersections();
         this.roads = selfishMap.getRoads();
-        selfishMap.loadRoadList(selfishMap.getRoads());
+        //selfishMap.loadRoadList(selfishMap.getRoads());
+        selfishMap.loadRoadList();
         this.thisRoadList = selfishMap.getRoadList();
 
         // agtTo = thisAgent.getDestination();
