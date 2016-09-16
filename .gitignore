@@ -10,5 +10,5 @@ mine/
 GRID.iml
 G.R.I.D.iml
 logs/
-TEST_INFO_LOG.log
 TEST_ERR_LOG.log
+TEST_INFO_LOG.log
