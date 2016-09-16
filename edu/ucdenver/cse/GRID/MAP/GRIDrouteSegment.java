@@ -6,8 +6,9 @@ public class GRIDrouteSegment {
     private Long timeAtRoadExit;
 
     public GRIDrouteSegment() {}
-    public GRIDrouteSegment(String inputRoadID) {
+    public GRIDrouteSegment(String inputRoadID, Long exitTime) {
         this.road_ID = inputRoadID;
+        this.timeAtRoadExit = exitTime;
     }
 
     public String getRoadID() { return road_ID; }
@@ -17,6 +18,6 @@ public class GRIDrouteSegment {
     public void setTimeAtRoadExit(Long inputStartTime) { this.timeAtRoadExit = inputStartTime; }
 
     public String toString() {
-        return "Road: "+this.road_ID+" Time at Road Exit: "+this.timeAtRoadExit;
+        return this.road_ID+" ("+this.timeAtRoadExit+")";
     }
 }

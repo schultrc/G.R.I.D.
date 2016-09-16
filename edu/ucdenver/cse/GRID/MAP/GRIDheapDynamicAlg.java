@@ -33,7 +33,7 @@ public class GRIDheapDynamicAlg {
         ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal = new ConcurrentHashMap<>();
         ConcurrentHashMap<String, String> previousIntersections = new ConcurrentHashMap<>();
         /* BEGIN here is the new data structure for segments */
-        ArrayList<GRIDrouteSegment> finalRouteSegments = new ArrayList<>();
+        ConcurrentMap<String, GRIDrouteSegment> finalRouteSegments = new ConcurrentHashMap<>();
         /* END */
         Long thisTimeslice = currentTime/1000;
         Long totalTravelTime = thisTimeslice;
@@ -112,11 +112,9 @@ public class GRIDheapDynamicAlg {
                     previousIntersections.put(dest.getValue(),curr.getValue());
 
                     /* BEGIN here is the new data structure for segments */
-                    //System.out.print("road ID before: "+graph.getRoadListItem(curr.getValue()+dest.getValue()).getId()+"\n");
                     String tempString = graph.getRoadListItem(curr.getValue()+dest.getValue()).getId();
-                    //System.out.print("road ID: "+tempString+"\n");
-                    GRIDrouteSegment tempSegment = new GRIDrouteSegment(tempString);
-                    finalRouteSegments.add(tempSegment);
+                    GRIDrouteSegment tempSegment = new GRIDrouteSegment(tempString, tempTmTotal);
+                    finalRouteSegments.put(tempString, tempSegment);
                     /* END */
                 }
             }
@@ -134,13 +132,17 @@ public class GRIDheapDynamicAlg {
             if(curr.getValue().equals(agtTo)) totalTravelTime = curr.getTmTotal();
         }
 
+        /* BEGIN weight/time testing
+         * 38347489_0 (404)
+         * 38347521_0 (404)
+         * 1779115801223351743
+        */
+        //GRIDroad tempTestRoad = graph.getRoadListItem("1779115801223351743");
+        //System.out.println("weight on 38347521_0 at 404: "+tempTestRoad.getWeightAtTime(404L));
+        /* END weight/time testing */
+
         GRIDroute finalPath = new GRIDroute();
-        /* BEGIN new code for segments */
-        finalPath.setRouteSegments(finalRouteSegments);
-        /*for(GRIDrouteSegment segment : finalRouteSegments) {
-            System.out.print(" road: "+segment.getRoadID());
-        }*/
-        /* END */
+
         String step = agtTo;
 
         finalPath.Intersections.add(step);
@@ -159,6 +161,14 @@ public class GRIDheapDynamicAlg {
         }
 
         Collections.reverse(finalPath.Intersections);
+
+        /* BEGIN build segment list */
+        ArrayList<String> tempPathList  = graph.getPathByRoad(finalPath.Intersections);
+
+        for(String finalPathRoadID : tempPathList) {
+            finalPath.RouteSegments.add(finalRouteSegments.get(finalPathRoadID));
+        }
+        /* END */
 
         finalPath.setcalculatedTravelTime(totalTravelTime);
         return finalPath;

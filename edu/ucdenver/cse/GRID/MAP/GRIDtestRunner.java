@@ -69,7 +69,7 @@ public class GRIDtestRunner{
                 System.out.print(",");
         }
         
-	    ArrayList<String> tempPathList  = myMap.getPathByRoad(outRoute.Intersections);
+	    /*ArrayList<String> tempPathList  = myMap.getPathByRoad(outRoute.Intersections);
 
         System.out.print("\n\nPath by Link:\n");
         for (String path : tempPathList)
@@ -77,6 +77,15 @@ public class GRIDtestRunner{
             System.out.print(path);
             if(!tempPathList.isEmpty()
                && !path.equals(tempPathList.get(tempPathList.size() - 1)))
+                System.out.print(",");
+        }*/
+
+        System.out.print("\n\nPath by Segment:\n");
+        for (GRIDrouteSegment segment : outRoute.RouteSegments)
+        {
+            System.out.print(segment);
+            if(!outRoute.RouteSegments.isEmpty()
+                    && !segment.equals(outRoute.RouteSegments.get(outRoute.RouteSegments.size() - 1)))
                 System.out.print(",");
         }
 
