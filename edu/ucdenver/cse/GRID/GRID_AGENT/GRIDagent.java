@@ -16,6 +16,8 @@ import java.util.*;
 
 public class GRIDagent {
     private String Id = "";
+    private GRIDroute origRoute;
+    private GRIDroute newRoute;
     private GRIDroute myRoute;
     private Long x; private Long y; // Future Use for now 05/08
     private String currentLink;     // Future Use 05/08

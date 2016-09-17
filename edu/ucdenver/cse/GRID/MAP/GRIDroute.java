@@ -51,7 +51,18 @@ public class GRIDroute {
 		
 		return true;
 	}
-	
+
+	public boolean compareOldNewRoute(GRIDroute newRoute) {
+		if (this.RouteSegments.isEmpty() || newRoute.RouteSegments.isEmpty()) { return false; }
+		if (this.RouteSegments.size() != newRoute.RouteSegments.size()) { return false; }
+
+		for(int i = 0; i < this.RouteSegments.size(); ++i) {
+			if (!this.RouteSegments.get(i).equals(newRoute.RouteSegments.get(i))) { return false; }
+		}
+
+		return true;
+	}
+
 	public String toString() {
 		String theRouteStr = "Route: ";
 		

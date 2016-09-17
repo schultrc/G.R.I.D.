@@ -21,7 +21,6 @@ public class GRIDheapDynamicAlg {
     private GRIDmap graph;
 
     public GRIDheapDynamicAlg(GRIDmap thisMap) {
-        //graph = thisMap;
         graph = graphLoadEdges(thisMap);
     }
 
@@ -46,9 +45,6 @@ public class GRIDheapDynamicAlg {
          */
         agtTo = graph.getRoad(thisAgent.getDestination()).getFrom();
 
-        /* Probably don't need this
-        ConcurrentMap<String, GRIDroad> roads = graph.getRoads();
-        */
         startNodeValues = new GRIDnodeWeightTime();
         startNodeValues.setNodeWtTotal(0.0);
         startNodeValues.setNodeTmTotal(thisTimeslice);
@@ -65,9 +61,7 @@ public class GRIDheapDynamicAlg {
             return null;
         }
 
-        /* roadList creation--this will be fixed in the GRIDmap class by
-         * combining operations of GRIDmap and the DirectedGraph class
-         * more seamlessly
+        /* roadList creation--necessary for fibHeap mGraph data structure
          */
         graph.loadRoadList();
 
@@ -163,11 +157,7 @@ public class GRIDheapDynamicAlg {
         Collections.reverse(finalPath.Intersections);
 
         /* BEGIN build segment list */
-        ArrayList<String> tempPathList  = graph.getPathByRoad(finalPath.Intersections);
-
-        for(String finalPathRoadID : tempPathList) {
-            finalPath.RouteSegments.add(finalRouteSegments.get(finalPathRoadID));
-        }
+        finalPath.RouteSegments = graph.getPathBySegment(finalPath.Intersections, finalRouteSegments);
         /* END */
 
         finalPath.setcalculatedTravelTime(totalTravelTime);

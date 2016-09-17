@@ -5,8 +5,7 @@ import java.util.*;
 //import java.util.ArrayList;
 
 public final class GRIDmap implements Iterable<String> {
-//public class GRIDmap {
-	
+
 	private ConcurrentMap<String, GRIDintersection> Intersections = new ConcurrentHashMap<String, GRIDintersection>();
 	private ConcurrentMap<String, GRIDroad> Roads = new ConcurrentHashMap<String, GRIDroad >();
 
@@ -82,24 +81,6 @@ public final class GRIDmap implements Iterable<String> {
 	public GRIDintersection getIntersection(String theIntersection) {
 		return this.Intersections.get(theIntersection);
 	}
-	
-	public String hasRoad(String from, String to) {
-		// determine if we have a road that goes from "from" to "to"
-		ArrayList<String> theWantedRoad = new ArrayList<>();
-		theWantedRoad.add(from);
-		theWantedRoad.add(to);
-		
-		ArrayList<String> returnList = this.getPathByRoad(theWantedRoad);
-		
-		if (returnList.size() != 1) {
-			System.out.println("Could not find a road from: " + from + " to: " + to);
-			return "";
-		}
-		
-		else {
-			return returnList.get(0);
-		}
-	}
 
     public GRIDnodeWeightTime calcWeight(String startNode, String endNode, long startTime)
     {
@@ -108,15 +89,33 @@ public final class GRIDmap implements Iterable<String> {
         GRIDnodeWeightTime tempNode = new GRIDnodeWeightTime();
 
         tempTimeslice = this.getRoadListItem(startNode+endNode).getTravelTime();
-		// test code begin
+		// BEGIN test code
 		//System.out.println("tempTimeslice: "+tempTimeslice);
-		// test code end
+		// END test code
         tempWeight = this.getRoadListItem(startNode+endNode).getWeightOverInterval(startTime);
         tempNode.setNodeWtTotal(tempWeight);
         tempNode.setNodeTmTotal(tempTimeslice);
 
         return tempNode;
     }
+
+	public String hasRoad(String from, String to) {
+		// determine if we have a road that goes from "from" to "to"
+		ArrayList<String> theWantedRoad = new ArrayList<>();
+		theWantedRoad.add(from);
+		theWantedRoad.add(to);
+
+		ArrayList<String> returnList = this.getPathByRoad(theWantedRoad);
+
+		if (returnList.size() != 1) {
+			System.out.println("Could not find a road from: " + from + " to: " + to);
+			return "";
+		}
+
+		else {
+			return returnList.get(0);
+		}
+	}
 
 	public ArrayList<String> getPathByRoad(ArrayList<String> pathByNode)
 	{
@@ -135,15 +134,43 @@ public final class GRIDmap implements Iterable<String> {
 		return  pathByRoad;
 	}
 
-	/*  *
-	* The following functions are transplanted from the DirectedGraph class.
-	* These need to be reviewed and cleaned up for better integration, i.e.,
-	* eliminating the need for the 'middleware' function and using only roads
-	* rather than pulling from the edge list as created by the original
-	* DirectedGraph class.
-	* * */
+	public ArrayList<GRIDrouteSegment> getPathBySegment(ArrayList<String> pathByNode,
+										   ConcurrentMap<String, GRIDrouteSegment> finalRouteSegments)
+	{
+		/* Turns a route made of intersections into a route made of roads,
+		 * then into a path of segments */
+		ArrayList<String> pathByRoad = getPathByRoad(pathByNode);
+		ArrayList<GRIDrouteSegment> pathBySegment = new ArrayList<>();
 
-	private final Map<String, Map<String, Double>> mGraph = new HashMap<String, Map<String, Double>>();
+		for(String finalPathRoadID : pathByRoad) {
+			pathBySegment.add(finalRouteSegments.get(finalPathRoadID));
+		}
+
+		return  pathBySegment;
+	}
+
+	public void addVehicleToRoads(ArrayList<GRIDrouteSegment> newRouteSegments, Long startTime) {
+		for(int i = 0; i < newRouteSegments.size(); ++i) {
+			for(Long atTime = startTime; atTime < newRouteSegments.get(i).getTimeAtRoadExit(); ++atTime) {
+				this.Roads.get(newRouteSegments.get(i).getRoadID()).addToWeight(atTime);
+			}
+		}
+	}
+
+	public void removeVehicleFromRoads(ArrayList<GRIDrouteSegment> oldRouteSegments, Long startTime) {
+		for(int i = 0; i < oldRouteSegments.size(); ++i) {
+			for(Long atTime = startTime; atTime < oldRouteSegments.get(i).getTimeAtRoadExit(); ++atTime) {
+				this.Roads.get(oldRouteSegments.get(i).getRoadID()).subFromWeight(atTime);
+			}
+		}
+	}
+
+	/*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+	* The following functions are transplanted from the DirectedGraph class.                         *
+	* These are necessary for the use of the fibHeap data structure.                                 *
+	*   *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  */
+
+	private final ConcurrentMap<String, Map<String, Double>> fibHeapGraph = new ConcurrentHashMap<String, Map<String, Double>>();
 	public class graphEdge{
         String start;
         String finish;
@@ -157,11 +184,11 @@ public final class GRIDmap implements Iterable<String> {
 		public String toString(){return "Edge [start: "+start+" end: "+finish+" weight: "+weight+"]";}
 	}
 
-	public graphEdge getEdge(String start, String finish) // Map.Entry<String, Map.Entry<String, Double>>
+	public graphEdge getEdge(String start, String finish)
 	{
 		graphEdge temp = new graphEdge();
-		mGraph.containsKey(start);
-		Map<String, Double> arcs = mGraph.get(start);
+		fibHeapGraph.containsKey(start);
+		Map<String, Double> arcs = fibHeapGraph.get(start);
 		for(String key : arcs.keySet())
 		{
 			if(key == finish)
@@ -186,11 +213,11 @@ public final class GRIDmap implements Iterable<String> {
 	 */
 	public boolean addNode(String node) {
         /* If the node already exists, don't do anything. */
-		if (mGraph.containsKey(node))
+		if (fibHeapGraph.containsKey(node))
 			return false;
 
         /* Otherwise, add the node with an empty set of outgoing edges. */
-		mGraph.put(node, new HashMap<String, Double>());
+		fibHeapGraph.put(node, new HashMap<String, Double>());
 		return true;
 	}
 
@@ -208,11 +235,11 @@ public final class GRIDmap implements Iterable<String> {
 	 */
 	public void addEdge(String start, String dest, double length) {
         /* Confirm both endpoints exist. */
-		if (!mGraph.containsKey(start) || !mGraph.containsKey(dest))
+		if (!fibHeapGraph.containsKey(start) || !fibHeapGraph.containsKey(dest))
 			throw new NoSuchElementException("Both nodes must be in the graph.");
 
         /* Add the edge. */
-		mGraph.get(start).put(dest, length);
+		fibHeapGraph.get(start).put(dest, length);
 	}
 
 	/**
@@ -226,10 +253,10 @@ public final class GRIDmap implements Iterable<String> {
 	 */
 	public void removeEdge(String start, String dest) {
         /* Confirm both endpoints exist. */
-		if (!mGraph.containsKey(start) || !mGraph.containsKey(dest))
+		if (!fibHeapGraph.containsKey(start) || !fibHeapGraph.containsKey(dest))
 			throw new NoSuchElementException("Both nodes must be in the graph.");
 
-		mGraph.get(start).remove(dest);
+		fibHeapGraph.get(start).remove(dest);
 	}
 
 	/**
@@ -243,7 +270,7 @@ public final class GRIDmap implements Iterable<String> {
 	//public Map<String, Double> edgesFrom(String node) {
     public Map<String, Double> edgesFrom(String node) {
         /* Check that the node exists. */
-		Map<String, Double> arcs = mGraph.get(node);
+		Map<String, Double> arcs = fibHeapGraph.get(node);
 		if (arcs == null)
 			throw new NoSuchElementException("Source node does not exist.");
 
@@ -256,6 +283,6 @@ public final class GRIDmap implements Iterable<String> {
 	 * @return An iterator that traverses the nodes in the graph.
 	 */
 	public Iterator<String> iterator() {
-		return mGraph.keySet().iterator();
+		return fibHeapGraph.keySet().iterator();
 	}
 }
