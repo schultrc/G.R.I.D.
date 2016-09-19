@@ -108,7 +108,7 @@ public class GRIDpathrecalc {
 
         Collections.reverse(finalPath.Intersections);
 
-        finalPath.setcalculatedTravelTime(currentPathTotal.get(agtTo).getNodeTmTotal());
+        finalPath.setCalculatedTravelTime(currentPathTotal.get(agtTo).getNodeTmTotal());
 
         // We need to convert this to roads, as well
 

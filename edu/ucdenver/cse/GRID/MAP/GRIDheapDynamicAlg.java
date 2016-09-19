@@ -101,13 +101,14 @@ public class GRIDheapDynamicAlg {
 
                     tempNode.setNodeTmTotal(tempTime+tempNode.getNodeTmTotal());
                     Long tempTmTotal = tempNode.getNodeTmTotal();
+                    Double tempEmissions = tempNode.getNodeEmissions();
 
                     pq.decreaseKey(dest, 0D, (tempNode.getNodeWtTotal()+curr.getWtTotal()),tempTmTotal);
                     previousIntersections.put(dest.getValue(),curr.getValue());
 
                     /* BEGIN here is the new data structure for segments */
                     String tempString = graph.getRoadListItem(curr.getValue()+dest.getValue()).getId();
-                    GRIDrouteSegment tempSegment = new GRIDrouteSegment(tempString, tempTmTotal);
+                    GRIDrouteSegment tempSegment = new GRIDrouteSegment(tempString, tempTmTotal, tempEmissions);
                     finalRouteSegments.put(tempString, tempSegment);
                     /* END */
                 }
@@ -160,7 +161,8 @@ public class GRIDheapDynamicAlg {
         finalPath.RouteSegments = graph.getPathBySegment(finalPath.Intersections, finalRouteSegments);
         /* END */
 
-        finalPath.setcalculatedTravelTime(totalTravelTime);
+        finalPath.setCalculatedTravelTime(totalTravelTime);
+        finalPath.setCalculatedEmissionsTotal();
         return finalPath;
     }
 

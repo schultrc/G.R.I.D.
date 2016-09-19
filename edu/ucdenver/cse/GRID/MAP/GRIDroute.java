@@ -6,16 +6,26 @@ import java.util.*;
 public class GRIDroute {	
 	private Long agent_ID;
 	private Long calculatedTravelTime;
+	private Double calculatedEmissionsTotal;
 
 	public ArrayList<String> Intersections = new ArrayList<String>(2);
 	public ArrayList<String> Roads = new ArrayList<String>(2);
 	public ArrayList<GRIDrouteSegment> RouteSegments = new ArrayList<GRIDrouteSegment>();
 
-	public void setcalculatedTravelTime(Long inTime){ this.calculatedTravelTime = inTime; }
+	public void setCalculatedTravelTime(Long inTime){ this.calculatedTravelTime = inTime; }
+	public void setCalculatedEmissionsTotal(){
+		this.calculatedEmissionsTotal = 0.0;
+
+		for(GRIDrouteSegment segment : RouteSegments) {
+			this.calculatedEmissionsTotal += segment.getSegmentEmissions();
+			System.out.println("emissions: "+this.calculatedEmissionsTotal);
+		}
+	}
 
 	public ArrayList<String> getIntersections(){ return this.Intersections; }
 	public Long getAgent_ID(){ return this.agent_ID; }
-	public Long getcalculatedTravelTime(){ return this.calculatedTravelTime; }
+	public Long getCalculatedTravelTime(){ return this.calculatedTravelTime; }
+	public Double getCalculatedEmissionsTotal(){ return this.calculatedEmissionsTotal; }
 	public ArrayList<String> getRoads() {return this.Roads; }
 	public void setRoads(ArrayList<String> theRoads) { this.Roads = theRoads; }
 	public ArrayList<GRIDrouteSegment> getRouteSegments() { return this.RouteSegments; }

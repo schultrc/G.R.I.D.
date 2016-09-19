@@ -24,6 +24,7 @@ public class GRIDagent {
     private String origin;
     private String destination;
     private Long fuelEconomy;
+    private Double emissions;
     private Long vehOccupancy;
     private Long vehSize;
     private double departureTime;
@@ -55,11 +56,12 @@ public class GRIDagent {
     public void setLink(String newLink){ this.currentLink = newLink; }
     public void setOrigin(String newOrigin){ this.origin = newOrigin; }
     public void setDestination(String newDest){ this.destination = newDest; }
-    public void setFuelEconomy(Long fuelEconomy){ this.fuelEconomy = fuelEconomy; }
+    public void setFuelEconomy(Long newFuelEconomy){ this.fuelEconomy = newFuelEconomy; }
+    public void setEmissions(Double mewEmissions){ this.emissions = mewEmissions; }
     public void setVehOccupancy(Long vehOccupancy){ this.vehOccupancy = vehOccupancy; }
     public void setvehSize(Long vehSize){ this.vehSize = vehSize; }
-	public void setDepartureTime(double departureTime) { this.departureTime = departureTime; }
-	public void setRouteHasChanged(boolean routeHasChanged) { this.routeHasChanged = routeHasChanged; }
+	public void setDepartureTime(double newDepartureTime) { this.departureTime = newDepartureTime; }
+	public void setRouteHasChanged(boolean hasRouteChanged) { this.routeHasChanged = hasRouteChanged; }
 	
 	// matsim integration only. Move to extended class?
 	// Should we always force to false? once the destination is set, we'll never go back to needing

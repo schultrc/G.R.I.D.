@@ -130,12 +130,14 @@ public class GRIDroad {
 		if(getCurrentSpeed() == 0)
 			return MAX_WEIGHT;
 
-		if(capMinusActual <= 0.0)
-			//theWeight = this.Length/this.getCurrentSpeed();
-			theWeight = calcEmissions(this.getCurrentSpeed());
-		else
-			//theWeight = this.Length/(this.getCurrentSpeed()*capMinusActual);
-			theWeight = calcEmissions(this.getCurrentSpeed())*capMinusActual;
+		if(capMinusActual <= 0.0) {
+			theWeight = this.Length/this.getCurrentSpeed();
+			theWeight += calcEmissions(this.getCurrentSpeed());
+		}
+		else {
+			theWeight = this.Length/(this.getCurrentSpeed()*capMinusActual);
+			theWeight += calcEmissions(this.getCurrentSpeed());
+		}
 
 		return theWeight;
 	}
@@ -203,7 +205,7 @@ public class GRIDroad {
 
 		emissions += 160885;
 
-		return emissions;
+		return Math.round(emissions);
 	}
 	
 	public boolean setWeightAtTime(Long time, double capacity) {
