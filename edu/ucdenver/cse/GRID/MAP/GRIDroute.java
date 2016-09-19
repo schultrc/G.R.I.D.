@@ -18,7 +18,6 @@ public class GRIDroute {
 
 		for(GRIDrouteSegment segment : RouteSegments) {
 			this.calculatedEmissionsTotal += segment.getSegmentEmissions();
-			System.out.println("emissions: "+this.calculatedEmissionsTotal);
 		}
 	}
 
