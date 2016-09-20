@@ -90,7 +90,7 @@ public class GRIDtestRunner{
         }
 
         System.out.println("\n\nCalculated Travel Time: "+outRoute.getCalculatedTravelTime());
-        System.out.println("Calculated Total Emissions: "+outRoute.getCalculatedEmissionsTotal()+" CO2 g/mile");
+        System.out.println("Calculated Total Emissions: "+outRoute.getCalculatedEmissionsTotal()+" CO2 g/route");
 
         long stopTime = System.nanoTime();
         long timeToRun = ((stopTime - startTime)/1000000);

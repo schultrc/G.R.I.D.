@@ -27,7 +27,11 @@ public class GRIDroad {
 	private double currentSpeed = -1;
 
 	// Use a long as the key, which represents miliseconds since midnight, January 1, 1970
+	// we need to enhance this map to also hold emissions on the road at that time based on
+	// the number of vehicles traveling at the current speed on the road, or we could just
+	// use an additional map for emissions exclusively
 	private ConcurrentHashMap<Long, Double> vehiclesCurrentlyOnRoadAtTime = new ConcurrentHashMap<Long, Double>();
+	private ConcurrentHashMap<Long, Double> emissionsCurrentlyOnRoadAtTime = new ConcurrentHashMap<>();
 	
 	// Max capacity is defined in vehicles per hour
 	private double maxCapacity;
@@ -96,6 +100,16 @@ public class GRIDroad {
 			this.vehiclesCurrentlyOnRoadAtTime.put(time, ourDefaultValue + 1);
 		}
 	}
+
+	public void addEmmissionsAtTime(Long time, Double emissions) {
+		if(this.emissionsCurrentlyOnRoadAtTime.containsKey(time)) {
+			this.emissionsCurrentlyOnRoadAtTime.replace(time,
+					this.emissionsCurrentlyOnRoadAtTime.get(time) + emissions);
+		}
+		else {
+			this.emissionsCurrentlyOnRoadAtTime.put(time, emissions);
+		}
+	}
 	
 	public void subFromWeight(Long time) {
 		// If there is already an offset, add to it
@@ -111,12 +125,35 @@ public class GRIDroad {
 			this.vehiclesCurrentlyOnRoadAtTime.put(time, 0.0);
 		}
 	}
+
+	public void subEmmissionsAtTime(Long time, Double emissions) {
+		if(this.emissionsCurrentlyOnRoadAtTime.containsKey(time)) {
+			this.emissionsCurrentlyOnRoadAtTime.replace(time,
+					this.emissionsCurrentlyOnRoadAtTime.get(time) - emissions);
+			if (this.emissionsCurrentlyOnRoadAtTime.get(time) < 0) {
+				this.emissionsCurrentlyOnRoadAtTime.replace(time, 0.0);
+			}
+		}
+		else {
+			// This should never happen
+			this.emissionsCurrentlyOnRoadAtTime.put(time, 0.0);
+		}
+	}
+
 	public double getWeightAtTime(Long time) {
 		if (this.vehiclesCurrentlyOnRoadAtTime.containsKey(time) ) {
 			return this.vehiclesCurrentlyOnRoadAtTime.get(time) + this.getDefaultWeight();
 		}
 		
 		return this.getDefaultWeight();
+	}
+
+	public double getEmissionsAtTime(Long time) {
+		if (this.emissionsCurrentlyOnRoadAtTime.containsKey(time) ) {
+			return this.emissionsCurrentlyOnRoadAtTime.get(time) + this.getDefaultWeight();
+		}
+
+		return 0.0; // is there a default emissions level...?
 	}
 
 	/* so an agent arrives at link01 at time 0.0
@@ -132,11 +169,11 @@ public class GRIDroad {
 
 		if(capMinusActual <= 0.0) {
 			theWeight = this.Length/this.getCurrentSpeed();
-			theWeight += calcEmissions(this.getCurrentSpeed());
+			theWeight += calcEmissions(this.getCurrentSpeed() + this.getEmissionsAtTime(intervalStartTime));
 		}
 		else {
 			theWeight = this.Length/(this.getCurrentSpeed()*capMinusActual);
-			theWeight += calcEmissions(this.getCurrentSpeed());
+			theWeight += calcEmissions(this.getCurrentSpeed() + this.getEmissionsAtTime(intervalStartTime));
 		}
 
 		return theWeight;
@@ -145,12 +182,13 @@ public class GRIDroad {
 	/*
 	 * This is a first "approximation" for an emissions utility function
 	 * based on the graph from the emissions_graph_sketch.pdf document.
-	 * The value returned represents CO2 in grams/mile.
+	 * The value returned represents CO2 in grams/mile (adjusted for meters).
 	 */
 	public double calcEmissions (Double base) {
 		int exp = 0;
-		Double emissions = 0.0,
-			   veryLargeNumber = 3876685312500000000000000.0;
+		Double emissionsModifier = 1609.34/this.Length,
+			   emissions = 0.0,
+			   veryLargeNumber = 0.0;
 
 		veryLargeNumber = 3876685312500000000000000.0;
 		emissions += (-751/veryLargeNumber)*Math.pow(base, 17);
@@ -205,7 +243,7 @@ public class GRIDroad {
 
 		emissions += 160885;
 
-		return Math.round(emissions);
+		return emissions/emissionsModifier;
 	}
 	
 	public boolean setWeightAtTime(Long time, double capacity) {
