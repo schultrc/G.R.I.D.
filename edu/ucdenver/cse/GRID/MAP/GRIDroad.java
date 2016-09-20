@@ -145,62 +145,62 @@ public class GRIDroad {
 	/*
 	 * This is a first "approximation" for an emissions utility function
 	 * based on the graph from the emissions_graph_sketch.pdf document.
-	 * The value returned represents CO2 in grams/million.
+	 * The value returned represents CO2 in grams/mile.
 	 */
 	public double calcEmissions (Double base) {
 		int exp = 0;
 		Double emissions = 0.0,
-			   veryLargeNumber = 0.0;
+			   veryLargeNumber = 3876685312500000000000000.0;
 
-		veryLargeNumber = 38766853125.0*Math.pow(10,14);
+		veryLargeNumber = 3876685312500000000000000.0;
 		emissions += (-751/veryLargeNumber)*Math.pow(base, 17);
 
-		veryLargeNumber = 3192564375.0*Math.pow(10,15);
+		veryLargeNumber = 3192564375000000000000000.0;
 		emissions += (510179.0/veryLargeNumber)*Math.pow(base, 16);
 
-		veryLargeNumber = 153488671875.0*Math.pow(10,10);
+		veryLargeNumber = 1534886718750000000000.0;
 		emissions += (-93437.0/veryLargeNumber)*Math.pow(base, 15);
 
-		veryLargeNumber = 49116375.0*Math.pow(10,13);
+		veryLargeNumber = 491163750000000000000.0;
 		emissions += (6977527.0/veryLargeNumber)*Math.pow(base, 14);
 
-		veryLargeNumber = 280665.0*Math.pow(10,13);
+		veryLargeNumber = 2806650000000000000.0;
 		emissions += (-6375373.0/veryLargeNumber)*Math.pow(base, 13);
 
-		veryLargeNumber = 280665.0*Math.pow(10,14);
+		veryLargeNumber = 28066500000000000000.0;
 		emissions += (7401385339.0/veryLargeNumber)*Math.pow(base, 12);
 
-		veryLargeNumber = 467775.0*Math.pow(10,12);
+		veryLargeNumber = 467775000000000000.0;
 		emissions += (-10748594201.0/veryLargeNumber)*Math.pow(base, 11);
 
-		veryLargeNumber = 71442.0*Math.pow(10,12);
+		veryLargeNumber = 71442000000000000.0;
 		emissions += (109449918439.0/veryLargeNumber)*Math.pow(base, 10);
 
-		veryLargeNumber = 285768.0*Math.pow(10,11);
+		veryLargeNumber = 28576800000000000.0;
 		emissions += (-2256198105319.0/veryLargeNumber)*Math.pow(base, 9);
 
-		veryLargeNumber = 571536.0*Math.pow(10,11);
+		veryLargeNumber = 57153600000000000.0;
 		emissions += (180317060929469.0/veryLargeNumber)*Math.pow(base, 8);
 
-		veryLargeNumber = 224532.0*Math.pow(10,10);
+		veryLargeNumber = 2245320000000000.0;
 		emissions += (-218847480649027.0/veryLargeNumber)*Math.pow(base, 7);
 
-		veryLargeNumber = 898128.0*Math.pow(10,8);
+		veryLargeNumber = 89812800000000.0;
 		emissions += (207162673320349.0/veryLargeNumber)*Math.pow(base, 6);
 
-		veryLargeNumber = 5837832.0*Math.pow(10,7);
+		veryLargeNumber = 58378320000000.0;
 		emissions += (-2400950603209441.0/veryLargeNumber)*Math.pow(base, 5);
 
-		veryLargeNumber = 9081072*Math.pow(10,7);
+		veryLargeNumber = 90810720000000.0;
 		emissions += (48865091547708299.0/veryLargeNumber)*Math.pow(base, 4);
 
-		veryLargeNumber = 58212.0*Math.pow(10,6);
+		veryLargeNumber = 58212000000.0;
 		emissions += (-288507131120381.0/veryLargeNumber)*Math.pow(base, 3);
 
-		veryLargeNumber = 38808.0*Math.pow(10,4);
+		veryLargeNumber = 388080000.0;
 		emissions += (11651456905537.0/veryLargeNumber)*Math.pow(base, 2);
 
-		veryLargeNumber = 6732.0*Math.pow(10,2);
+		veryLargeNumber = 673200.0;
 		emissions += (-71110999427.0/veryLargeNumber)*base;
 
 		emissions += 160885;

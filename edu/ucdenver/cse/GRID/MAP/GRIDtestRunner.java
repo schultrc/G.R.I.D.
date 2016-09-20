@@ -97,15 +97,6 @@ public class GRIDtestRunner{
         
         System.out.print("\nTook " + timeToRun/1000.0 + " Seconds");
         System.out.print("\n\nAnd we're done.\n");
-
-        // BEGIN calcEmissions test code
-        Double temptTestSpeed = 90.0;
-        GRIDroad tempTestRoad001 = new GRIDroad("tempTestRoad001");
-        double tempTestEmissions = tempTestRoad001.calcEmissions(temptTestSpeed);
-        tempTestEmissions = Math.round(tempTestEmissions);
-
-        System.out.println("Emissions at "+temptTestSpeed+": "+tempTestEmissions);
-        // END
     }
 
     private GRIDagent getTestAgent()
