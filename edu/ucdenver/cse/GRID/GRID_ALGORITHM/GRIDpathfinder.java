@@ -35,8 +35,6 @@ public class GRIDpathfinder {
         };
 
         public Double getEdgeWeight(GRIDnodeWeightTime thisNode) {
-            //System.out.println("inside green");
-
             return thisNode.getNodeEmissions()+thisNode.getNodeWtTotal();
         }
     }

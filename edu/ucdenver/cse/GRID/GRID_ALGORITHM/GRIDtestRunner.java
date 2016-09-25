@@ -41,15 +41,15 @@ public class GRIDtestRunner{
         GRIDheapAlg greedy = new GRIDheapAlg();
         GRIDpathfinder dyna = new GRIDpathfinder(myMap); //
         GRIDpathfinder.GRIDgreenPathfinder dynaGreen= new GRIDpathfinder.GRIDgreenPathfinder(myMap);
-        myPathGreedy = greedy.shortestPath(networkMap,"1040921516","72823276_0"); // 72823276_0 864162469
+        //myPathGreedy = greedy.shortestPath(networkMap,"1040921516","72823276_0"); // 72823276_0 864162469
 
         //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         //GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         GRIDroute outRoute = new GRIDroute();
         /*GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         outRoute = test001.findPath();*/
-        //outRoute = dyna.findPath(testAgent001, 0L);
-        outRoute = dynaGreen.findPath(testAgent001, 0L);
+        outRoute = dyna.findPath(testAgent001, 0L);
+        //outRoute = dynaGreen.findPath(testAgent001, 0L);
 
         //ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
