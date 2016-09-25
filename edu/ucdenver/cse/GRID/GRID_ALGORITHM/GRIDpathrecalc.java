@@ -4,9 +4,10 @@
     http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
 */
 
-package edu.ucdenver.cse.GRID.MAP;
+package edu.ucdenver.cse.GRID.GRID_ALGORITHM;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.MAP.*;
 
 import java.util.concurrent.*;
 import java.util.*;
@@ -197,7 +198,7 @@ public class GRIDpathrecalc {
         long startTimeCounter = System.nanoTime();
 
         tempTimeslice = thisRoadList.get(startNode+endNode).getTravelTime();
-        tempWeight = thisRoadList.get(startNode+endNode).getWeightOverInterval(startTime);
+        tempWeight = thisRoadList.get(startNode+endNode).getTimeWeightOverInterval(startTime);
         tempNode.setNodeWtTotal(tempWeight);
         tempNode.setNodeTmTotal(tempTimeslice);
 

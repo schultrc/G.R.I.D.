@@ -4,9 +4,12 @@
     http://www.vogella.com/tutorials/JavaAlgorithmsDijkstra/article.html
 */
 
-package edu.ucdenver.cse.GRID.MAP;
+package edu.ucdenver.cse.GRID.GRID_ALGORITHM;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.MAP.GRIDmap;
+import edu.ucdenver.cse.GRID.MAP.GRIDroad;
+import edu.ucdenver.cse.GRID.MAP.GRIDroute;
 
 import java.util.concurrent.*;
 import java.util.*;

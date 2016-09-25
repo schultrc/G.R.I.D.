@@ -1,4 +1,4 @@
-package edu.ucdenver.cse.GRID.MAP;
+package edu.ucdenver.cse.GRID.GRID_ALGORITHM;
 
 import java.util.*; // For ArrayList
 

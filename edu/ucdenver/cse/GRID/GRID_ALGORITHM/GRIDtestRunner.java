@@ -1,15 +1,12 @@
-package edu.ucdenver.cse.GRID.MAP;
+package edu.ucdenver.cse.GRID.GRID_ALGORITHM;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
 import edu.ucdenver.cse.GRID.GRID_UTILS.logWriter;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Set;
 import java.util.logging.Level;
 
-import static org.junit.Assert.*;
+import edu.ucdenver.cse.GRID.MAP.*;
 import org.junit.Test;
 
 public class GRIDtestRunner{
@@ -19,7 +16,7 @@ public class GRIDtestRunner{
     private GRIDmapReader myReader = new GRIDmapReader();
     // SmallNetwork2 PuebloNetwork 5x5network RyeNetwork
     private GRIDmap myMap = myReader.readMapFile("data/PuebloNetwork.xml");
-    //private GRIDmap networkMap = graphMiddleware(myMap);
+    private GRIDmap networkMap = graphMiddleware(myMap);
     private ArrayList myPathGreedy = new ArrayList();
     private ArrayList myPathDynamic = new ArrayList();
 
@@ -42,15 +39,17 @@ public class GRIDtestRunner{
     	Long startTime = System.nanoTime();
 
         GRIDheapAlg greedy = new GRIDheapAlg();
-        GRIDheapDynamicAlg dyna = new GRIDheapDynamicAlg(myMap); //
-        //myPathGreedy = greedy.shortestPath(networkMap,"1040921516","864162469");
+        GRIDpathfinder dyna = new GRIDpathfinder(myMap); //
+        GRIDpathfinder.GRIDgreenPathfinder dynaGreen= new GRIDpathfinder.GRIDgreenPathfinder(myMap);
+        myPathGreedy = greedy.shortestPath(networkMap,"1040921516","72823276_0"); // 72823276_0 864162469
 
         //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         //GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         GRIDroute outRoute = new GRIDroute();
         /*GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         outRoute = test001.findPath();*/
-        outRoute = dyna.findPath(testAgent001, 0L);
+        //outRoute = dyna.findPath(testAgent001, 0L);
+        outRoute = dynaGreen.findPath(testAgent001, 0L);
 
         //ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
@@ -58,7 +57,7 @@ public class GRIDtestRunner{
         assertNotNull(outRoute);
         assertTrue(outRoute.Intersections.size() > 0);*/
 
-        //System.out.println("\nShortest path: "+myPathGreedy);
+        System.out.println("\nShortest path: "+myPathGreedy);
         //System.out.println("\nShortest path: "+myPathDynamic);
 
         System.out.print("\nPath:\n");

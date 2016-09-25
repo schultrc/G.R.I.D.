@@ -4,9 +4,9 @@
     Keith Schwartz
 */
 
-package edu.ucdenver.cse.GRID.MAP;
+package edu.ucdenver.cse.GRID.GRID_ALGORITHM;
 
-import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.MAP.GRIDmap;
 
 import java.util.concurrent.*;
 import java.util.*;
@@ -81,6 +81,7 @@ public class GRIDheapAlg {
                 {
                     pq.decreaseKey(dest, pathCost, 0.0, 0L);
                     previousIntersections.put(dest.getValue(),curr.getValue());
+                    //System.out.println("prev: "+previousIntersections.get(dest.getValue())+"|"+dest.getValue());
                 }
             }
 

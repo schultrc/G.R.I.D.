@@ -10,18 +10,35 @@
     http://www.keithschwarz.com/interesting/code/?dir=fibonacci-heap
 */
 
-package edu.ucdenver.cse.GRID.MAP;
+package edu.ucdenver.cse.GRID.GRID_ALGORITHM;
 
 import edu.ucdenver.cse.GRID.GRID_AGENT.GRIDagent;
+import edu.ucdenver.cse.GRID.MAP.*;
 
 import java.util.concurrent.*;
 import java.util.*;
 
-public class GRIDheapDynamicAlg {
-    private GRIDmap graph;
+public class GRIDpathfinder {
+    private static GRIDmap graph;
+    private ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, String> previousIntersections = new ConcurrentHashMap<>();
+    private ConcurrentMap<String, GRIDrouteSegment> finalRouteSegments = new ConcurrentHashMap<>();
 
-    public GRIDheapDynamicAlg(GRIDmap thisMap) {
+    public GRIDpathfinder(GRIDmap thisMap) {
         graph = graphLoadEdges(thisMap);
+    }
+
+    public static class GRIDgreenPathfinder extends GRIDpathfinder {
+
+        public GRIDgreenPathfinder(GRIDmap thisMap) {
+            super(thisMap);
+        };
+
+        public Double getEdgeWeight(GRIDnodeWeightTime thisNode) {
+            //System.out.println("inside green");
+
+            return thisNode.getNodeEmissions()+thisNode.getNodeWtTotal();
+        }
     }
 
     public GRIDroute findPath(GRIDagent thisAgent, Long currentTime) {
@@ -29,10 +46,10 @@ public class GRIDheapDynamicAlg {
 
         Map<String, GRIDfibHeap.Entry> entries = new HashMap<>();
         GRIDnodeWeightTime startNodeValues;
-        ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal = new ConcurrentHashMap<>();
-        ConcurrentHashMap<String, String> previousIntersections = new ConcurrentHashMap<>();
+        //ConcurrentMap<String, GRIDnodeWeightTime> currentPathTotal = new ConcurrentHashMap<>();
+        //ConcurrentHashMap<String, String> previousIntersections = new ConcurrentHashMap<>();
         /* BEGIN here is the new data structure for segments */
-        ConcurrentMap<String, GRIDrouteSegment> finalRouteSegments = new ConcurrentHashMap<>();
+        //ConcurrentMap<String, GRIDrouteSegment> finalRouteSegments = new ConcurrentHashMap<>();
         /* END */
         Long thisTimeslice = currentTime/1000;
         Long totalTravelTime = thisTimeslice;
@@ -94,8 +111,12 @@ public class GRIDheapDynamicAlg {
                  * the cost of the shortest path.
                  */
                 GRIDfibHeap.Entry dest = entries.get(arc.getKey());
+                //Double newWeight = tempNode.getNodeWtTotal()+curr.getWtTotal();
+                /* BEGIN new code for different weight calculations*/
+                Double newWeight = getEdgeWeight(tempNode)+curr.getWtTotal();
+                /* END */
 
-                if ((tempNode.getNodeWtTotal()+curr.getWtTotal()) < dest.getWtTotal())
+                if (newWeight < dest.getWtTotal())
                 {
                     Long tempTime = currentPathTotal.get(curr.getValue()).getNodeTmTotal();
 
@@ -103,7 +124,7 @@ public class GRIDheapDynamicAlg {
                     Long tempTmTotal = tempNode.getNodeTmTotal();
                     Double tempEmissions = tempNode.getNodeEmissions();
 
-                    pq.decreaseKey(dest, 0D, (tempNode.getNodeWtTotal()+curr.getWtTotal()),tempTmTotal);
+                    pq.decreaseKey(dest, 0D, newWeight, tempTmTotal);
                     previousIntersections.put(dest.getValue(),curr.getValue());
 
                     /* BEGIN here is the new data structure for segments */
@@ -166,7 +187,11 @@ public class GRIDheapDynamicAlg {
         return finalPath;
     }
 
-    private GRIDmap graphLoadEdges(GRIDmap myGraph) {
+    protected Double getEdgeWeight(GRIDnodeWeightTime thisNode) {
+        return thisNode.getNodeWtTotal();
+    }
+
+    private static GRIDmap graphLoadEdges(GRIDmap myGraph) {
         Long startTime = System.nanoTime();
 
         ArrayList<String> networkIntersections = new ArrayList<>(myGraph.getIntersections().keySet());
@@ -191,6 +216,6 @@ public class GRIDheapDynamicAlg {
         return myGraph;
     }
 
-/* END GRIDheapDynamicAlg CLASS */
+/* END GRIDpathfinder CLASS */
 }
 
