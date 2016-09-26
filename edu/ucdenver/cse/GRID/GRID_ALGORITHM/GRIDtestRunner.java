@@ -41,15 +41,16 @@ public class GRIDtestRunner{
         GRIDheapAlg greedy = new GRIDheapAlg();
         GRIDpathfinder dyna = new GRIDpathfinder(myMap); //
         GRIDpathfinder.GRIDgreenPathfinder dynaGreen= new GRIDpathfinder.GRIDgreenPathfinder(myMap);
-        //myPathGreedy = greedy.shortestPath(networkMap,"1040921516","72823276_0"); // 72823276_0 864162469
+        //myPathGreedy = greedy.shortestPath(networkMap,"455935394","864162469"); // 72823276_0 864162469
 
         //GRIDselfishAlg test001 = new GRIDselfishAlg(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         //GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
-        GRIDroute outRoute = new GRIDroute();
+        GRIDroute dynaTimeOnlyOutRoute = new GRIDroute();
+        GRIDroute greenOutRoute = new GRIDroute();
         /*GRIDpathrecalc test001 = new GRIDpathrecalc(testAgent001, networkMap, 0L); // GRIDpathrecalc GRIDselfishAlg
         outRoute = test001.findPath();*/
-        outRoute = dyna.findPath(testAgent001, 0L);
-        //outRoute = dynaGreen.findPath(testAgent001, 0L);
+        dynaTimeOnlyOutRoute = dyna.findPath(testAgent001, 0L);
+        greenOutRoute = dynaGreen.findPath(testAgent001, 0L);
 
         //ListIterator<String> pathIterator = outRoute.Intersections.listIterator();
 
@@ -57,15 +58,43 @@ public class GRIDtestRunner{
         assertNotNull(outRoute);
         assertTrue(outRoute.Intersections.size() > 0);*/
 
-        System.out.println("\nShortest path: "+myPathGreedy);
-        //System.out.println("\nShortest path: "+myPathDynamic);
+        /*System.out.println("\nShortest path: "+myPathGreedy);
+        System.out.println("\nShortest path: "+myPathDynamic);*/
 
-        System.out.print("\nPath:\n");
-        for (String intrx : outRoute.Intersections)
+        System.out.print("\nPath by Intersection:\n");
+        for (String intrx : dynaTimeOnlyOutRoute.Intersections)
         {
             System.out.print(intrx);
             if(!intrx.equals(testAgent001.getDestination()))
+                System.out.print(", ");
+        }
+
+	    /*ArrayList<String> tempPathList  = myMap.getPathByRoad(outRoute.Intersections);
+
+        System.out.print("\n\nPath by Link:\n");
+        for (String path : tempPathList)
+        {
+            System.out.print(path);
+            if(!tempPathList.isEmpty()
+               && !path.equals(tempPathList.get(tempPathList.size() - 1)))
                 System.out.print(",");
+        }*/
+
+        System.out.print("\n\nPath by Segment:\n");
+        for (GRIDrouteSegment segment : dynaTimeOnlyOutRoute.RouteSegments)
+        {
+            System.out.print(segment);
+            if(!dynaTimeOnlyOutRoute.RouteSegments.isEmpty()
+                    && !segment.equals(dynaTimeOnlyOutRoute.RouteSegments.get(dynaTimeOnlyOutRoute.RouteSegments.size() - 1)))
+                System.out.print(",");
+        }
+
+        System.out.print("\nPath by Intersection:\n");
+        for (String intrx : greenOutRoute.Intersections)
+        {
+            System.out.print(intrx);
+            if(!intrx.equals(testAgent001.getDestination()))
+                System.out.print(", ");
         }
         
 	    /*ArrayList<String> tempPathList  = myMap.getPathByRoad(outRoute.Intersections);
@@ -80,16 +109,19 @@ public class GRIDtestRunner{
         }*/
 
         System.out.print("\n\nPath by Segment:\n");
-        for (GRIDrouteSegment segment : outRoute.RouteSegments)
+        for (GRIDrouteSegment segment : greenOutRoute.RouteSegments)
         {
             System.out.print(segment);
-            if(!outRoute.RouteSegments.isEmpty()
-                    && !segment.equals(outRoute.RouteSegments.get(outRoute.RouteSegments.size() - 1)))
+            if(!greenOutRoute.RouteSegments.isEmpty()
+                    && !segment.equals(greenOutRoute.RouteSegments.get(greenOutRoute.RouteSegments.size() - 1)))
                 System.out.print(",");
         }
 
-        System.out.println("\n\nCalculated Travel Time: "+outRoute.getCalculatedTravelTime());
-        System.out.println("Calculated Total Emissions: "+outRoute.getCalculatedEmissionsTotal()+" CO2 g/route");
+        System.out.println("\n\nCalculated Travel Time  (Time): "+dynaTimeOnlyOutRoute.getCalculatedTravelTime());
+        System.out.println("Calculated Travel Time (Green): "+greenOutRoute.getCalculatedTravelTime());
+
+        System.out.println("\nCalculated Total Emissions  (Time): "+dynaTimeOnlyOutRoute.getCalculatedEmissionsTotal()+" emissions");
+        System.out.println("Calculated Total Emissions (Green): "+greenOutRoute.getCalculatedEmissionsTotal()+" emissions");
 
         long stopTime = System.nanoTime();
         long timeToRun = ((stopTime - startTime)/1000000);
@@ -103,7 +135,7 @@ public class GRIDtestRunner{
         String agtID = "testAgent001",
                 currentLink = "106292026_0", // 40963664_0 106292026_0
                 currentIntrx = "1040921516", // 1040921516 // 2
-                destIntrx = "72823276_0";
+                destIntrx = "72823276_0"; // 72823276_0_r
         // 864162469 - 1400447055 99282649_0_r [72823276_0 problem link]
 
         GRIDagent myAgent = new GRIDagent(agtID,currentLink,currentIntrx,destIntrx, false, false);
@@ -121,6 +153,8 @@ public class GRIDtestRunner{
         {
             if(i+1 == networkIntersections.size()){System.out.println("nodes: "+(i+1));}
             myGraph.addNode(networkIntersections.get(i));
+            /*if(networkIntersections.get(i).equals("864162469")) // 849307460 864162469 1040921516
+                System.out.println("node: "+networkIntersections.get(i)+" | "+i);*/
         }
 
         for(int i = 0; i < networkRoads.size(); i++)

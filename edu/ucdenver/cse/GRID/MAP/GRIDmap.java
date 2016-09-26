@@ -269,7 +269,6 @@ public final class GRIDmap implements Iterable<String> {
 	 * @return An immutable view of the edges leaving that node.
 	 * @throws NoSuchElementException If the node does not exist.
 	 */
-	//public Map<String, Double> edgesFrom(String node) {
     public Map<String, Double> edgesFrom(String node) {
         /* Check that the node exists. */
 		Map<String, Double> arcs = fibHeapGraph.get(node);

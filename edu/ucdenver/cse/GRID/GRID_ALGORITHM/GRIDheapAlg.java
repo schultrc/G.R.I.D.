@@ -46,7 +46,6 @@ public class GRIDheapAlg {
              * have the shortest distance to it.
              */
         GRIDfibHeap.Entry curr = pq.dequeueMin();
-        System.out.println("Source: " + curr.getValue());
 
         /* Keep processing the queue until no nodes remain. */
         while (!pq.isEmpty())
@@ -68,20 +67,22 @@ public class GRIDheapAlg {
                  * which is the cost of this node plus the cost of this edge.
                  */
                 double pathCost = curr.getPriority() + arc.getValue();
-                GRIDmap.graphEdge test000 = graph.getEdge(curr.getValue(), arc.getKey());
+                //GRIDmap.graphEdge test000 = graph.getEdge(curr.getValue(), arc.getKey());
 
-                //System.out.println(test000+" pathCost: "+pathCost);
+                //System.out.println("pathcost: "+pathCost+" | arc value: "+arc.getValue());
 
                 /* If the length of the best-known path from the source to
                  * this node is longer than this potential path cost, update
                  * the cost of the shortest path.
                  */
                 GRIDfibHeap.Entry dest = entries.get(arc.getKey());
+
                 if (pathCost < dest.getPriority())
                 {
+                    System.out.println("arc: "+arc.getKey()+" cost: "+pathCost);
                     pq.decreaseKey(dest, pathCost, 0.0, 0L);
                     previousIntersections.put(dest.getValue(),curr.getValue());
-                    //System.out.println("prev: "+previousIntersections.get(dest.getValue())+"|"+dest.getValue());
+                    System.out.println("from: "+curr.getValue()+" to: "+dest.getValue());
                 }
             }
 

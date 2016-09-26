@@ -28,15 +28,15 @@ public class GRIDutilityFunction {
         // emissions = roadLength/idealSpeed + (roadLength*(currentSpeed-idealSpeed));
 
         if(currentSpeed < idealSpeedLow){
-            System.out.println("too slow");
+            //System.out.println("too slow");
             return (roadLength/idealSpeedLow + (idealSpeedLow-currentSpeed));
         }
         if(currentSpeed > idealSpeedHigh){
-            System.out.println("too fast");
+            //System.out.println("too fast");
             return (roadLength/idealSpeedHigh + (currentSpeed-idealSpeedHigh));
         }
 
-        System.out.println("just right");
+        //System.out.println("just right");
         return roadLength/idealSpeedLow + currentSpeed-idealSpeedLow;
     }
 }
